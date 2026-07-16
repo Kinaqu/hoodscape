@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T17:07:44Z",
+  "generated_at_utc": "2026-07-16T17:54:04Z",
   "node_count": 72,
   "edge_count": 182,
   "edge_types": [
@@ -838,8 +838,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
+          "label": "Alchemy blog"
         }
       ],
       "last_checked": "2026-07-16",
@@ -854,9 +858,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
+          "label": "Alchemy blog"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "alchemy",
@@ -869,8 +882,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
+          "label": "Alchemy blog"
         }
       ],
       "last_checked": "2026-07-16",
@@ -885,9 +902,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
+          "label": "Allium blog"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "allium",
@@ -900,8 +926,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
+          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
+          "label": "Allium blog"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -916,9 +946,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        },
+        {
+          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
+          "label": "Allium blog"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "arbitrum",
@@ -1113,9 +1152,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "blockscout",
@@ -1128,8 +1172,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1162,9 +1206,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "cash-cat",
@@ -1177,8 +1226,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1193,9 +1242,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
+          "label": "Chainalysis blog"
+        },
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "chainalysis",
@@ -1208,8 +1266,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
+          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
+          "label": "Chainalysis blog"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1224,9 +1282,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
+          "label": "Chainalysis blog"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
+          "label": "Chainlink PR"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "chainlink",
@@ -1237,9 +1304,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        },
+        {
+          "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
+          "label": "LayerZero X post"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "chainlink",
@@ -1252,12 +1328,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
+          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
+          "label": "Chainlink PR"
         },
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1274,8 +1350,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/rhj/stocktokens",
-          "label": "Stock Tokens"
+          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
+          "label": "Chainlink PR"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1364,8 +1444,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
+          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
+          "label": "USDG newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1382,12 +1462,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
+          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
+          "label": "USDG newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1402,9 +1478,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
+          "label": "USDG newsroom"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "fireblocks",
@@ -1415,9 +1500,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
+          "label": "Fireblocks post"
+        },
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "fireblocks",
@@ -1430,8 +1524,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
+          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
+          "label": "Fireblocks post"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1446,9 +1540,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
+          "label": "Fireblocks post"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
+          "label": "Chainlink PR"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "flap",
@@ -1459,9 +1562,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        },
+        {
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap board"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "flap",
@@ -1472,9 +1584,18 @@
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        },
+        {
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap board"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "flap",
@@ -1487,8 +1608,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        },
+        {
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap board"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1611,9 +1736,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "index-fi",
@@ -1660,9 +1790,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        },
+        {
+          "url": "https://docs.layerzero.network/v2/deployments/chains/robinhood-testnet",
+          "label": "LayerZero docs"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "layerzero",
@@ -1675,12 +1814,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
+          "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
+          "label": "LayerZero X post"
         },
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1697,8 +1836,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://symbiosis.finance",
-          "label": "Symbiosis"
+          "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
+          "label": "LayerZero X post"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1715,8 +1858,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
+          "url": "https://cryptobriefing.com/lighter-robinhood-chain-perpetual-trading/",
+          "label": "CryptoBriefing"
+        },
+        {
+          "url": "https://lighter.xyz/",
+          "label": "Lighter"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1731,9 +1878,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://cryptobriefing.com/lighter-robinhood-chain-perpetual-trading/",
+          "label": "CryptoBriefing"
+        },
+        {
+          "url": "https://uniswap.org/",
+          "label": "Uniswap"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "text_mining"
+      "source": "x_digest"
     },
     {
       "from": "maple",
@@ -2162,9 +2318,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "pleiades",
@@ -2177,12 +2338,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
-        },
-        {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2199,8 +2356,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2217,8 +2374,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://4.fun/",
-          "label": "Primary"
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2269,9 +2426,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "privy",
@@ -2282,9 +2444,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://docs.robinhood.com/chain/",
+          "label": "Chain docs"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "privy",
@@ -2297,8 +2468,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2313,9 +2484,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.quicknode.com/builders-guide/best/top-10-robinhood-chain-rpc-providers",
+          "label": "QuickNode guide"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "quicknode",
@@ -2328,8 +2508,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.quicknode.com/builders-guide/best/top-10-robinhood-chain-rpc-providers",
+          "label": "QuickNode guide"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2346,8 +2530,12 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.quicknode.com/builders-guide/best/top-10-robinhood-chain-rpc-providers",
+          "label": "QuickNode guide"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2362,9 +2550,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "rialto",
@@ -2393,9 +2586,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "rialto",
@@ -2408,8 +2606,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/rhj/stocktokens",
-          "label": "Stock Tokens"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2426,8 +2624,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2988,8 +3186,13 @@
       "confidence": "low",
       "strength": "weak",
       "directed": true,
-      "evidence": [],
-      "last_checked": "2026-07-03",
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
       "source": "x_digest"
     },
     {
@@ -3001,9 +3204,14 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "spark",
@@ -3202,9 +3410,14 @@
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "swaphood",
@@ -3215,9 +3428,14 @@
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "swaphood",
@@ -3230,8 +3448,8 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3516,9 +3734,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://x.com/trmlabs/status/2072447956993581330",
+          "label": "TRM X post"
+        },
+        {
+          "url": "https://www.blockaid.io/blog/blockaid-brings-real-time-transaction-protection-to-robinhood-chain",
+          "label": "Blockaid blog"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "trust-wallet",
@@ -3713,9 +3940,18 @@
       "confidence": "high",
       "strength": "strong",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/chain/",
+          "label": "Chain page"
+        },
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "virtuals",

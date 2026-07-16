@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T17:07:44Z",
+  "generated_at_utc": "2026-07-16T17:54:04Z",
   "count": 72,
   "layers": [
     "official",
@@ -468,7 +468,16 @@
       "about": "Oracles and CCIP-class messaging are load-bearing for tokenized asset products and cross-domain flows.\n\nPresence as a partner is infrastructure context, not proof that every RH app uses Chainlink correctly.",
       "status": "day-1 partner",
       "risks": "Wrong feed configuration is an app risk even when the oracle network is reputable.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
+          "label": "Chainlink PR"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -516,7 +525,16 @@
       "about": "Node and API infra makes the chain usable for apps; it is not a protocol risk model by itself.\n\nLandscape role: RPC & developer infra. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Infra outages affect UX, not consensus guarantees.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
+          "label": "Alchemy blog"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -564,7 +582,16 @@
       "about": "Cross-chain messaging expands product surface and attack surface at the same time.\n\nTreat bridge and messaging paths as first-class risk when reading \u201cecosystem maps.\u201d",
       "status": "day-1 partner",
       "risks": "Messaging \u2260 removing bridge or solver risk.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
+          "label": "LayerZero X post"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -612,7 +639,16 @@
       "about": "TRM-class tools support investigations and risk screening for institutions and platforms.\n\nPresence signals compliance stack ambitions for a corporate L2.\n\nNot a consumer trading app.",
       "status": "live",
       "risks": "Compliance tooling \u2260 user-level scam protection for every wallet action.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/trmlabs/status/2072447956993581330",
+          "label": "TRM X post"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -708,7 +744,12 @@
       "about": "Privy-style infra helps apps ship login and wallet UX without full custom key management.\n\nBuilder dependency, not an end-user yield product.",
       "status": "live",
       "risks": "App integration quality varies; review the app that embeds it.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -756,7 +797,16 @@
       "about": "Reliable RPC is table stakes for wallets and dapps.\n\nOutages affect UX, not L2 consensus guarantees.",
       "status": "live",
       "risks": "Provider availability risk for apps that hard-depend on one endpoint.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        },
+        {
+          "url": "https://www.quicknode.com/builders-guide/best/top-10-robinhood-chain-rpc-providers",
+          "label": "QuickNode guide"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -804,7 +854,12 @@
       "about": "Explorers are primary tools for verification \u2014 contracts, txs, token holders.\n\nBookmark an explorer when researching any CA on RH.",
       "status": "live",
       "risks": "UI phishing clones exist industry-wide \u2014 verify URL.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -848,7 +903,16 @@
       "about": "Data infra partner (testnet announcement)\n\nLandscape role: Onchain data infra. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
       "risks": "Infra presence improves UX; it does not remove protocol or bridge risk for end users.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
+          "label": "Allium blog"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -896,7 +960,12 @@
       "about": "Institutional controls cited in eco maps\n\nLandscape role: Institutional wallet infra. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
       "risks": "Infra presence improves UX; it does not remove protocol or bridge risk for end users.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
+          "label": "Fireblocks post"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -944,7 +1013,12 @@
       "about": "Compliance tooling cited in eco maps\n\nLandscape role: Compliance analytics. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
       "risks": "Infra presence improves UX; it does not remove protocol or bridge risk for end users.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
+          "label": "Chainalysis blog"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -1145,7 +1219,12 @@
       "about": "Newsroom and ecosystem copy place Rialto in the onchain spot path for crypto and tokenized assets.\n\nProp AMM / specialized venues solve a different job than public Uniswap pools \u2014 inventory and pricing can differ.\n\nWorth separating public AMM vs prop venue when analyzing \u201cliquidity on RH.\u201d",
       "status": "day-1 partner",
       "risks": "Venue design and access may differ from permissionless public AMM UX.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -1197,7 +1276,12 @@
       "about": "Positioned as the prop side of the day-1 liquidity story vs Uniswap\u2019s public AMM.\n\nCorporate chain launches often ship both open and controlled liquidity jobs \u2014 do not merge them into one \u201cDEX blob.\u201d",
       "status": "day-1 partner",
       "risks": "Less public surface than Uniswap; verify access and assumptions before comparing volume.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -1464,7 +1548,12 @@
       "about": "Part of the curator/strategy stack around USDG lending stories \u2014 verify actual deployments on RH before assuming exposure.\n\nLandscape role: Yield / stable strategy partner. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Strategy risk is separate from chain and Morpho market risk.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
+          "label": "USDG newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -1656,7 +1745,16 @@
       "about": "Part of the derivatives and trading surface beyond pure Uniswap spot flow.\n\nTreat \u201cintegrated in wallet\u201d marketing as distribution, not a risk free pass.",
       "status": "live",
       "risks": "Derivatives risk + new-chain operational risk.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://cryptobriefing.com/lighter-robinhood-chain-perpetual-trading/",
+          "label": "CryptoBriefing"
+        },
+        {
+          "url": "https://lighter.xyz/",
+          "label": "Lighter"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -1806,7 +1904,12 @@
       "about": "SwapHood is a chain-native public AMM rather than a multi-chain bluechip deploy.\n\nUseful for understanding native builder surface; depth may be thin versus Uniswap.\n\nCompare fees, pools, and routing before size.",
       "status": "live",
       "risks": "Early native venue \u2014 smart contract and liquidity risk.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": 190738.3810501198,
@@ -2440,7 +2543,12 @@
       "about": "CT tracked deploy leadership flipping among Noxa/Pons/Flap-class apps.\n\nCommunity posts have flagged approval-surface concerns on related paths \u2014 treat as risk case studies and verify contracts yourself.",
       "status": "live",
       "risks": "Unlimited approvals and multicall patterns can be dangerous; revoke unused allowances.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -2487,7 +2595,16 @@
       "about": "Flap competes with Noxa/Pons-class launchpads for permissionless token creation.\n\nLaunchpad volume can dominate chain fee/volume screenshots without proving RWA thesis.\n\nOrientation: mechanisms and competition, not which pad to farm.",
       "status": "community",
       "risks": "Launchpad approval and contract risk; DYOR.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        },
+        {
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap board"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -3061,7 +3178,12 @@
       "about": "Agents are a core official narrative (\u201cAI-native\u201d chain). Virtuals-class platforms are where much of the agent token surface appears.\n\nAgent volume is not the same as RWA product-market fit.",
       "status": "live",
       "risks": "Agent tokens are often highly speculative; treat as noise/attention unless proven utility.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://robinhood.com/us/en/chain/",
+          "label": "Chain page"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -3158,7 +3280,12 @@
       "about": "Gamified mining; fee print on Llama\n\nLandscape role: Gamified / attention app. Attention / meme / gamified sample in the early landscape \u2014 not complete long-tail coverage.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
       "risks": "Highly speculative attention asset; not a research endorsement.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 45676.36675845629,
@@ -3206,7 +3333,12 @@
       "about": "Memes prove distribution and low-friction trading; they do not prove stock-token PMF.\n\nIncluded so the map shows the volume composition story honestly.",
       "status": "sample only",
       "risks": "Extreme speculation; can go to zero. Not a recommendation.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
@@ -3254,7 +3386,12 @@
       "about": "Gaming project small TVL\n\nLandscape role: Gaming / attention. Attention / meme / gamified sample in the early landscape \u2014 not complete long-tail coverage.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
       "risks": "Highly speculative attention asset; not a research endorsement.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "DefiLlama"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
