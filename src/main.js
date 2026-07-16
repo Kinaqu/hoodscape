@@ -1,5 +1,6 @@
 import "./style.css";
 import { layerIcon } from "./icons.js";
+import { mountGraphView, unmountGraphView } from "./graph-mount.tsx";
 
 const LAYER_META = [
   { id: "all", label: "All", desc: "Full landscape" },
@@ -34,6 +35,7 @@ const state = {
   route: "map",
   entities: [],
   pulse: null,
+  graph: null,
   layer: "all",
   q: "",
   sort: "default",
@@ -151,7 +153,7 @@ function parseRoute() {
     state.selected = state.entities.find((e) => e.slug === slug) || null;
     return;
   }
-  state.route = ["map", "how", "submit", "sources"].includes(page) ? page : "map";
+  state.route = ["map", "graph", "how", "submit", "sources"].includes(page) ? page : "map";
   if (page !== "entity") state.selected = null;
 }
 
@@ -161,14 +163,16 @@ function navigate(path) {
 
 async function loadData() {
   try {
-    const [entRes, pulseRes] = await Promise.all([
+    const [entRes, pulseRes, graphRes] = await Promise.all([
       fetch("/data/entities.json"),
       fetch("/data/pulse.json"),
+      fetch("/data/graph.json"),
     ]);
     if (!entRes.ok) throw new Error(`entities.json ${entRes.status}`);
     const ent = await entRes.json();
     state.entities = ent.entities || [];
     state.pulse = pulseRes.ok ? await pulseRes.json() : null;
+    state.graph = graphRes.ok ? await graphRes.json() : null;
     state.loadError = null;
   } catch (e) {
     state.loadError = e.message || String(e);
@@ -234,6 +238,7 @@ function shell(content) {
         </a>
         <nav>
           <a href="#/map" class="${state.route === "map" ? "active" : ""}">Map</a>
+          <a href="#/graph" class="${state.route === "graph" ? "active" : ""}">Graph</a>
           <a href="#/how" class="${state.route === "how" ? "active" : ""}">How to read</a>
           <a href="#/sources" class="${state.route === "sources" ? "active" : ""}">Sources</a>
           <a href="#/submit" class="nav-cta ${state.route === "submit" ? "active" : ""}">Submit</a>
@@ -664,6 +669,38 @@ function renderSubmit() {
   `;
 }
 
+function renderGraph() {
+  if (!state.graph?.nodes?.length) {
+    return `
+      <article class="page-prose">
+        <h1>Ecosystem graph</h1>
+        <p class="lede">Graph data not loaded. Run <code>npm run research:graph</code> and refresh.</p>
+        <a class="back-link" href="#/map">← Back to map</a>
+      </article>
+    `;
+  }
+  return `
+    <section class="hero graph-hero">
+      <div class="hero-top">
+        <div>
+          <h1>Ecosystem graph</h1>
+          <p class="lead">
+            How projects connect — partnerships, infra, liquidity, intel. Orientation only, not endorsements.
+          </p>
+        </div>
+        <div class="badge-row">
+          <span class="badge accent">${state.graph.node_count ?? state.graph.nodes.length} nodes</span>
+          <span class="badge">${state.graph.edge_count ?? state.graph.edges.length} edges</span>
+          <span class="badge warn">NFA</span>
+        </div>
+      </div>
+    </section>
+    <div class="map-stage graph-stage">
+      <div id="graph-mount"></div>
+    </div>
+  `;
+}
+
 function renderSources() {
   const primary = [
     ["Robinhood Chain", "https://robinhood.com/us/en/chain/"],
@@ -717,6 +754,17 @@ function resultsKey() {
   return [state.route, state.layer, state.sort, state.conf, state.q, state.view].join("|");
 }
 
+let graphMounted = false;
+let lastRenderedRoute = null;
+
+function updateNavActive() {
+  document.querySelectorAll(".site-header nav a").forEach((a) => {
+    const href = a.getAttribute("href") || "";
+    const page = href.replace(/^#\/?/, "").split("/")[0];
+    a.classList.toggle("active", page === state.route);
+  });
+}
+
 function setHash(path) {
   const next = `#/${path}`;
   if (location.hash === next) return;
@@ -742,14 +790,20 @@ function bindPanelEvents() {
   });
 }
 
+function setPanelScrollLock(open) {
+  document.body.classList.toggle("panel-open", open);
+}
+
 function mountPanel(entity) {
   const root = $("#panel-root");
   if (!root) return;
   if (!entity) {
     root.innerHTML = "";
+    setPanelScrollLock(false);
     return;
   }
   root.innerHTML = renderPanel(entity);
+  setPanelScrollLock(true);
   bindPanelEvents();
 }
 
@@ -763,10 +817,29 @@ function render(options = {}) {
     return;
   }
 
+  const prevRoute = lastRenderedRoute;
+  if (prevRoute === "graph" && state.route === "graph" && graphMounted) {
+    const live = $("#graph-mount")?.querySelector(".graph-view");
+    if (live) {
+      updateNavActive();
+      if (state.selected) mountPanel(state.selected);
+      else mountPanel(null);
+      return;
+    }
+    graphMounted = false;
+    unmountGraphView();
+  }
+
+  if (prevRoute === "graph" && state.route !== "graph") {
+    unmountGraphView();
+    graphMounted = false;
+  }
+
   let body = "";
   if (state.route === "how") body = renderHow();
   else if (state.route === "submit") body = renderSubmit();
   else if (state.route === "sources") body = renderSources();
+  else if (state.route === "graph") body = renderGraph();
   else body = renderMap();
 
   // Preserve scroll when re-rendering map filters
@@ -790,6 +863,25 @@ function render(options = {}) {
   if (state.selected) mountPanel(state.selected);
   else mountPanel(null);
 
+  if (state.route === "graph") {
+    const mount = $("#graph-mount");
+    if (mount && state.graph) {
+      unmountGraphView();
+      requestAnimationFrame(() => {
+        const el = $("#graph-mount");
+        if (!el || state.route !== "graph" || !state.graph) return;
+        mountGraphView(el, {
+          graph: state.graph,
+          entities: state.entities,
+          onNodeClick: (slug) => openEntity(slug),
+        });
+        graphMounted = true;
+      });
+    }
+  }
+
+  lastRenderedRoute = state.route;
+
   if (state.route === "map") {
     window.scrollTo(0, prevScroll);
   }
@@ -799,6 +891,12 @@ function openEntity(slug) {
   const ent = state.entities.find((x) => x.slug === slug) || null;
   if (!ent) return;
   state.selected = ent;
+
+  if (state.route === "graph") {
+    mountPanel(ent);
+    return;
+  }
+
   state.route = "map";
   setHash(`entity/${slug}`);
 
@@ -814,6 +912,10 @@ function openEntity(slug) {
 function closeEntity() {
   if (!state.selected && !$("#panel-root")?.innerHTML) return;
   state.selected = null;
+  if (state.route === "graph") {
+    mountPanel(null);
+    return;
+  }
   setHash("map");
   mountPanel(null);
 }
@@ -924,6 +1026,15 @@ function onHashChange() {
 
   // Soft transitions when map DOM already exists
   const mapAlive = Boolean($(".layer-overview") || $("#results"));
+
+  if (state.route === "graph" && prevRoute === "graph") {
+    const nextSlug = state.selected?.slug || null;
+    if (nextSlug !== prevSlug) {
+      if (state.selected) mountPanel(state.selected);
+      else mountPanel(null);
+    }
+    return;
+  }
 
   if (mapAlive && state.route === "map") {
     const nextSlug = state.selected?.slug || null;

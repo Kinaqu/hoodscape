@@ -1,0 +1,49 @@
+export interface GraphNode {
+  id: string;
+  name: string;
+  layer: string;
+  confidence: string;
+  category: string;
+  weight: string;
+}
+
+export interface GraphEdge {
+  from: string;
+  to: string;
+  type: string;
+  label: string;
+  explanation: string;
+  confidence: string;
+  strength: string;
+  directed: boolean;
+  evidence: { url: string; label: string; proves?: string }[];
+}
+
+export interface GraphData {
+  generated_at_utc?: string;
+  node_count?: number;
+  edge_count?: number;
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+}
+
+export type ConfFilter = "high-medium" | "all" | "high" | "medium" | "low";
+
+export interface EntityVisual {
+  candidates: string[];
+  monogram: string;
+  hue: number;
+}
+
+export interface GraphEntity {
+  slug: string;
+  name: string;
+  logo?: string;
+  website?: string;
+  twitter?: string;
+  display?: {
+    monogram?: string;
+    hue?: number;
+    logo_domain?: string;
+  };
+}

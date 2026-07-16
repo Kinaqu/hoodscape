@@ -1,0 +1,2137 @@
+{
+  "generated_at_utc": "2026-07-16T16:57:43Z",
+  "entity_count": 72,
+  "manual_edge_count": 226,
+  "unique_directed_pairs": 226,
+  "auto_fill_candidates": 0,
+  "asymmetric_pairs": 132,
+  "missing_targets": [],
+  "text_mining_candidates": 24,
+  "orphans_under_2_links": [],
+  "manual_edges": [
+    {
+      "from_slug": "robinhood-crypto",
+      "from_name": "Robinhood Crypto",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinhood-crypto",
+      "from_name": "Robinhood Crypto",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinhood-crypto",
+      "from_name": "Robinhood Crypto",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinhood-crypto",
+      "from_name": "Robinhood Crypto",
+      "to_slug": "robinhood-chain-docs",
+      "to_name": "Robinhood Chain Docs",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinhood-chain-docs",
+      "from_name": "Robinhood Chain Docs",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinhood-chain-docs",
+      "from_name": "Robinhood Chain Docs",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-chain-docs",
+      "from_name": "Robinhood Chain Docs",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-chain-docs",
+      "from_name": "Robinhood Chain Docs",
+      "to_slug": "quicknode",
+      "to_name": "QuickNode",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-wallet",
+      "from_name": "Robinhood Wallet",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinhood-wallet",
+      "from_name": "Robinhood Wallet",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-wallet",
+      "from_name": "Robinhood Wallet",
+      "to_slug": "1inch",
+      "to_name": "1inch",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-wallet",
+      "from_name": "Robinhood Wallet",
+      "to_slug": "trust-wallet",
+      "to_name": "Trust Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "usdg-paxos",
+      "to_name": "USDG / Paxos",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "spark",
+      "to_name": "Spark",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "ethena",
+      "to_name": "Ethena",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "steakhouse",
+      "to_name": "Steakhouse",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "maple",
+      "to_name": "Maple",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "stock-tokens-official",
+      "from_name": "Stock Tokens (official)",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "stock-tokens-official",
+      "from_name": "Stock Tokens (official)",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "stock-tokens-official",
+      "from_name": "Stock Tokens (official)",
+      "to_slug": "rialto",
+      "to_name": "Rialto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "stock-tokens-official",
+      "from_name": "Stock Tokens (official)",
+      "to_slug": "usdg-paxos",
+      "to_name": "USDG / Paxos",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "stock-tokens-official",
+      "from_name": "Stock Tokens (official)",
+      "to_slug": "chainlink",
+      "to_name": "Chainlink",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "vlad-tenev",
+      "from_name": "Vlad Tenev",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "vlad-tenev",
+      "from_name": "Vlad Tenev",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "vlad-tenev",
+      "from_name": "Vlad Tenev",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "usdg-paxos",
+      "from_name": "USDG / Paxos",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "usdg-paxos",
+      "from_name": "USDG / Paxos",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "usdg-paxos",
+      "from_name": "USDG / Paxos",
+      "to_slug": "spark",
+      "to_name": "Spark",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arbitrum",
+      "from_name": "Arbitrum",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "arbitrum",
+      "from_name": "Arbitrum",
+      "to_slug": "robinhood-chain-docs",
+      "to_name": "Robinhood Chain Docs",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "chainlink",
+      "from_name": "Chainlink",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "chainlink",
+      "from_name": "Chainlink",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "chainlink",
+      "from_name": "Chainlink",
+      "to_slug": "layerzero",
+      "to_name": "LayerZero",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "alchemy",
+      "from_name": "Alchemy",
+      "to_slug": "quicknode",
+      "to_name": "QuickNode",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "alchemy",
+      "from_name": "Alchemy",
+      "to_slug": "robinhood-chain-docs",
+      "to_name": "Robinhood Chain Docs",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "alchemy",
+      "from_name": "Alchemy",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "layerzero",
+      "from_name": "LayerZero",
+      "to_slug": "symbiosis",
+      "to_name": "Symbiosis",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "layerzero",
+      "from_name": "LayerZero",
+      "to_slug": "chainlink",
+      "to_name": "Chainlink",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "layerzero",
+      "from_name": "LayerZero",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "trm-labs",
+      "from_name": "TRM Labs",
+      "to_slug": "chainalysis",
+      "to_name": "Chainalysis",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "trm-labs",
+      "from_name": "TRM Labs",
+      "to_slug": "blockaid",
+      "to_name": "Blockaid",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "trm-labs",
+      "from_name": "TRM Labs",
+      "to_slug": "fireblocks",
+      "to_name": "Fireblocks",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "bitgo",
+      "from_name": "BitGo",
+      "to_slug": "fireblocks",
+      "to_name": "Fireblocks",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "bitgo",
+      "from_name": "BitGo",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "bitgo",
+      "from_name": "BitGo",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "privy",
+      "from_name": "Privy",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "privy",
+      "from_name": "Privy",
+      "to_slug": "quicknode",
+      "to_name": "QuickNode",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "privy",
+      "from_name": "Privy",
+      "to_slug": "robinhood-chain-docs",
+      "to_name": "Robinhood Chain Docs",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "quicknode",
+      "from_name": "QuickNode",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "quicknode",
+      "from_name": "QuickNode",
+      "to_slug": "robinhood-chain-docs",
+      "to_name": "Robinhood Chain Docs",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "quicknode",
+      "from_name": "QuickNode",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "blockscout",
+      "from_name": "Blockscout",
+      "to_slug": "robinhood-chain-docs",
+      "to_name": "Robinhood Chain Docs",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "blockscout",
+      "from_name": "Blockscout",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "allium",
+      "from_name": "Allium",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "allium",
+      "from_name": "Allium",
+      "to_slug": "chainlink",
+      "to_name": "Chainlink",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "allium",
+      "from_name": "Allium",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "fireblocks",
+      "from_name": "Fireblocks",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "fireblocks",
+      "from_name": "Fireblocks",
+      "to_slug": "chainlink",
+      "to_name": "Chainlink",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "fireblocks",
+      "from_name": "Fireblocks",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "chainalysis",
+      "from_name": "Chainalysis",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "chainalysis",
+      "from_name": "Chainalysis",
+      "to_slug": "chainlink",
+      "to_name": "Chainlink",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "chainalysis",
+      "from_name": "Chainalysis",
+      "to_slug": "alchemy",
+      "to_name": "Alchemy",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "blockaid",
+      "from_name": "Blockaid",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "blockaid",
+      "from_name": "Blockaid",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "blockaid",
+      "from_name": "Blockaid",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "trust-wallet",
+      "from_name": "Trust Wallet",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "trust-wallet",
+      "from_name": "Trust Wallet",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "rialto",
+      "to_name": "Rialto",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "pleiades",
+      "to_name": "Pleiades",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "1inch",
+      "to_name": "1inch",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "0x",
+      "to_name": "0x",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "rialto",
+      "from_name": "Rialto",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "rialto",
+      "from_name": "Rialto",
+      "to_slug": "pleiades",
+      "to_name": "Pleiades",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "rialto",
+      "from_name": "Rialto",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "rialto",
+      "from_name": "Rialto",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "pleiades",
+      "from_name": "Pleiades",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pleiades",
+      "from_name": "Pleiades",
+      "to_slug": "rialto",
+      "to_name": "Rialto",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pleiades",
+      "from_name": "Pleiades",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "1inch",
+      "from_name": "1inch",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "1inch",
+      "from_name": "1inch",
+      "to_slug": "0x",
+      "to_name": "0x",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "1inch",
+      "from_name": "1inch",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "0x",
+      "from_name": "0x",
+      "to_slug": "1inch",
+      "to_name": "1inch",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "0x",
+      "from_name": "0x",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "0x",
+      "from_name": "0x",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "usdg-paxos",
+      "to_name": "USDG / Paxos",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "spark",
+      "to_name": "Spark",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "steakhouse",
+      "to_name": "Steakhouse",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "ethena",
+      "to_name": "Ethena",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "maple",
+      "to_name": "Maple",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "spark",
+      "from_name": "Spark",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "spark",
+      "from_name": "Spark",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "spark",
+      "from_name": "Spark",
+      "to_slug": "usdg-paxos",
+      "to_name": "USDG / Paxos",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "ethena",
+      "from_name": "Ethena",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "ethena",
+      "from_name": "Ethena",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "ethena",
+      "from_name": "Ethena",
+      "to_slug": "usdg-paxos",
+      "to_name": "USDG / Paxos",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "steakhouse",
+      "from_name": "Steakhouse",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "steakhouse",
+      "from_name": "Steakhouse",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "steakhouse",
+      "from_name": "Steakhouse",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "maple",
+      "from_name": "Maple",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "maple",
+      "from_name": "Maple",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "maple",
+      "from_name": "Maple",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arcus",
+      "from_name": "Arcus",
+      "to_slug": "lighter",
+      "to_name": "Lighter",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arcus",
+      "from_name": "Arcus",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arcus",
+      "from_name": "Arcus",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "lighter",
+      "from_name": "Lighter",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "lighter",
+      "from_name": "Lighter",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "curve",
+      "from_name": "Curve",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "curve",
+      "from_name": "Curve",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "curve",
+      "from_name": "Curve",
+      "to_slug": "usdg-paxos",
+      "to_name": "USDG / Paxos",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pancakeswap",
+      "from_name": "PancakeSwap",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pancakeswap",
+      "from_name": "PancakeSwap",
+      "to_slug": "1inch",
+      "to_name": "1inch",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pancakeswap",
+      "from_name": "PancakeSwap",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "swaphood",
+      "from_name": "SwapHood",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "swaphood",
+      "from_name": "SwapHood",
+      "to_slug": "robinswap",
+      "to_name": "RobinSwap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "swaphood",
+      "from_name": "SwapHood",
+      "to_slug": "sheriff-exchange",
+      "to_name": "Sheriff Exchange",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "sheriff-exchange",
+      "from_name": "Sheriff Exchange",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "sheriff-exchange",
+      "from_name": "Sheriff Exchange",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "sheriff-exchange",
+      "from_name": "Sheriff Exchange",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinswap",
+      "from_name": "RobinSwap",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinswap",
+      "from_name": "RobinSwap",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinswap",
+      "from_name": "RobinSwap",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodit",
+      "from_name": "Hoodit",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodit",
+      "from_name": "Hoodit",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodit",
+      "from_name": "Hoodit",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "frothswap",
+      "from_name": "FrothSwap",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "frothswap",
+      "from_name": "FrothSwap",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "frothswap",
+      "from_name": "FrothSwap",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "aeon-protocol",
+      "from_name": "AEON Protocol",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "aeon-protocol",
+      "from_name": "AEON Protocol",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "aeon-protocol",
+      "from_name": "AEON Protocol",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "meridian-predict",
+      "from_name": "Meridian Predict",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "meridian-predict",
+      "from_name": "Meridian Predict",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "meridian-predict",
+      "from_name": "Meridian Predict",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodbets",
+      "from_name": "Hoodbets",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodbets",
+      "from_name": "Hoodbets",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodbets",
+      "from_name": "Hoodbets",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "dexfi-aggregator",
+      "from_name": "DexFi Aggregator",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "dexfi-aggregator",
+      "from_name": "DexFi Aggregator",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "dexfi-aggregator",
+      "from_name": "DexFi Aggregator",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "symbiosis",
+      "from_name": "Symbiosis",
+      "to_slug": "layerzero",
+      "to_name": "LayerZero",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "symbiosis",
+      "from_name": "Symbiosis",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "index-fi",
+      "from_name": "Index Fi",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "index-fi",
+      "from_name": "Index Fi",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "index-fi",
+      "from_name": "Index Fi",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "midas-rwa",
+      "from_name": "Midas RWA",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "midas-rwa",
+      "from_name": "Midas RWA",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "midas-rwa",
+      "from_name": "Midas RWA",
+      "to_slug": "arcus",
+      "to_name": "Arcus",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "noxa-fun",
+      "from_name": "NOXA Fun",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "noxa-fun",
+      "from_name": "NOXA Fun",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "noxa-fun",
+      "from_name": "NOXA Fun",
+      "to_slug": "4-fun",
+      "to_name": "4.fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "noxa-fun",
+      "from_name": "NOXA Fun",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "pons",
+      "from_name": "Pons",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pons",
+      "from_name": "Pons",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "pons",
+      "from_name": "Pons",
+      "to_slug": "4-fun",
+      "to_name": "4.fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "flap",
+      "from_name": "Flap",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "flap",
+      "from_name": "Flap",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "flap",
+      "from_name": "Flap",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "4-fun",
+      "from_name": "4.fun",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "4-fun",
+      "from_name": "4.fun",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "4-fun",
+      "from_name": "4.fun",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "stoxesfun",
+      "from_name": "Stoxesfun",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "stoxesfun",
+      "from_name": "Stoxesfun",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "stoxesfun",
+      "from_name": "Stoxesfun",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hood-fun",
+      "from_name": "hood.fun",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hood-fun",
+      "from_name": "hood.fun",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hood-fun",
+      "from_name": "hood.fun",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "sentry",
+      "from_name": "Sentry",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "sentry",
+      "from_name": "Sentry",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "sentry",
+      "from_name": "Sentry",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinfun",
+      "from_name": "RobinFun",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinfun",
+      "from_name": "RobinFun",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinfun",
+      "from_name": "RobinFun",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "doppler",
+      "from_name": "Doppler",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "doppler",
+      "from_name": "Doppler",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "doppler",
+      "from_name": "Doppler",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "bankr",
+      "from_name": "Bankr",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "bankr",
+      "from_name": "Bankr",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "bankr",
+      "from_name": "Bankr",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "based-alpha",
+      "from_name": "Based Alpha",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "based-alpha",
+      "from_name": "Based Alpha",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "based-alpha",
+      "from_name": "Based Alpha",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "ymym-meme",
+      "from_name": "ymym.meme",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "ymym-meme",
+      "from_name": "ymym.meme",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "ymym-meme",
+      "from_name": "ymym.meme",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodpump",
+      "from_name": "HoodPump",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodpump",
+      "from_name": "HoodPump",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodpump",
+      "from_name": "HoodPump",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arrowpad",
+      "from_name": "ArrowPad",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arrowpad",
+      "from_name": "ArrowPad",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "arrowpad",
+      "from_name": "ArrowPad",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "virtuals",
+      "from_name": "Virtuals",
+      "to_slug": "robinode",
+      "to_name": "RobiNode",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "virtuals",
+      "from_name": "Virtuals",
+      "to_slug": "robinhood-crypto",
+      "to_name": "Robinhood Crypto",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "virtuals",
+      "from_name": "Virtuals",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinode",
+      "from_name": "RobiNode",
+      "to_slug": "stock-tokens-official",
+      "to_name": "Stock Tokens (official)",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "robinode",
+      "from_name": "RobiNode",
+      "to_slug": "virtuals",
+      "to_name": "Virtuals",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "robinode",
+      "from_name": "RobiNode",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "slvr",
+      "from_name": "SLVR",
+      "to_slug": "cash-cat",
+      "to_name": "Cash Cat",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "slvr",
+      "from_name": "SLVR",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "slvr",
+      "from_name": "SLVR",
+      "to_slug": "hoodz",
+      "to_name": "HOODZ",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "cash-cat",
+      "from_name": "Cash Cat",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "cash-cat",
+      "from_name": "Cash Cat",
+      "to_slug": "slvr",
+      "to_name": "SLVR",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "cash-cat",
+      "from_name": "Cash Cat",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "hoodz",
+      "from_name": "HOODZ",
+      "to_slug": "cash-cat",
+      "to_name": "Cash Cat",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodz",
+      "from_name": "HOODZ",
+      "to_slug": "slvr",
+      "to_name": "SLVR",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "hoodz",
+      "from_name": "HOODZ",
+      "to_slug": "noxa-fun",
+      "to_name": "NOXA Fun",
+      "would_auto_fill": false,
+      "same_layer": false
+    },
+    {
+      "from_slug": "news-for-robinhood",
+      "from_name": "News For Robinhood",
+      "to_slug": "the-defi-edge",
+      "to_name": "The DeFi Edge",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "news-for-robinhood",
+      "from_name": "News For Robinhood",
+      "to_slug": "tom-wan",
+      "to_name": "Tom Wan",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "news-for-robinhood",
+      "from_name": "News For Robinhood",
+      "to_slug": "defillama-rh-chain",
+      "to_name": "DefiLlama RH Chain",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "the-defi-edge",
+      "from_name": "The DeFi Edge",
+      "to_slug": "tom-wan",
+      "to_name": "Tom Wan",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "the-defi-edge",
+      "from_name": "The DeFi Edge",
+      "to_slug": "jon-ma",
+      "to_name": "Jon Ma",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "the-defi-edge",
+      "from_name": "The DeFi Edge",
+      "to_slug": "defillama-rh-chain",
+      "to_name": "DefiLlama RH Chain",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "tom-wan",
+      "from_name": "Tom Wan",
+      "to_slug": "the-defi-edge",
+      "to_name": "The DeFi Edge",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "tom-wan",
+      "from_name": "Tom Wan",
+      "to_slug": "defillama-rh-chain",
+      "to_name": "DefiLlama RH Chain",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "tom-wan",
+      "from_name": "Tom Wan",
+      "to_slug": "jon-ma",
+      "to_name": "Jon Ma",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "jon-ma",
+      "from_name": "Jon Ma",
+      "to_slug": "the-defi-edge",
+      "to_name": "The DeFi Edge",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "jon-ma",
+      "from_name": "Jon Ma",
+      "to_slug": "tom-wan",
+      "to_name": "Tom Wan",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "jon-ma",
+      "from_name": "Jon Ma",
+      "to_slug": "defillama-rh-chain",
+      "to_name": "DefiLlama RH Chain",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "eli5defi",
+      "from_name": "Eli5DeFi",
+      "to_slug": "the-defi-edge",
+      "to_name": "The DeFi Edge",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "eli5defi",
+      "from_name": "Eli5DeFi",
+      "to_slug": "tom-wan",
+      "to_name": "Tom Wan",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "eli5defi",
+      "from_name": "Eli5DeFi",
+      "to_slug": "defillama-rh-chain",
+      "to_name": "DefiLlama RH Chain",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "defillama-rh-chain",
+      "from_name": "DefiLlama RH Chain",
+      "to_slug": "the-defi-edge",
+      "to_name": "The DeFi Edge",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "defillama-rh-chain",
+      "from_name": "DefiLlama RH Chain",
+      "to_slug": "tom-wan",
+      "to_name": "Tom Wan",
+      "would_auto_fill": false,
+      "same_layer": true
+    },
+    {
+      "from_slug": "defillama-rh-chain",
+      "from_name": "DefiLlama RH Chain",
+      "to_slug": "jon-ma",
+      "to_name": "Jon Ma",
+      "would_auto_fill": false,
+      "same_layer": true
+    }
+  ],
+  "text_candidates": [
+    {
+      "from_slug": "robinhood-crypto",
+      "from_name": "Robinhood Crypto",
+      "to_slug": "arbitrum",
+      "to_name": "Arbitrum",
+      "source": "text_mining",
+      "snippet": "Robinhood Chain is pitched as a permissionless Layer 2 for financial services and real-world assets, developed on Arbitrum infrastructure. The brokerage app and the chain are different products: app = accounts, KYC, eligibility; chain = rai"
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "steakhouse",
+      "to_name": "Steakhouse",
+      "source": "text_mining",
+      "snippet": "Earn lets eligible users lend dollar-backed USDG via a self-custody path, with an official ~7% APY narrative and insurance claims in newsroom copy. Infrastructure is powered by Morpho; partners named in launch narrative include Steakhouse, "
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "source": "text_mining",
+      "snippet": "Earn lets eligible users lend dollar-backed USDG via a self-custody path, with an official ~7% APY narrative and insurance claims in newsroom copy. Infrastructure is powered by Morpho; partners named in launch narrative include Steakhouse, "
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "ethena",
+      "to_name": "Ethena",
+      "source": "text_mining",
+      "snippet": "Earn lets eligible users lend dollar-backed USDG via a self-custody path, with an official ~7% APY narrative and insurance claims in newsroom copy. Infrastructure is powered by Morpho; partners named in launch narrative include Steakhouse, "
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "spark",
+      "to_name": "Spark",
+      "source": "text_mining",
+      "snippet": "Earn lets eligible users lend dollar-backed USDG via a self-custody path, with an official ~7% APY narrative and insurance claims in newsroom copy. Infrastructure is powered by Morpho; partners named in launch narrative include Steakhouse, "
+    },
+    {
+      "from_slug": "robinhood-earn",
+      "from_name": "Robinhood Earn",
+      "to_slug": "maple",
+      "to_name": "Maple",
+      "source": "text_mining",
+      "snippet": "Earn lets eligible users lend dollar-backed USDG via a self-custody path, with an official ~7% APY narrative and insurance claims in newsroom copy. Infrastructure is powered by Morpho; partners named in launch narrative include Steakhouse, "
+    },
+    {
+      "from_slug": "trust-wallet",
+      "from_name": "Trust Wallet",
+      "to_slug": "robinhood-wallet",
+      "to_name": "Robinhood Wallet",
+      "source": "text_mining",
+      "snippet": "Alternative access path to the chain outside Robinhood Wallet. Promo fee periods are time-boxed \u2014 date every claim. Third-party self-custody wallet with RH Chain swap promo windows."
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "pleiades",
+      "to_name": "Pleiades",
+      "source": "text_mining",
+      "snippet": "Uniswap deployed as the day-1 public liquidity layer for the chain\u2019s open AMM job. Early RH volume spikes on Uniswap can be meme- and incentive-heavy; separate that from stock-token depth. Public AMM depth is a different liquidity job than "
+    },
+    {
+      "from_slug": "uniswap",
+      "from_name": "Uniswap",
+      "to_slug": "rialto",
+      "to_name": "Rialto",
+      "source": "text_mining",
+      "snippet": "Uniswap deployed as the day-1 public liquidity layer for the chain\u2019s open AMM job. Early RH volume spikes on Uniswap can be meme- and incentive-heavy; separate that from stock-token depth. Public AMM depth is a different liquidity job than "
+    },
+    {
+      "from_slug": "rialto",
+      "from_name": "Rialto",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "source": "text_mining",
+      "snippet": "Newsroom and ecosystem copy place Rialto in the onchain spot path for crypto and tokenized assets. Prop AMM / specialized venues solve a different job than public Uniswap pools \u2014 inventory and pricing can differ. Worth separating public AMM"
+    },
+    {
+      "from_slug": "pleiades",
+      "from_name": "Pleiades",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "source": "text_mining",
+      "snippet": "Positioned as the prop side of the day-1 liquidity story vs Uniswap\u2019s public AMM. Corporate chain launches often ship both open and controlled liquidity jobs \u2014 do not merge them into one \u201cDEX blob.\u201d Proprietary AMM / prop trading venue call"
+    },
+    {
+      "from_slug": "morpho",
+      "from_name": "Morpho",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "source": "text_mining",
+      "snippet": "Morpho Blue-class markets dominate early DeFi TVL on the chain. Earn funnels attention to USDG lending, but Morpho also represents general onchain credit infrastructure. Read markets, oracles, and curator setup before treating TVL as \u201csafe "
+    },
+    {
+      "from_slug": "spark",
+      "from_name": "Spark",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "source": "text_mining",
+      "snippet": "Appears in Earn-adjacent and yield job lists; complements Morpho rather than replacing it. Landscape role: Yield / savings jobs. Onchain financial application or venue on Robinhood Chain. Hoodscape is orientation only \u2014 verify primary docs,"
+    },
+    {
+      "from_slug": "ethena",
+      "from_name": "Ethena",
+      "to_slug": "robinhood-earn",
+      "to_name": "Robinhood Earn",
+      "source": "text_mining",
+      "snippet": "Part of the curator/strategy stack around USDG lending stories \u2014 verify actual deployments on RH before assuming exposure. Landscape role: Yield / stable strategy partner. Onchain financial application or venue on Robinhood Chain. Hoodscape"
+    },
+    {
+      "from_slug": "steakhouse",
+      "from_name": "Steakhouse",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "source": "text_mining",
+      "snippet": "Curators shape risk parameters and market design; \u201cpartner\u201d status is not a performance guarantee. Landscape role: Vault curator partner. Onchain financial application or venue on Robinhood Chain. Hoodscape is orientation only \u2014 verify prim"
+    },
+    {
+      "from_slug": "maple",
+      "from_name": "Maple",
+      "to_slug": "morpho",
+      "to_name": "Morpho",
+      "source": "text_mining",
+      "snippet": "Institutional-style credit narratives differ from open Morpho markets \u2014 confirm what is actually live on RH Chain. Landscape role: Credit / lending partner. Onchain financial application or venue on Robinhood Chain. Hoodscape is orientation"
+    },
+    {
+      "from_slug": "lighter",
+      "from_name": "Lighter",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "source": "text_mining",
+      "snippet": "Part of the derivatives and trading surface beyond pure Uniswap spot flow. Treat \u201cintegrated in wallet\u201d marketing as distribution, not a risk free pass. ZK-powered perps/spot venue with wallet integration claims on RH Chain."
+    },
+    {
+      "from_slug": "curve",
+      "from_name": "Curve",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "source": "text_mining",
+      "snippet": "Curve is known for efficient stable and volatile pools on other networks; on RH it appears as a smaller DEX TVL slice. Public AMM depth here is still secondary to Uniswap in early metrics. Useful as a diversification of pool types, not as t"
+    },
+    {
+      "from_slug": "pancakeswap",
+      "from_name": "PancakeSwap",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "source": "text_mining",
+      "snippet": "PancakeSwap extends a familiar multi-chain DEX brand onto RH. Early TVL/volume is modest versus Uniswap\u2019s day-1 footprint. Treat as alternate public swap venue, not the primary liquidity map. Multi-chain DEX with AMM deployments registered "
+    },
+    {
+      "from_slug": "swaphood",
+      "from_name": "SwapHood",
+      "to_slug": "uniswap",
+      "to_name": "Uniswap",
+      "source": "text_mining",
+      "snippet": "SwapHood is a chain-native public AMM rather than a multi-chain bluechip deploy. Useful for understanding native builder surface; depth may be thin versus Uniswap. Compare fees, pools, and routing before size. Native RH DEX (V2/V3) \u2014 early "
+    },
+    {
+      "from_slug": "pons",
+      "from_name": "Pons",
+      "to_slug": "flap",
+      "to_name": "Flap",
+      "source": "text_mining",
+      "snippet": "CT tracked deploy leadership flipping among Noxa/Pons/Flap-class apps. Community posts have flagged approval-surface concerns on related paths \u2014 treat as risk case studies and verify contracts yourself. High-deploy launchpad rail in the RH "
+    },
+    {
+      "from_slug": "flap",
+      "from_name": "Flap",
+      "to_slug": "pons",
+      "to_name": "Pons",
+      "source": "text_mining",
+      "snippet": "Flap competes with Noxa/Pons-class launchpads for permissionless token creation. Launchpad volume can dominate chain fee/volume screenshots without proving RWA thesis. Orientation: mechanisms and competition, not which pad to farm. Launchpa"
+    },
+    {
+      "from_slug": "4-fun",
+      "from_name": "4.fun",
+      "to_slug": "lighter",
+      "to_name": "Lighter",
+      "source": "text_mining",
+      "snippet": "4.fun positions itself as a lighter launch UX on RH Chain. Such rails amplify attention-layer tokens quickly. Read actual docs and contracts \u2014 marketing claims change. Meme launch rail with no-creation-fee / no-bonding-curve marketing claim"
+    },
+    {
+      "from_slug": "4-fun",
+      "from_name": "4.fun",
+      "to_slug": "curve",
+      "to_name": "Curve",
+      "source": "text_mining",
+      "snippet": "4.fun positions itself as a lighter launch UX on RH Chain. Such rails amplify attention-layer tokens quickly. Read actual docs and contracts \u2014 marketing claims change. Meme launch rail with no-creation-fee / no-bonding-curve marketing claim"
+    }
+  ],
+  "asymmetric_sample": [
+    {
+      "from": "bankr",
+      "to": "noxa-fun"
+    },
+    {
+      "from": "hoodz",
+      "to": "cash-cat"
+    },
+    {
+      "from": "news-for-robinhood",
+      "to": "defillama-rh-chain"
+    },
+    {
+      "from": "robinfun",
+      "to": "flap"
+    },
+    {
+      "from": "meridian-predict",
+      "to": "morpho"
+    },
+    {
+      "from": "stoxesfun",
+      "to": "pons"
+    },
+    {
+      "from": "eli5defi",
+      "to": "tom-wan"
+    },
+    {
+      "from": "vlad-tenev",
+      "to": "stock-tokens-official"
+    },
+    {
+      "from": "hoodbets",
+      "to": "uniswap"
+    },
+    {
+      "from": "robinode",
+      "to": "stock-tokens-official"
+    },
+    {
+      "from": "sentry",
+      "to": "flap"
+    },
+    {
+      "from": "privy",
+      "to": "robinhood-chain-docs"
+    },
+    {
+      "from": "robinswap",
+      "to": "arcus"
+    },
+    {
+      "from": "hoodpump",
+      "to": "flap"
+    },
+    {
+      "from": "cash-cat",
+      "to": "uniswap"
+    },
+    {
+      "from": "ymym-meme",
+      "to": "pons"
+    },
+    {
+      "from": "sheriff-exchange",
+      "to": "arcus"
+    },
+    {
+      "from": "blockaid",
+      "to": "robinhood-wallet"
+    },
+    {
+      "from": "dexfi-aggregator",
+      "to": "uniswap"
+    },
+    {
+      "from": "midas-rwa",
+      "to": "arcus"
+    },
+    {
+      "from": "chainalysis",
+      "to": "chainlink"
+    },
+    {
+      "from": "virtuals",
+      "to": "robinhood-crypto"
+    },
+    {
+      "from": "alchemy",
+      "to": "arbitrum"
+    },
+    {
+      "from": "cash-cat",
+      "to": "noxa-fun"
+    },
+    {
+      "from": "lighter",
+      "to": "robinhood-wallet"
+    },
+    {
+      "from": "stoxesfun",
+      "to": "noxa-fun"
+    },
+    {
+      "from": "arrowpad",
+      "to": "flap"
+    },
+    {
+      "from": "dexfi-aggregator",
+      "to": "morpho"
+    },
+    {
+      "from": "bitgo",
+      "to": "robinhood-wallet"
+    },
+    {
+      "from": "slvr",
+      "to": "noxa-fun"
+    }
+  ]
+}
