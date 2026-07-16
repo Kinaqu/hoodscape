@@ -34,7 +34,6 @@ const SITE_LINKS = {
 };
 
 const SUBMIT_X_HANDLE = "Kinaqu123";
-const SUBMIT_X_RECIPIENT_ID = "1523218246425587712";
 
 const SUBMIT_LAYER_OPTIONS = LAYER_META.filter((l) => l.id !== "all").map((l) => ({
   value: l.id,
@@ -923,7 +922,7 @@ function renderSubmit() {
       <h1>Submit a project</h1>
       <p class="lede">
         Request a map listing — curated by <strong style="color:var(--text)">job</strong>, not market cap.
-        Opens a DM to <a href="${SITE_LINKS.twitter}" target="_blank" rel="noopener noreferrer">@${SUBMIT_X_HANDLE}</a> with the listing filled in.
+        Posts a public reply mentioning <a href="${SITE_LINKS.twitter}" target="_blank" rel="noopener noreferrer">@${SUBMIT_X_HANDLE}</a> with your listing — X does not allow pre-filled DMs.
       </p>
 
       <div class="submit-box">
@@ -959,12 +958,12 @@ function renderSubmit() {
           })}
 
           <div class="actions">
-            <button type="submit" class="btn primary">Send DM on X</button>
+            <button type="submit" class="btn primary">Post on X</button>
             <button type="button" class="btn" id="copy-submit">Copy message</button>
           </div>
           <p class="form-note">
-            Opens X direct messages to @${SUBMIT_X_HANDLE} with this form pre-filled. You send when ready.
-            Manual review · no guarantee · disclose affiliations.
+            Opens the X post composer with @${SUBMIT_X_HANDLE} and your listing as a public reply-style mention.
+            Full text is copied as backup. Manual review · no guarantee · disclose affiliations.
           </p>
           <p class="form-note ok" id="form-status" hidden></p>
         </form>
@@ -1302,13 +1301,35 @@ function formatSubmissionMessage(payload) {
   return lines.join("\n");
 }
 
-function buildTwitterDmUrl(message) {
-  const base = `https://x.com/messages/compose?recipient_id=${SUBMIT_X_RECIPIENT_ID}`;
-  const withText = `${base}&text=${encodeURIComponent(message)}`;
-  if (withText.length <= 1900) {
-    return { url: withText, prefilled: true };
+function buildCompactPostText(payload) {
+  const parts = [
+    `@${SUBMIT_X_HANDLE}`,
+    "Hoodscape list",
+    payload.name,
+    payload.layerLabel,
+    payload.jobLabel,
+    payload.url,
+  ];
+  if (payload.twitter) parts.push(payload.twitter);
+  if (payload.proof) parts.push(`Proof: ${payload.proof}`);
+  return parts.join(" · ");
+}
+
+function buildTwitterPostUrl(payload) {
+  const message = formatSubmissionMessage(payload);
+  const full = `@${SUBMIT_X_HANDLE}\n\n${message}`;
+  if (full.length <= 275) {
+    return {
+      url: `https://x.com/intent/tweet?text=${encodeURIComponent(full)}`,
+      truncated: false,
+    };
   }
-  return { url: base, prefilled: false };
+  const compact = buildCompactPostText(payload);
+  const text = compact.length <= 275 ? compact : `${compact.slice(0, 272)}…`;
+  return {
+    url: `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`,
+    truncated: true,
+  };
 }
 
 async function copySubmitMessage(text) {
@@ -1380,15 +1401,13 @@ function bindSubmitForm() {
     }
     const message = formatSubmissionMessage(payload);
     if (openX) {
-      const dm = buildTwitterDmUrl(message);
-      if (!dm.prefilled) {
-        await copySubmitMessage(message);
-      }
-      window.open(dm.url, "_blank", "noopener,noreferrer");
+      const post = buildTwitterPostUrl(payload);
+      await copySubmitMessage(message);
+      window.open(post.url, "_blank", "noopener,noreferrer");
       setSubmitStatus(
-        dm.prefilled
-          ? "DM opened — review the message and hit Send on X."
-          : "DM opened — full message copied, paste into the chat.",
+        post.truncated
+          ? "Post composer opened (compact). Full listing copied — paste in a follow-up if needed."
+          : `Post composer opened with @${SUBMIT_X_HANDLE}. Full listing copied as backup.`,
         true,
       );
       return;
