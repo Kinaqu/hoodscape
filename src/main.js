@@ -940,7 +940,7 @@ function onHashChange() {
   render();
 }
 
-async function boot() {
+export async function boot() {
   $("#app").innerHTML = `<div class="loading">Loading Hoodscape…</div>`;
   await loadData();
   parseRoute();
@@ -950,5 +950,3 @@ async function boot() {
     if (e.key === "Escape" && state.selected) closeEntity();
   });
 }
-
-boot();
