@@ -1491,6 +1491,177 @@ main {
   align-items: center;
 }
 
+/* Graph / mind map */
+.graph-hero {
+  margin-bottom: 0.5rem;
+}
+
+.graph-stage {
+  padding: 0;
+  overflow: hidden;
+}
+
+.graph-stage #graph-mount {
+  min-height: 68vh;
+}
+
+.graph-view {
+  display: flex;
+  flex-direction: column;
+  min-height: 68vh;
+}
+
+.graph-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.75rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.graph-toolbar select {
+  font-family: var(--font);
+  font-size: 0.82rem;
+  padding: 0.42rem 0.65rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+}
+
+.graph-btn {
+  font-family: var(--font);
+  font-size: 0.82rem;
+  padding: 0.42rem 0.75rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--ease), border-color var(--ease), background var(--ease);
+}
+
+.graph-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.graph-meta {
+  margin: 0;
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-family: var(--mono);
+}
+
+.graph-canvas {
+  position: relative;
+  flex: 1;
+  min-height: 420px;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(61, 186, 140, 0.04), transparent),
+    var(--bg-elev);
+  cursor: grab;
+}
+
+.graph-canvas:active {
+  cursor: grabbing;
+}
+
+.graph-empty {
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.graph-tooltip {
+  position: absolute;
+  z-index: 4;
+  width: min(268px, calc(100% - 1.5rem));
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--glass-strong);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+}
+
+.graph-tooltip-type {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.25rem;
+}
+
+.graph-tooltip-label {
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.graph-tooltip-explanation {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.graph-tooltip-evidence {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.45rem;
+}
+
+.graph-tooltip-evidence a {
+  font-size: 0.78rem;
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+.graph-tooltip-evidence a:hover {
+  text-decoration: underline;
+}
+
+.graph-tooltip-conf {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.graph-tooltip-conf.conf-high { color: var(--green); }
+.graph-tooltip-conf.conf-medium { color: var(--amber); }
+.graph-tooltip-conf.conf-low { color: var(--slate); }
+
+.graph-hint {
+  margin: 0;
+  padding: 0.55rem 1rem 0.75rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 640px) {
+  .graph-meta {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .graph-stage #graph-mount,
+  .graph-view {
+    min-height: 58vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card:hover { transform: none; }
 }
