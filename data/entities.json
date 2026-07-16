@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T14:16:30Z",
+  "generated_at_utc": "2026-07-16T14:57:40Z",
   "count": 72,
   "layers": [
     "official",
@@ -277,7 +277,7 @@
       "job": "Company leadership signal",
       "notes": "CEO; builder embed stock-token calls",
       "summary": "CEO / co-founder signal account for product direction (e.g. builder calls to embed stock tokens).",
-      "about": "Useful as Tier-0 primary signal for strategy, not as a protocol docs substitute.",
+      "about": "Useful as Tier-0 primary signal for strategy, not as a protocol docs substitute.\n\nLandscape role: Company leadership signal. Official Robinhood product or leadership surface for the chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "official",
       "risks": "Social posts are not legal or product documentation.",
       "sources": [],
@@ -295,6 +295,10 @@
         {
           "name": "Stock Tokens (official)",
           "slug": "stock-tokens-official"
+        },
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
         }
       ]
     },
@@ -427,7 +431,7 @@
       "job": "RPC & developer infra",
       "notes": "Day-1 infra / RPC partner",
       "summary": "RPC / developer infrastructure partner for builders on Robinhood Chain.",
-      "about": "Node and API infra makes the chain usable for apps; it is not a protocol risk model by itself.",
+      "about": "Node and API infra makes the chain usable for apps; it is not a protocol risk model by itself.\n\nLandscape role: RPC & developer infra. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Infra outages affect UX, not consensus guarantees.",
       "sources": [],
@@ -447,6 +451,10 @@
         {
           "name": "Robinhood Chain Docs",
           "slug": "robinhood-chain-docs"
+        },
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
         }
       ]
     },
@@ -500,10 +508,10 @@
       "website": "",
       "job": "Onchain risk & compliance",
       "notes": "Compliance / screening partner (testnet era)",
-      "summary": "Onchain risk & compliance",
-      "about": "Compliance / screening partner (testnet era)",
+      "summary": "Compliance / screening partner referenced in testnet and ecosystem narratives.",
+      "about": "TRM-class tools support investigations and risk screening for institutions and platforms.\n\nPresence signals compliance stack ambitions for a corporate L2.\n\nNot a consumer trading app.",
       "status": "live",
-      "risks": "",
+      "risks": "Compliance tooling \u2260 user-level scam protection for every wallet action.",
       "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
@@ -513,7 +521,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Chainalysis",
+          "slug": "chainalysis"
+        },
+        {
+          "name": "Blockaid",
+          "slug": "blockaid"
+        },
+        {
+          "name": "Fireblocks",
+          "slug": "fireblocks"
+        }
+      ]
     },
     {
       "id": "e013",
@@ -526,10 +547,10 @@
       "website": "",
       "job": "Institutional custody rails",
       "notes": "Custody partner cited in ecosystem coverage",
-      "summary": "Institutional custody rails",
-      "about": "Custody partner cited in ecosystem coverage",
+      "summary": "Custody partner cited in broader RH Chain institutional coverage.",
+      "about": "Custody rails matter for institutions bridging into onchain products.\n\nDifferent from self-custody Wallet UX for retail.\n\nConfirm product scope before assuming BitGo secures your personal keys.",
       "status": "live",
-      "risks": "",
+      "risks": "Third-party custody terms and operational risk.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -539,7 +560,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Fireblocks",
+          "slug": "fireblocks"
+        },
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        },
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        }
+      ]
     },
     {
       "id": "e014",
@@ -552,10 +586,10 @@
       "website": "",
       "job": "Embedded wallet / auth",
       "notes": "Wallet/auth infra cited in eco maps",
-      "summary": "Embedded wallet / auth",
-      "about": "Wallet/auth infra cited in eco maps",
+      "summary": "Embedded wallet / auth infrastructure cited in eco maps for RH builders.",
+      "about": "Privy-style infra helps apps ship login and wallet UX without full custom key management.\n\nBuilder dependency, not an end-user yield product.",
       "status": "live",
-      "risks": "",
+      "risks": "App integration quality varies; review the app that embeds it.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -565,7 +599,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        },
+        {
+          "name": "QuickNode",
+          "slug": "quicknode"
+        },
+        {
+          "name": "Robinhood Chain Docs",
+          "slug": "robinhood-chain-docs"
+        }
+      ]
     },
     {
       "id": "e015",
@@ -578,10 +625,10 @@
       "website": "",
       "job": "Node & API infra",
       "notes": "RPC/node infra cited in eco maps",
-      "summary": "Node & API infra",
-      "about": "RPC/node infra cited in eco maps",
+      "summary": "Node / RPC API infra for developers building on Robinhood Chain.",
+      "about": "Reliable RPC is table stakes for wallets and dapps.\n\nOutages affect UX, not L2 consensus guarantees.",
       "status": "live",
-      "risks": "",
+      "risks": "Provider availability risk for apps that hard-depend on one endpoint.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -591,7 +638,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        },
+        {
+          "name": "Robinhood Chain Docs",
+          "slug": "robinhood-chain-docs"
+        },
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
+        }
+      ]
     },
     {
       "id": "e016",
@@ -604,10 +664,10 @@
       "website": "",
       "job": "Chain explorer",
       "notes": "Block explorer for the chain",
-      "summary": "Chain explorer",
-      "about": "Block explorer for the chain",
+      "summary": "Block explorer surface for inspecting RH Chain transactions and contracts.",
+      "about": "Explorers are primary tools for verification \u2014 contracts, txs, token holders.\n\nBookmark an explorer when researching any CA on RH.",
       "status": "live",
-      "risks": "",
+      "risks": "UI phishing clones exist industry-wide \u2014 verify URL.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -617,7 +677,16 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Robinhood Chain Docs",
+          "slug": "robinhood-chain-docs"
+        },
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        }
+      ]
     },
     {
       "id": "e017",
@@ -631,9 +700,9 @@
       "job": "Onchain data infra",
       "notes": "Data infra partner (testnet announcement)",
       "summary": "Onchain data infra",
-      "about": "Data infra partner (testnet announcement)",
+      "about": "Data infra partner (testnet announcement)\n\nLandscape role: Onchain data infra. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Infra presence improves UX; it does not remove protocol or bridge risk for end users.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -643,7 +712,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
+        },
+        {
+          "name": "Chainlink",
+          "slug": "chainlink"
+        },
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        }
+      ]
     },
     {
       "id": "e018",
@@ -657,9 +739,9 @@
       "job": "Institutional wallet infra",
       "notes": "Institutional controls cited in eco maps",
       "summary": "Institutional wallet infra",
-      "about": "Institutional controls cited in eco maps",
+      "about": "Institutional controls cited in eco maps\n\nLandscape role: Institutional wallet infra. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Infra presence improves UX; it does not remove protocol or bridge risk for end users.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -669,7 +751,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
+        },
+        {
+          "name": "Chainlink",
+          "slug": "chainlink"
+        },
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        }
+      ]
     },
     {
       "id": "e019",
@@ -683,9 +778,9 @@
       "job": "Compliance analytics",
       "notes": "Compliance tooling cited in eco maps",
       "summary": "Compliance analytics",
-      "about": "Compliance tooling cited in eco maps",
+      "about": "Compliance tooling cited in eco maps\n\nLandscape role: Compliance analytics. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Infra presence improves UX; it does not remove protocol or bridge risk for end users.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -695,7 +790,20 @@
         "infra",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
+        },
+        {
+          "name": "Chainlink",
+          "slug": "chainlink"
+        },
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        }
+      ]
     },
     {
       "id": "e020",
@@ -709,7 +817,7 @@
       "job": "Scam/threat detection",
       "notes": "Day-1 security partner; free builder tier claim",
       "summary": "Security / threat-detection partner with day-1 RH Chain narrative and builder tooling access claims.",
-      "about": "Useful as ecosystem security infrastructure \u2014 not a substitute for user diligence or audits of individual apps.",
+      "about": "Useful as ecosystem security infrastructure \u2014 not a substitute for user diligence or audits of individual apps.\n\nLandscape role: Scam/threat detection. Infrastructure that helps builders and users access Robinhood Chain (RPC, oracles, bridges, compliance, security).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Detection tools reduce some scam surface; they do not eliminate protocol risk.",
       "sources": [],
@@ -729,6 +837,10 @@
         {
           "name": "Uniswap",
           "slug": "uniswap"
+        },
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
         }
       ]
     },
@@ -957,7 +1069,7 @@
       "job": "Swap infrastructure / aggregation",
       "notes": "Aggregator volume visible on Llama DEX overview",
       "summary": "Swap infrastructure / aggregation layer with volume visible on RH DEX overviews.",
-      "about": "Infrastructure for filling swaps across sources \u2014 part of the routing stack, not a destination \u201capp brand\u201d for end users.",
+      "about": "Infrastructure for filling swaps across sources \u2014 part of the routing stack, not a destination \u201capp brand\u201d for end users.\n\nLandscape role: Swap infrastructure / aggregation. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
       "risks": "As with any router, verify allowances and counterparties.",
       "sources": [
@@ -982,6 +1094,10 @@
         {
           "name": "Uniswap",
           "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
         }
       ]
     },
@@ -1053,7 +1169,7 @@
       "job": "Yield / savings jobs",
       "notes": "Spark Savings + liquidity layer on RH",
       "summary": "Yield / savings style protocols on RH (Spark Savings and related liquidity layer).",
-      "about": "Appears in Earn-adjacent and yield job lists; complements Morpho rather than replacing it.",
+      "about": "Appears in Earn-adjacent and yield job lists; complements Morpho rather than replacing it.\n\nLandscape role: Yield / savings jobs. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
       "risks": "Yield products can change parameters; read market docs.",
       "sources": [],
@@ -1092,7 +1208,7 @@
       "job": "Yield / stable strategy partner",
       "notes": "Earn stack partner (newsroom)",
       "summary": "Yield / stable strategy partner named in Robinhood Earn launch narrative.",
-      "about": "Part of the curator/strategy stack around USDG lending stories \u2014 verify actual deployments on RH before assuming exposure.",
+      "about": "Part of the curator/strategy stack around USDG lending stories \u2014 verify actual deployments on RH before assuming exposure.\n\nLandscape role: Yield / stable strategy partner. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Strategy risk is separate from chain and Morpho market risk.",
       "sources": [],
@@ -1131,7 +1247,7 @@
       "job": "Vault curator partner",
       "notes": "Earn / Morpho curator partner (newsroom)",
       "summary": "Vault curator partner referenced in Earn / Morpho ecosystem narrative.",
-      "about": "Curators shape risk parameters and market design; \u201cpartner\u201d status is not a performance guarantee.",
+      "about": "Curators shape risk parameters and market design; \u201cpartner\u201d status is not a performance guarantee.\n\nLandscape role: Vault curator partner. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Curator choices affect borrower/lender outcomes.",
       "sources": [],
@@ -1151,6 +1267,10 @@
         {
           "name": "Robinhood Earn",
           "slug": "robinhood-earn"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
         }
       ]
     },
@@ -1166,7 +1286,7 @@
       "job": "Credit / lending partner",
       "notes": "Earn stack partner (newsroom)",
       "summary": "Credit / lending partner named in Earn stack narrative.",
-      "about": "Institutional-style credit narratives differ from open Morpho markets \u2014 confirm what is actually live on RH Chain.",
+      "about": "Institutional-style credit narratives differ from open Morpho markets \u2014 confirm what is actually live on RH Chain.\n\nLandscape role: Credit / lending partner. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "day-1 partner",
       "risks": "Credit products have default and liquidity risk.",
       "sources": [],
@@ -1186,6 +1306,10 @@
         {
           "name": "Morpho",
           "slug": "morpho"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
         }
       ]
     },
@@ -1274,10 +1398,10 @@
       "website": "https://curve.finance/",
       "job": "Specialized AMM",
       "notes": "Stable/volatile pools on RH",
-      "summary": "Specialized AMM",
-      "about": "Stable/volatile pools on RH",
+      "summary": "Curve-style specialized AMM presence on Robinhood Chain.",
+      "about": "Curve is known for efficient stable and volatile pools on other networks; on RH it appears as a smaller DEX TVL slice.\n\nPublic AMM depth here is still secondary to Uniswap in early metrics.\n\nUseful as a diversification of pool types, not as the main volume venue.",
       "status": "live",
-      "risks": "",
+      "risks": "Pool risk and low early depth \u2014 check actual pair liquidity.",
       "sources": [
         {
           "url": "https://curve.finance/",
@@ -1292,7 +1416,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "USDG / Paxos",
+          "slug": "usdg-paxos"
+        }
+      ]
     },
     {
       "id": "e035",
@@ -1305,10 +1442,10 @@
       "website": "https://pancakeswap.finance/",
       "job": "Multi-chain DEX presence",
       "notes": "AMM V2/V3 presence on RH",
-      "summary": "Multi-chain DEX presence",
-      "about": "AMM V2/V3 presence on RH",
+      "summary": "Multi-chain DEX with AMM deployments registered on Robinhood Chain.",
+      "about": "PancakeSwap extends a familiar multi-chain DEX brand onto RH.\n\nEarly TVL/volume is modest versus Uniswap\u2019s day-1 footprint.\n\nTreat as alternate public swap venue, not the primary liquidity map.",
       "status": "live",
-      "risks": "",
+      "risks": "Cross-chain brand \u2260 identical risk or liquidity on every deployment.",
       "sources": [
         {
           "url": "https://pancakeswap.finance/",
@@ -1323,7 +1460,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "1inch",
+          "slug": "1inch"
+        },
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        }
+      ]
     },
     {
       "id": "e036",
@@ -1336,10 +1486,10 @@
       "website": "",
       "job": "Native public DEX",
       "notes": "Native RH DEX V2/V3",
-      "summary": "Native public DEX",
-      "about": "Native RH DEX V2/V3",
+      "summary": "Native RH DEX (V2/V3) \u2014 early local swap venue.",
+      "about": "SwapHood is a chain-native public AMM rather than a multi-chain bluechip deploy.\n\nUseful for understanding native builder surface; depth may be thin versus Uniswap.\n\nCompare fees, pools, and routing before size.",
       "status": "live",
-      "risks": "",
+      "risks": "Early native venue \u2014 smart contract and liquidity risk.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -1349,7 +1499,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "RobinSwap",
+          "slug": "robinswap"
+        },
+        {
+          "name": "Sheriff Exchange",
+          "slug": "sheriff-exchange"
+        }
+      ]
     },
     {
       "id": "e037",
@@ -1363,9 +1526,9 @@
       "job": "Native DEX",
       "notes": "Small DEX TVL V2/V3",
       "summary": "Native DEX",
-      "about": "Small DEX TVL V2/V3",
+      "about": "Small DEX TVL V2/V3\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1375,7 +1538,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e038",
@@ -1389,9 +1565,9 @@
       "job": "Native DEX",
       "notes": "Native DEX V2/V3 on Llama",
       "summary": "Native DEX",
-      "about": "Native DEX V2/V3 on Llama",
+      "about": "Native DEX V2/V3 on Llama\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1401,7 +1577,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e039",
@@ -1415,9 +1604,9 @@
       "job": "Native DEX",
       "notes": "Small native DEX",
       "summary": "Native DEX",
-      "about": "Small native DEX",
+      "about": "Small native DEX\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1427,7 +1616,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e040",
@@ -1441,9 +1643,9 @@
       "job": "Native DEX",
       "notes": "Small DEX on Llama",
       "summary": "Native DEX",
-      "about": "Small DEX on Llama",
+      "about": "Small DEX on Llama\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1453,7 +1655,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e041",
@@ -1467,9 +1682,9 @@
       "job": "Native DEX",
       "notes": "Small DEX TVL on Llama",
       "summary": "Native DEX",
-      "about": "Small DEX TVL on Llama",
+      "about": "Small DEX TVL on Llama\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1479,7 +1694,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e042",
@@ -1493,9 +1721,9 @@
       "job": "Prediction markets",
       "notes": "Prediction market on RH",
       "summary": "Prediction markets",
-      "about": "Prediction market on RH",
+      "about": "Prediction market on RH\n\nLandscape role: Prediction markets. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -1505,7 +1733,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e043",
@@ -1519,9 +1760,9 @@
       "job": "Prediction markets",
       "notes": "Prediction market (small TVL)",
       "summary": "Prediction markets",
-      "about": "Prediction market (small TVL)",
+      "about": "Prediction market (small TVL)\n\nLandscape role: Prediction markets. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1531,7 +1772,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e044",
@@ -1545,9 +1799,9 @@
       "job": "Yield aggregation",
       "notes": "Yield aggregator on RH",
       "summary": "Yield aggregation",
-      "about": "Yield aggregator on RH",
+      "about": "Yield aggregator on RH\n\nLandscape role: Yield aggregation. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [
         {
           "url": "https://dexfi.com/",
@@ -1562,7 +1816,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e045",
@@ -1617,9 +1884,9 @@
       "job": "Tokenized index product",
       "notes": "Programmatic stock index claims (CT)",
       "summary": "Tokenized index product",
-      "about": "Programmatic stock index claims (CT)",
+      "about": "Programmatic stock index claims (CT)\n\nLandscape role: Tokenized index product. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1629,7 +1896,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e047",
@@ -1643,9 +1923,9 @@
       "job": "Tokenized credit / RWA product",
       "notes": "mGLO day-1 product claims (CT)",
       "summary": "Tokenized credit / RWA product",
-      "about": "mGLO day-1 product claims (CT)",
+      "about": "mGLO day-1 product claims (CT)\n\nLandscape role: Tokenized credit / RWA product. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
-      "risks": "",
+      "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -1655,7 +1935,20 @@
         "defi",
         "live"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        }
+      ]
     },
     {
       "id": "e048",
@@ -1748,10 +2041,10 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Launchpad war; DEX volume on Llama",
-      "summary": "Token launch rail",
-      "about": "Launchpad war; DEX volume on Llama",
+      "summary": "Launchpad rail in the RH deploy race; shows meaningful DEX volume in some overviews.",
+      "about": "Flap competes with Noxa/Pons-class launchpads for permissionless token creation.\n\nLaunchpad volume can dominate chain fee/volume screenshots without proving RWA thesis.\n\nOrientation: mechanisms and competition, not which pad to farm.",
       "status": "community",
-      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "risks": "Launchpad approval and contract risk; DYOR.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -1760,7 +2053,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
+      ]
     },
     {
       "id": "e051",
@@ -1773,10 +2079,10 @@
       "website": "https://4.fun/",
       "job": "Meme launch rail",
       "notes": "No creation fees / no bonding curves claim",
-      "summary": "Meme launch rail",
-      "about": "No creation fees / no bonding curves claim",
+      "summary": "Meme launch rail with no-creation-fee / no-bonding-curve marketing claims.",
+      "about": "4.fun positions itself as a lighter launch UX on RH Chain.\n\nSuch rails amplify attention-layer tokens quickly.\n\nRead actual docs and contracts \u2014 marketing claims change.",
       "status": "community",
-      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "risks": "Meme launch risk + contract risk.",
       "sources": [
         {
           "url": "https://4.fun/",
@@ -1790,7 +2096,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e052",
@@ -1804,7 +2123,7 @@
       "job": "Launchpad (RWA-themed)",
       "notes": "RWA-dividend launch narrative",
       "summary": "Launchpad (RWA-themed)",
-      "about": "RWA-dividend launch narrative",
+      "about": "RWA-dividend launch narrative\n\nLandscape role: Launchpad (RWA-themed). Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1815,7 +2134,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e053",
@@ -1829,7 +2161,7 @@
       "job": "Token launch rail",
       "notes": "Deploy rankings (CT)",
       "summary": "Token launch rail",
-      "about": "Deploy rankings (CT)",
+      "about": "Deploy rankings (CT)\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1840,7 +2172,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e054",
@@ -1854,7 +2199,7 @@
       "job": "Token launch rail",
       "notes": "Launchpad on Llama",
       "summary": "Token launch rail",
-      "about": "Launchpad on Llama",
+      "about": "Launchpad on Llama\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1865,7 +2210,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e055",
@@ -1879,7 +2237,7 @@
       "job": "Token launch rail",
       "notes": "Launchpad on Llama",
       "summary": "Token launch rail",
-      "about": "Launchpad on Llama",
+      "about": "Launchpad on Llama\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1890,7 +2248,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e056",
@@ -1904,7 +2275,7 @@
       "job": "Launch tooling",
       "notes": "Prior week launchpad ranking (CT)",
       "summary": "Launch tooling",
-      "about": "Prior week launchpad ranking (CT)",
+      "about": "Prior week launchpad ranking (CT)\n\nLandscape role: Launch tooling. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1915,7 +2286,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e057",
@@ -1929,7 +2313,7 @@
       "job": "Agent-assisted launches",
       "notes": "Agent launch tooling (CT)",
       "summary": "Agent-assisted launches",
-      "about": "Agent launch tooling (CT)",
+      "about": "Agent launch tooling (CT)\n\nLandscape role: Agent-assisted launches. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1940,7 +2324,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e058",
@@ -1954,7 +2351,7 @@
       "job": "Token launch rail",
       "notes": "Small launchpad TVL",
       "summary": "Token launch rail",
-      "about": "Small launchpad TVL",
+      "about": "Small launchpad TVL\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [
@@ -1970,7 +2367,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e059",
@@ -1984,7 +2394,7 @@
       "job": "Token launch rail",
       "notes": "Small launchpad on Llama",
       "summary": "Token launch rail",
-      "about": "Small launchpad on Llama",
+      "about": "Small launchpad on Llama\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -1995,7 +2405,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e060",
@@ -2009,7 +2432,7 @@
       "job": "Token launch rail",
       "notes": "Small launchpad",
       "summary": "Token launch rail",
-      "about": "Small launchpad",
+      "about": "Small launchpad\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -2020,7 +2443,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e061",
@@ -2034,7 +2470,7 @@
       "job": "Token launch rail",
       "notes": "Small launchpad",
       "summary": "Token launch rail",
-      "about": "Small launchpad",
+      "about": "Small launchpad\n\nLandscape role: Token launch rail. Permissionless token launch rail \u2014 useful for understanding deploy volume, not as investment advice.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "community",
       "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
       "sources": [],
@@ -2045,7 +2481,20 @@
         "launchpad",
         "community"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        }
+      ]
     },
     {
       "id": "e062",
@@ -2138,7 +2587,7 @@
       "job": "Gamified / attention app",
       "notes": "Gamified mining; fee print on Llama",
       "summary": "Gamified / attention app",
-      "about": "Gamified mining; fee print on Llama",
+      "about": "Gamified mining; fee print on Llama\n\nLandscape role: Gamified / attention app. Attention / meme / gamified sample in the early landscape \u2014 not complete long-tail coverage.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
       "risks": "Highly speculative attention asset; not a research endorsement.",
       "sources": [],
@@ -2150,7 +2599,20 @@
         "noise",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Cash Cat",
+          "slug": "cash-cat"
+        },
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "HOODZ",
+          "slug": "hoodz"
+        }
+      ]
     },
     {
       "id": "e065",
@@ -2163,10 +2625,10 @@
       "website": "",
       "job": "Native meme (attention layer)",
       "notes": "High-visibility native meme",
-      "summary": "Native meme (attention layer)",
-      "about": "High-visibility native meme",
+      "summary": "High-visibility native meme on RH Chain \u2014 attention layer sample.",
+      "about": "Memes prove distribution and low-friction trading; they do not prove stock-token PMF.\n\nIncluded so the map shows the volume composition story honestly.",
       "status": "sample only",
-      "risks": "Highly speculative attention asset; not a research endorsement.",
+      "risks": "Extreme speculation; can go to zero. Not a recommendation.",
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
@@ -2176,7 +2638,20 @@
         "noise",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "SLVR",
+          "slug": "slvr"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
+      ]
     },
     {
       "id": "e066",
@@ -2190,7 +2665,7 @@
       "job": "Gaming / attention",
       "notes": "Gaming project small TVL",
       "summary": "Gaming / attention",
-      "about": "Gaming project small TVL",
+      "about": "Gaming project small TVL\n\nLandscape role: Gaming / attention. Attention / meme / gamified sample in the early landscape \u2014 not complete long-tail coverage.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
       "risks": "Highly speculative attention asset; not a research endorsement.",
       "sources": [],
@@ -2202,7 +2677,20 @@
         "noise",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Cash Cat",
+          "slug": "cash-cat"
+        },
+        {
+          "name": "SLVR",
+          "slug": "slvr"
+        },
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        }
+      ]
     },
     {
       "id": "e067",
@@ -2216,9 +2704,9 @@
       "job": "Independent ecosystem intel",
       "notes": "Independent RH intel / wallet clusters",
       "summary": "Independent ecosystem intel",
-      "about": "Independent RH intel / wallet clusters",
+      "about": "Independent RH intel / wallet clusters\n\nLandscape role: Independent ecosystem intel. Research or data voice useful for orientation (usually secondary unless primary-sourced).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
-      "risks": "",
+      "risks": "Secondary commentary can be wrong or late \u2014 prefer primary sources.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -2228,7 +2716,20 @@
         "media",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "The DeFi Edge",
+          "slug": "the-defi-edge"
+        },
+        {
+          "name": "Tom Wan",
+          "slug": "tom-wan"
+        },
+        {
+          "name": "DefiLlama RH Chain",
+          "slug": "defillama-rh-chain"
+        }
+      ]
     },
     {
       "id": "e068",
@@ -2241,10 +2742,10 @@
       "website": "",
       "job": "DeFi research / curation",
       "notes": "Research; memes vs RWA fork framing",
-      "summary": "DeFi research / curation",
-      "about": "Research; memes vs RWA fork framing",
+      "summary": "Mid-tier research/curation account that framed RH\u2019s memes-vs-RWA fork clearly.",
+      "about": "Useful for secondary landscape framing and reading lists.\n\nStill secondary to official docs and onchain data.",
       "status": "sample only",
-      "risks": "",
+      "risks": "Editorial takes can be incomplete \u2014 verify numbers.",
       "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
@@ -2254,7 +2755,20 @@
         "media",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "Tom Wan",
+          "slug": "tom-wan"
+        },
+        {
+          "name": "Jon Ma",
+          "slug": "jon-ma"
+        },
+        {
+          "name": "DefiLlama RH Chain",
+          "slug": "defillama-rh-chain"
+        }
+      ]
     },
     {
       "id": "e069",
@@ -2268,9 +2782,9 @@
       "job": "Onchain data research",
       "notes": "Entropy Advisors; launchpad deploy ranks",
       "summary": "Onchain data research",
-      "about": "Entropy Advisors; launchpad deploy ranks",
+      "about": "Entropy Advisors; launchpad deploy ranks\n\nLandscape role: Onchain data research. Research or data voice useful for orientation (usually secondary unless primary-sourced).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
-      "risks": "",
+      "risks": "Secondary commentary can be wrong or late \u2014 prefer primary sources.",
       "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
@@ -2280,7 +2794,20 @@
         "media",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "The DeFi Edge",
+          "slug": "the-defi-edge"
+        },
+        {
+          "name": "DefiLlama RH Chain",
+          "slug": "defillama-rh-chain"
+        },
+        {
+          "name": "Jon Ma",
+          "slug": "jon-ma"
+        }
+      ]
     },
     {
       "id": "e070",
@@ -2294,9 +2821,9 @@
       "job": "Macro / product research",
       "notes": "Artemis; product thesis letters",
       "summary": "Macro / product research",
-      "about": "Artemis; product thesis letters",
+      "about": "Artemis; product thesis letters\n\nLandscape role: Macro / product research. Research or data voice useful for orientation (usually secondary unless primary-sourced).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
-      "risks": "",
+      "risks": "Secondary commentary can be wrong or late \u2014 prefer primary sources.",
       "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
@@ -2306,7 +2833,20 @@
         "media",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "The DeFi Edge",
+          "slug": "the-defi-edge"
+        },
+        {
+          "name": "Tom Wan",
+          "slug": "tom-wan"
+        },
+        {
+          "name": "DefiLlama RH Chain",
+          "slug": "defillama-rh-chain"
+        }
+      ]
     },
     {
       "id": "e071",
@@ -2320,9 +2860,9 @@
       "job": "Visual research explainers",
       "notes": "Visual explainers; RWA+meme barbell",
       "summary": "Visual research explainers",
-      "about": "Visual explainers; RWA+meme barbell",
+      "about": "Visual explainers; RWA+meme barbell\n\nLandscape role: Visual research explainers. Research or data voice useful for orientation (usually secondary unless primary-sourced).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
-      "risks": "",
+      "risks": "Secondary commentary can be wrong or late \u2014 prefer primary sources.",
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
@@ -2332,7 +2872,20 @@
         "media",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "The DeFi Edge",
+          "slug": "the-defi-edge"
+        },
+        {
+          "name": "Tom Wan",
+          "slug": "tom-wan"
+        },
+        {
+          "name": "DefiLlama RH Chain",
+          "slug": "defillama-rh-chain"
+        }
+      ]
     },
     {
       "id": "e072",
@@ -2346,9 +2899,9 @@
       "job": "TVL / volume / fees dashboard",
       "notes": "Primary public metrics (chainId 4663)",
       "summary": "TVL / volume / fees dashboard",
-      "about": "Primary public metrics (chainId 4663)",
+      "about": "Primary public metrics (chainId 4663)\n\nLandscape role: TVL / volume / fees dashboard. Research or data voice useful for orientation (usually secondary unless primary-sourced).\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "sample only",
-      "risks": "",
+      "risks": "Secondary commentary can be wrong or late \u2014 prefer primary sources.",
       "sources": [
         {
           "url": "https://defillama.com/chain/robinhood-chain",
@@ -2363,7 +2916,20 @@
         "media",
         "sample only"
       ],
-      "related": []
+      "related": [
+        {
+          "name": "The DeFi Edge",
+          "slug": "the-defi-edge"
+        },
+        {
+          "name": "Tom Wan",
+          "slug": "tom-wan"
+        },
+        {
+          "name": "Jon Ma",
+          "slug": "jon-ma"
+        }
+      ]
     }
   ],
   "disclaimer": "NFA. Orientation map only. Not investment advice. Listings are not endorsements."
