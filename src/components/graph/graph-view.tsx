@@ -127,8 +127,13 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
   const [activeEdge, setActiveEdge] = useState<GraphEdge | null>(null);
   const [pointer, setPointer] = useState({ x: 0, y: 0 });
   const [draggingId, setDraggingId] = useState<string | null>(null);
+  const [logoRevision, setLogoRevision] = useState(0);
 
   const visuals = useMemo(() => buildVisualMap(entities), [entities]);
+
+  const bumpLogos = useCallback(() => {
+    setLogoRevision((v) => v + 1);
+  }, []);
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -192,12 +197,11 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
   }, [graphPayload]);
 
   useEffect(() => {
-    const bump = () => fgRef.current?.refresh();
     for (const node of filtered.nodes) {
       const candidates = visuals[node.id]?.candidates ?? [];
-      loadNodeImage(node.id, candidates, imagesRef.current, bump);
+      loadNodeImage(node.id, candidates, imagesRef.current, bumpLogos);
     }
-  }, [filtered, visuals]);
+  }, [filtered, visuals, bumpLogos]);
 
   const paintNode = useCallback(
     (node: SimNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -256,7 +260,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
         ctx.fillText(node.name, x, y + r + 4 / globalScale);
       }
     },
-    [visuals, draggingId],
+    [visuals, draggingId, logoRevision],
   );
 
   const paintPointerArea = useCallback(

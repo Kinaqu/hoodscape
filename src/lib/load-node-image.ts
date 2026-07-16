@@ -2,6 +2,14 @@ import { needsCrossOrigin } from "@/lib/resolve-logo";
 
 export type ImgState = HTMLImageElement | "loading" | "error";
 
+function safeUpdate(onUpdate: () => void) {
+  try {
+    onUpdate();
+  } catch {
+    // never crash the graph tree from an image callback
+  }
+}
+
 export function loadNodeImage(
   nodeId: string,
   candidates: string[],
@@ -10,7 +18,7 @@ export function loadNodeImage(
 ) {
   if (!candidates.length) {
     cache.set(nodeId, "error");
-    onUpdate();
+    safeUpdate(onUpdate);
     return;
   }
 
@@ -24,7 +32,7 @@ export function loadNodeImage(
   const tryNext = () => {
     if (idx >= candidates.length) {
       cache.set(nodeId, "error");
-      onUpdate();
+      safeUpdate(onUpdate);
       return;
     }
 
@@ -35,7 +43,7 @@ export function loadNodeImage(
     img.decoding = "async";
     img.onload = () => {
       cache.set(nodeId, img);
-      onUpdate();
+      safeUpdate(onUpdate);
     };
     img.onerror = tryNext;
     img.src = url;

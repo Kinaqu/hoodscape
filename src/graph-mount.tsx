@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot, type Root } from "react-dom/client";
+import { GraphErrorBoundary } from "@/components/graph/graph-error-boundary";
 import { GraphView } from "@/components/graph/graph-view";
 import type { GraphData, GraphEntity } from "@/types/graph";
 
@@ -21,11 +22,13 @@ export function mountGraphView(
   }
   root.render(
     <StrictMode>
-      <GraphView
-        graph={props.graph}
-        entities={props.entities}
-        onNodeClick={props.onNodeClick}
-      />
+      <GraphErrorBoundary>
+        <GraphView
+          graph={props.graph}
+          entities={props.entities}
+          onNodeClick={props.onNodeClick}
+        />
+      </GraphErrorBoundary>
     </StrictMode>,
   );
 }
