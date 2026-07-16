@@ -164,12 +164,15 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
   const canvasRef = useRef<HTMLDivElement>(null);
   const fgRef = useRef<ForceGraphMethods<SimNode, SimLink> | undefined>(undefined);
   const fitPending = useRef(true);
+  const pinHoverRef = useRef(false);
   const imagesRef = useRef(new Map<string, ImgState>());
   const [panelAnchor, setPanelAnchor] = useState({ x: 0, y: 0 });
   const [size, setSize] = useState({ w: 800, h: 560 });
   const [confFilter, setConfFilter] = useState<ConfFilter>("high-medium");
   const [layerFilter, setLayerFilter] = useState("all");
+  const [hoveredLink, setHoveredLink] = useState<SimLink | null>(null);
   const [hoveredLinkKey, setHoveredLinkKey] = useState<string | null>(null);
+  const [linkPinPos, setLinkPinPos] = useState({ x: 0, y: 0 });
   const [edgePanel, setEdgePanel] = useState<GraphEdge | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [logoRevision, setLogoRevision] = useState(0);
@@ -342,16 +345,62 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
     return { x: event.clientX - rect.left, y: event.clientY - rect.top };
   }, []);
 
-  const handleLinkHover = useCallback((link: LinkObject<SimNode, SimLink> | null) => {
-    setHoveredLinkKey(link ? linkKey(link as SimLink) : null);
+  const updateLinkPinPos = useCallback((link: SimLink) => {
+    const fg = fgRef.current;
+    const rect = interactiveRef.current?.getBoundingClientRect();
+    if (!fg || !rect) return;
+
+    const src = typeof link.source === "object" ? link.source : null;
+    const tgt = typeof link.target === "object" ? link.target : null;
+    if (!src || !tgt || src.x == null || src.y == null || tgt.x == null || tgt.y == null) return;
+
+    const midX = (src.x + tgt.x) / 2;
+    const midY = (src.y + tgt.y) / 2;
+    const coords = fg.graph2ScreenCoords(midX, midY);
+    if (!coords) return;
+
+    setLinkPinPos({
+      x: Math.min(Math.max(coords.x, 48), size.w - 48),
+      y: Math.min(Math.max(coords.y - 10, 28), size.h - 28),
+    });
+  }, [size.h, size.w]);
+
+  const clearHoveredLink = useCallback(() => {
+    setHoveredLink(null);
+    setHoveredLinkKey(null);
   }, []);
 
-  const handleLinkRightClick = useCallback(
-    (link: LinkObject<SimNode, SimLink>, event: MouseEvent) => {
-      event.preventDefault();
-      openEdgePanel(link as SimLink, anchorFromEvent(event));
+  const handleLinkHover = useCallback(
+    (link: LinkObject<SimNode, SimLink> | null) => {
+      if (!link) {
+        if (!pinHoverRef.current) clearHoveredLink();
+        return;
+      }
+      const simLink = link as SimLink;
+      setHoveredLink(simLink);
+      setHoveredLinkKey(linkKey(simLink));
+      updateLinkPinPos(simLink);
     },
-    [anchorFromEvent, openEdgePanel],
+    [clearHoveredLink, updateLinkPinPos],
+  );
+
+  const handleLinkClick = useCallback(
+    (link: LinkObject<SimNode, SimLink>, event: MouseEvent) => {
+      event.stopPropagation();
+      openEdgePanel(link as SimLink, anchorFromEvent(event));
+      clearHoveredLink();
+    },
+    [anchorFromEvent, clearHoveredLink, openEdgePanel],
+  );
+
+  const handleLinkPinClick = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      event.stopPropagation();
+      if (!hoveredLink) return;
+      openEdgePanel(hoveredLink, anchorFromEvent(event.nativeEvent));
+      clearHoveredLink();
+    },
+    [anchorFromEvent, clearHoveredLink, hoveredLink, openEdgePanel],
   );
 
   const handleNodeClick = useCallback(
@@ -404,7 +453,9 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
         ref={interactiveRef}
         className="graph-interactive"
         style={{ minHeight: 420, height: size.h }}
-        onContextMenu={(e) => e.preventDefault()}
+        onMouseMove={() => {
+          if (hoveredLink) updateLinkPinPos(hoveredLink);
+        }}
       >
         <div
           ref={canvasRef}
@@ -448,7 +499,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
                 node.fy = node.y;
               }}
               onLinkHover={handleLinkHover}
-              onLinkRightClick={handleLinkRightClick}
+              onLinkClick={handleLinkClick}
               onBackgroundClick={closeEdgePanel}
               warmupTicks={120}
               cooldownTicks={160}
@@ -463,6 +514,29 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
             />
           )}
         </div>
+
+        {hoveredLink && !edgePanel && (
+          <button
+            type="button"
+            className="graph-link-pin"
+            aria-label="View connection evidence"
+            style={{
+              left: linkPinPos.x,
+              top: linkPinPos.y,
+            }}
+            onMouseEnter={() => {
+              pinHoverRef.current = true;
+            }}
+            onMouseLeave={() => {
+              pinHoverRef.current = false;
+              clearHoveredLink();
+            }}
+            onMouseDown={(e) => e.stopPropagation()}
+            onClick={handleLinkPinClick}
+          >
+            View evidence
+          </button>
+        )}
 
         {edgePanel && (
           <div
@@ -480,7 +554,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
       </div>
 
       <p className="graph-hint">
-        Drag nodes · right-click a connection for evidence (stays open) · left-click node for details · Esc to close
+        Drag nodes · hover a connection and click to view evidence (stays open) · click node for details · Esc to close
       </p>
     </div>
   );
