@@ -1,16 +1,18 @@
 {
-  "generated_at_utc": "2026-07-16T16:57:43Z",
+  "generated_at_utc": "2026-07-16T17:07:44Z",
   "node_count": 72,
-  "edge_count": 156,
+  "edge_count": 182,
   "edge_types": [
     "competitive",
     "ecosystem_directory",
     "infra_dependency",
     "lending_stack",
     "liquidity_stack",
+    "media_intel",
     "official_stack",
     "partner_named",
-    "product_integration"
+    "product_integration",
+    "twitter_mention"
   ],
   "nodes": [
     {
@@ -1068,6 +1070,24 @@
     },
     {
       "from": "blockaid",
+      "to": "robinhood-wallet",
+      "type": "product_integration",
+      "label": "Day-1 security partner",
+      "explanation": "Blockaid is cited as ecosystem security/threat-detection partner with Wallet-adjacent builder protection narratives on RH Chain.",
+      "confidence": "high",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/chain/",
+          "label": "Chain page"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
+    },
+    {
+      "from": "blockaid",
       "to": "uniswap",
       "type": "partner_named",
       "label": "Day-1 / launch partner",
@@ -1114,6 +1134,24 @@
       ],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "cash-cat",
+      "to": "noxa-fun",
+      "type": "competitive",
+      "label": "Meme attention via launch rails",
+      "explanation": "Native memes like Cash Cat often ride launchpad distribution rails (NOXA-class pads) for early attention \u2014 does not imply official endorsement.",
+      "confidence": "low",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
     },
     {
       "from": "cash-cat",
@@ -1936,6 +1974,60 @@
       "source": "csv_manual"
     },
     {
+      "from": "news-for-robinhood",
+      "to": "cash-cat",
+      "type": "twitter_mention",
+      "label": "$WALLET cluster narrative",
+      "explanation": "@NewsForRH mapped wallet/deployer clusters around high-visibility native tokens including Cash Cat-class attention assets. CT intel \u2014 verify onchain.",
+      "confidence": "low",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/NewsForRH/status/2077717819823886447",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "news-for-robinhood",
+      "to": "the-defi-edge",
+      "type": "media_intel",
+      "label": "Intel cites research tier",
+      "explanation": "News For Robinhood maps ecosystem intel and references Tier-1 research accounts like The DeFi Edge for narrative framing.",
+      "confidence": "low",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/NewsForRH/status/2077717819823886447",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
+    },
+    {
+      "from": "news-for-robinhood",
+      "to": "tom-wan",
+      "type": "media_intel",
+      "label": "Intel cites onchain research",
+      "explanation": "News For Robinhood sits in the same CT intel cluster as Tom Wan deploy/volume posts \u2014 secondary source only.",
+      "confidence": "low",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/NewsForRH/status/2077717819823886447",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
+    },
+    {
       "from": "noxa-fun",
       "to": "4-fun",
       "type": "competitive",
@@ -1957,27 +2049,37 @@
       "from": "noxa-fun",
       "to": "flap",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "NOXA Fun and Flap compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Launchpad war triad",
+      "explanation": "NOXA and Flap trade leaderboard positions with Pons in early RH launchpad war coverage.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
-      "evidence": [],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
     },
     {
       "from": "noxa-fun",
       "to": "pons",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "NOXA Fun and Pons compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Launchpad war leaderboard",
+      "explanation": "NOXA and Pons are repeatedly paired in CT deploy-rank narratives as leading RH launchpads in week-one metrics.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
-      "evidence": [],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
     },
     {
       "from": "noxa-fun",
@@ -2124,16 +2226,39 @@
     },
     {
       "from": "pons",
+      "to": "4-fun",
+      "type": "twitter_mention",
+      "label": "Approval-surface risk flag",
+      "explanation": "@Nikitont flagged Multicall3 / approval-surface concerns on paths related to Pons-class launchpads. Treat as risk lead \u2014 verify contracts before interacting.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/Nikitont/status/2077713827181773021",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "pons",
       "to": "flap",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "Pons and Flap compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
+      "label": "Pons flipped Flap on deploys (15 Jul)",
+      "explanation": "@tomwanhh reported Pons overtook Flap in RH launchpad deploy counts around 15 Jul 2026. Competitive leaderboard only \u2014 not safety or quality ranking.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "pons",
@@ -2240,6 +2365,24 @@
       "evidence": [],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "rialto",
+      "to": "pleiades",
+      "type": "liquidity_stack",
+      "label": "Day-1 prop liquidity pair",
+      "explanation": "Rialto and Pleiades appear as paired prop/specialized liquidity venues in day-1 mainnet trading lists versus public Uniswap pools.",
+      "confidence": "high",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "rialto",
@@ -2365,6 +2508,24 @@
     {
       "from": "robinhood-crypto",
       "to": "arbitrum",
+      "type": "infra_dependency",
+      "label": "Built on Arbitrum L2",
+      "explanation": "Official RH Chain page states the network is developed on Arbitrum Layer 2 infrastructure (Orbit-class stack context).",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/chain/",
+          "label": "Chain page"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
+    },
+    {
+      "from": "robinhood-crypto",
+      "to": "arbitrum",
       "type": "partner_named",
       "label": "Day-1 / launch partner (text)",
       "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Robinhood Crypto. Partner naming is orientation only \u2014 not performance or security endorsement. Arbitrum appears in Robinhood Crypto about/summary copy.",
@@ -2476,111 +2637,91 @@
       "from": "robinhood-earn",
       "to": "ethena",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Robinhood Earn and Ethena sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Earn stack partner",
+      "explanation": "Newsroom cites Ethena in Robinhood Earn partner stack around USDG lending on RH Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
           "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
           "label": "Newsroom"
         }
       ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "robinhood-earn",
       "to": "maple",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Robinhood Earn and Maple sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Earn stack partner",
+      "explanation": "Maple named in Earn launch partner stack \u2014 institutional credit lane distinct from open Morpho markets.",
       "confidence": "high",
-      "strength": "strong",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
         {
           "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
           "label": "Newsroom"
         }
       ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "robinhood-earn",
       "to": "morpho",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Robinhood Earn and Morpho sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Earn powered by Morpho",
+      "explanation": "Official Earn copy and newsroom name Morpho as lending infrastructure behind USDG yield narrative on RH Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
           "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
           "label": "Newsroom"
         }
       ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "robinhood-earn",
       "to": "spark",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Robinhood Earn and Spark sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Earn stack partner",
+      "explanation": "Spark appears in official Earn-adjacent partner narrative alongside Morpho on RH Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
           "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
           "label": "Newsroom"
         }
       ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "robinhood-earn",
       "to": "steakhouse",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Robinhood Earn and Steakhouse sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Earn curator partner",
+      "explanation": "Newsroom launch narrative names Steakhouse among Earn/Morpho partner stack on RH Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
           "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
           "label": "Newsroom"
         }
       ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "robinhood-earn",
@@ -2621,6 +2762,24 @@
       ],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "robinhood-wallet",
+      "to": "1inch",
+      "type": "product_integration",
+      "label": "Wallet trading routes",
+      "explanation": "Wallet trading narratives on RH Chain cite aggregator routing (1inch-class) alongside native DEX venues for swap UX.",
+      "confidence": "high",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/RobinhoodCrypto/status/2077420481355849815",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "robinhood-wallet",
@@ -2677,6 +2836,24 @@
       "source": "csv_manual"
     },
     {
+      "from": "robinhood-wallet",
+      "to": "uniswap",
+      "type": "product_integration",
+      "label": "Wallet checkout on RH Chain",
+      "explanation": "@RobinhoodCrypto (Tier 0) promoted Apple/Google Pay checkout on Robinhood Chain via Wallet \u2014 swaps/liquidity often route through public DEX infra like Uniswap.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/RobinhoodCrypto/status/2077420481355849815",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
       "from": "robinode",
       "to": "stock-tokens-official",
       "type": "product_integration",
@@ -2693,6 +2870,24 @@
       ],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "robinode",
+      "to": "stock-tokens-official",
+      "type": "twitter_mention",
+      "label": "Listed \u2260 liquid",
+      "explanation": "@robinodexyz highlights that stock tokens can be listed onchain without being sellable at size \u2014 routing/sellability is a separate check from ticker presence.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/robinodexyz/status/2077709280913031179",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
     },
     {
       "from": "robinode",
@@ -2783,6 +2978,19 @@
       ],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "slvr",
+      "to": "cash-cat",
+      "type": "competitive",
+      "label": "Attention-layer cluster",
+      "explanation": "SLVR and Cash Cat are grouped in Hoodscape noise layer as gamified/meme attention samples on RH Chain.",
+      "confidence": "low",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
     },
     {
       "from": "slvr",
@@ -3032,6 +3240,24 @@
     {
       "from": "symbiosis",
       "to": "layerzero",
+      "type": "infra_dependency",
+      "label": "Bridge messaging stack",
+      "explanation": "Symbiosis and LayerZero are cited together in RH ecosystem bridge/messaging maps \u2014 cross-chain path adds bridge risk surface.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://symbiosis.finance",
+          "label": "Symbiosis"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
+    },
+    {
+      "from": "symbiosis",
+      "to": "layerzero",
       "type": "partner_named",
       "label": "Day-1 / launch partner",
       "explanation": "LayerZero is named as a day-1 or launch partner in narratives around Symbiosis. Partner naming is orientation only \u2014 not performance or security endorsement.",
@@ -3064,6 +3290,222 @@
       ],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "the-defi-edge",
+      "to": "cash-cat",
+      "type": "twitter_mention",
+      "label": "Meme volume composition",
+      "explanation": "@thedefiedge uses native meme activity (Cash Cat-class tokens) to explain why headline DEX volume can diverge from RWA narrative.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "the-defi-edge",
+      "to": "defillama-rh-chain",
+      "type": "media_intel",
+      "label": "Metrics anchor for research",
+      "explanation": "@thedefiedge landscape threads cite DefiLlama RH Chain dashboard for TVL/DEX volume context when arguing volume composition.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
+    },
+    {
+      "from": "the-defi-edge",
+      "to": "robinhood-crypto",
+      "type": "twitter_mention",
+      "label": "Brokerage-on-rails framing",
+      "explanation": "@thedefiedge argues RH is building a vertically integrated brokerage on permissionless rails \u2014 not a meme-only casino. Orientation framing only.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709972092453196",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "the-defi-edge",
+      "to": "stock-tokens-official",
+      "type": "twitter_mention",
+      "label": "Meme vol vs stock-token road",
+      "explanation": "@thedefiedge frames a fork: meme/launchpad volume today vs stock-token/RWA path as the longer thesis test for the chain.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "the-defi-edge",
+      "to": "tom-wan",
+      "type": "media_intel",
+      "label": "Research cluster cross-cite",
+      "explanation": "The DeFi Edge and Tom Wan are mutually cited in Hoodscape media layer \u2014 both frame RH Chain metrics and launchpad/RWA narratives for CT.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
+    },
+    {
+      "from": "the-defi-edge",
+      "to": "uniswap",
+      "type": "twitter_mention",
+      "label": "DEX vol \u2260 RWA thesis",
+      "explanation": "@thedefiedge notes RH Chain hit #2 DEX volume with memecoin-heavy composition \u2014 Uniswap is the public AMM capturing much of that print.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "tom-wan",
+      "to": "defillama-rh-chain",
+      "type": "media_intel",
+      "label": "Onchain metrics source",
+      "explanation": "@tomwanhh uses DefiLlama public metrics in RH Chain deploy and volume analysis \u2014 primary numbers with secondary interpretation.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077690634048037164",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
+    },
+    {
+      "from": "tom-wan",
+      "to": "flap",
+      "type": "media_intel",
+      "label": "Tracks launchpad deploy ranks",
+      "explanation": "@tomwanhh tracks Flap in the RH launchpad deploy race alongside Pons and NOXA. Leaderboard flips quickly in week-one chains.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "tom-wan",
+      "to": "noxa-fun",
+      "type": "media_intel",
+      "label": "Tracks launchpad deploy ranks",
+      "explanation": "@tomwanhh cites NOXA Fun in RH launchpad war metrics. Useful for understanding permissionless deploy volume \u2014 not a pad endorsement.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "tom-wan",
+      "to": "pons",
+      "type": "media_intel",
+      "label": "Tracks launchpad deploy ranks",
+      "explanation": "@tomwanhh publishes onchain deploy leaderboards for RH Chain launchpads; 15 Jul post noted Pons flipping Flap by deploy count. Deploy rank \u2260 safety or quality.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "tom-wan",
+      "to": "symbiosis",
+      "type": "twitter_mention",
+      "label": "Bridge vs native issuance",
+      "explanation": "@tomwanhh argues canonical bridge TVL alone misses native issuance on RH Chain (~$100M mcap week narrative). Symbiosis is the named bridge TVL slice on Llama.",
+      "confidence": "medium",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077690634048037164",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "x_digest"
+    },
+    {
+      "from": "tom-wan",
+      "to": "the-defi-edge",
+      "type": "media_intel",
+      "label": "Research cluster cross-cite",
+      "explanation": "Tom Wan and The DeFi Edge form a Tier-1 research pair frequently referenced together in RH Chain landscape digests.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
     },
     {
       "from": "trm-labs",
@@ -3149,6 +3591,24 @@
       ],
       "last_checked": "2026-07-16",
       "source": "csv_manual"
+    },
+    {
+      "from": "uniswap",
+      "to": "cash-cat",
+      "type": "liquidity_stack",
+      "label": "Meme flow into public AMM",
+      "explanation": "High-visibility native memes (Cash Cat-class) trade on public AMM venues \u2014 explains meme-heavy DEX volume composition on early RH metrics.",
+      "confidence": "medium",
+      "strength": "weak",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/thedefiedge/status/2077709910591365630",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "x_digest"
     },
     {
       "from": "uniswap",
@@ -3261,23 +3721,19 @@
       "from": "virtuals",
       "to": "robinhood-crypto",
       "type": "product_integration",
-      "label": "Product / UX integration",
-      "explanation": "Virtuals is oriented as integrating with or routing through Robinhood Crypto in official or high-signal ecosystem copy. Confirm live deployments before assuming user exposure.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Agentic chain narrative",
+      "explanation": "Official RH Chain positioning includes agentic/AI-native themes; Virtuals-class platforms are where much agent token surface appears on the chain.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://robinhood.com/us/en/chain/",
           "label": "Chain page"
-        },
-        {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
         }
       ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "last_checked": "2026-07-03",
+      "source": "x_digest"
     },
     {
       "from": "vlad-tenev",

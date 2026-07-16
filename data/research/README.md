@@ -5,7 +5,8 @@
 ```bash
 npm run research:audit    # edge-audit.json + edge-audit.md
 npm run research:seed     # regenerate data/edges.csv from CSV + text mining
-npm run research:graph    # seed + export public/data/graph.json
+npm run research:merge-x  # merge x-edge-log.csv → edges.csv (x_digest wins)
+npm run research:graph    # seed + merge-x + export public/data/graph.json
 ```
 
 ## Files
@@ -22,7 +23,10 @@ npm run research:graph    # seed + export public/data/graph.json
 1. Run digest (see `NftResearch/rh-x-talk-digest.md` method).
 2. Append row to `x-edge-log.csv`.
 3. Copy verified rows into `edges.csv` with `source=x_digest`.
-4. `npm run research:graph`
+4. `npm run research:merge-x`
+5. `npm run research:graph`
+
+Digests live in [`digests/`](digests/) (2026-07-03, 07-10, 07-16).
 
 ## Mind map UI
 

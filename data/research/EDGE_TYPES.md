@@ -75,6 +75,12 @@ CT or official X post links two accounts (manual digest only).
 **Example label:** `CT maps cluster (lead)`  
 **Default confidence:** medium / low
 
+### `media_intel`
+Research / intel accounts cross-cite each other or anchor metrics (secondary).
+
+**Example label:** `Research cluster cross-cite`  
+**Default confidence:** low / medium
+
 ### `shared_category`
 Weak same-category adjacency — hide by default in mind map.
 
