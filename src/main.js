@@ -402,34 +402,36 @@ function renderMap() {
     ${renderPulse()}
     ${renderLayerOverview()}
 
-    <div class="toolbar">
-      <div class="search-wrap">
-        <span class="icon">⌕</span>
-        <input type="search" id="search" placeholder="Search name, job, twitter…" value="${escapeHtml(state.q)}" autocomplete="off" />
+    <div class="map-stage">
+      <div class="toolbar">
+        <div class="search-wrap">
+          <span class="icon">⌕</span>
+          <input type="search" id="search" placeholder="Search name, job, twitter…" value="${escapeHtml(state.q)}" autocomplete="off" />
+        </div>
+        <select id="sort" aria-label="Sort">
+          <option value="default" ${state.sort === "default" ? "selected" : ""}>Sort: default</option>
+          <option value="tvl" ${state.sort === "tvl" ? "selected" : ""}>Sort: TVL</option>
+          <option value="confidence" ${state.sort === "confidence" ? "selected" : ""}>Sort: confidence</option>
+          <option value="az" ${state.sort === "az" ? "selected" : ""}>Sort: A–Z</option>
+        </select>
+        <select id="conf" aria-label="Confidence filter">
+          <option value="all" ${state.conf === "all" ? "selected" : ""}>Confidence: all</option>
+          <option value="high" ${state.conf === "high" ? "selected" : ""}>high only</option>
+          <option value="medium" ${state.conf === "medium" ? "selected" : ""}>medium only</option>
+          <option value="low" ${state.conf === "low" ? "selected" : ""}>low only</option>
+        </select>
+        <div class="view-toggle" id="view-toggle">
+          <button type="button" data-view="grouped" class="${state.view === "grouped" ? "active" : ""}">Grouped</button>
+          <button type="button" data-view="flat" class="${state.view === "flat" ? "active" : ""}">Flat</button>
+        </div>
       </div>
-      <select id="sort" aria-label="Sort">
-        <option value="default" ${state.sort === "default" ? "selected" : ""}>Sort: default</option>
-        <option value="tvl" ${state.sort === "tvl" ? "selected" : ""}>Sort: TVL</option>
-        <option value="confidence" ${state.sort === "confidence" ? "selected" : ""}>Sort: confidence</option>
-        <option value="az" ${state.sort === "az" ? "selected" : ""}>Sort: A–Z</option>
-      </select>
-      <select id="conf" aria-label="Confidence filter">
-        <option value="all" ${state.conf === "all" ? "selected" : ""}>Confidence: all</option>
-        <option value="high" ${state.conf === "high" ? "selected" : ""}>high only</option>
-        <option value="medium" ${state.conf === "medium" ? "selected" : ""}>medium only</option>
-        <option value="low" ${state.conf === "low" ? "selected" : ""}>low only</option>
-      </select>
-      <div class="view-toggle" id="view-toggle">
-        <button type="button" data-view="grouped" class="${state.view === "grouped" ? "active" : ""}">Grouped</button>
-        <button type="button" data-view="flat" class="${state.view === "flat" ? "active" : ""}">Flat</button>
-      </div>
+
+      <p class="results-meta">${list.length} shown${
+        state.layer !== "all" ? ` · ${state.layer}` : ""
+      }${state.q ? ` · “${escapeHtml(state.q)}”` : ""}</p>
+
+      <div id="results">${renderResults(list)}</div>
     </div>
-
-    <p class="results-meta">${list.length} shown${
-      state.layer !== "all" ? ` · ${state.layer}` : ""
-    }${state.q ? ` · “${escapeHtml(state.q)}”` : ""}</p>
-
-    <div id="results">${renderResults(list)}</div>
   `;
 }
 

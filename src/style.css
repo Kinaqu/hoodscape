@@ -35,8 +35,9 @@
   --header-h: 60px;
   --shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
   --ease: 0.15s ease;
-  --glass: rgba(12, 18, 16, 0.68);
-  --glass-strong: rgba(12, 18, 16, 0.82);
+  --glass: rgba(12, 18, 16, 0.72);
+  --glass-strong: rgba(12, 18, 16, 0.86);
+  --stage-bg: rgba(12, 18, 16, 0.94);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -266,9 +267,7 @@ main {
   gap: 0.5rem;
   margin-bottom: 0.35rem;
   padding: 0.65rem 0.85rem;
-  background: var(--glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--bg-elev);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
 }
@@ -313,9 +312,7 @@ main {
   text-align: left;
   font-family: inherit;
   cursor: pointer;
-  background: var(--glass);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--bg-card);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.85rem;
@@ -327,7 +324,7 @@ main {
   gap: 0.25rem;
 }
 .layer-tile:hover {
-  background: var(--glass-strong);
+  background: var(--bg-card-hover);
   border-color: var(--border);
   transform: translateY(-1px);
 }
@@ -365,6 +362,22 @@ main {
   flex-shrink: 0;
 }
 
+.map-stage {
+  background: var(--stage-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 0 1.1rem 1.35rem;
+  margin-top: 0.35rem;
+  isolation: isolate;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.03) inset,
+    0 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+.map-stage .results-meta {
+  margin: 0 0 0.75rem;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -375,9 +388,13 @@ main {
   top: var(--header-h);
   z-index: 40;
   padding: 0.55rem 0;
-  background: linear-gradient(180deg, var(--glass-strong) 70%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+}
+
+.map-stage .toolbar {
+  margin: 0 -1.1rem 0.85rem;
+  padding: 0.65rem 1.1rem 0.55rem;
+  background: var(--stage-bg);
+  border-bottom: 1px solid var(--border-soft);
 }
 .search-wrap {
   position: relative;
@@ -481,9 +498,7 @@ main {
 }
 
 .card {
-  background: var(--glass);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--bg-card);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   padding: 0.95rem 1rem;
@@ -497,9 +512,10 @@ main {
   flex-direction: column;
   gap: 0.4rem;
   min-height: 132px;
+  isolation: isolate;
 }
 .card:hover {
-  background: var(--glass-strong);
+  background: var(--bg-card-hover);
   border-color: var(--border);
 }
 .card:focus-visible {
@@ -1310,9 +1326,7 @@ main {
   padding: 0;
   min-height: 124px;
   overflow: hidden;
-  background: var(--glass);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--bg-card);
 }
 .card .card-accent {
   position: absolute;
