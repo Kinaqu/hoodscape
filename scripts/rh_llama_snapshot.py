@@ -87,6 +87,7 @@ def main() -> int:
             "error": fees.get("error") if isinstance(fees, dict) else None,
         },
         "protocols_on_chain_count": len(rh_protocols),
+        "protocols_all": rh_protocols,
         "protocols_top": rh_protocols[:20],
         "sources": [
             "https://api.llama.fi/v2/chains",

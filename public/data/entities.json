@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T18:18:00Z",
+  "generated_at_utc": "2026-07-16T18:39:31Z",
   "count": 72,
   "layers": [
     "official",
@@ -1166,7 +1166,7 @@
       ],
       "confidence": "high",
       "last_checked": "2026-07-16",
-      "tvl_rh": 15034197.42692674,
+      "tvl_rh": 63337707.26624528,
       "tags": [
         "dex",
         "defi",
@@ -1201,7 +1201,9 @@
           "name": "Stock Tokens (official)",
           "slug": "stock-tokens-official"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e023",
@@ -1443,7 +1445,7 @@
       ],
       "confidence": "high",
       "last_checked": "2026-07-16",
-      "tvl_rh": 116995428.77094853,
+      "tvl_rh": 125479549.90042455,
       "tags": [
         "lending",
         "defi",
@@ -1482,7 +1484,9 @@
           "name": "Maple",
           "slug": "maple"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e028",
@@ -1503,7 +1507,7 @@
       "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
-      "tvl_rh": 8424437.662476074,
+      "tvl_rh": 13469897.59836479,
       "tags": [
         "yield",
         "defi",
@@ -1530,7 +1534,9 @@
           "name": "USDG / Paxos",
           "slug": "usdg-paxos"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e029",
@@ -1700,7 +1706,7 @@
       "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
-      "tvl_rh": 14419859.00378253,
+      "tvl_rh": 16919734.77845693,
       "tags": [
         "perps",
         "defi",
@@ -1727,7 +1733,9 @@
           "name": "Stock Tokens (official)",
           "slug": "stock-tokens-official"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e033",
@@ -1806,7 +1814,7 @@
       ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
-      "tvl_rh": 132733.18075693634,
+      "tvl_rh": 132170.93812493034,
       "tags": [
         "dex",
         "defi",
@@ -1833,7 +1841,9 @@
           "name": "USDG / Paxos",
           "slug": "usdg-paxos"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e035",
@@ -1859,7 +1869,7 @@
       ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
-      "tvl_rh": 118016.82528394119,
+      "tvl_rh": 113686.37087011975,
       "tags": [
         "dex",
         "defi",
@@ -1886,7 +1896,9 @@
           "name": "Robinhood Wallet",
           "slug": "robinhood-wallet"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e036",
@@ -1912,7 +1924,7 @@
       ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
-      "tvl_rh": 190738.3810501198,
+      "tvl_rh": 830370.9654199025,
       "tags": [
         "dex",
         "defi",
@@ -1939,7 +1951,9 @@
           "name": "Sheriff Exchange",
           "slug": "sheriff-exchange"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e037",
@@ -1960,7 +1974,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": 2350.681454969703,
+      "tvl_rh": 116220.06834655078,
       "tags": [
         "dex",
         "defi",
@@ -1987,7 +2001,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e038",
@@ -2008,7 +2024,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": 20273.328069515184,
+      "tvl_rh": 20068.02430659749,
       "tags": [
         "dex",
         "defi",
@@ -2035,7 +2051,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e039",
@@ -2056,7 +2074,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 2022.6200802557144,
       "tags": [
         "dex",
         "defi",
@@ -2083,7 +2101,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e040",
@@ -2104,7 +2124,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 1002.0485618714088,
       "tags": [
         "dex",
         "defi",
@@ -2131,7 +2151,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e041",
@@ -2152,7 +2174,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": 4001.189145083509,
+      "tvl_rh": 4175.906601942764,
       "tags": [
         "dex",
         "defi",
@@ -2179,7 +2201,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e042",
@@ -2200,7 +2224,7 @@
       "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
-      "tvl_rh": 108900.22840436768,
+      "tvl_rh": 108394.29975366176,
       "tags": [
         "prediction",
         "defi",
@@ -2227,7 +2251,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e043",
@@ -2248,7 +2274,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 809.16742372883,
       "tags": [
         "prediction",
         "defi",
@@ -2275,7 +2301,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e044",
@@ -2301,7 +2329,7 @@
       ],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": 84698.56056402507,
+      "tvl_rh": 84468.49655371039,
       "tags": [
         "yield_aggregator",
         "defi",
@@ -2328,7 +2356,9 @@
           "name": "Arcus",
           "slug": "arcus"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e045",
@@ -2354,7 +2384,7 @@
       ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
-      "tvl_rh": 42743.79678522133,
+      "tvl_rh": 39339.544243004915,
       "tags": [
         "bridge",
         "defi",
@@ -2378,7 +2408,9 @@
           "name": "Robinhood Crypto",
           "slug": "robinhood-crypto"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e046",
@@ -2500,7 +2532,7 @@
       ],
       "confidence": "high",
       "last_checked": "2026-07-16",
-      "tvl_rh": 6087390.160305349,
+      "tvl_rh": 6399398.022406258,
       "tags": [
         "launchpad",
         "live"
@@ -2530,7 +2562,9 @@
           "name": "Uniswap",
           "slug": "uniswap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e049",
@@ -2809,7 +2843,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": 36725.68195541632,
+      "tvl_rh": 34346.40985038211,
       "tags": [
         "launchpad",
         "community"
@@ -2835,7 +2869,9 @@
           "name": "Flap",
           "slug": "flap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e055",
@@ -2856,7 +2892,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 1471.6567743175997,
       "tags": [
         "launchpad",
         "community"
@@ -2882,7 +2918,9 @@
           "name": "Flap",
           "slug": "flap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e056",
@@ -3002,7 +3040,7 @@
       ],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 19822.4738526348,
       "tags": [
         "launchpad",
         "community"
@@ -3028,7 +3066,9 @@
           "name": "Flap",
           "slug": "flap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e059",
@@ -3049,7 +3089,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 112.57793996900512,
       "tags": [
         "launchpad",
         "community"
@@ -3075,7 +3115,9 @@
           "name": "Flap",
           "slug": "flap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e060",
@@ -3096,7 +3138,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 39.56612231105341,
       "tags": [
         "launchpad",
         "community"
@@ -3122,7 +3164,9 @@
           "name": "Flap",
           "slug": "flap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e061",
@@ -3143,7 +3187,7 @@
       "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 0.5113631297987908,
       "tags": [
         "launchpad",
         "community"
@@ -3169,7 +3213,9 @@
           "name": "Flap",
           "slug": "flap"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e062",
@@ -3297,7 +3343,7 @@
       ],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": 45676.36675845629,
+      "tvl_rh": 65460.45395653357,
       "tags": [
         "gamified",
         "noise",
@@ -3324,7 +3370,9 @@
           "name": "HOODZ",
           "slug": "hoodz"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e065",
@@ -3403,7 +3451,7 @@
       ],
       "confidence": "low",
       "last_checked": "2026-07-16",
-      "tvl_rh": null,
+      "tvl_rh": 405.6099476654877,
       "tags": [
         "gaming",
         "noise",
@@ -3430,7 +3478,9 @@
           "name": "NOXA Fun",
           "slug": "noxa-fun"
         }
-      ]
+      ],
+      "tvl_source": "defillama",
+      "tvl_as_of_utc": "2026-07-16T18:39:27Z"
     },
     {
       "id": "e067",
