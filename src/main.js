@@ -1,5 +1,5 @@
 import "./style.css";
-import { layerIcon, glyphIcon } from "./icons.js";
+import { layerIcon } from "./icons.js";
 
 const LAYER_META = [
   { id: "all", label: "All", desc: "Full landscape" },
@@ -128,6 +128,18 @@ function cardClasses(e) {
     `conf-${e.confidence || "low"}`,
     `weight-${d.weight || "std"}`,
   ].join(" ");
+}
+
+function shouldShowLayerChip() {
+  return state.view === "flat" || state.layer !== "all";
+}
+
+function confIndicatorHtml(confidence) {
+  const conf = escapeHtml(confidence || "low");
+  return `<span class="conf-indicator ${conf}" title="Confidence: ${conf}">
+    <span class="conf-dot" aria-hidden="true"></span>
+    <span class="conf-label">${conf}</span>
+  </span>`;
 }
 
 
@@ -296,10 +308,21 @@ function renderLayerOverview() {
 
 function renderCard(e, i = 0) {
   const d = displayOf(e);
-  const tvl =
-    e.tvl_rh != null ? `<span class="tvl-badge">TVL ${formatUsd(e.tvl_rh)}</span>` : "";
   const blurb = e.summary || e.job || e.notes || "—";
-  const glyph = glyphIcon(d.glyph);
+  const showLayer = shouldShowLayerChip();
+  const layerChip = showLayer
+    ? `<span class="layer-chip ${escapeHtml(e.layer)}"><span class="chip-ico">${layerIcon(e.layer)}</span>${escapeHtml(e.layer)}</span>`
+    : "";
+  const footerSignals = [
+    e.category ? `<span class="card-signal">${escapeHtml(e.category)}</span>` : "",
+    e.status ? `<span class="card-signal status-tag">${escapeHtml(e.status)}</span>` : "",
+  ]
+    .filter(Boolean)
+    .join('<span class="card-signal-sep" aria-hidden="true">·</span>');
+  const tvlValue =
+    e.tvl_rh != null
+      ? `<span class="tvl-badge">${formatUsd(e.tvl_rh)}</span>`
+      : `<span class="tvl-badge is-empty" aria-hidden="true"></span>`;
   return `
     <button type="button" class="${cardClasses(e)}" data-slug="${escapeHtml(e.slug)}" style="--i:${i};--hue:${d.hue ?? 160}">
       <div class="card-accent"></div>
@@ -308,15 +331,13 @@ function renderCard(e, i = 0) {
         <div class="card-body">
           <div class="card-top">
             <h3>${escapeHtml(e.name)}</h3>
-            <span class="layer-chip ${escapeHtml(e.layer)}"><span class="chip-ico">${layerIcon(e.layer)}</span>${escapeHtml(e.layer)}</span>
+            ${confIndicatorHtml(e.confidence)}
           </div>
+          ${layerChip}
           <p class="job">${escapeHtml(blurb)}</p>
-          <div class="card-meta">
-            <span class="glyph-ico" title="${escapeHtml(d.glyph)}">${glyph}</span>
-            <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
-            ${e.status ? `<span class="status-tag">${escapeHtml(e.status)}</span>` : ""}
-            ${e.category ? `<span>${escapeHtml(e.category)}</span>` : ""}
-            ${tvl}
+          <div class="card-footer">
+            <div class="card-signals">${footerSignals || `<span class="card-signal is-muted">—</span>`}</div>
+            <div class="card-tvl-slot">${tvlValue}</div>
           </div>
         </div>
       </div>
