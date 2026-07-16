@@ -46,6 +46,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font);
   background: var(--bg);
   color: var(--text);
@@ -145,14 +147,26 @@ a:hover { color: var(--accent-strong); text-decoration: underline; }
 }
 
 .header-inner {
+  position: relative;
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 1.25rem;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
+}
+
+#nav-mount {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  pointer-events: none;
+}
+
+#nav-mount > * {
+  pointer-events: auto;
 }
 
 .brand {
@@ -188,38 +202,24 @@ a:hover { color: var(--accent-strong); text-decoration: underline; }
   margin-top: 0.05rem;
 }
 
-nav { display: flex; align-items: center; gap: 0.15rem; flex-wrap: wrap; }
-nav a {
-  color: var(--text-muted);
-  font-size: 0.84rem;
-  font-weight: 500;
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: var(--ease);
-}
-nav a:hover, nav a.active {
-  color: var(--text);
-  background: var(--bg-elev);
-  text-decoration: none;
-}
-nav .nav-cta {
-  margin-left: 0.35rem;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border: 1px solid rgba(61, 186, 140, 0.25);
-}
-nav .nav-cta:hover {
-  background: rgba(61, 186, 140, 0.2);
-  color: var(--accent-strong);
-}
-
 main {
   flex: 1;
   max-width: var(--max);
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem 1.25rem 3.5rem;
+}
+
+@media (max-width: 767px) {
+  #app main {
+    padding-bottom: 5.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #app main {
+    padding-top: 3.25rem;
+  }
 }
 
 .hero { margin-bottom: 1.15rem; }

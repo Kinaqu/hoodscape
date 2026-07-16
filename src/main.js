@@ -1,6 +1,7 @@
 import "./style.css";
 import { layerIcon } from "./icons.js";
 import { mountGraphView, unmountGraphView } from "./graph-mount.tsx";
+import { mountNavBar, syncNavRoute } from "./nav-mount.tsx";
 
 const LAYER_META = [
   { id: "all", label: "All", desc: "Full landscape" },
@@ -24,12 +25,6 @@ const LAYER_ORDER = [
 ];
 
 const CONF_RANK = { high: 0, medium: 1, low: 2 };
-
-const BRAND_MARK = `<svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-  <path d="M6 22 L12 10 L16 16 L20 8 L26 22" stroke="#3dba8c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="12" cy="10" r="1.8" fill="#e6c35c"/>
-  <circle cx="20" cy="8" r="1.8" fill="#e6c35c"/>
-</svg>`;
 
 const state = {
   route: "map",
@@ -227,24 +222,6 @@ function filtered() {
 
 function shell(content) {
   return `
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#/map">
-          <div class="brand-mark">${BRAND_MARK}</div>
-          <div>
-            Hoodscape
-            <span class="sub">Robinhood Chain landscape</span>
-          </div>
-        </a>
-        <nav>
-          <a href="#/map" class="${state.route === "map" ? "active" : ""}">Map</a>
-          <a href="#/graph" class="${state.route === "graph" ? "active" : ""}">Graph</a>
-          <a href="#/how" class="${state.route === "how" ? "active" : ""}">How to read</a>
-          <a href="#/sources" class="${state.route === "sources" ? "active" : ""}">Sources</a>
-          <a href="#/submit" class="nav-cta ${state.route === "submit" ? "active" : ""}">Submit</a>
-        </nav>
-      </div>
-    </header>
     <main>${content}</main>
     <footer class="site-footer">
       NFA · Not investment advice · Listings are not endorsements ·
@@ -757,14 +734,6 @@ function resultsKey() {
 let graphMounted = false;
 let lastRenderedRoute = null;
 
-function updateNavActive() {
-  document.querySelectorAll(".site-header nav a").forEach((a) => {
-    const href = a.getAttribute("href") || "";
-    const page = href.replace(/^#\/?/, "").split("/")[0];
-    a.classList.toggle("active", page === state.route);
-  });
-}
-
 function setHash(path) {
   const next = `#/${path}`;
   if (location.hash === next) return;
@@ -821,7 +790,7 @@ function render(options = {}) {
   if (prevRoute === "graph" && state.route === "graph" && graphMounted) {
     const live = $("#graph-mount")?.querySelector(".graph-view");
     if (live) {
-      updateNavActive();
+      syncNavRoute(state.route);
       if (state.selected) mountPanel(state.selected);
       else mountPanel(null);
       return;
@@ -846,6 +815,7 @@ function render(options = {}) {
   const prevScroll = window.scrollY;
 
   app.innerHTML = shell(body);
+  syncNavRoute(state.route);
   bindEvents();
 
   const key = resultsKey();
@@ -1023,11 +993,13 @@ function onHashChange() {
   const prevRoute = state.route;
   const prevSlug = state.selected?.slug || null;
   parseRoute();
+  syncNavRoute(state.route);
 
   // Soft transitions when map DOM already exists
   const mapAlive = Boolean($(".layer-overview") || $("#results"));
 
   if (state.route === "graph" && prevRoute === "graph") {
+    syncNavRoute(state.route);
     const nextSlug = state.selected?.slug || null;
     if (nextSlug !== prevSlug) {
       if (state.selected) mountPanel(state.selected);
@@ -1055,8 +1027,11 @@ function onHashChange() {
 
 export async function boot() {
   $("#app").innerHTML = `<div class="loading">Loading Hoodscape…</div>`;
+  const navMount = document.getElementById("nav-mount");
+  if (navMount) mountNavBar(navMount, { activeRoute: state.route });
   await loadData();
   parseRoute();
+  if (navMount) syncNavRoute(state.route);
   render({ animateResults: true });
   window.addEventListener("hashchange", onHashChange);
   document.addEventListener("keydown", (e) => {
