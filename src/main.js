@@ -34,6 +34,7 @@ const SITE_LINKS = {
 };
 
 const SUBMIT_X_HANDLE = "Kinaqu123";
+const SUBMIT_X_RECIPIENT_ID = "1523218246425587712";
 
 const SUBMIT_LAYER_OPTIONS = LAYER_META.filter((l) => l.id !== "all").map((l) => ({
   value: l.id,
@@ -922,7 +923,7 @@ function renderSubmit() {
       <h1>Submit a project</h1>
       <p class="lede">
         Request a map listing — curated by <strong style="color:var(--text)">job</strong>, not market cap.
-        Sends a structured message to <a href="${SITE_LINKS.twitter}" target="_blank" rel="noopener noreferrer">@${SUBMIT_X_HANDLE}</a> on X.
+        Opens a DM to <a href="${SITE_LINKS.twitter}" target="_blank" rel="noopener noreferrer">@${SUBMIT_X_HANDLE}</a> with the listing filled in.
       </p>
 
       <div class="submit-box">
@@ -958,11 +959,11 @@ function renderSubmit() {
           })}
 
           <div class="actions">
-            <button type="submit" class="btn primary">Send on X</button>
+            <button type="submit" class="btn primary">Send DM on X</button>
             <button type="button" class="btn" id="copy-submit">Copy message</button>
           </div>
           <p class="form-note">
-            Opens X with a pre-filled @${SUBMIT_X_HANDLE} message. Full text is copied — paste into DM if the composer truncates.
+            Opens X direct messages to @${SUBMIT_X_HANDLE} with this form pre-filled. You send when ready.
             Manual review · no guarantee · disclose affiliations.
           </p>
           <p class="form-note ok" id="form-status" hidden></p>
@@ -1301,13 +1302,13 @@ function formatSubmissionMessage(payload) {
   return lines.join("\n");
 }
 
-function buildTwitterIntentUrl(message) {
-  const full = `@${SUBMIT_X_HANDLE}\n\n${message}`;
-  if (full.length <= 275) {
-    return `https://x.com/intent/tweet?text=${encodeURIComponent(full)}`;
+function buildTwitterDmUrl(message) {
+  const base = `https://x.com/messages/compose?recipient_id=${SUBMIT_X_RECIPIENT_ID}`;
+  const withText = `${base}&text=${encodeURIComponent(message)}`;
+  if (withText.length <= 1900) {
+    return { url: withText, prefilled: true };
   }
-  const short = `@${SUBMIT_X_HANDLE} Hoodscape list: ${message.split("\n").slice(2, 6).join(" · ")} (full message copied)`;
-  return `https://x.com/intent/tweet?text=${encodeURIComponent(short.slice(0, 275))}`;
+  return { url: base, prefilled: false };
 }
 
 async function copySubmitMessage(text) {
@@ -1378,18 +1379,23 @@ function bindSubmitForm() {
       return;
     }
     const message = formatSubmissionMessage(payload);
-    const copied = await copySubmitMessage(message);
     if (openX) {
-      window.open(buildTwitterIntentUrl(message), "_blank", "noopener,noreferrer");
+      const dm = buildTwitterDmUrl(message);
+      if (!dm.prefilled) {
+        await copySubmitMessage(message);
+      }
+      window.open(dm.url, "_blank", "noopener,noreferrer");
+      setSubmitStatus(
+        dm.prefilled
+          ? "DM opened — review the message and hit Send on X."
+          : "DM opened — full message copied, paste into the chat.",
+        true,
+      );
+      return;
     }
+    const copied = await copySubmitMessage(message);
     setSubmitStatus(
-      copied
-        ? openX
-          ? "Copied — X composer opened. Paste into DM if needed."
-          : "Message copied to clipboard."
-        : openX
-          ? "X composer opened. Copy the message manually if needed."
-          : "Could not copy — check browser permissions.",
+      copied ? "Message copied to clipboard." : "Could not copy — check browser permissions.",
       copied,
     );
   };
