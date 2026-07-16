@@ -857,6 +857,7 @@ function render(options = {}) {
     if (mount && state.graph) {
       mountGraphView(mount, {
         graph: state.graph,
+        entities: state.entities,
         onNodeClick: (slug) => openEntity(slug),
       });
       graphMounted = true;

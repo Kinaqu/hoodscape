@@ -1566,8 +1566,12 @@ main {
   cursor: grab;
 }
 
-.graph-canvas:active {
+.graph-canvas.is-dragging {
   cursor: grabbing;
+}
+
+.graph-canvas canvas {
+  cursor: inherit;
 }
 
 .graph-empty {

@@ -28,3 +28,20 @@ export interface GraphData {
 }
 
 export type ConfFilter = "high-medium" | "all" | "high" | "medium" | "low";
+
+export interface EntityVisual {
+  logoUrl: string;
+  monogram: string;
+  hue: number;
+}
+
+export interface GraphEntity {
+  slug: string;
+  name: string;
+  logo?: string;
+  display?: {
+    monogram?: string;
+    hue?: number;
+    logo_domain?: string;
+  };
+}
