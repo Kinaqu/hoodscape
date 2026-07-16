@@ -1,0 +1,73 @@
+name,type,twitter,category,primary_url,notes,last_seen,confidence,layer,job_one_liner
+Robinhood Crypto,official,@RobinhoodCrypto,official,https://robinhood.com/us/en/chain/,Official chain + crypto product surface,2026-07-16,high,official,Official product & chain surface
+Robinhood Chain Docs,official,,docs,https://docs.robinhood.com/chain/,Developer docs for the L2,2026-07-16,high,official,Primary builder documentation
+Robinhood Wallet,official,@RobinhoodCrypto,wallet,https://robinhood.com/us/en/chain/,Self-custody wallet surface; trending tokens; Pay checkout claims,2026-07-16,high,official,Wallet UX into RH Chain
+Robinhood Earn,official,@RobinhoodCrypto,lending,https://robinhood.com/us/en/crypto/earn/,USDG lending via Morpho; ~7% APY narrative; insurance claims in newsroom,2026-07-16,high,official,App-facing USDG lend product
+Stock Tokens (official),official,@RobinhoodCrypto,rwa,https://robinhood.com/rhj/stocktokens,Tokenized equities product; jurisdiction-restricted (not US),2026-07-16,high,official,Official RWA / equity tokens
+Vlad Tenev,official,@vladtenev,official,,CEO; builder embed stock-token calls,2026-07-16,high,official,Company leadership signal
+USDG / Paxos,defi,,stablecoin,,Dollar-backed stable narrative; dominant stables mcap on chain,2026-07-16,high,defi,Settlement / Earn stable base
+Arbitrum,infra,@arbitrum,infra,https://docs.arbitrum.io/,Orbit stack parent for RH Chain,2026-07-16,high,infra,L2 stack / Orbit platform
+Chainlink,infra,@chainlink,oracle,,Day-1 oracle / CCIP partner (testnet+narrative),2026-07-16,high,infra,Oracles & cross-chain messaging
+Alchemy,infra,@Alchemy,rpc,,Day-1 infra / RPC partner,2026-07-16,high,infra,RPC & developer infra
+LayerZero,infra,@LayerZero_Core,bridge,,Cross-chain messaging partner,2026-07-16,high,infra,Omnichain messaging
+TRM Labs,infra,@trmlabs,compliance,,Compliance / screening partner (testnet era),2026-07-16,high,infra,Onchain risk & compliance
+BitGo,infra,@BitGo,custody,,Custody partner cited in ecosystem coverage,2026-07-16,medium,infra,Institutional custody rails
+Privy,infra,@privy_io,wallet_infra,,Wallet/auth infra cited in eco maps,2026-07-16,medium,infra,Embedded wallet / auth
+QuickNode,infra,@QuickNode,rpc,,RPC/node infra cited in eco maps,2026-07-16,medium,infra,Node & API infra
+Blockscout,infra,@blockscout,explorer,,Block explorer for the chain,2026-07-16,medium,infra,Chain explorer
+Allium,infra,@AlliumLabs,data,,Data infra partner (testnet announcement),2026-07-16,medium,infra,Onchain data infra
+Fireblocks,infra,@FireblocksHQ,custody,,Institutional controls cited in eco maps,2026-07-16,low,infra,Institutional wallet infra
+Chainalysis,infra,@chainalysis,compliance,,Compliance tooling cited in eco maps,2026-07-16,low,infra,Compliance analytics
+Blockaid,infra,@blockaid_,security,,Day-1 security partner; free builder tier claim,2026-07-16,high,infra,Scam/threat detection
+Trust Wallet,infra,@TrustWallet,wallet,,Third-party wallet with RH Chain swap promo windows,2026-07-16,medium,infra,Self-custody access path
+Uniswap,defi,@Uniswap,dex,https://uniswap.org/,V2/V3/V4 (+ UniswapX narrative) primary public AMM,2026-07-16,high,defi,Public AMM liquidity layer
+Rialto,defi,@rialto_xyz,prop_amm,,Prop AMM / spot venue; newsroom day-1 trading list,2026-07-16,high,defi,Prop / specialized spot venue
+Pleiades,defi,,prop_amm,,Proprietary AMM / prop trading venue (newsroom day-1),2026-07-16,high,defi,Prop trading venue (day-1)
+1inch,defi,@1inch,aggregator,https://1inch.io/,Router / aggregator in wallet trading narrative,2026-07-16,high,defi,DEX aggregation / routing
+0x,defi,@0xProject,aggregator,https://0x.org/,Aggregator volume visible on Llama DEX overview,2026-07-16,high,defi,Swap infrastructure / aggregation
+Morpho,defi,@Morpho,lending,https://morpho.org/,Largest RH TVL; powers Robinhood Earn rails,2026-07-16,high,defi,Lending backbone for Earn
+Spark,defi,@sparkdotfi,yield,,Spark Savings + liquidity layer on RH,2026-07-16,high,defi,Yield / savings jobs
+Ethena,defi,@ethena_labs,yield,,Earn stack partner (newsroom),2026-07-16,high,defi,Yield / stable strategy partner
+Steakhouse,defi,@Steakhousedao,curator,,Earn / Morpho curator partner (newsroom),2026-07-16,high,defi,Vault curator partner
+Maple,defi,@maplefinance,lending,,Earn stack partner (newsroom),2026-07-16,high,defi,Credit / lending partner
+Arcus,defi,@arcus_xyz,perps,,Perps/spot; ex-dYdX team narrative; high TVL,2026-07-16,high,defi,Perps & tokenized equity trading
+Lighter,defi,@Lighter_xyz,perps,,ZK perps/spot; wallet integration claims,2026-07-16,high,defi,Perps / spot venue
+Curve,defi,@CurveFinance,dex,https://curve.finance/,Stable/volatile pools on RH,2026-07-16,medium,defi,Specialized AMM
+PancakeSwap,defi,@PancakeSwap,dex,https://pancakeswap.finance/,AMM V2/V3 presence on RH,2026-07-16,medium,defi,Multi-chain DEX presence
+SwapHood,defi,@SwapHoodFi,dex,,Native RH DEX V2/V3,2026-07-16,medium,defi,Native public DEX
+Sheriff Exchange,defi,@sheriffexchange,dex,,Small DEX TVL V2/V3,2026-07-16,low,defi,Native DEX
+RobinSwap,defi,@RobinSwap_,dex,,Native DEX V2/V3 on Llama,2026-07-16,low,defi,Native DEX
+Hoodit,defi,@HooditXYZ,dex,,Small native DEX,2026-07-16,low,defi,Native DEX
+FrothSwap,defi,@froth_meme,dex,,Small DEX on Llama,2026-07-16,low,defi,Native DEX
+AEON Protocol,defi,,dex,,Small DEX TVL on Llama,2026-07-16,low,defi,Native DEX
+Meridian Predict,defi,@meridiandotxyz,prediction,,Prediction market on RH,2026-07-16,medium,defi,Prediction markets
+Hoodbets,defi,@hoodbetsxyz,prediction,,Prediction market (small TVL),2026-07-16,low,defi,Prediction markets
+DexFi Aggregator,defi,@DexFinance,yield_aggregator,https://dexfi.com/,Yield aggregator on RH,2026-07-16,low,defi,Yield aggregation
+Symbiosis,defi,@symbiosis_fi,bridge,https://symbiosis.finance,Cross-chain bridge TVL on RH,2026-07-16,medium,infra,Cross-chain bridge
+Index Fi,defi,@TheIndexFi,rwa,,Programmatic stock index claims (CT),2026-07-16,low,defi,Tokenized index product
+Midas RWA,defi,@MidasRWA,rwa,,mGLO day-1 product claims (CT),2026-07-16,low,defi,Tokenized credit / RWA product
+NOXA Fun,launchpad,@Noxa_Fi,launchpad,,Early dominant launchpad; Llama TVL,2026-07-16,high,launchpad,Token launch rail
+Pons,launchpad,@ponsdotfamily,launchpad,,High deploy count narrative; approval-risk CT notes,2026-07-16,medium,launchpad,Token launch rail
+Flap,launchpad,@flapdotsh,launchpad,,Launchpad war; DEX volume on Llama,2026-07-16,medium,launchpad,Token launch rail
+4.fun,launchpad,@fourdottfun,launchpad,https://4.fun/,No creation fees / no bonding curves claim,2026-07-16,medium,launchpad,Meme launch rail
+Stoxesfun,launchpad,@Stoxesfun,launchpad,,RWA-dividend launch narrative,2026-07-16,low,launchpad,Launchpad (RWA-themed)
+hood.fun,launchpad,@hooddotfun,launchpad,,Deploy rankings (CT),2026-07-16,low,launchpad,Token launch rail
+Sentry,launchpad,@sentrylauncher,launchpad,,Launchpad on Llama,2026-07-16,low,launchpad,Token launch rail
+RobinFun,launchpad,@robinfunxyz,launchpad,,Launchpad on Llama,2026-07-16,low,launchpad,Token launch rail
+Doppler,launchpad,@dopplerprotocol,launchpad,,Prior week launchpad ranking (CT),2026-07-16,low,launchpad,Launch tooling
+Bankr,launchpad,@bankrbot,launchpad,,Agent launch tooling (CT),2026-07-16,low,launchpad,Agent-assisted launches
+Based Alpha,launchpad,@BasedOneX,launchpad,https://alpha.based.one,Small launchpad TVL,2026-07-16,low,launchpad,Token launch rail
+ymym.meme,launchpad,@ymym_hood,launchpad,,Small launchpad on Llama,2026-07-16,low,launchpad,Token launch rail
+HoodPump,launchpad,@hoodpump_fun,launchpad,,Small launchpad,2026-07-16,low,launchpad,Token launch rail
+ArrowPad,launchpad,@RobinArrowPad,launchpad,,Small launchpad,2026-07-16,low,launchpad,Token launch rail
+Virtuals,agent,@virtuals_io,agent,,Agent launch platform cited in eco maps,2026-07-16,medium,agents,Agent launch platform
+RobiNode,builder,@robinodexyz,agent,,Stock-token routing; listed≠liquid,2026-07-16,medium,agents,Agent layer for RWA routes
+SLVR,noise,@S_L_V_R_FUN,gamified,,Gamified mining; fee print on Llama,2026-07-16,low,noise,Gamified / attention app
+Cash Cat,noise,@cashcat_token,meme,,High-visibility native meme,2026-07-16,low,noise,Native meme (attention layer)
+HOODZ,noise,@HOODZRH,gaming,,Gaming project small TVL,2026-07-16,low,noise,Gaming / attention
+News For Robinhood,media,@NewsForRH,data,,Independent RH intel / wallet clusters,2026-07-16,medium,media,Independent ecosystem intel
+The DeFi Edge,media,@thedefiedge,data,,Research; memes vs RWA fork framing,2026-07-16,high,media,DeFi research / curation
+Tom Wan,media,@tomwanhh,data,,Entropy Advisors; launchpad deploy ranks,2026-07-16,high,media,Onchain data research
+Jon Ma,media,@jonbma,data,,Artemis; product thesis letters,2026-07-16,high,media,Macro / product research
+Eli5DeFi,media,@Eli5defi,data,,Visual explainers; RWA+meme barbell,2026-07-16,medium,media,Visual research explainers
+DefiLlama RH Chain,media,,data,https://defillama.com/chain/robinhood-chain,Primary public metrics (chainId 4663),2026-07-16,high,media,TVL / volume / fees dashboard

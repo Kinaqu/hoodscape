@@ -1,0 +1,17 @@
+{
+  "name": "rh-chain-map",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Orientation map for Robinhood Chain — protocols, rails, jobs. NFA.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "data": "python3 scripts/export_entities_json.py",
+    "data:full": "python3 scripts/rh_llama_snapshot.py && python3 scripts/export_entities_json.py"
+  },
+  "devDependencies": {
+    "vite": "^8.1.1"
+  }
+}

@@ -1,0 +1,1369 @@
+{
+  "generated_at_utc": "2026-07-16T13:54:11Z",
+  "count": 72,
+  "layers": [
+    "official",
+    "infra",
+    "defi",
+    "launchpad",
+    "agents",
+    "media",
+    "noise"
+  ],
+  "entities": [
+    {
+      "id": "e001",
+      "slug": "robinhood-crypto",
+      "name": "Robinhood Crypto",
+      "type": "official",
+      "layer": "official",
+      "category": "official",
+      "twitter": "@RobinhoodCrypto",
+      "website": "https://robinhood.com/us/en/chain/",
+      "job": "Official product & chain surface",
+      "notes": "Official chain + crypto product surface",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "official"
+      ]
+    },
+    {
+      "id": "e002",
+      "slug": "robinhood-chain-docs",
+      "name": "Robinhood Chain Docs",
+      "type": "official",
+      "layer": "official",
+      "category": "docs",
+      "twitter": "",
+      "website": "https://docs.robinhood.com/chain/",
+      "job": "Primary builder documentation",
+      "notes": "Developer docs for the L2",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "docs",
+        "official"
+      ]
+    },
+    {
+      "id": "e003",
+      "slug": "robinhood-wallet",
+      "name": "Robinhood Wallet",
+      "type": "official",
+      "layer": "official",
+      "category": "wallet",
+      "twitter": "@RobinhoodCrypto",
+      "website": "https://robinhood.com/us/en/chain/",
+      "job": "Wallet UX into RH Chain",
+      "notes": "Self-custody wallet surface; trending tokens; Pay checkout claims",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "wallet",
+        "official"
+      ]
+    },
+    {
+      "id": "e004",
+      "slug": "robinhood-earn",
+      "name": "Robinhood Earn",
+      "type": "official",
+      "layer": "official",
+      "category": "lending",
+      "twitter": "@RobinhoodCrypto",
+      "website": "https://robinhood.com/us/en/crypto/earn/",
+      "job": "App-facing USDG lend product",
+      "notes": "USDG lending via Morpho; ~7% APY narrative; insurance claims in newsroom",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "lending",
+        "official"
+      ]
+    },
+    {
+      "id": "e005",
+      "slug": "stock-tokens-official",
+      "name": "Stock Tokens (official)",
+      "type": "official",
+      "layer": "official",
+      "category": "rwa",
+      "twitter": "@RobinhoodCrypto",
+      "website": "https://robinhood.com/rhj/stocktokens",
+      "job": "Official RWA / equity tokens",
+      "notes": "Tokenized equities product; jurisdiction-restricted (not US)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "rwa",
+        "official"
+      ]
+    },
+    {
+      "id": "e006",
+      "slug": "vlad-tenev",
+      "name": "Vlad Tenev",
+      "type": "official",
+      "layer": "official",
+      "category": "official",
+      "twitter": "@vladtenev",
+      "website": "",
+      "job": "Company leadership signal",
+      "notes": "CEO; builder embed stock-token calls",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "official"
+      ]
+    },
+    {
+      "id": "e007",
+      "slug": "usdg-paxos",
+      "name": "USDG / Paxos",
+      "type": "defi",
+      "layer": "defi",
+      "category": "stablecoin",
+      "twitter": "",
+      "website": "",
+      "job": "Settlement / Earn stable base",
+      "notes": "Dollar-backed stable narrative; dominant stables mcap on chain",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "stablecoin",
+        "defi"
+      ]
+    },
+    {
+      "id": "e008",
+      "slug": "arbitrum",
+      "name": "Arbitrum",
+      "type": "infra",
+      "layer": "infra",
+      "category": "infra",
+      "twitter": "@arbitrum",
+      "website": "https://docs.arbitrum.io/",
+      "job": "L2 stack / Orbit platform",
+      "notes": "Orbit stack parent for RH Chain",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "infra"
+      ]
+    },
+    {
+      "id": "e009",
+      "slug": "chainlink",
+      "name": "Chainlink",
+      "type": "infra",
+      "layer": "infra",
+      "category": "oracle",
+      "twitter": "@chainlink",
+      "website": "",
+      "job": "Oracles & cross-chain messaging",
+      "notes": "Day-1 oracle / CCIP partner (testnet+narrative)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "oracle",
+        "infra"
+      ]
+    },
+    {
+      "id": "e010",
+      "slug": "alchemy",
+      "name": "Alchemy",
+      "type": "infra",
+      "layer": "infra",
+      "category": "rpc",
+      "twitter": "@Alchemy",
+      "website": "",
+      "job": "RPC & developer infra",
+      "notes": "Day-1 infra / RPC partner",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "rpc",
+        "infra"
+      ]
+    },
+    {
+      "id": "e011",
+      "slug": "layerzero",
+      "name": "LayerZero",
+      "type": "infra",
+      "layer": "infra",
+      "category": "bridge",
+      "twitter": "@LayerZero_Core",
+      "website": "",
+      "job": "Omnichain messaging",
+      "notes": "Cross-chain messaging partner",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "bridge",
+        "infra"
+      ]
+    },
+    {
+      "id": "e012",
+      "slug": "trm-labs",
+      "name": "TRM Labs",
+      "type": "infra",
+      "layer": "infra",
+      "category": "compliance",
+      "twitter": "@trmlabs",
+      "website": "",
+      "job": "Onchain risk & compliance",
+      "notes": "Compliance / screening partner (testnet era)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "compliance",
+        "infra"
+      ]
+    },
+    {
+      "id": "e013",
+      "slug": "bitgo",
+      "name": "BitGo",
+      "type": "infra",
+      "layer": "infra",
+      "category": "custody",
+      "twitter": "@BitGo",
+      "website": "",
+      "job": "Institutional custody rails",
+      "notes": "Custody partner cited in ecosystem coverage",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "custody",
+        "infra"
+      ]
+    },
+    {
+      "id": "e014",
+      "slug": "privy",
+      "name": "Privy",
+      "type": "infra",
+      "layer": "infra",
+      "category": "wallet_infra",
+      "twitter": "@privy_io",
+      "website": "",
+      "job": "Embedded wallet / auth",
+      "notes": "Wallet/auth infra cited in eco maps",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "wallet_infra",
+        "infra"
+      ]
+    },
+    {
+      "id": "e015",
+      "slug": "quicknode",
+      "name": "QuickNode",
+      "type": "infra",
+      "layer": "infra",
+      "category": "rpc",
+      "twitter": "@QuickNode",
+      "website": "",
+      "job": "Node & API infra",
+      "notes": "RPC/node infra cited in eco maps",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "rpc",
+        "infra"
+      ]
+    },
+    {
+      "id": "e016",
+      "slug": "blockscout",
+      "name": "Blockscout",
+      "type": "infra",
+      "layer": "infra",
+      "category": "explorer",
+      "twitter": "@blockscout",
+      "website": "",
+      "job": "Chain explorer",
+      "notes": "Block explorer for the chain",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "explorer",
+        "infra"
+      ]
+    },
+    {
+      "id": "e017",
+      "slug": "allium",
+      "name": "Allium",
+      "type": "infra",
+      "layer": "infra",
+      "category": "data",
+      "twitter": "@AlliumLabs",
+      "website": "",
+      "job": "Onchain data infra",
+      "notes": "Data infra partner (testnet announcement)",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "infra"
+      ]
+    },
+    {
+      "id": "e018",
+      "slug": "fireblocks",
+      "name": "Fireblocks",
+      "type": "infra",
+      "layer": "infra",
+      "category": "custody",
+      "twitter": "@FireblocksHQ",
+      "website": "",
+      "job": "Institutional wallet infra",
+      "notes": "Institutional controls cited in eco maps",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "custody",
+        "infra"
+      ]
+    },
+    {
+      "id": "e019",
+      "slug": "chainalysis",
+      "name": "Chainalysis",
+      "type": "infra",
+      "layer": "infra",
+      "category": "compliance",
+      "twitter": "@chainalysis",
+      "website": "",
+      "job": "Compliance analytics",
+      "notes": "Compliance tooling cited in eco maps",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "compliance",
+        "infra"
+      ]
+    },
+    {
+      "id": "e020",
+      "slug": "blockaid",
+      "name": "Blockaid",
+      "type": "infra",
+      "layer": "infra",
+      "category": "security",
+      "twitter": "@blockaid_",
+      "website": "",
+      "job": "Scam/threat detection",
+      "notes": "Day-1 security partner; free builder tier claim",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "security",
+        "infra"
+      ]
+    },
+    {
+      "id": "e021",
+      "slug": "trust-wallet",
+      "name": "Trust Wallet",
+      "type": "infra",
+      "layer": "infra",
+      "category": "wallet",
+      "twitter": "@TrustWallet",
+      "website": "",
+      "job": "Self-custody access path",
+      "notes": "Third-party wallet with RH Chain swap promo windows",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "wallet",
+        "infra"
+      ]
+    },
+    {
+      "id": "e022",
+      "slug": "uniswap",
+      "name": "Uniswap",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@Uniswap",
+      "website": "https://uniswap.org/",
+      "job": "Public AMM liquidity layer",
+      "notes": "V2/V3/V4 (+ UniswapX narrative) primary public AMM",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 15034197.42692674,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e023",
+      "slug": "rialto",
+      "name": "Rialto",
+      "type": "defi",
+      "layer": "defi",
+      "category": "prop_amm",
+      "twitter": "@rialto_xyz",
+      "website": "",
+      "job": "Prop / specialized spot venue",
+      "notes": "Prop AMM / spot venue; newsroom day-1 trading list",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "prop_amm",
+        "defi"
+      ]
+    },
+    {
+      "id": "e024",
+      "slug": "pleiades",
+      "name": "Pleiades",
+      "type": "defi",
+      "layer": "defi",
+      "category": "prop_amm",
+      "twitter": "",
+      "website": "",
+      "job": "Prop trading venue (day-1)",
+      "notes": "Proprietary AMM / prop trading venue (newsroom day-1)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "prop_amm",
+        "defi"
+      ]
+    },
+    {
+      "id": "e025",
+      "slug": "1inch",
+      "name": "1inch",
+      "type": "defi",
+      "layer": "defi",
+      "category": "aggregator",
+      "twitter": "@1inch",
+      "website": "https://1inch.io/",
+      "job": "DEX aggregation / routing",
+      "notes": "Router / aggregator in wallet trading narrative",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "aggregator",
+        "defi"
+      ]
+    },
+    {
+      "id": "e026",
+      "slug": "0x",
+      "name": "0x",
+      "type": "defi",
+      "layer": "defi",
+      "category": "aggregator",
+      "twitter": "@0xProject",
+      "website": "https://0x.org/",
+      "job": "Swap infrastructure / aggregation",
+      "notes": "Aggregator volume visible on Llama DEX overview",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "aggregator",
+        "defi"
+      ]
+    },
+    {
+      "id": "e027",
+      "slug": "morpho",
+      "name": "Morpho",
+      "type": "defi",
+      "layer": "defi",
+      "category": "lending",
+      "twitter": "@Morpho",
+      "website": "https://morpho.org/",
+      "job": "Lending backbone for Earn",
+      "notes": "Largest RH TVL; powers Robinhood Earn rails",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 116995428.77094853,
+      "tags": [
+        "lending",
+        "defi"
+      ]
+    },
+    {
+      "id": "e028",
+      "slug": "spark",
+      "name": "Spark",
+      "type": "defi",
+      "layer": "defi",
+      "category": "yield",
+      "twitter": "@sparkdotfi",
+      "website": "",
+      "job": "Yield / savings jobs",
+      "notes": "Spark Savings + liquidity layer on RH",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 8424437.662476074,
+      "tags": [
+        "yield",
+        "defi"
+      ]
+    },
+    {
+      "id": "e029",
+      "slug": "ethena",
+      "name": "Ethena",
+      "type": "defi",
+      "layer": "defi",
+      "category": "yield",
+      "twitter": "@ethena_labs",
+      "website": "",
+      "job": "Yield / stable strategy partner",
+      "notes": "Earn stack partner (newsroom)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "yield",
+        "defi"
+      ]
+    },
+    {
+      "id": "e030",
+      "slug": "steakhouse",
+      "name": "Steakhouse",
+      "type": "defi",
+      "layer": "defi",
+      "category": "curator",
+      "twitter": "@Steakhousedao",
+      "website": "",
+      "job": "Vault curator partner",
+      "notes": "Earn / Morpho curator partner (newsroom)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "curator",
+        "defi"
+      ]
+    },
+    {
+      "id": "e031",
+      "slug": "maple",
+      "name": "Maple",
+      "type": "defi",
+      "layer": "defi",
+      "category": "lending",
+      "twitter": "@maplefinance",
+      "website": "",
+      "job": "Credit / lending partner",
+      "notes": "Earn stack partner (newsroom)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "lending",
+        "defi"
+      ]
+    },
+    {
+      "id": "e032",
+      "slug": "arcus",
+      "name": "Arcus",
+      "type": "defi",
+      "layer": "defi",
+      "category": "perps",
+      "twitter": "@arcus_xyz",
+      "website": "",
+      "job": "Perps & tokenized equity trading",
+      "notes": "Perps/spot; ex-dYdX team narrative; high TVL",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 14419859.00378253,
+      "tags": [
+        "perps",
+        "defi"
+      ]
+    },
+    {
+      "id": "e033",
+      "slug": "lighter",
+      "name": "Lighter",
+      "type": "defi",
+      "layer": "defi",
+      "category": "perps",
+      "twitter": "@Lighter_xyz",
+      "website": "",
+      "job": "Perps / spot venue",
+      "notes": "ZK perps/spot; wallet integration claims",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "perps",
+        "defi"
+      ]
+    },
+    {
+      "id": "e034",
+      "slug": "curve",
+      "name": "Curve",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@CurveFinance",
+      "website": "https://curve.finance/",
+      "job": "Specialized AMM",
+      "notes": "Stable/volatile pools on RH",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 132733.18075693634,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e035",
+      "slug": "pancakeswap",
+      "name": "PancakeSwap",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@PancakeSwap",
+      "website": "https://pancakeswap.finance/",
+      "job": "Multi-chain DEX presence",
+      "notes": "AMM V2/V3 presence on RH",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 118016.82528394119,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e036",
+      "slug": "swaphood",
+      "name": "SwapHood",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@SwapHoodFi",
+      "website": "",
+      "job": "Native public DEX",
+      "notes": "Native RH DEX V2/V3",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 190738.3810501198,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e037",
+      "slug": "sheriff-exchange",
+      "name": "Sheriff Exchange",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@sheriffexchange",
+      "website": "",
+      "job": "Native DEX",
+      "notes": "Small DEX TVL V2/V3",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 2350.681454969703,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e038",
+      "slug": "robinswap",
+      "name": "RobinSwap",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@RobinSwap_",
+      "website": "",
+      "job": "Native DEX",
+      "notes": "Native DEX V2/V3 on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 20273.328069515184,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e039",
+      "slug": "hoodit",
+      "name": "Hoodit",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@HooditXYZ",
+      "website": "",
+      "job": "Native DEX",
+      "notes": "Small native DEX",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e040",
+      "slug": "frothswap",
+      "name": "FrothSwap",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "@froth_meme",
+      "website": "",
+      "job": "Native DEX",
+      "notes": "Small DEX on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e041",
+      "slug": "aeon-protocol",
+      "name": "AEON Protocol",
+      "type": "defi",
+      "layer": "defi",
+      "category": "dex",
+      "twitter": "",
+      "website": "",
+      "job": "Native DEX",
+      "notes": "Small DEX TVL on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 4001.189145083509,
+      "tags": [
+        "dex",
+        "defi"
+      ]
+    },
+    {
+      "id": "e042",
+      "slug": "meridian-predict",
+      "name": "Meridian Predict",
+      "type": "defi",
+      "layer": "defi",
+      "category": "prediction",
+      "twitter": "@meridiandotxyz",
+      "website": "",
+      "job": "Prediction markets",
+      "notes": "Prediction market on RH",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 108900.22840436768,
+      "tags": [
+        "prediction",
+        "defi"
+      ]
+    },
+    {
+      "id": "e043",
+      "slug": "hoodbets",
+      "name": "Hoodbets",
+      "type": "defi",
+      "layer": "defi",
+      "category": "prediction",
+      "twitter": "@hoodbetsxyz",
+      "website": "",
+      "job": "Prediction markets",
+      "notes": "Prediction market (small TVL)",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "prediction",
+        "defi"
+      ]
+    },
+    {
+      "id": "e044",
+      "slug": "dexfi-aggregator",
+      "name": "DexFi Aggregator",
+      "type": "defi",
+      "layer": "defi",
+      "category": "yield_aggregator",
+      "twitter": "@DexFinance",
+      "website": "https://dexfi.com/",
+      "job": "Yield aggregation",
+      "notes": "Yield aggregator on RH",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 84698.56056402507,
+      "tags": [
+        "yield_aggregator",
+        "defi"
+      ]
+    },
+    {
+      "id": "e045",
+      "slug": "symbiosis",
+      "name": "Symbiosis",
+      "type": "defi",
+      "layer": "infra",
+      "category": "bridge",
+      "twitter": "@symbiosis_fi",
+      "website": "https://symbiosis.finance",
+      "job": "Cross-chain bridge",
+      "notes": "Cross-chain bridge TVL on RH",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 42743.79678522133,
+      "tags": [
+        "bridge",
+        "defi",
+        "infra"
+      ]
+    },
+    {
+      "id": "e046",
+      "slug": "index-fi",
+      "name": "Index Fi",
+      "type": "defi",
+      "layer": "defi",
+      "category": "rwa",
+      "twitter": "@TheIndexFi",
+      "website": "",
+      "job": "Tokenized index product",
+      "notes": "Programmatic stock index claims (CT)",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "rwa",
+        "defi"
+      ]
+    },
+    {
+      "id": "e047",
+      "slug": "midas-rwa",
+      "name": "Midas RWA",
+      "type": "defi",
+      "layer": "defi",
+      "category": "rwa",
+      "twitter": "@MidasRWA",
+      "website": "",
+      "job": "Tokenized credit / RWA product",
+      "notes": "mGLO day-1 product claims (CT)",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "rwa",
+        "defi"
+      ]
+    },
+    {
+      "id": "e048",
+      "slug": "noxa-fun",
+      "name": "NOXA Fun",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@Noxa_Fi",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Early dominant launchpad; Llama TVL",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 6087390.160305349,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e049",
+      "slug": "pons",
+      "name": "Pons",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@ponsdotfamily",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "High deploy count narrative; approval-risk CT notes",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e050",
+      "slug": "flap",
+      "name": "Flap",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@flapdotsh",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Launchpad war; DEX volume on Llama",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e051",
+      "slug": "4-fun",
+      "name": "4.fun",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@fourdottfun",
+      "website": "https://4.fun/",
+      "job": "Meme launch rail",
+      "notes": "No creation fees / no bonding curves claim",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e052",
+      "slug": "stoxesfun",
+      "name": "Stoxesfun",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@Stoxesfun",
+      "website": "",
+      "job": "Launchpad (RWA-themed)",
+      "notes": "RWA-dividend launch narrative",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e053",
+      "slug": "hood-fun",
+      "name": "hood.fun",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@hooddotfun",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Deploy rankings (CT)",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e054",
+      "slug": "sentry",
+      "name": "Sentry",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@sentrylauncher",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Launchpad on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 36725.68195541632,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e055",
+      "slug": "robinfun",
+      "name": "RobinFun",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@robinfunxyz",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Launchpad on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e056",
+      "slug": "doppler",
+      "name": "Doppler",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@dopplerprotocol",
+      "website": "",
+      "job": "Launch tooling",
+      "notes": "Prior week launchpad ranking (CT)",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e057",
+      "slug": "bankr",
+      "name": "Bankr",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@bankrbot",
+      "website": "",
+      "job": "Agent-assisted launches",
+      "notes": "Agent launch tooling (CT)",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e058",
+      "slug": "based-alpha",
+      "name": "Based Alpha",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@BasedOneX",
+      "website": "https://alpha.based.one",
+      "job": "Token launch rail",
+      "notes": "Small launchpad TVL",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e059",
+      "slug": "ymym-meme",
+      "name": "ymym.meme",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@ymym_hood",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Small launchpad on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e060",
+      "slug": "hoodpump",
+      "name": "HoodPump",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@hoodpump_fun",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Small launchpad",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e061",
+      "slug": "arrowpad",
+      "name": "ArrowPad",
+      "type": "launchpad",
+      "layer": "launchpad",
+      "category": "launchpad",
+      "twitter": "@RobinArrowPad",
+      "website": "",
+      "job": "Token launch rail",
+      "notes": "Small launchpad",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "launchpad"
+      ]
+    },
+    {
+      "id": "e062",
+      "slug": "virtuals",
+      "name": "Virtuals",
+      "type": "agent",
+      "layer": "agents",
+      "category": "agent",
+      "twitter": "@virtuals_io",
+      "website": "",
+      "job": "Agent launch platform",
+      "notes": "Agent launch platform cited in eco maps",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "agent",
+        "agents"
+      ]
+    },
+    {
+      "id": "e063",
+      "slug": "robinode",
+      "name": "RobiNode",
+      "type": "builder",
+      "layer": "agents",
+      "category": "agent",
+      "twitter": "@robinodexyz",
+      "website": "",
+      "job": "Agent layer for RWA routes",
+      "notes": "Stock-token routing; listed\u2260liquid",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "agent",
+        "builder",
+        "agents"
+      ]
+    },
+    {
+      "id": "e064",
+      "slug": "slvr",
+      "name": "SLVR",
+      "type": "noise",
+      "layer": "noise",
+      "category": "gamified",
+      "twitter": "@S_L_V_R_FUN",
+      "website": "",
+      "job": "Gamified / attention app",
+      "notes": "Gamified mining; fee print on Llama",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": 45676.36675845629,
+      "tags": [
+        "gamified",
+        "noise"
+      ]
+    },
+    {
+      "id": "e065",
+      "slug": "cash-cat",
+      "name": "Cash Cat",
+      "type": "noise",
+      "layer": "noise",
+      "category": "meme",
+      "twitter": "@cashcat_token",
+      "website": "",
+      "job": "Native meme (attention layer)",
+      "notes": "High-visibility native meme",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "meme",
+        "noise"
+      ]
+    },
+    {
+      "id": "e066",
+      "slug": "hoodz",
+      "name": "HOODZ",
+      "type": "noise",
+      "layer": "noise",
+      "category": "gaming",
+      "twitter": "@HOODZRH",
+      "website": "",
+      "job": "Gaming / attention",
+      "notes": "Gaming project small TVL",
+      "confidence": "low",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "gaming",
+        "noise"
+      ]
+    },
+    {
+      "id": "e067",
+      "slug": "news-for-robinhood",
+      "name": "News For Robinhood",
+      "type": "media",
+      "layer": "media",
+      "category": "data",
+      "twitter": "@NewsForRH",
+      "website": "",
+      "job": "Independent ecosystem intel",
+      "notes": "Independent RH intel / wallet clusters",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "media"
+      ]
+    },
+    {
+      "id": "e068",
+      "slug": "the-defi-edge",
+      "name": "The DeFi Edge",
+      "type": "media",
+      "layer": "media",
+      "category": "data",
+      "twitter": "@thedefiedge",
+      "website": "",
+      "job": "DeFi research / curation",
+      "notes": "Research; memes vs RWA fork framing",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "media"
+      ]
+    },
+    {
+      "id": "e069",
+      "slug": "tom-wan",
+      "name": "Tom Wan",
+      "type": "media",
+      "layer": "media",
+      "category": "data",
+      "twitter": "@tomwanhh",
+      "website": "",
+      "job": "Onchain data research",
+      "notes": "Entropy Advisors; launchpad deploy ranks",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "media"
+      ]
+    },
+    {
+      "id": "e070",
+      "slug": "jon-ma",
+      "name": "Jon Ma",
+      "type": "media",
+      "layer": "media",
+      "category": "data",
+      "twitter": "@jonbma",
+      "website": "",
+      "job": "Macro / product research",
+      "notes": "Artemis; product thesis letters",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "media"
+      ]
+    },
+    {
+      "id": "e071",
+      "slug": "eli5defi",
+      "name": "Eli5DeFi",
+      "type": "media",
+      "layer": "media",
+      "category": "data",
+      "twitter": "@Eli5defi",
+      "website": "",
+      "job": "Visual research explainers",
+      "notes": "Visual explainers; RWA+meme barbell",
+      "confidence": "medium",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "media"
+      ]
+    },
+    {
+      "id": "e072",
+      "slug": "defillama-rh-chain",
+      "name": "DefiLlama RH Chain",
+      "type": "media",
+      "layer": "media",
+      "category": "data",
+      "twitter": "",
+      "website": "https://defillama.com/chain/robinhood-chain",
+      "job": "TVL / volume / fees dashboard",
+      "notes": "Primary public metrics (chainId 4663)",
+      "confidence": "high",
+      "last_checked": "2026-07-16",
+      "tvl_rh": null,
+      "tags": [
+        "data",
+        "media"
+      ]
+    }
+  ],
+  "disclaimer": "NFA. Orientation map only. Not investment advice. Listings are not endorsements."
+}

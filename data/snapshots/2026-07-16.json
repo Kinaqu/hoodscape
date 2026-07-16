@@ -1,0 +1,217 @@
+{
+  "as_of_utc": "2026-07-16T13:47:20Z",
+  "chain": "Robinhood Chain",
+  "chain_id": 4663,
+  "tvl": 194559243.85330522,
+  "tvl_history_latest": {
+    "date": 1784160000,
+    "tvl": 194559040
+  },
+  "stablecoins_circulating_usd": 348698606.5879411,
+  "dex": {
+    "total24h": 797508036,
+    "total7d": 5058392087,
+    "total30d": 5574264364,
+    "change_1d": -2.42,
+    "change_7d": 84.09,
+    "protocol_count": 20
+  },
+  "fees": {
+    "total24h": 3942550,
+    "total7d": 24938256,
+    "error": null
+  },
+  "protocols_on_chain_count": 36,
+  "protocols_top": [
+    {
+      "name": "Morpho Blue",
+      "slug": "morpho-blue",
+      "category": "Lending",
+      "tvl_total": 7289807439.192075,
+      "tvl_rh": 116995428.77094853,
+      "twitter": "Morpho",
+      "url": "https://app.morpho.org"
+    },
+    {
+      "name": "Uniswap V3",
+      "slug": "uniswap-v3",
+      "category": "Dexs",
+      "tvl_total": 1521463051.0848954,
+      "tvl_rh": 30706974.60063068,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Uniswap V4",
+      "slug": "uniswap-v4",
+      "category": "Dexs",
+      "tvl_total": 829413167.8158795,
+      "tvl_rh": 15942750.00479163,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Uniswap V2",
+      "slug": "uniswap-v2",
+      "category": "Dexs",
+      "tvl_total": 780174242.6550717,
+      "tvl_rh": 15034197.42692674,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Arcus Perps",
+      "slug": "arcus-perps",
+      "category": "Derivatives",
+      "tvl_total": 14419859.00378253,
+      "tvl_rh": 14419859.00378253,
+      "twitter": "arcus_xyz",
+      "url": "https://arcus.xyz/"
+    },
+    {
+      "name": "Spark Savings",
+      "slug": "spark-savings",
+      "category": "Yield",
+      "tvl_total": 1091354707.6563177,
+      "tvl_rh": 8424437.662476074,
+      "twitter": "sparkdotfi",
+      "url": "https://data.spark.fi/savings/"
+    },
+    {
+      "name": "NOXA Fun",
+      "slug": "noxa-fun",
+      "category": "Launchpad",
+      "tvl_total": 6100981.250063761,
+      "tvl_rh": 6087390.160305349,
+      "twitter": "Noxa_Fi",
+      "url": "https://fun.noxa.eth.limo/"
+    },
+    {
+      "name": "SwapHood V3",
+      "slug": "swaphood-v3",
+      "category": "Dexs",
+      "tvl_total": 637797.8681969142,
+      "tvl_rh": 637797.8681969142,
+      "twitter": "SwapHoodFi",
+      "url": "https://www.swaphood.finance/#/"
+    },
+    {
+      "name": "SwapHood V2",
+      "slug": "swaphood-v2",
+      "category": "Dexs",
+      "tvl_total": 190738.3810501198,
+      "tvl_rh": 190738.3810501198,
+      "twitter": "SwapHoodFi",
+      "url": "https://www.swaphood.finance/#/"
+    },
+    {
+      "name": "Curve DEX",
+      "slug": "curve-dex",
+      "category": "Dexs",
+      "tvl_total": 1290190215.123611,
+      "tvl_rh": 132733.18075693634,
+      "twitter": "CurveFinance",
+      "url": "https://curve.finance"
+    },
+    {
+      "name": "PancakeSwap AMM V3",
+      "slug": "pancakeswap-amm-v3",
+      "category": "Dexs",
+      "tvl_total": 284342378.09363174,
+      "tvl_rh": 118016.82528394119,
+      "twitter": "PancakeSwap",
+      "url": "https://pancakeswap.finance/swap"
+    },
+    {
+      "name": "Sheriff V3",
+      "slug": "sheriff-v3",
+      "category": "Dexs",
+      "tvl_total": 113496.75151848429,
+      "tvl_rh": 113496.75151848429,
+      "twitter": "sheriffexchange",
+      "url": "https://app.sheriff.exchange/"
+    },
+    {
+      "name": "Meridian Predict",
+      "slug": "meridian-predict",
+      "category": "Prediction Market",
+      "tvl_total": 108900.22840436768,
+      "tvl_rh": 108900.22840436768,
+      "twitter": "meridiandotxyz",
+      "url": "https://app.meridian.xyz/predict"
+    },
+    {
+      "name": "DexFi Aggregator",
+      "slug": "dexfi-aggregator",
+      "category": "Yield Aggregator",
+      "tvl_total": 1822351.9322024263,
+      "tvl_rh": 84698.56056402507,
+      "twitter": "DexFinance",
+      "url": "https://dexfi.com/"
+    },
+    {
+      "name": "SLVR",
+      "slug": "slvr",
+      "category": "Gamified Mining",
+      "tvl_total": 45676.36675845629,
+      "tvl_rh": 45676.36675845629,
+      "twitter": "S_L_V_R_FUN",
+      "url": ""
+    },
+    {
+      "name": "Symbiosis",
+      "slug": "symbiosis",
+      "category": "Cross Chain Bridge",
+      "tvl_total": 9350132.511975253,
+      "tvl_rh": 42743.79678522133,
+      "twitter": "symbiosis_fi",
+      "url": "https://symbiosis.finance"
+    },
+    {
+      "name": "Sentry",
+      "slug": "sentry",
+      "category": "Launchpad",
+      "tvl_total": 36725.68195541632,
+      "tvl_rh": 36725.68195541632,
+      "twitter": "sentrylauncher",
+      "url": " "
+    },
+    {
+      "name": "RobinSwap V3",
+      "slug": "robinswap-v3",
+      "category": "Dexs",
+      "tvl_total": 20273.328069515184,
+      "tvl_rh": 20273.328069515184,
+      "twitter": "RobinSwap_",
+      "url": " "
+    },
+    {
+      "name": "AEON Protocol",
+      "slug": "aeon-protocol",
+      "category": "Dexs",
+      "tvl_total": 4001.189145083509,
+      "tvl_rh": 4001.189145083509,
+      "twitter": null,
+      "url": " "
+    },
+    {
+      "name": "Sheriff V2",
+      "slug": "sheriff-v2",
+      "category": "Dexs",
+      "tvl_total": 2350.681454969703,
+      "tvl_rh": 2350.681454969703,
+      "twitter": "sheriffexchange",
+      "url": "https://app.sheriff.exchange/"
+    }
+  ],
+  "sources": [
+    "https://api.llama.fi/v2/chains",
+    "https://api.llama.fi/v2/historicalChainTvl/Robinhood%20Chain",
+    "https://stablecoins.llama.fi/stablecoinchains",
+    "https://api.llama.fi/overview/dexs/Robinhood%20Chain",
+    "https://api.llama.fi/overview/fees/Robinhood%20Chain",
+    "https://api.llama.fi/protocols",
+    "https://defillama.com/chain/robinhood-chain"
+  ],
+  "disclaimer": "NFA. Public DefiLlama metrics only. Not investment advice."
+}
