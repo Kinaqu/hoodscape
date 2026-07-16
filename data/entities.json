@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T18:39:31Z",
+  "generated_at_utc": "2026-07-16T18:54:49Z",
   "count": 72,
   "layers": [
     "official",
@@ -2163,15 +2163,24 @@
       "layer": "defi",
       "category": "dex",
       "twitter": "",
-      "website": "",
-      "logo": "",
+      "website": "https://www.aeonprotocol.net/",
+      "logo": "https://www.aeonprotocol.net/icon.png",
       "job": "Native DEX",
-      "notes": "Small DEX TVL on Llama",
+      "notes": "ve(3,3) DEX on RH; fee-anchored emissions",
       "summary": "Native DEX",
-      "about": "Small DEX TVL on Llama\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
+      "about": "ve(3,3) DEX on Robinhood Chain with fee-anchored emissions and multi-pool architecture (vAMM, CL, DLMM).\n\nSmall but tracked TVL on DefiLlama.\n\nLandscape role: Native DEX. Onchain financial application or venue on Robinhood Chain.\n\nHoodscape is orientation only \u2014 verify primary docs, contracts, and eligibility before interacting. NFA.",
       "status": "live",
       "risks": "Smart contract, oracle, and liquidity risks apply. NFA \u2014 verify before using.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://www.aeonprotocol.net/",
+          "label": "Primary"
+        },
+        {
+          "url": "https://defillama.com/protocol/aeon-protocol",
+          "label": "DefiLlama"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 4175.906601942764,
@@ -2184,8 +2193,8 @@
         "monogram": "AP",
         "hue": 66,
         "glyph": "swap",
-        "logo_domain": "",
-        "avatar_kind": "monogram",
+        "logo_domain": "aeonprotocol.net",
+        "avatar_kind": "logo",
         "weight": "quiet"
       },
       "related": [
