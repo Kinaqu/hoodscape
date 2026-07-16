@@ -1,4 +1,5 @@
 import "./style.css";
+import { layerIcon, glyphIcon } from "./icons.js";
 
 const LAYER_META = [
   { id: "all", label: "All", desc: "Full landscape" },
@@ -64,6 +65,71 @@ function escapeHtml(s) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 }
+
+function statusSlug(status) {
+  return String(status || "unknown")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "") || "unknown";
+}
+
+function catSlug(category) {
+  return String(category || "other")
+    .toLowerCase()
+    .replace(/_/g, "-")
+    .replace(/[^a-z0-9-]+/g, "-") || "other";
+}
+
+function displayOf(e) {
+  return e.display || {
+    monogram: (e.name || "?").slice(0, 2).toUpperCase(),
+    hue: 160,
+    glyph: "node",
+    logo_domain: "",
+    avatar_kind: e.logo ? "logo" : "monogram",
+    weight: "std",
+  };
+}
+
+function avatarUrl(e) {
+  const d = displayOf(e);
+  if (e.logo) return e.logo;
+  if (d.logo_domain) {
+    return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d.logo_domain)}&sz=128`;
+  }
+  return "";
+}
+
+function avatarHtml(e, sizeClass = "") {
+  const d = displayOf(e);
+  const url = avatarUrl(e);
+  const mono = escapeHtml(d.monogram || "?");
+  const hue = d.hue ?? 160;
+  const layer = escapeHtml(e.layer || "defi");
+  if (url) {
+    return `<div class="avatar ${sizeClass} layer-${layer}" style="--hue:${hue}">
+      <img src="${escapeHtml(url)}" alt="" loading="lazy" referrerpolicy="no-referrer"
+        onerror="this.style.display='none';this.nextElementSibling.hidden=false" />
+      <span class="mono" hidden>${mono}</span>
+    </div>`;
+  }
+  return `<div class="avatar ${sizeClass} layer-${layer} is-mono" style="--hue:${hue}">
+    <span class="mono">${mono}</span>
+  </div>`;
+}
+
+function cardClasses(e) {
+  const d = displayOf(e);
+  return [
+    "card",
+    `skin-${e.layer || "defi"}`,
+    `cat-${catSlug(e.category)}`,
+    `status-${statusSlug(e.status)}`,
+    `conf-${e.confidence || "low"}`,
+    `weight-${d.weight || "std"}`,
+  ].join(" ");
+}
+
 
 function parseRoute() {
   const hash = location.hash.replace(/^#\/?/, "") || "map";
@@ -217,7 +283,7 @@ function renderLayerOverview() {
           (l) => `
         <button type="button" class="layer-tile ${state.layer === l.id ? "active" : ""}" data-layer="${l.id}">
           <div class="tile-top">
-            <span class="tile-name"><span class="dot ${l.id}" style="display:inline-block;margin-right:6px;vertical-align:middle"></span>${l.label}</span>
+            <span class="tile-name"><span class="tile-ico layer-tone-${l.id}">${layerIcon(l.id)}</span>${l.label}</span>
             <span class="tile-count">${counts[l.id] || 0}</span>
           </div>
           <p class="tile-desc">${escapeHtml(l.desc)}</p>
@@ -229,21 +295,30 @@ function renderLayerOverview() {
 }
 
 function renderCard(e, i = 0) {
+  const d = displayOf(e);
   const tvl =
-    e.tvl_rh != null ? `<span>TVL ${formatUsd(e.tvl_rh)}</span>` : "";
+    e.tvl_rh != null ? `<span class="tvl-badge">TVL ${formatUsd(e.tvl_rh)}</span>` : "";
   const blurb = e.summary || e.job || e.notes || "—";
+  const glyph = glyphIcon(d.glyph);
   return `
-    <button type="button" class="card" data-slug="${escapeHtml(e.slug)}" style="--i:${i}">
-      <div class="card-top">
-        <h3>${escapeHtml(e.name)}</h3>
-        <span class="layer-chip ${escapeHtml(e.layer)}">${escapeHtml(e.layer)}</span>
-      </div>
-      <p class="job">${escapeHtml(blurb)}</p>
-      <div class="card-meta">
-        <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
-        ${e.status ? `<span>${escapeHtml(e.status)}</span>` : ""}
-        ${e.category ? `<span>${escapeHtml(e.category)}</span>` : ""}
-        ${tvl}
+    <button type="button" class="${cardClasses(e)}" data-slug="${escapeHtml(e.slug)}" style="--i:${i};--hue:${d.hue ?? 160}">
+      <div class="card-accent"></div>
+      <div class="card-main">
+        ${avatarHtml(e)}
+        <div class="card-body">
+          <div class="card-top">
+            <h3>${escapeHtml(e.name)}</h3>
+            <span class="layer-chip ${escapeHtml(e.layer)}"><span class="chip-ico">${layerIcon(e.layer)}</span>${escapeHtml(e.layer)}</span>
+          </div>
+          <p class="job">${escapeHtml(blurb)}</p>
+          <div class="card-meta">
+            <span class="glyph-ico" title="${escapeHtml(d.glyph)}">${glyph}</span>
+            <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
+            ${e.status ? `<span class="status-tag">${escapeHtml(e.status)}</span>` : ""}
+            ${e.category ? `<span>${escapeHtml(e.category)}</span>` : ""}
+            ${tvl}
+          </div>
+        </div>
       </div>
     </button>
   `;
@@ -273,7 +348,7 @@ function renderResults(list) {
       return `
         <section class="group" data-group="${l}" style="--i:${gi}">
           <div class="group-head">
-            <span class="dot ${l}"></span>
+            <span class="group-ico layer-tone-${l}">${layerIcon(l)}</span>
             <h2>${escapeHtml(m.label)}</h2>
             <span class="count">${items.length}</span>
             <span class="hint">${escapeHtml(m.desc || "")}</span>
@@ -375,12 +450,17 @@ function renderPanel(e) {
     <div class="modal-backdrop" id="modal-bg" role="dialog" aria-modal="true" aria-label="${escapeHtml(e.name)}">
       <div class="modal layer-${escapeHtml(e.layer)}">
         <button type="button" class="close" id="modal-close" aria-label="Close">×</button>
-        <div class="modal-chips">
-          <span class="layer-chip ${escapeHtml(e.layer)}">${escapeHtml(e.layer)}</span>
-          ${e.status ? `<span class="status-pill">${escapeHtml(e.status)}</span>` : ""}
-          <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
+        <div class="panel-hero">
+          ${avatarHtml(e, "lg")}
+          <div class="panel-hero-text">
+            <div class="modal-chips">
+              <span class="layer-chip ${escapeHtml(e.layer)}"><span class="chip-ico">${layerIcon(e.layer)}</span>${escapeHtml(e.layer)}</span>
+              ${e.status ? `<span class="status-pill">${escapeHtml(e.status)}</span>` : ""}
+              <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
+            </div>
+            <h2>${escapeHtml(e.name)}</h2>
+          </div>
         </div>
-        <h2>${escapeHtml(e.name)}</h2>
         <p class="summary">${escapeHtml(summary)}</p>
         ${e.job && e.job !== summary ? `<p class="job-line">${escapeHtml(e.job)}</p>` : ""}
 

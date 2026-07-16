@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T14:57:40Z",
+  "generated_at_utc": "2026-07-16T15:05:03Z",
   "count": 72,
   "layers": [
     "official",
@@ -20,6 +20,7 @@
       "category": "official",
       "twitter": "@RobinhoodCrypto",
       "website": "https://robinhood.com/us/en/chain/",
+      "logo": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128",
       "job": "Official product & chain surface",
       "notes": "Official chain + crypto product surface",
       "summary": "Official product surface for Robinhood Chain \u2014 the public face of the L2 and onchain crypto products.",
@@ -42,6 +43,14 @@
       "tags": [
         "official"
       ],
+      "display": {
+        "monogram": "RC",
+        "hue": 40,
+        "glyph": "seal",
+        "logo_domain": "robinhood.com",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Wallet",
@@ -70,6 +79,7 @@
       "category": "docs",
       "twitter": "",
       "website": "https://docs.robinhood.com/chain/",
+      "logo": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128",
       "job": "Primary builder documentation",
       "notes": "Developer docs for the L2",
       "summary": "Primary developer documentation for building on Robinhood Chain.",
@@ -89,6 +99,14 @@
         "docs",
         "official"
       ],
+      "display": {
+        "monogram": "RC",
+        "hue": 214,
+        "glyph": "seal",
+        "logo_domain": "docs.robinhood.com",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Robinhood Crypto",
@@ -117,6 +135,7 @@
       "category": "wallet",
       "twitter": "@RobinhoodCrypto",
       "website": "https://robinhood.com/us/en/chain/",
+      "logo": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128",
       "job": "Wallet UX into RH Chain",
       "notes": "Self-custody wallet surface; trending tokens; Pay checkout claims",
       "summary": "Self-custody wallet surface that points users at Robinhood Chain activity (swaps, trending, checkout UX).",
@@ -136,6 +155,14 @@
         "wallet",
         "official"
       ],
+      "display": {
+        "monogram": "RW",
+        "hue": 16,
+        "glyph": "wallet",
+        "logo_domain": "robinhood.com",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Crypto",
@@ -164,6 +191,7 @@
       "category": "lending",
       "twitter": "@RobinhoodCrypto",
       "website": "https://robinhood.com/us/en/crypto/earn/",
+      "logo": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128",
       "job": "App-facing USDG lend product",
       "notes": "USDG lending via Morpho; ~7% APY narrative; insurance claims in newsroom",
       "summary": "App-facing USDG lending product; underlying rails cited as Morpho with partner stack support.",
@@ -187,6 +215,14 @@
         "lending",
         "official"
       ],
+      "display": {
+        "monogram": "RE",
+        "hue": 39,
+        "glyph": "lend",
+        "logo_domain": "robinhood.com",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Morpho",
@@ -223,6 +259,7 @@
       "category": "rwa",
       "twitter": "@RobinhoodCrypto",
       "website": "https://robinhood.com/rhj/stocktokens",
+      "logo": "https://www.google.com/s2/favicons?domain=robinhood.com&sz=128",
       "job": "Official RWA / equity tokens",
       "notes": "Tokenized equities product; jurisdiction-restricted (not US)",
       "summary": "Official tokenized equities product on Robinhood Chain \u2014 the RWA thesis surface, not a memecoin market.",
@@ -242,6 +279,14 @@
         "rwa",
         "official"
       ],
+      "display": {
+        "monogram": "ST",
+        "hue": 135,
+        "glyph": "chart",
+        "logo_domain": "robinhood.com",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Crypto",
@@ -274,6 +319,7 @@
       "category": "official",
       "twitter": "@vladtenev",
       "website": "",
+      "logo": "",
       "job": "Company leadership signal",
       "notes": "CEO; builder embed stock-token calls",
       "summary": "CEO / co-founder signal account for product direction (e.g. builder calls to embed stock tokens).",
@@ -287,6 +333,14 @@
       "tags": [
         "official"
       ],
+      "display": {
+        "monogram": "VT",
+        "hue": 18,
+        "glyph": "seal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Robinhood Crypto",
@@ -311,6 +365,7 @@
       "category": "stablecoin",
       "twitter": "",
       "website": "",
+      "logo": "",
       "job": "Settlement / Earn stable base",
       "notes": "Dollar-backed stable narrative; dominant stables mcap on chain",
       "summary": "Dollar-backed stable narrative on Robinhood Chain; dominant share of stables mcap in early metrics.",
@@ -326,6 +381,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "UP",
+        "hue": 135,
+        "glyph": "lend",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Earn",
@@ -350,6 +413,7 @@
       "category": "infra",
       "twitter": "@arbitrum",
       "website": "https://docs.arbitrum.io/",
+      "logo": "https://www.google.com/s2/favicons?domain=arbitrum.io&sz=128",
       "job": "L2 stack / Orbit platform",
       "notes": "Orbit stack parent for RH Chain",
       "summary": "Orbit / L2 stack parent for Robinhood Chain \u2014 security and architecture context.",
@@ -369,6 +433,14 @@
         "infra",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "AR",
+        "hue": 150,
+        "glyph": "node",
+        "logo_domain": "docs.arbitrum.io",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Crypto",
@@ -389,6 +461,7 @@
       "category": "oracle",
       "twitter": "@chainlink",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=chain.link&sz=128",
       "job": "Oracles & cross-chain messaging",
       "notes": "Day-1 oracle / CCIP partner (testnet+narrative)",
       "summary": "Oracle and cross-chain messaging partner cited in day-1 / testnet ecosystem narratives.",
@@ -404,6 +477,14 @@
         "infra",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "CH",
+        "hue": 219,
+        "glyph": "node",
+        "logo_domain": "chain.link",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Stock Tokens (official)",
@@ -428,6 +509,7 @@
       "category": "rpc",
       "twitter": "@Alchemy",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=alchemy.com&sz=128",
       "job": "RPC & developer infra",
       "notes": "Day-1 infra / RPC partner",
       "summary": "RPC / developer infrastructure partner for builders on Robinhood Chain.",
@@ -443,6 +525,14 @@
         "infra",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "AL",
+        "hue": 89,
+        "glyph": "node",
+        "logo_domain": "alchemy.com",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "QuickNode",
@@ -467,6 +557,7 @@
       "category": "bridge",
       "twitter": "@LayerZero_Core",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=layerzero.network&sz=128",
       "job": "Omnichain messaging",
       "notes": "Cross-chain messaging partner",
       "summary": "Omnichain messaging / bridge-layer partner cited for moving messages and assets across chains.",
@@ -482,6 +573,14 @@
         "infra",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "LA",
+        "hue": 241,
+        "glyph": "bridge",
+        "logo_domain": "layerzero.network",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Symbiosis",
@@ -506,6 +605,7 @@
       "category": "compliance",
       "twitter": "@trmlabs",
       "website": "",
+      "logo": "",
       "job": "Onchain risk & compliance",
       "notes": "Compliance / screening partner (testnet era)",
       "summary": "Compliance / screening partner referenced in testnet and ecosystem narratives.",
@@ -521,6 +621,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "TL",
+        "hue": 260,
+        "glyph": "shield",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Chainalysis",
@@ -545,6 +653,7 @@
       "category": "custody",
       "twitter": "@BitGo",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=bitgo.com&sz=128",
       "job": "Institutional custody rails",
       "notes": "Custody partner cited in ecosystem coverage",
       "summary": "Custody partner cited in broader RH Chain institutional coverage.",
@@ -560,6 +669,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "BI",
+        "hue": 293,
+        "glyph": "shield",
+        "logo_domain": "bitgo.com",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Fireblocks",
@@ -584,6 +701,7 @@
       "category": "wallet_infra",
       "twitter": "@privy_io",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=privy.io&sz=128",
       "job": "Embedded wallet / auth",
       "notes": "Wallet/auth infra cited in eco maps",
       "summary": "Embedded wallet / auth infrastructure cited in eco maps for RH builders.",
@@ -599,6 +717,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "PR",
+        "hue": 90,
+        "glyph": "wallet",
+        "logo_domain": "privy.io",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Alchemy",
@@ -623,6 +749,7 @@
       "category": "rpc",
       "twitter": "@QuickNode",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=quicknode.com&sz=128",
       "job": "Node & API infra",
       "notes": "RPC/node infra cited in eco maps",
       "summary": "Node / RPC API infra for developers building on Robinhood Chain.",
@@ -638,6 +765,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "QU",
+        "hue": 327,
+        "glyph": "node",
+        "logo_domain": "quicknode.com",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Alchemy",
@@ -662,6 +797,7 @@
       "category": "explorer",
       "twitter": "@blockscout",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=blockscout.com&sz=128",
       "job": "Chain explorer",
       "notes": "Block explorer for the chain",
       "summary": "Block explorer surface for inspecting RH Chain transactions and contracts.",
@@ -677,6 +813,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "BL",
+        "hue": 249,
+        "glyph": "node",
+        "logo_domain": "blockscout.com",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Robinhood Chain Docs",
@@ -697,6 +841,7 @@
       "category": "data",
       "twitter": "@AlliumLabs",
       "website": "",
+      "logo": "",
       "job": "Onchain data infra",
       "notes": "Data infra partner (testnet announcement)",
       "summary": "Onchain data infra",
@@ -712,6 +857,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "AL",
+        "hue": 344,
+        "glyph": "signal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Arbitrum",
@@ -736,6 +889,7 @@
       "category": "custody",
       "twitter": "@FireblocksHQ",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=fireblocks.com&sz=128",
       "job": "Institutional wallet infra",
       "notes": "Institutional controls cited in eco maps",
       "summary": "Institutional wallet infra",
@@ -751,6 +905,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "FI",
+        "hue": 316,
+        "glyph": "shield",
+        "logo_domain": "fireblocks.com",
+        "avatar_kind": "logo",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Arbitrum",
@@ -775,6 +937,7 @@
       "category": "compliance",
       "twitter": "@chainalysis",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=chainalysis.com&sz=128",
       "job": "Compliance analytics",
       "notes": "Compliance tooling cited in eco maps",
       "summary": "Compliance analytics",
@@ -790,6 +953,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "CH",
+        "hue": 80,
+        "glyph": "shield",
+        "logo_domain": "chainalysis.com",
+        "avatar_kind": "logo",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Arbitrum",
@@ -814,6 +985,7 @@
       "category": "security",
       "twitter": "@blockaid_",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=blockaid.io&sz=128",
       "job": "Scam/threat detection",
       "notes": "Day-1 security partner; free builder tier claim",
       "summary": "Security / threat-detection partner with day-1 RH Chain narrative and builder tooling access claims.",
@@ -829,6 +1001,14 @@
         "infra",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "BL",
+        "hue": 55,
+        "glyph": "shield",
+        "logo_domain": "blockaid.io",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Wallet",
@@ -853,6 +1033,7 @@
       "category": "wallet",
       "twitter": "@TrustWallet",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=trustwallet.com&sz=128",
       "job": "Self-custody access path",
       "notes": "Third-party wallet with RH Chain swap promo windows",
       "summary": "Third-party self-custody wallet with RH Chain swap promo windows.",
@@ -868,6 +1049,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "TW",
+        "hue": 38,
+        "glyph": "wallet",
+        "logo_domain": "trustwallet.com",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Robinhood Wallet",
@@ -888,6 +1077,7 @@
       "category": "dex",
       "twitter": "@Uniswap",
       "website": "https://uniswap.org/",
+      "logo": "https://www.google.com/s2/favicons?domain=uniswap.org&sz=128",
       "job": "Public AMM liquidity layer",
       "notes": "V2/V3/V4 (+ UniswapX narrative) primary public AMM",
       "summary": "Primary public AMM on Robinhood Chain (v2/v3/v4 narrative) \u2014 main open liquidity venue by volume/TVL.",
@@ -908,6 +1098,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "UN",
+        "hue": 211,
+        "glyph": "swap",
+        "logo_domain": "uniswap.org",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Rialto",
@@ -940,6 +1138,7 @@
       "category": "prop_amm",
       "twitter": "@rialto_xyz",
       "website": "",
+      "logo": "",
       "job": "Prop / specialized spot venue",
       "notes": "Prop AMM / spot venue; newsroom day-1 trading list",
       "summary": "Prop / specialized spot venue named in official day-1 trading lists alongside Uniswap.",
@@ -955,6 +1154,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "RI",
+        "hue": 261,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -983,6 +1190,7 @@
       "category": "prop_amm",
       "twitter": "",
       "website": "",
+      "logo": "",
       "job": "Prop trading venue (day-1)",
       "notes": "Proprietary AMM / prop trading venue (newsroom day-1)",
       "summary": "Proprietary AMM / prop trading venue called out as a day-1 partner in mainnet narrative.",
@@ -998,6 +1206,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "PL",
+        "hue": 129,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1022,6 +1238,7 @@
       "category": "aggregator",
       "twitter": "@1inch",
       "website": "https://1inch.io/",
+      "logo": "https://www.google.com/s2/favicons?domain=1inch.io&sz=128",
       "job": "DEX aggregation / routing",
       "notes": "Router / aggregator in wallet trading narrative",
       "summary": "DEX aggregator / router in wallet trading narratives for RH Chain.",
@@ -1042,6 +1259,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "1I",
+        "hue": 347,
+        "glyph": "swap",
+        "logo_domain": "1inch.io",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1066,6 +1291,7 @@
       "category": "aggregator",
       "twitter": "@0xProject",
       "website": "https://0x.org/",
+      "logo": "https://www.google.com/s2/favicons?domain=0x.org&sz=128",
       "job": "Swap infrastructure / aggregation",
       "notes": "Aggregator volume visible on Llama DEX overview",
       "summary": "Swap infrastructure / aggregation layer with volume visible on RH DEX overviews.",
@@ -1086,6 +1312,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "0X",
+        "hue": 168,
+        "glyph": "swap",
+        "logo_domain": "0x.org",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "1inch",
@@ -1110,6 +1344,7 @@
       "category": "lending",
       "twitter": "@Morpho",
       "website": "https://morpho.org/",
+      "logo": "https://www.google.com/s2/favicons?domain=morpho.org&sz=128",
       "job": "Lending backbone for Earn",
       "notes": "Largest RH TVL; powers Robinhood Earn rails",
       "summary": "Lending backbone on RH Chain; largest TVL slice and rails behind Robinhood Earn narrative.",
@@ -1130,6 +1365,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "MO",
+        "hue": 31,
+        "glyph": "lend",
+        "logo_domain": "morpho.org",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Robinhood Earn",
@@ -1166,6 +1409,7 @@
       "category": "yield",
       "twitter": "@sparkdotfi",
       "website": "",
+      "logo": "",
       "job": "Yield / savings jobs",
       "notes": "Spark Savings + liquidity layer on RH",
       "summary": "Yield / savings style protocols on RH (Spark Savings and related liquidity layer).",
@@ -1181,6 +1425,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "SP",
+        "hue": 5,
+        "glyph": "lend",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Morpho",
@@ -1205,6 +1457,7 @@
       "category": "yield",
       "twitter": "@ethena_labs",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=ethena.fi&sz=128",
       "job": "Yield / stable strategy partner",
       "notes": "Earn stack partner (newsroom)",
       "summary": "Yield / stable strategy partner named in Robinhood Earn launch narrative.",
@@ -1220,6 +1473,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "ET",
+        "hue": 359,
+        "glyph": "lend",
+        "logo_domain": "ethena.fi",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Robinhood Earn",
@@ -1244,6 +1505,7 @@
       "category": "curator",
       "twitter": "@Steakhousedao",
       "website": "",
+      "logo": "",
       "job": "Vault curator partner",
       "notes": "Earn / Morpho curator partner (newsroom)",
       "summary": "Vault curator partner referenced in Earn / Morpho ecosystem narrative.",
@@ -1259,6 +1521,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "ST",
+        "hue": 322,
+        "glyph": "lend",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Morpho",
@@ -1283,6 +1553,7 @@
       "category": "lending",
       "twitter": "@maplefinance",
       "website": "",
+      "logo": "https://www.google.com/s2/favicons?domain=maple.finance&sz=128",
       "job": "Credit / lending partner",
       "notes": "Earn stack partner (newsroom)",
       "summary": "Credit / lending partner named in Earn stack narrative.",
@@ -1298,6 +1569,14 @@
         "defi",
         "day-1 partner"
       ],
+      "display": {
+        "monogram": "MA",
+        "hue": 77,
+        "glyph": "lend",
+        "logo_domain": "maple.finance",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Robinhood Earn",
@@ -1322,6 +1601,7 @@
       "category": "perps",
       "twitter": "@arcus_xyz",
       "website": "",
+      "logo": "",
       "job": "Perps & tokenized equity trading",
       "notes": "Perps/spot; ex-dYdX team narrative; high TVL",
       "summary": "Perps / derivatives venue on RH Chain with material TVL in early Llama rankings.",
@@ -1337,6 +1617,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "AR",
+        "hue": 32,
+        "glyph": "leverage",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Lighter",
@@ -1361,6 +1649,7 @@
       "category": "perps",
       "twitter": "@Lighter_xyz",
       "website": "",
+      "logo": "",
       "job": "Perps / spot venue",
       "notes": "ZK perps/spot; wallet integration claims",
       "summary": "ZK-powered perps/spot venue with wallet integration claims on RH Chain.",
@@ -1376,6 +1665,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "LI",
+        "hue": 203,
+        "glyph": "leverage",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Arcus",
@@ -1396,6 +1693,7 @@
       "category": "dex",
       "twitter": "@CurveFinance",
       "website": "https://curve.finance/",
+      "logo": "https://www.google.com/s2/favicons?domain=curve.finance&sz=128",
       "job": "Specialized AMM",
       "notes": "Stable/volatile pools on RH",
       "summary": "Curve-style specialized AMM presence on Robinhood Chain.",
@@ -1416,6 +1714,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "CU",
+        "hue": 39,
+        "glyph": "swap",
+        "logo_domain": "curve.finance",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1440,6 +1746,7 @@
       "category": "dex",
       "twitter": "@PancakeSwap",
       "website": "https://pancakeswap.finance/",
+      "logo": "https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128",
       "job": "Multi-chain DEX presence",
       "notes": "AMM V2/V3 presence on RH",
       "summary": "Multi-chain DEX with AMM deployments registered on Robinhood Chain.",
@@ -1460,6 +1767,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "PA",
+        "hue": 272,
+        "glyph": "swap",
+        "logo_domain": "pancakeswap.finance",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1484,6 +1799,7 @@
       "category": "dex",
       "twitter": "@SwapHoodFi",
       "website": "",
+      "logo": "",
       "job": "Native public DEX",
       "notes": "Native RH DEX V2/V3",
       "summary": "Native RH DEX (V2/V3) \u2014 early local swap venue.",
@@ -1499,6 +1815,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "SW",
+        "hue": 303,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1523,6 +1847,7 @@
       "category": "dex",
       "twitter": "@sheriffexchange",
       "website": "",
+      "logo": "",
       "job": "Native DEX",
       "notes": "Small DEX TVL V2/V3",
       "summary": "Native DEX",
@@ -1538,6 +1863,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "SE",
+        "hue": 73,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1562,6 +1895,7 @@
       "category": "dex",
       "twitter": "@RobinSwap_",
       "website": "",
+      "logo": "",
       "job": "Native DEX",
       "notes": "Native DEX V2/V3 on Llama",
       "summary": "Native DEX",
@@ -1577,6 +1911,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "RO",
+        "hue": 141,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1601,6 +1943,7 @@
       "category": "dex",
       "twitter": "@HooditXYZ",
       "website": "",
+      "logo": "",
       "job": "Native DEX",
       "notes": "Small native DEX",
       "summary": "Native DEX",
@@ -1616,6 +1959,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "HO",
+        "hue": 287,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1640,6 +1991,7 @@
       "category": "dex",
       "twitter": "@froth_meme",
       "website": "",
+      "logo": "",
       "job": "Native DEX",
       "notes": "Small DEX on Llama",
       "summary": "Native DEX",
@@ -1655,6 +2007,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "FR",
+        "hue": 66,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1679,6 +2039,7 @@
       "category": "dex",
       "twitter": "",
       "website": "",
+      "logo": "",
       "job": "Native DEX",
       "notes": "Small DEX TVL on Llama",
       "summary": "Native DEX",
@@ -1694,6 +2055,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "AP",
+        "hue": 66,
+        "glyph": "swap",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1718,6 +2087,7 @@
       "category": "prediction",
       "twitter": "@meridiandotxyz",
       "website": "",
+      "logo": "",
       "job": "Prediction markets",
       "notes": "Prediction market on RH",
       "summary": "Prediction markets",
@@ -1733,6 +2103,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "MP",
+        "hue": 221,
+        "glyph": "odds",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1757,6 +2135,7 @@
       "category": "prediction",
       "twitter": "@hoodbetsxyz",
       "website": "",
+      "logo": "",
       "job": "Prediction markets",
       "notes": "Prediction market (small TVL)",
       "summary": "Prediction markets",
@@ -1772,6 +2151,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "HO",
+        "hue": 62,
+        "glyph": "odds",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1796,6 +2183,7 @@
       "category": "yield_aggregator",
       "twitter": "@DexFinance",
       "website": "https://dexfi.com/",
+      "logo": "https://www.google.com/s2/favicons?domain=dexfi.com&sz=128",
       "job": "Yield aggregation",
       "notes": "Yield aggregator on RH",
       "summary": "Yield aggregation",
@@ -1816,6 +2204,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "DA",
+        "hue": 292,
+        "glyph": "lend",
+        "logo_domain": "dexfi.com",
+        "avatar_kind": "logo",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1840,6 +2236,7 @@
       "category": "bridge",
       "twitter": "@symbiosis_fi",
       "website": "https://symbiosis.finance",
+      "logo": "https://www.google.com/s2/favicons?domain=symbiosis.finance&sz=128",
       "job": "Cross-chain bridge",
       "notes": "Cross-chain bridge TVL on RH",
       "summary": "Cross-chain bridge with TVL registered on RH Chain in Llama.",
@@ -1861,6 +2258,14 @@
         "infra",
         "live"
       ],
+      "display": {
+        "monogram": "SY",
+        "hue": 220,
+        "glyph": "bridge",
+        "logo_domain": "symbiosis.finance",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "LayerZero",
@@ -1881,6 +2286,7 @@
       "category": "rwa",
       "twitter": "@TheIndexFi",
       "website": "",
+      "logo": "",
       "job": "Tokenized index product",
       "notes": "Programmatic stock index claims (CT)",
       "summary": "Tokenized index product",
@@ -1896,6 +2302,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "IF",
+        "hue": 302,
+        "glyph": "chart",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1920,6 +2334,7 @@
       "category": "rwa",
       "twitter": "@MidasRWA",
       "website": "",
+      "logo": "",
       "job": "Tokenized credit / RWA product",
       "notes": "mGLO day-1 product claims (CT)",
       "summary": "Tokenized credit / RWA product",
@@ -1935,6 +2350,14 @@
         "defi",
         "live"
       ],
+      "display": {
+        "monogram": "MR",
+        "hue": 297,
+        "glyph": "chart",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Uniswap",
@@ -1959,6 +2382,7 @@
       "category": "launchpad",
       "twitter": "@Noxa_Fi",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Early dominant launchpad; Llama TVL",
       "summary": "Early dominant launchpad rail on RH Chain by community metrics and Llama TVL.",
@@ -1973,6 +2397,14 @@
         "launchpad",
         "live"
       ],
+      "display": {
+        "monogram": "NF",
+        "hue": 204,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "Pons",
@@ -2001,6 +2433,7 @@
       "category": "launchpad",
       "twitter": "@ponsdotfamily",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "High deploy count narrative; approval-risk CT notes",
       "summary": "High-deploy launchpad rail in the RH \u201claunchpad war\u201d; watch approval UX carefully.",
@@ -2015,6 +2448,14 @@
         "launchpad",
         "live"
       ],
+      "display": {
+        "monogram": "PO",
+        "hue": 148,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2039,6 +2480,7 @@
       "category": "launchpad",
       "twitter": "@flapdotsh",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Launchpad war; DEX volume on Llama",
       "summary": "Launchpad rail in the RH deploy race; shows meaningful DEX volume in some overviews.",
@@ -2053,6 +2495,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "FL",
+        "hue": 269,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2077,6 +2527,7 @@
       "category": "launchpad",
       "twitter": "@fourdottfun",
       "website": "https://4.fun/",
+      "logo": "https://www.google.com/s2/favicons?domain=4.fun&sz=128",
       "job": "Meme launch rail",
       "notes": "No creation fees / no bonding curves claim",
       "summary": "Meme launch rail with no-creation-fee / no-bonding-curve marketing claims.",
@@ -2096,6 +2547,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "4F",
+        "hue": 6,
+        "glyph": "rocket",
+        "logo_domain": "4.fun",
+        "avatar_kind": "logo",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2120,6 +2579,7 @@
       "category": "launchpad",
       "twitter": "@Stoxesfun",
       "website": "",
+      "logo": "",
       "job": "Launchpad (RWA-themed)",
       "notes": "RWA-dividend launch narrative",
       "summary": "Launchpad (RWA-themed)",
@@ -2134,6 +2594,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "ST",
+        "hue": 159,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2158,6 +2626,7 @@
       "category": "launchpad",
       "twitter": "@hooddotfun",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Deploy rankings (CT)",
       "summary": "Token launch rail",
@@ -2172,6 +2641,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "HF",
+        "hue": 6,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2196,6 +2673,7 @@
       "category": "launchpad",
       "twitter": "@sentrylauncher",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Launchpad on Llama",
       "summary": "Token launch rail",
@@ -2210,6 +2688,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "SE",
+        "hue": 287,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2234,6 +2720,7 @@
       "category": "launchpad",
       "twitter": "@robinfunxyz",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Launchpad on Llama",
       "summary": "Token launch rail",
@@ -2248,6 +2735,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "RO",
+        "hue": 189,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2272,6 +2767,7 @@
       "category": "launchpad",
       "twitter": "@dopplerprotocol",
       "website": "",
+      "logo": "",
       "job": "Launch tooling",
       "notes": "Prior week launchpad ranking (CT)",
       "summary": "Launch tooling",
@@ -2286,6 +2782,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "DO",
+        "hue": 62,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2310,6 +2814,7 @@
       "category": "launchpad",
       "twitter": "@bankrbot",
       "website": "",
+      "logo": "",
       "job": "Agent-assisted launches",
       "notes": "Agent launch tooling (CT)",
       "summary": "Agent-assisted launches",
@@ -2324,6 +2829,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "BA",
+        "hue": 46,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2348,6 +2861,7 @@
       "category": "launchpad",
       "twitter": "@BasedOneX",
       "website": "https://alpha.based.one",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Small launchpad TVL",
       "summary": "Token launch rail",
@@ -2367,6 +2881,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "BA",
+        "hue": 228,
+        "glyph": "rocket",
+        "logo_domain": "alpha.based.one",
+        "avatar_kind": "favicon",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2391,6 +2913,7 @@
       "category": "launchpad",
       "twitter": "@ymym_hood",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Small launchpad on Llama",
       "summary": "Token launch rail",
@@ -2405,6 +2928,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "YM",
+        "hue": 173,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2429,6 +2960,7 @@
       "category": "launchpad",
       "twitter": "@hoodpump_fun",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Small launchpad",
       "summary": "Token launch rail",
@@ -2443,6 +2975,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "HO",
+        "hue": 292,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2467,6 +3007,7 @@
       "category": "launchpad",
       "twitter": "@RobinArrowPad",
       "website": "",
+      "logo": "",
       "job": "Token launch rail",
       "notes": "Small launchpad",
       "summary": "Token launch rail",
@@ -2481,6 +3022,14 @@
         "launchpad",
         "community"
       ],
+      "display": {
+        "monogram": "AR",
+        "hue": 114,
+        "glyph": "rocket",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2505,6 +3054,7 @@
       "category": "agent",
       "twitter": "@virtuals_io",
       "website": "",
+      "logo": "",
       "job": "Agent launch platform",
       "notes": "Agent launch platform cited in eco maps",
       "summary": "Agent launch platform frequently cited in RH Chain agentic / AI layer maps.",
@@ -2520,6 +3070,14 @@
         "agents",
         "live"
       ],
+      "display": {
+        "monogram": "VI",
+        "hue": 232,
+        "glyph": "bot",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "RobiNode",
@@ -2544,6 +3102,7 @@
       "category": "agent",
       "twitter": "@robinodexyz",
       "website": "",
+      "logo": "",
       "job": "Agent layer for RWA routes",
       "notes": "Stock-token routing; listed\u2260liquid",
       "summary": "Builder focusing on agent routing for tokenized stocks \u2014 \u201clisted \u2260 liquid\u201d in practice.",
@@ -2560,6 +3119,14 @@
         "agents",
         "community"
       ],
+      "display": {
+        "monogram": "RO",
+        "hue": 22,
+        "glyph": "bot",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "std"
+      },
       "related": [
         {
           "name": "Stock Tokens (official)",
@@ -2584,6 +3151,7 @@
       "category": "gamified",
       "twitter": "@S_L_V_R_FUN",
       "website": "",
+      "logo": "",
       "job": "Gamified / attention app",
       "notes": "Gamified mining; fee print on Llama",
       "summary": "Gamified / attention app",
@@ -2599,6 +3167,14 @@
         "noise",
         "sample only"
       ],
+      "display": {
+        "monogram": "SL",
+        "hue": 125,
+        "glyph": "spark",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Cash Cat",
@@ -2623,6 +3199,7 @@
       "category": "meme",
       "twitter": "@cashcat_token",
       "website": "",
+      "logo": "",
       "job": "Native meme (attention layer)",
       "notes": "High-visibility native meme",
       "summary": "High-visibility native meme on RH Chain \u2014 attention layer sample.",
@@ -2638,6 +3215,14 @@
         "noise",
         "sample only"
       ],
+      "display": {
+        "monogram": "CC",
+        "hue": 12,
+        "glyph": "spark",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "NOXA Fun",
@@ -2662,6 +3247,7 @@
       "category": "gaming",
       "twitter": "@HOODZRH",
       "website": "",
+      "logo": "",
       "job": "Gaming / attention",
       "notes": "Gaming project small TVL",
       "summary": "Gaming / attention",
@@ -2677,6 +3263,14 @@
         "noise",
         "sample only"
       ],
+      "display": {
+        "monogram": "HO",
+        "hue": 278,
+        "glyph": "spark",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Cash Cat",
@@ -2701,6 +3295,7 @@
       "category": "data",
       "twitter": "@NewsForRH",
       "website": "",
+      "logo": "",
       "job": "Independent ecosystem intel",
       "notes": "Independent RH intel / wallet clusters",
       "summary": "Independent ecosystem intel",
@@ -2716,6 +3311,14 @@
         "media",
         "sample only"
       ],
+      "display": {
+        "monogram": "NF",
+        "hue": 224,
+        "glyph": "signal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "The DeFi Edge",
@@ -2740,6 +3343,7 @@
       "category": "data",
       "twitter": "@thedefiedge",
       "website": "",
+      "logo": "",
       "job": "DeFi research / curation",
       "notes": "Research; memes vs RWA fork framing",
       "summary": "Mid-tier research/curation account that framed RH\u2019s memes-vs-RWA fork clearly.",
@@ -2755,6 +3359,14 @@
         "media",
         "sample only"
       ],
+      "display": {
+        "monogram": "TD",
+        "hue": 66,
+        "glyph": "signal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "Tom Wan",
@@ -2779,6 +3391,7 @@
       "category": "data",
       "twitter": "@tomwanhh",
       "website": "",
+      "logo": "",
       "job": "Onchain data research",
       "notes": "Entropy Advisors; launchpad deploy ranks",
       "summary": "Onchain data research",
@@ -2794,6 +3407,14 @@
         "media",
         "sample only"
       ],
+      "display": {
+        "monogram": "TW",
+        "hue": 233,
+        "glyph": "signal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "The DeFi Edge",
@@ -2818,6 +3439,7 @@
       "category": "data",
       "twitter": "@jonbma",
       "website": "",
+      "logo": "",
       "job": "Macro / product research",
       "notes": "Artemis; product thesis letters",
       "summary": "Macro / product research",
@@ -2833,6 +3455,14 @@
         "media",
         "sample only"
       ],
+      "display": {
+        "monogram": "JM",
+        "hue": 128,
+        "glyph": "signal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "The DeFi Edge",
@@ -2857,6 +3487,7 @@
       "category": "data",
       "twitter": "@Eli5defi",
       "website": "",
+      "logo": "",
       "job": "Visual research explainers",
       "notes": "Visual explainers; RWA+meme barbell",
       "summary": "Visual research explainers",
@@ -2872,6 +3503,14 @@
         "media",
         "sample only"
       ],
+      "display": {
+        "monogram": "EL",
+        "hue": 135,
+        "glyph": "signal",
+        "logo_domain": "",
+        "avatar_kind": "monogram",
+        "weight": "quiet"
+      },
       "related": [
         {
           "name": "The DeFi Edge",
@@ -2896,6 +3535,7 @@
       "category": "data",
       "twitter": "",
       "website": "https://defillama.com/chain/robinhood-chain",
+      "logo": "https://www.google.com/s2/favicons?domain=defillama.com&sz=128",
       "job": "TVL / volume / fees dashboard",
       "notes": "Primary public metrics (chainId 4663)",
       "summary": "TVL / volume / fees dashboard",
@@ -2916,6 +3556,14 @@
         "media",
         "sample only"
       ],
+      "display": {
+        "monogram": "DR",
+        "hue": 198,
+        "glyph": "signal",
+        "logo_domain": "defillama.com",
+        "avatar_kind": "logo",
+        "weight": "hero"
+      },
       "related": [
         {
           "name": "The DeFi Edge",

@@ -9,12 +9,64 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "rh-entities.csv"
 OUT_ENTITIES = ROOT / "data" / "entities.json"
 SNAP_DIR = ROOT / "data" / "snapshots"
 SITE_PUBLIC = ROOT / "public" / "data"
+
+GLYPH_BY_CATEGORY = {
+    "official": "seal",
+    "docs": "seal",
+    "wallet": "wallet",
+    "wallet_infra": "wallet",
+    "lending": "lend",
+    "curator": "lend",
+    "yield": "lend",
+    "yield_aggregator": "lend",
+    "stablecoin": "lend",
+    "rwa": "chart",
+    "dex": "swap",
+    "prop_amm": "swap",
+    "aggregator": "swap",
+    "perps": "leverage",
+    "prediction": "odds",
+    "oracle": "node",
+    "rpc": "node",
+    "explorer": "node",
+    "infra": "node",
+    "data": "signal",
+    "bridge": "bridge",
+    "compliance": "shield",
+    "security": "shield",
+    "custody": "shield",
+    "launchpad": "rocket",
+    "agent": "bot",
+    "meme": "spark",
+    "gamified": "spark",
+    "gaming": "spark",
+}
+
+HERO_SLUGS = {
+    "robinhood-crypto",
+    "robinhood-wallet",
+    "robinhood-earn",
+    "stock-tokens-official",
+    "arbitrum",
+    "chainlink",
+    "alchemy",
+    "layerzero",
+    "blockaid",
+    "uniswap",
+    "morpho",
+    "1inch",
+    "arcus",
+    "noxa-fun",
+    "defillama-rh-chain",
+    "usdg-paxos",
+}
 
 
 def slugify(name: str) -> str:
@@ -46,6 +98,45 @@ def parse_related(raw: str) -> list[str]:
     return [x.strip() for x in raw.split(",") if x.strip()]
 
 
+def domain_from_url(url: str) -> str:
+    if not url:
+        return ""
+    try:
+        u = url if "://" in url else "https://" + url
+        d = urlparse(u).netloc.lower()
+        return d[4:] if d.startswith("www.") else d
+    except Exception:
+        return ""
+
+
+def monogram(name: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9 ]+", " ", name).strip()
+    parts = [p for p in cleaned.split() if p]
+    if not parts:
+        return "?"
+    if len(parts) == 1:
+        p = parts[0]
+        return (p[:2] if len(p) > 1 else p[:1]).upper()
+    return (parts[0][0] + parts[1][0]).upper()
+
+
+def hue_from_slug(slug: str) -> int:
+    h = 0
+    for ch in slug:
+        h = (h * 31 + ord(ch)) & 0xFFFFFFFF
+    return h % 360
+
+
+def weight_for(slug: str, layer: str, confidence: str, tvl) -> str:
+    if slug in HERO_SLUGS:
+        return "hero"
+    if tvl and tvl >= 1_000_000:
+        return "hero"
+    if confidence == "low" or layer in ("noise", "media"):
+        return "quiet"
+    return "std"
+
+
 def load_csv() -> list[dict]:
     rows = []
     with CSV_PATH.open(encoding="utf-8") as f:
@@ -60,27 +151,54 @@ def load_csv() -> list[dict]:
             job = (row.get("job_one_liner") or notes or "").strip()
             summary = (row.get("summary") or job or notes).strip()
             about = (row.get("about") or "").strip().replace("|", "\n\n")
+            website = (row.get("primary_url") or "").strip()
+            logo = (row.get("logo") or "").strip()
+            domain = domain_from_url(website)
+            if not domain and logo and "domain=" in logo:
+                m = re.search(r"domain=([^&]+)", logo)
+                if m:
+                    domain = m.group(1)
+            slug = slugify(name)
+            category = (row.get("category") or "").strip()
+            layer = (row.get("layer") or row.get("type") or "noise").strip()
+            confidence = (row.get("confidence") or "low").strip()
+            status = (row.get("status") or "").strip()
+            glyph = GLYPH_BY_CATEGORY.get(category, "node")
+            if layer == "media" and category == "data":
+                glyph = "signal"
+            if layer == "noise":
+                glyph = GLYPH_BY_CATEGORY.get(category, "spark")
+
             entity = {
                 "id": f"e{i+1:03d}",
-                "slug": slugify(name),
+                "slug": slug,
                 "name": name,
                 "type": (row.get("type") or "").strip(),
-                "layer": (row.get("layer") or row.get("type") or "noise").strip(),
-                "category": (row.get("category") or "").strip(),
+                "layer": layer,
+                "category": category,
                 "twitter": tw,
-                "website": (row.get("primary_url") or "").strip(),
+                "website": website,
+                "logo": logo,
                 "job": job,
                 "notes": notes,
                 "summary": summary,
                 "about": about,
-                "status": (row.get("status") or "").strip(),
+                "status": status,
                 "related_names": parse_related(row.get("related") or ""),
                 "risks": (row.get("risks") or "").strip(),
                 "sources": parse_sources(row.get("sources") or ""),
-                "confidence": (row.get("confidence") or "low").strip(),
+                "confidence": confidence,
                 "last_checked": (row.get("last_seen") or "").strip(),
                 "tvl_rh": None,
                 "tags": [],
+                "display": {
+                    "monogram": monogram(name),
+                    "hue": hue_from_slug(slug),
+                    "glyph": glyph,
+                    "logo_domain": domain,
+                    "avatar_kind": "logo" if logo else ("favicon" if domain else "monogram"),
+                    "weight": "std",  # filled after tvl merge
+                },
             }
             for key in ("category", "type", "layer", "status"):
                 v = entity.get(key)
@@ -88,7 +206,6 @@ def load_csv() -> list[dict]:
                     entity["tags"].append(v)
             rows.append(entity)
 
-    # unique slugs
     seen: dict[str, int] = {}
     for e in rows:
         base = e["slug"]
@@ -97,34 +214,30 @@ def load_csv() -> list[dict]:
         else:
             seen[base] += 1
             e["slug"] = f"{base}-{seen[base]}"
+            e["display"]["hue"] = hue_from_slug(e["slug"])
 
-    # resolve related names → slugs
     by_name = {e["name"].lower(): e["slug"] for e in rows}
-    by_slug = {e["slug"]: e for e in rows}
-    by_layer = {}
+    by_layer: dict[str, list] = {}
     conf_rank = {"high": 0, "medium": 1, "low": 2}
     for e in rows:
         by_layer.setdefault(e["layer"], []).append(e)
     for layer, items in by_layer.items():
-        items.sort(
-            key=lambda x: (conf_rank.get(x.get("confidence"), 9), x["name"])
-        )
+        items.sort(key=lambda x: (conf_rank.get(x.get("confidence"), 9), x["name"]))
 
     for e in rows:
         related = []
-        seen = set()
+        seen_s = set()
         for n in e.pop("related_names", []):
             slug = by_name.get(n.lower())
-            if slug and slug != e["slug"] and slug not in seen:
+            if slug and slug != e["slug"] and slug not in seen_s:
                 related.append({"name": n, "slug": slug})
-                seen.add(slug)
-        # fallback: same-layer peers
+                seen_s.add(slug)
         if len(related) < 2:
             for peer in by_layer.get(e["layer"], []):
-                if peer["slug"] == e["slug"] or peer["slug"] in seen:
+                if peer["slug"] == e["slug"] or peer["slug"] in seen_s:
                     continue
                 related.append({"name": peer["name"], "slug": peer["slug"]})
-                seen.add(peer["slug"])
+                seen_s.add(peer["slug"])
                 if len(related) >= 3:
                     break
         e["related"] = related
@@ -142,6 +255,10 @@ def load_latest_snapshot() -> dict | None:
 
 def merge_tvl(entities: list[dict], snapshot: dict | None) -> None:
     if not snapshot:
+        for e in entities:
+            e["display"]["weight"] = weight_for(
+                e["slug"], e["layer"], e["confidence"], None
+            )
         return
     protos = snapshot.get("protocols_top") or []
     by_tw = {}
@@ -169,6 +286,9 @@ def merge_tvl(entities: list[dict], snapshot: dict | None) -> None:
                         break
         if hit and hit.get("tvl_rh") is not None:
             e["tvl_rh"] = hit["tvl_rh"]
+        e["display"]["weight"] = weight_for(
+            e["slug"], e["layer"], e["confidence"], e.get("tvl_rh")
+        )
 
 
 def build_pulse(snapshot: dict | None) -> dict:
@@ -230,6 +350,11 @@ def main() -> int:
     (SITE_PUBLIC / "pulse.json").write_text(json.dumps(pulse, indent=2), encoding="utf-8")
     print(f"Wrote {SITE_PUBLIC / 'entities.json'}")
     print(f"Wrote {SITE_PUBLIC / 'pulse.json'}")
+    kinds = {}
+    for e in entities:
+        k = e["display"]["avatar_kind"]
+        kinds[k] = kinds.get(k, 0) + 1
+    print("avatar_kind", kinds)
     return 0
 
 
