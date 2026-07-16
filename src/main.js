@@ -226,18 +226,20 @@ function renderLayerOverview() {
   `;
 }
 
-function renderCard(e) {
+function renderCard(e, i = 0) {
   const tvl =
     e.tvl_rh != null ? `<span>TVL ${formatUsd(e.tvl_rh)}</span>` : "";
+  const blurb = e.summary || e.job || e.notes || "—";
   return `
-    <button type="button" class="card" data-slug="${escapeHtml(e.slug)}">
+    <button type="button" class="card" data-slug="${escapeHtml(e.slug)}" style="--i:${i}">
       <div class="card-top">
         <h3>${escapeHtml(e.name)}</h3>
         <span class="layer-chip ${escapeHtml(e.layer)}">${escapeHtml(e.layer)}</span>
       </div>
-      <p class="job">${escapeHtml(e.job || e.notes || "—")}</p>
+      <p class="job">${escapeHtml(blurb)}</p>
       <div class="card-meta">
         <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
+        ${e.status ? `<span>${escapeHtml(e.status)}</span>` : ""}
         ${e.category ? `<span>${escapeHtml(e.category)}</span>` : ""}
         ${tvl}
       </div>
@@ -251,7 +253,7 @@ function renderResults(list) {
   }
 
   if (state.view === "flat" || state.layer !== "all") {
-    return `<div class="grid">${list.map(renderCard).join("")}</div>`;
+    return `<div class="grid">${list.map((e, i) => renderCard(e, i)).join("")}</div>`;
   }
 
   // grouped
@@ -260,19 +262,21 @@ function renderResults(list) {
     (groups[e.layer] ||= []).push(e);
   }
   const meta = Object.fromEntries(LAYER_META.map((l) => [l.id, l]));
+  let i = 0;
   return LAYER_ORDER.filter((l) => groups[l]?.length)
-    .map((l) => {
+    .map((l, gi) => {
       const items = groups[l];
       const m = meta[l] || { label: l, desc: "" };
+      const cards = items.map((e) => renderCard(e, i++)).join("");
       return `
-        <section class="group" data-group="${l}">
+        <section class="group" data-group="${l}" style="--i:${gi}">
           <div class="group-head">
             <span class="dot ${l}"></span>
             <h2>${escapeHtml(m.label)}</h2>
             <span class="count">${items.length}</span>
             <span class="hint">${escapeHtml(m.desc || "")}</span>
           </div>
-          <div class="grid">${items.map(renderCard).join("")}</div>
+          <div class="grid">${cards}</div>
         </section>`;
     })
     .join("");
@@ -331,6 +335,13 @@ function renderMap() {
   `;
 }
 
+function paragraphs(text) {
+  return String(text || "")
+    .split(/\n\n+/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+}
+
 function renderPanel(e) {
   const links = [];
   if (e.website) {
@@ -344,18 +355,47 @@ function renderPanel(e) {
       `<a class="btn" href="https://x.com/${escapeHtml(handle)}" target="_blank" rel="noopener">${escapeHtml(e.twitter)} ↗</a>`
     );
   }
+  for (const s of e.sources || []) {
+    if (s.url && s.url !== e.website) {
+      links.push(
+        `<a class="btn" href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.label || s.url)} ↗</a>`
+      );
+    }
+  }
+
+  const aboutHtml = paragraphs(e.about)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join("");
+  const summary = e.summary || e.job || "";
+  const related = e.related || [];
+
   return `
     <div class="modal-backdrop" id="modal-bg" role="dialog" aria-modal="true" aria-label="${escapeHtml(e.name)}">
-      <div class="modal">
+      <div class="modal layer-${escapeHtml(e.layer)}">
         <button type="button" class="close" id="modal-close" aria-label="Close">×</button>
-        <span class="layer-chip ${escapeHtml(e.layer)}">${escapeHtml(e.layer)}</span>
+        <div class="modal-chips">
+          <span class="layer-chip ${escapeHtml(e.layer)}">${escapeHtml(e.layer)}</span>
+          ${e.status ? `<span class="status-pill">${escapeHtml(e.status)}</span>` : ""}
+          <span class="conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span>
+        </div>
         <h2>${escapeHtml(e.name)}</h2>
-        <p class="job-line">${escapeHtml(e.job || "")}</p>
+        <p class="summary">${escapeHtml(summary)}</p>
+        ${e.job && e.job !== summary ? `<p class="job-line">${escapeHtml(e.job)}</p>` : ""}
+
+        ${
+          aboutHtml
+            ? `<div class="panel-section">
+          <h3>What it is</h3>
+          <div class="about-block">${aboutHtml}</div>
+        </div>`
+            : ""
+        }
 
         <div class="panel-section">
           <h3>Trust</h3>
           <div class="panel-kv">
             <div><span class="k">Confidence</span><span class="v conf ${escapeHtml(e.confidence)}">${escapeHtml(e.confidence)}</span></div>
+            <div><span class="k">Status</span><span class="v">${escapeHtml(e.status || "—")}</span></div>
             <div><span class="k">Last checked</span><span class="v">${escapeHtml(e.last_checked || "—")}</span></div>
             <div><span class="k">Category</span><span class="v">${escapeHtml(e.category || "—")}</span></div>
             ${
@@ -366,14 +406,46 @@ function renderPanel(e) {
           </div>
         </div>
 
-        <div class="panel-section">
+        ${
+          e.risks
+            ? `<div class="panel-section">
+          <h3>Risks / caveats</h3>
+          <div class="risks-box">${escapeHtml(e.risks)}</div>
+        </div>`
+            : ""
+        }
+
+        ${
+          e.notes && e.notes !== summary && e.notes !== e.about
+            ? `<div class="panel-section">
           <h3>Notes</h3>
-          <p>${escapeHtml(e.notes || "No notes yet.")}</p>
+          <p>${escapeHtml(e.notes)}</p>
+        </div>`
+            : ""
+        }
+
+        <div class="panel-section">
+          <h3>Links</h3>
+          <div class="links" style="margin-top:0.35rem">
+            ${links.join("") || `<span style="color:var(--text-dim);font-size:0.85rem">No primary links yet — verify before interacting.</span>`}
+          </div>
         </div>
 
-        <div class="links">
-          ${links.join("") || `<span style="color:var(--text-dim);font-size:0.85rem">No primary links yet — verify before interacting.</span>`}
-        </div>
+        ${
+          related.length
+            ? `<div class="panel-section">
+          <h3>Related</h3>
+          <div class="related-row">
+            ${related
+              .map(
+                (r) =>
+                  `<button type="button" class="related-chip" data-slug="${escapeHtml(r.slug)}">${escapeHtml(r.name)}</button>`
+              )
+              .join("")}
+          </div>
+        </div>`
+            : ""
+        }
       </div>
     </div>
   `;
@@ -553,6 +625,15 @@ function render() {
 
   app.innerHTML = shell(body);
   bindEvents();
+  // stagger cards on map
+  const results = $("#results");
+  if (results) {
+    results.classList.remove("is-entering");
+    // force reflow then re-add for animation replay
+    void results.offsetWidth;
+    results.classList.add("is-entering");
+    window.setTimeout(() => results.classList.remove("is-entering"), 900);
+  }
 }
 
 function openEntity(slug) {
@@ -608,6 +689,13 @@ function bindEvents() {
 
   document.querySelectorAll(".card[data-slug]").forEach((el) => {
     el.addEventListener("click", () => openEntity(el.dataset.slug));
+  });
+
+  document.querySelectorAll(".related-chip[data-slug]").forEach((el) => {
+    el.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      openEntity(el.dataset.slug);
+    });
   });
 
   $("#modal-bg")?.addEventListener("click", (e) => {
