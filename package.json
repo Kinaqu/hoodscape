@@ -9,7 +9,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "data": "python3 scripts/export_entities_json.py",
-    "data:full": "python3 scripts/rh_llama_snapshot.py && python3 scripts/export_entities_json.py"
+    "data:full": "python3 scripts/rh_llama_snapshot.py && python3 scripts/export_entities_json.py",
+    "research:audit": "python3 scripts/audit_edges.py",
+    "research:seed": "python3 scripts/seed_edges.py",
+    "research:graph": "python3 scripts/seed_edges.py && python3 scripts/export_entities_json.py"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

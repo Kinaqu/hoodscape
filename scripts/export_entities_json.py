@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "rh-entities.csv"
+EDGES_PATH = ROOT / "data" / "edges.csv"
 OUT_ENTITIES = ROOT / "data" / "entities.json"
 SNAP_DIR = ROOT / "data" / "snapshots"
 SITE_PUBLIC = ROOT / "public" / "data"
@@ -291,6 +292,75 @@ def merge_tvl(entities: list[dict], snapshot: dict | None) -> None:
         )
 
 
+def parse_evidence_urls(raw: str) -> list[dict]:
+    out = []
+    raw = (raw or "").strip()
+    if not raw:
+        return out
+    for part in raw.split(";"):
+        part = part.strip()
+        if not part:
+            continue
+        if "|" in part:
+            url, label = part.split("|", 1)
+            out.append({"url": url.strip(), "label": label.strip() or url.strip()})
+        else:
+            out.append({"url": part, "label": part})
+    return out
+
+
+def load_edges(entities: list[dict]) -> list[dict]:
+    if not EDGES_PATH.exists():
+        return []
+    slugs = {e["slug"] for e in entities}
+    edges = []
+    with EDGES_PATH.open(encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            fr = (row.get("from_slug") or "").strip()
+            to = (row.get("to_slug") or "").strip()
+            if not fr or not to or fr not in slugs or to not in slugs:
+                continue
+            edges.append(
+                {
+                    "from": fr,
+                    "to": to,
+                    "type": (row.get("type") or "").strip(),
+                    "label": (row.get("label") or "").strip(),
+                    "explanation": (row.get("explanation") or "").strip(),
+                    "confidence": (row.get("confidence") or "low").strip(),
+                    "strength": (row.get("strength") or "weak").strip(),
+                    "directed": (row.get("directed") or "true").strip().lower() == "true",
+                    "evidence": parse_evidence_urls(row.get("evidence_urls") or ""),
+                    "last_checked": (row.get("last_checked") or "").strip(),
+                    "source": (row.get("source") or "").strip(),
+                }
+            )
+    return edges
+
+
+def build_graph(entities: list[dict], edges: list[dict]) -> dict:
+    nodes = [
+        {
+            "id": e["slug"],
+            "name": e["name"],
+            "layer": e["layer"],
+            "confidence": e.get("confidence"),
+            "category": e.get("category"),
+            "weight": (e.get("display") or {}).get("weight", "std"),
+        }
+        for e in entities
+    ]
+    return {
+        "generated_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "node_count": len(nodes),
+        "edge_count": len(edges),
+        "edge_types": sorted({e["type"] for e in edges if e.get("type")}),
+        "nodes": nodes,
+        "edges": edges,
+        "disclaimer": "NFA. Graph edges are orientation with cited context — not endorsements.",
+    }
+
+
 def build_pulse(snapshot: dict | None) -> dict:
     if not snapshot:
         return {
@@ -348,8 +418,14 @@ def main() -> int:
         json.dumps(payload, indent=2), encoding="utf-8"
     )
     (SITE_PUBLIC / "pulse.json").write_text(json.dumps(pulse, indent=2), encoding="utf-8")
+    edges = load_edges(entities)
+    graph = build_graph(entities, edges)
+    graph_path = SITE_PUBLIC / "graph.json"
+    graph_path.write_text(json.dumps(graph, indent=2), encoding="utf-8")
+    (ROOT / "data" / "graph.json").write_text(json.dumps(graph, indent=2), encoding="utf-8")
     print(f"Wrote {SITE_PUBLIC / 'entities.json'}")
     print(f"Wrote {SITE_PUBLIC / 'pulse.json'}")
+    print(f"Wrote {graph_path} ({len(edges)} edges)")
     kinds = {}
     for e in entities:
         k = e["display"]["avatar_kind"]
