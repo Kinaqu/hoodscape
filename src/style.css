@@ -32,7 +32,9 @@
   --font: "Instrument Sans", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --max: 1180px;
-  --header-h: 60px;
+  --nav-bar-top: 1.5rem;
+  --nav-bar-h: 3rem;
+  --nav-bar-offset: calc(var(--nav-bar-top) + var(--nav-bar-h));
   --shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
   --ease: 0.15s ease;
   --glass: rgba(12, 18, 16, 0.72);
@@ -46,6 +48,8 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font);
   background: var(--bg);
   color: var(--text);
@@ -133,26 +137,52 @@ a:hover { color: var(--accent-strong); text-decoration: underline; }
   flex-direction: column;
 }
 
-.site-header {
-  border-bottom: 1px solid var(--border-soft);
-  background: var(--glass-strong);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  height: var(--header-h);
+#nav-mount {
+  pointer-events: none;
 }
 
-.header-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+#nav-mount > * {
+  pointer-events: auto;
+}
+
+.nav-bar-brand {
+  gap: 0.55rem;
+  padding: 0.15rem 0.35rem 0.15rem 0.15rem;
+  border-radius: 999px;
+  transition: background var(--ease);
+}
+
+.nav-bar-brand:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-bar-brand .brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.nav-bar-brand .brand-mark svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: 640px) {
+  .nav-bar-brand {
+    gap: 0.7rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+  }
+
+  .nav-bar-brand .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .nav-bar-brand .brand-mark svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .brand {
@@ -188,38 +218,24 @@ a:hover { color: var(--accent-strong); text-decoration: underline; }
   margin-top: 0.05rem;
 }
 
-nav { display: flex; align-items: center; gap: 0.15rem; flex-wrap: wrap; }
-nav a {
-  color: var(--text-muted);
-  font-size: 0.84rem;
-  font-weight: 500;
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: var(--ease);
-}
-nav a:hover, nav a.active {
-  color: var(--text);
-  background: var(--bg-elev);
-  text-decoration: none;
-}
-nav .nav-cta {
-  margin-left: 0.35rem;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border: 1px solid rgba(61, 186, 140, 0.25);
-}
-nav .nav-cta:hover {
-  background: rgba(61, 186, 140, 0.2);
-  color: var(--accent-strong);
-}
-
 main {
   flex: 1;
   max-width: var(--max);
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem 1.25rem 3.5rem;
+}
+
+@media (max-width: 767px) {
+  #app main {
+    padding-bottom: 5.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #app main {
+    padding-top: calc(var(--nav-bar-offset) + 0.75rem);
+  }
 }
 
 .hero { margin-bottom: 1.15rem; }
@@ -389,7 +405,7 @@ main {
   align-items: center;
   margin-bottom: 0.85rem;
   position: sticky;
-  top: var(--header-h);
+  top: var(--nav-bar-offset);
   z-index: 40;
   padding: 0.55rem 0;
 }
@@ -1196,9 +1212,7 @@ main {
   animation: shimmer 1.2s linear infinite;
 }
 
-.site-header {
-  transition: border-color var(--dur-fast), background var(--dur-fast);
-}
+
 .page-prose {
   animation: fade-up var(--dur) var(--ease-out) both;
 }
