@@ -33,6 +33,73 @@ const SITE_LINKS = {
   github: "https://github.com/Kinaqu",
 };
 
+const SUBMIT_X_HANDLE = "Kinaqu123";
+
+const SUBMIT_LAYER_OPTIONS = LAYER_META.filter((l) => l.id !== "all").map((l) => ({
+  value: l.id,
+  label: l.label,
+  hint: l.desc,
+}));
+
+const SUBMIT_JOBS_BY_LAYER = {
+  defi: [
+    { value: "dex", label: "DEX / AMM", hint: "Public swap & liquidity" },
+    { value: "lending", label: "Lending & credit", hint: "Markets, vaults, Earn rails" },
+    { value: "perps", label: "Perps & derivatives", hint: "Leverage, options-style venues" },
+    { value: "prediction", label: "Prediction markets", hint: "Event / odds markets" },
+    { value: "yield", label: "Yield & aggregators", hint: "Auto-compound, vault routers" },
+    { value: "rwa", label: "RWA & structured", hint: "Tokenized assets, indexes" },
+    { value: "other", label: "Other DeFi", hint: "Doesn't fit above" },
+  ],
+  infra: [
+    { value: "rpc", label: "RPC & nodes", hint: "API access for builders" },
+    { value: "oracle", label: "Oracles & feeds", hint: "Price / data infrastructure" },
+    { value: "bridge", label: "Bridge & messaging", hint: "Cross-chain transport" },
+    { value: "wallet", label: "Wallet & auth", hint: "Embedded wallets, login" },
+    { value: "security", label: "Security & compliance", hint: "Screening, tx protection" },
+    { value: "custody", label: "Custody & institutional", hint: "Qualified custody rails" },
+    { value: "explorer", label: "Explorer & indexing", hint: "Block / contract lookup" },
+    { value: "other", label: "Other infra", hint: "Doesn't fit above" },
+  ],
+  launchpad: [
+    { value: "launch", label: "Token launch rail", hint: "Permissionless deploy" },
+    { value: "meme", label: "Meme / fair launch", hint: "Deploy boards, pump rails" },
+    { value: "bonding", label: "Bonding curve", hint: "Curve-based launches" },
+    { value: "other", label: "Other launchpad", hint: "Doesn't fit above" },
+  ],
+  agents: [
+    { value: "platform", label: "Agent platform", hint: "Launch & route agents" },
+    { value: "routing", label: "Trading / routing agent", hint: "Bots, automation" },
+    { value: "other", label: "Other agents", hint: "Doesn't fit above" },
+  ],
+  official: [
+    { value: "product", label: "Product surface", hint: "Official RH Chain product" },
+    { value: "wallet", label: "Wallet UX", hint: "Self-custody app surface" },
+    { value: "earn", label: "Earn / lending product", hint: "App-facing yield" },
+    { value: "rwa", label: "RWA / stock tokens", hint: "Official tokenized equities" },
+    { value: "docs", label: "Documentation", hint: "Builder / user docs" },
+    { value: "other", label: "Other official", hint: "Doesn't fit above" },
+  ],
+  media: [
+    { value: "research", label: "Research & analytics", hint: "Landscape explainers" },
+    { value: "data", label: "Data dashboard", hint: "Metrics, rankings" },
+    { value: "commentary", label: "CT / commentary", hint: "Secondary takes — verify" },
+    { value: "other", label: "Other media", hint: "Doesn't fit above" },
+  ],
+  noise: [
+    { value: "meme", label: "Meme / attention", hint: "Speculative sample" },
+    { value: "gaming", label: "Gaming / gamified", hint: "Play-to-earn style" },
+    { value: "other", label: "Other sample", hint: "Long-tail attention" },
+  ],
+};
+
+const SUBMIT_PROOF_OPTIONS = [
+  { value: "site", label: "Live site or docs", hint: "Primary URL works" },
+  { value: "onchain", label: "On-chain proof", hint: "Explorer / verified contract" },
+  { value: "partner", label: "Partner announcement", hint: "Day-1 or official partner post" },
+  { value: "llama", label: "DefiLlama on RH", hint: "Listed on RH Chain dashboard" },
+];
+
 const state = {
   route: "map",
   entities: [],
@@ -789,49 +856,114 @@ function renderHow() {
   `;
 }
 
+function renderChipPicker({ id, label, hint, name, required, options, multi = false }) {
+  const req = required ? " *" : "";
+  return `
+    <div class="field-group">
+      <span class="field-label" id="${id}-label">${escapeHtml(label)}${req}</span>
+      ${hint ? `<p class="field-hint">${escapeHtml(hint)}</p>` : ""}
+      <input type="hidden" name="${name}" id="${id}" ${required ? "required" : ""} value="" />
+      <div
+        class="chip-picker"
+        role="group"
+        aria-labelledby="${id}-label"
+        data-chip-field="${name}"
+        data-multi="${multi ? "true" : "false"}"
+      >
+        ${options
+          .map(
+            (o) => `
+          <button
+            type="button"
+            class="chip-picker-btn"
+            data-value="${escapeHtml(o.value)}"
+            data-label="${escapeHtml(o.label)}"
+          >
+            <span class="chip-picker-label">${escapeHtml(o.label)}</span>
+            ${o.hint ? `<span class="chip-picker-hint">${escapeHtml(o.hint)}</span>` : ""}
+          </button>`,
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderJobPicker(layer = "") {
+  const jobs = SUBMIT_JOBS_BY_LAYER[layer];
+  if (!jobs) {
+    return `
+      <div class="field-group" id="s-job-wrap">
+        <span class="field-label" id="s-job-label">Job *</span>
+        <p class="field-hint">Pick a layer first — jobs are grouped by layer.</p>
+        <input type="hidden" name="job" id="s-job" required disabled value="" />
+        <p class="chip-picker-placeholder">Select layer above</p>
+      </div>
+    `;
+  }
+  const layerLabel = SUBMIT_LAYER_OPTIONS.find((l) => l.value === layer)?.label || layer;
+  return `
+    <div id="s-job-wrap">
+      ${renderChipPicker({
+        id: "s-job",
+        label: "Job",
+        hint: `What does this project do on RH Chain? (${layerLabel})`,
+        name: "job",
+        required: true,
+        options: jobs,
+      })}
+    </div>
+  `;
+}
+
 function renderSubmit() {
   return `
     <article class="page-prose">
       <h1>Submit a project</h1>
       <p class="lede">
-        Building on Robinhood Chain? Request a listing for orientation — not a paid shill slot.
-        We curate by <strong style="color:var(--text)">job</strong>, not market cap.
+        Request a map listing — curated by <strong style="color:var(--text)">job</strong>, not market cap.
+        Sends a structured message to <a href="${SITE_LINKS.twitter}" target="_blank" rel="noopener noreferrer">@${SUBMIT_X_HANDLE}</a> on X.
       </p>
 
       <div class="submit-box">
-        <form id="submit-form">
-          <label for="s-name">Project name *</label>
-          <input id="s-name" name="name" required placeholder="e.g. Acme DEX" />
+        <form id="submit-form" novalidate>
+          <label for="s-name">Name *</label>
+          <input id="s-name" name="name" required autocomplete="organization" placeholder="e.g. Acme DEX" />
 
-          <label for="s-layer">Layer *</label>
-          <select id="s-layer" name="layer" required>
-            <option value="defi">DeFi</option>
-            <option value="infra">Infra</option>
-            <option value="launchpad">Launchpad</option>
-            <option value="agents">Agents</option>
-            <option value="official">Official / product</option>
-            <option value="media">Media / data</option>
-            <option value="noise">Other / noise</option>
-          </select>
+          ${renderChipPicker({
+            id: "s-layer",
+            label: "Layer",
+            hint: "Which Hoodscape layer fits best?",
+            name: "layer",
+            required: true,
+            options: SUBMIT_LAYER_OPTIONS,
+          })}
 
-          <label for="s-job">One-line job *</label>
-          <input id="s-job" name="job" required maxlength="120" placeholder="e.g. Public AMM for RH Chain pairs" />
+          ${renderJobPicker()}
 
           <label for="s-url">Website or docs *</label>
-          <input id="s-url" name="url" type="url" required placeholder="https://" />
+          <input id="s-url" name="url" type="url" required inputmode="url" placeholder="https://yoursite.com" />
 
-          <label for="s-tw">Twitter / X</label>
-          <input id="s-tw" name="twitter" placeholder="@handle" />
+          <label for="s-tw">X profile URL</label>
+          <input id="s-tw" name="twitter" type="url" inputmode="url" placeholder="https://x.com/yourproject" />
 
-          <label for="s-notes">Notes (primary sources, chain proof)</label>
-          <textarea id="s-notes" name="notes" placeholder="Explorer link, docs quote, day-1 partner status…"></textarea>
+          ${renderChipPicker({
+            id: "s-proof",
+            label: "Proof",
+            hint: "Pick everything that applies (sources we can verify).",
+            name: "proof",
+            required: true,
+            options: SUBMIT_PROOF_OPTIONS,
+            multi: true,
+          })}
 
           <div class="actions">
-            <button type="submit" class="btn primary">Open email draft</button>
-            <button type="button" class="btn" id="copy-md">Copy as markdown</button>
+            <button type="submit" class="btn primary">Send on X</button>
+            <button type="button" class="btn" id="copy-submit">Copy message</button>
           </div>
           <p class="form-note">
-            Opens your mail client with a structured draft. Manual review · no guarantee of listing · disclose affiliations.
+            Opens X with a pre-filled @${SUBMIT_X_HANDLE} message. Full text is copied — paste into DM if the composer truncates.
+            Manual review · no guarantee · disclose affiliations.
           </p>
           <p class="form-note ok" id="form-status" hidden></p>
         </form>
@@ -1126,55 +1258,148 @@ function bindEvents() {
     el.addEventListener("click", () => openEntity(el.dataset.slug));
   });
 
-  const form = $("#submit-form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const body = formatSubmission(data);
-      const subject = encodeURIComponent(
-        `[Hoodscape] List request: ${data.get("name")}`
-      );
-      window.location.href = `mailto:?subject=${subject}&body=${encodeURIComponent(body)}`;
-      const st = $("#form-status");
-      if (st) {
-        st.hidden = false;
-        st.textContent = "Mail draft opened. Paste recipient or use Copy markdown.";
-      }
-    });
+  bindSubmitForm();
+}
 
-    $("#copy-md")?.addEventListener("click", async () => {
-      const data = new FormData(form);
-      const body = formatSubmission(data);
-      try {
-        await navigator.clipboard.writeText(body);
-        const st = $("#form-status");
-        if (st) {
-          st.hidden = false;
-          st.textContent = "Copied markdown to clipboard.";
-        }
-      } catch {
-        alert(body);
-      }
-    });
+function submitLayerLabel(layerId) {
+  return SUBMIT_LAYER_OPTIONS.find((l) => l.value === layerId)?.label || layerId;
+}
+
+function submitJobLabel(layerId, jobId) {
+  const jobs = SUBMIT_JOBS_BY_LAYER[layerId] || [];
+  return jobs.find((j) => j.value === jobId)?.label || jobId;
+}
+
+function collectSubmitData(form) {
+  const data = new FormData(form);
+  const layer = data.get("layer") || "";
+  const job = data.get("job") || "";
+  return {
+    name: (data.get("name") || "").trim(),
+    layer,
+    layerLabel: submitLayerLabel(layer),
+    job,
+    jobLabel: submitJobLabel(layer, job),
+    url: (data.get("url") || "").trim(),
+    twitter: (data.get("twitter") || "").trim(),
+    proof: (data.get("proof") || "").trim(),
+  };
+}
+
+function formatSubmissionMessage(payload) {
+  const lines = [
+    "Hoodscape listing request",
+    "",
+    `Name: ${payload.name}`,
+    `Layer: ${payload.layerLabel}`,
+    `Job: ${payload.jobLabel}`,
+    `Site: ${payload.url}`,
+  ];
+  if (payload.twitter) lines.push(`X: ${payload.twitter}`);
+  lines.push(`Proof: ${payload.proof || "—"}`);
+  lines.push("", "Manual review. NFA. Not a promotion request.", "#RobinhoodChain");
+  return lines.join("\n");
+}
+
+function buildTwitterIntentUrl(message) {
+  const full = `@${SUBMIT_X_HANDLE}\n\n${message}`;
+  if (full.length <= 275) {
+    return `https://x.com/intent/tweet?text=${encodeURIComponent(full)}`;
+  }
+  const short = `@${SUBMIT_X_HANDLE} Hoodscape list: ${message.split("\n").slice(2, 6).join(" · ")} (full message copied)`;
+  return `https://x.com/intent/tweet?text=${encodeURIComponent(short.slice(0, 275))}`;
+}
+
+async function copySubmitMessage(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
   }
 }
 
-function formatSubmission(data) {
-  return [
-    "## Hoodscape — listing request",
-    "",
-    `- **Name:** ${data.get("name")}`,
-    `- **Layer:** ${data.get("layer")}`,
-    `- **Job:** ${data.get("job")}`,
-    `- **URL:** ${data.get("url")}`,
-    `- **Twitter:** ${data.get("twitter") || "—"}`,
-    "",
-    "### Notes",
-    data.get("notes") || "—",
-    "",
-    "_Manual review. NFA. Not an endorsement request for promotion._",
-  ].join("\n");
+function setSubmitStatus(text, ok = true) {
+  const st = $("#form-status");
+  if (!st) return;
+  st.hidden = false;
+  st.textContent = text;
+  st.classList.toggle("ok", ok);
+}
+
+function mountJobPicker(form, layer) {
+  const wrap = $("#s-job-wrap");
+  if (!wrap) return;
+  wrap.outerHTML = renderJobPicker(layer);
+  const picker = form.querySelector('[data-chip-field="job"]');
+  if (picker) initChipPicker(form, picker);
+}
+
+function initChipPicker(form, container) {
+  const field = container.dataset.chipField;
+  const multi = container.dataset.multi === "true";
+  const hidden = form.querySelector(`[name="${field}"]`);
+  if (!hidden) return;
+
+  container.querySelectorAll(".chip-picker-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!multi) {
+        container.querySelectorAll(".chip-picker-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        hidden.value = btn.dataset.value || "";
+        hidden.disabled = false;
+        if (field === "layer") {
+          mountJobPicker(form, hidden.value);
+        }
+      } else {
+        btn.classList.toggle("active");
+        const labels = [...container.querySelectorAll(".chip-picker-btn.active")].map(
+          (b) => b.dataset.label || b.dataset.value,
+        );
+        hidden.value = labels.join(", ");
+        hidden.disabled = labels.length === 0;
+      }
+      hidden.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  });
+}
+
+function bindSubmitForm() {
+  const form = $("#submit-form");
+  if (!form) return;
+
+  form.querySelectorAll(".chip-picker").forEach((picker) => initChipPicker(form, picker));
+
+  const send = async (openX = false) => {
+    if (!form.reportValidity()) return;
+    const payload = collectSubmitData(form);
+    if (!payload.proof) {
+      setSubmitStatus("Pick at least one proof option.", false);
+      return;
+    }
+    const message = formatSubmissionMessage(payload);
+    const copied = await copySubmitMessage(message);
+    if (openX) {
+      window.open(buildTwitterIntentUrl(message), "_blank", "noopener,noreferrer");
+    }
+    setSubmitStatus(
+      copied
+        ? openX
+          ? "Copied — X composer opened. Paste into DM if needed."
+          : "Message copied to clipboard."
+        : openX
+          ? "X composer opened. Copy the message manually if needed."
+          : "Could not copy — check browser permissions.",
+      copied,
+    );
+  };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    send(true);
+  });
+
+  $("#copy-submit")?.addEventListener("click", () => send(false));
 }
 
 function onHashChange() {
