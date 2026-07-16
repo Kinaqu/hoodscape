@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-07-16T18:06:10Z",
+  "generated_at_utc": "2026-07-16T18:18:00Z",
   "node_count": 72,
-  "edge_count": 59,
+  "edge_count": 74,
   "edge_types": [
     "infra_dependency",
     "lending_stack",
@@ -593,15 +593,15 @@
       "to": "robinhood-chain-docs",
       "type": "partner_named",
       "label": "Alchemy \u00d7 RH Chain",
-      "explanation": "Alchemy announces Robinhood Chain mainnet is live on Alchemy infrastructure.",
+      "explanation": "Alchemy announces Robinhood Chain mainnet is live on Alchemy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
-          "label": "Alchemy blog",
-          "proves": "Alchemy announces Robinhood Chain mainnet on its platform"
+          "url": "https://x.com/Alchemy/status/2072397155390882230",
+          "label": "Alchemy X post",
+          "proves": "Alchemy announces Robinhood Chain is live on Alchemy"
         }
       ],
       "last_checked": "2026-07-16",
@@ -621,6 +621,44 @@
           "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
           "label": "Allium blog",
           "proves": "Allium announces Robinhood Chain data support at launch"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "arbitrum",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Arbitrum \u00d7 RH Chain",
+      "explanation": "Arbitrum quotes Robinhood Crypto partner shout-out \u2014 RH Chain built on Arbitrum Orbit stack.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/arbitrum/status/2077081003164647933",
+          "label": "Arbitrum X post",
+          "proves": "Arbitrum amplifies Robinhood Chain partner announcement"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "arcus",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Arcus \u00d7 RH Chain",
+      "explanation": "Arcus profile and launch post position the DEX as built in partnership with Robinhood Crypto on Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/arcus_xyz/status/2072395169215959221",
+          "label": "Arcus X post",
+          "proves": "Arcus announces leading DEX on Robinhood Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -686,6 +724,25 @@
     },
     {
       "from": "blockaid",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Blockaid \u00d7 RH Chain",
+      "explanation": "Blockaid names Robinhood Crypto in Robinhood Chain security partnership announcement.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/blockaid_/status/2072439547430908313",
+          "label": "Blockaid X post",
+          "proves": "Blockaid names Robinhood Crypto in RH Chain partnership"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "blockaid",
       "to": "robinhood-wallet",
       "type": "partner_named",
       "label": "Partner announces RH integration",
@@ -707,17 +764,18 @@
       "to": "robinhood-wallet",
       "type": "product_integration",
       "label": "Day-1 security partner",
-      "explanation": "Blockaid is cited as ecosystem security/threat-detection partner with Wallet-adjacent builder protection narratives on RH Chain.",
+      "explanation": "Blockaid announces day-1 Robinhood Chain security partnership and Wallet protection support.",
       "confidence": "high",
-      "strength": "moderate",
+      "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
+          "url": "https://x.com/blockaid_/status/2072439547430908313",
+          "label": "Blockaid X post",
+          "proves": "Blockaid announces Robinhood Chain security partnership"
         }
       ],
-      "last_checked": "2026-07-10",
+      "last_checked": "2026-07-16",
       "source": "partnerships"
     },
     {
@@ -739,18 +797,37 @@
       "source": "partnerships"
     },
     {
-      "from": "chainlink",
+      "from": "chainalysis",
       "to": "robinhood-crypto",
       "type": "partner_named",
-      "label": "Chainlink \u00d7 RH Chain",
-      "explanation": "Chainlink press release: Robinhood Chain adopts Chainlink as official data and cross-chain oracle partner.",
+      "label": "Chainalysis \u00d7 RH Chain",
+      "explanation": "Chainalysis blog announces automatic token support for Robinhood Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
-          "label": "Chainlink PR",
+          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
+          "label": "Chainalysis blog",
+          "proves": "Chainalysis announces Robinhood Chain support"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "chainlink",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Chainlink \u00d7 RH Chain",
+      "explanation": "Chainlink announces Robinhood Chain partners with Chainlink as oracle platform.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/chainlink/status/2021399623563178207",
+          "label": "Chainlink X post",
           "proves": "Chainlink announces Robinhood Chain oracle partnership"
         }
       ],
@@ -781,17 +858,37 @@
     },
     {
       "from": "ethena",
-      "to": "robinhood-earn",
-      "type": "lending_stack",
-      "label": "Partner announces RH integration",
-      "explanation": "ethena publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Ethena \u00d7 RH Chain",
+      "explanation": "Ethena announces partnership with Robinhood Crypto to bring product suite to Robinhood Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
-          "label": "USDG newsroom"
+          "url": "https://x.com/ethena/status/2072394889061605529",
+          "label": "Ethena X post",
+          "proves": "Ethena announces partnership with Robinhood Crypto"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "ethena",
+      "to": "robinhood-earn",
+      "type": "lending_stack",
+      "label": "Earn collateral partner",
+      "explanation": "Ethena announces it is primary collateral issuer for Robinhood Earn via Steakhouse-curated vault.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/ethena/status/2072394889061605529",
+          "label": "Ethena X post",
+          "proves": "Ethena names Robinhood Earn collateral role on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -810,7 +907,26 @@
         {
           "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
           "label": "LayerZero post",
-          "proves": "LayerZero announces Robinhood Chain support"
+          "proves": "LayerZero announces Robinhood Chain connected via LayerZero"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "lighter",
+      "to": "robinhood-wallet",
+      "type": "product_integration",
+      "label": "Wallet perps powered by Lighter",
+      "explanation": "Lighter announces Robinhood Wallet native perps trading powered by Lighter on Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/Lighter_xyz/status/2072401921659277595",
+          "label": "Lighter X post",
+          "proves": "Lighter announces Wallet perps integration on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -820,19 +936,54 @@
       "from": "maple",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Partner announces RH integration",
-      "explanation": "maple publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
+      "label": "Earn stack partner",
+      "explanation": "Maple announces syrupUSDG live on Robinhood Chain and approved as Earn vault collateral.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
+          "url": "https://x.com/maplefinance/status/2072396227342413938",
+          "label": "Maple X post",
+          "proves": "Maple announces Robinhood Chain Earn integration"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "morpho",
+      "to": "robinhood-earn",
+      "type": "lending_stack",
+      "label": "Earn powered by Morpho",
+      "explanation": "Morpho announces Robinhood Earn is powered by Morpho vault infrastructure.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
         {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
+          "url": "https://x.com/Morpho/status/2072395963793350687",
+          "label": "Morpho X post",
+          "proves": "Morpho announces Robinhood Earn powered by Morpho"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "morpho",
+      "to": "steakhouse",
+      "type": "partner_named",
+      "label": "Earn vault curator",
+      "explanation": "Morpho names Steakhouse as curator of the Morpho vault behind Robinhood Earn.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/Morpho/status/2072395963793350687",
+          "label": "Morpho X post",
+          "proves": "Morpho names @SteakhouseFi as Earn vault curator"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1099,6 +1250,25 @@
         }
       ],
       "last_checked": "2026-07-10",
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-crypto",
+      "to": "blockaid",
+      "type": "partner_named",
+      "label": "RH names Blockaid partner",
+      "explanation": "Robinhood Crypto promotes Blockaid security platform for Robinhood Chain builders.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/RobinhoodCrypto/status/2077394806968320166",
+          "label": "Robinhood Crypto X post",
+          "proves": "Robinhood Crypto names Blockaid for RH Chain builders"
+        }
+      ],
+      "last_checked": "2026-07-16",
       "source": "partnerships"
     },
     {
@@ -1378,6 +1548,24 @@
     },
     {
       "from": "robinhood-wallet",
+      "to": "1inch",
+      "type": "product_integration",
+      "label": "Wallet trading routes",
+      "explanation": "Wallet trading narratives on RH Chain cite aggregator routing (1inch-class) alongside native DEX venues for swap UX.",
+      "confidence": "high",
+      "strength": "moderate",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/RobinhoodCrypto/status/2077420481355849815",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-10",
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-wallet",
       "to": "blockaid",
       "type": "product_integration",
       "label": "Security partner (Wallet)",
@@ -1390,6 +1578,25 @@
           "url": "https://www.blockaid.io/blog/blockaid-brings-real-time-transaction-protection-to-robinhood-chain",
           "label": "Blockaid blog",
           "proves": "Blockaid announces Robinhood Chain security partnership"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-wallet",
+      "to": "lighter",
+      "type": "partner_named",
+      "label": "RH names Lighter partner",
+      "explanation": "Robinhood announces Wallet supports perpetual futures via Lighter on Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/RobinhoodApp/status/2072390243500658876",
+          "label": "Robinhood X post",
+          "proves": "Robinhood announces Wallet perps via Lighter"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1450,6 +1657,24 @@
       "source": "partnerships"
     },
     {
+      "from": "robinhood-wallet",
+      "to": "uniswap",
+      "type": "product_integration",
+      "label": "Wallet checkout on RH Chain",
+      "explanation": "@RobinhoodCrypto (Tier 0) promoted Apple/Google Pay checkout on Robinhood Chain via Wallet \u2014 swaps/liquidity often route through public DEX infra like Uniswap.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/RobinhoodCrypto/status/2077420481355849815",
+          "label": "X post"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
       "from": "robinode",
       "to": "stock-tokens-official",
       "type": "product_integration",
@@ -1471,19 +1696,16 @@
       "from": "spark",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Partner announces RH integration",
-      "explanation": "spark publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
+      "label": "Earn stack partner",
+      "explanation": "Spark publishes launch commentary on Robinhood Earn / Robinhood Chain mainnet.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
+          "url": "https://x.com/sparkdotfi/status/2072400270797996332",
+          "label": "Spark X post",
+          "proves": "Spark discusses Robinhood Earn launch on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1493,19 +1715,16 @@
       "from": "steakhouse",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Partner announces RH integration",
-      "explanation": "steakhouse publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
+      "label": "Earn curator partner",
+      "explanation": "Steakhouse announces it curates the Morpho vault behind Robinhood Earn on Robinhood Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/crypto/earn/",
-          "label": "Earn"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
+          "url": "https://x.com/SteakhouseFi/status/2072401950801560015",
+          "label": "Steakhouse X post",
+          "proves": "Steakhouse announces Robinhood Earn vault curation"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1602,6 +1821,44 @@
       "source": "partnerships"
     },
     {
+      "from": "symbiosis",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Symbiosis \u00d7 RH Chain",
+      "explanation": "Symbiosis announces 60+ chains connected to Robinhood Crypto / Robinhood Chain bridging.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/symbiosis_fi/status/2077335234710843534",
+          "label": "Symbiosis X post",
+          "proves": "Symbiosis announces Robinhood Chain bridge support"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "trm-labs",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "TRM \u00d7 RH Chain",
+      "explanation": "TRM Labs announces it is a blockchain intelligence partner for Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://x.com/trmlabs/status/2072447956993581330",
+          "label": "TRM X post",
+          "proves": "TRM announces Robinhood Chain intelligence partnership"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
       "from": "trust-wallet",
       "to": "robinhood-wallet",
       "type": "infra_dependency",
@@ -1614,6 +1871,25 @@
         {
           "url": "https://robinhood.com/us/en/chain/",
           "label": "Chain page"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "uniswap",
+      "to": "robinhood-crypto",
+      "type": "partner_named",
+      "label": "Uniswap \u00d7 RH Chain",
+      "explanation": "Uniswap blog announces v2/v3/v4 and UniswapX live on Robinhood Chain as primary public AMM.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://blog.uniswap.org/robinhood-chain-is-live",
+          "label": "Uniswap blog",
+          "proves": "Uniswap announces Robinhood Chain deployment"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1645,18 +1921,19 @@
       "from": "virtuals",
       "to": "robinhood-crypto",
       "type": "product_integration",
-      "label": "Agentic chain narrative",
-      "explanation": "Official RH Chain positioning includes agentic/AI-native themes; Virtuals-class platforms are where much agent token surface appears on the chain.",
-      "confidence": "medium",
-      "strength": "moderate",
+      "label": "Agent infra integration",
+      "explanation": "Virtuals announces Robinhood Chain integrates Virtuals AI agent infrastructure from day one.",
+      "confidence": "high",
+      "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
+          "url": "https://x.com/virtuals_io/status/2072551467085709488",
+          "label": "Virtuals X post",
+          "proves": "Virtuals announces RH Chain day-1 agent infrastructure integration"
         }
       ],
-      "last_checked": "2026-07-03",
+      "last_checked": "2026-07-16",
       "source": "partnerships"
     },
     {

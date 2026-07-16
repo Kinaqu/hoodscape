@@ -51,11 +51,26 @@ VALID_EVIDENCE_HOSTS = (
     "allium.so/blog",
     "blockaid.io/blog",
     "chainalysis.com/blog",
+    "blog.uniswap.org",
     "prnewswire.com",
     "globaldollar.com/newsroom",
-    "x.com/RobinhoodCrypto",
-    "x.com/LayerZero_Core",
+    "x.com/robinhoodcrypto",
+    "x.com/robinhoodapp",
+    "x.com/morpho",
+    "x.com/ethena",
+    "x.com/alchemy",
+    "x.com/chainlink",
+    "x.com/layerzero_core",
     "x.com/trmlabs",
+    "x.com/lighter_xyz",
+    "x.com/symbiosis_fi",
+    "x.com/blockaid_",
+    "x.com/sparkdotfi",
+    "x.com/steakhousefi",
+    "x.com/maplefinance",
+    "x.com/arcus_xyz",
+    "x.com/virtuals_io",
+    "x.com/arbitrum",
     "linkedin.com/posts/fireblocks",
 )
 
@@ -247,7 +262,198 @@ def curated_missing() -> list[dict]:
         "partner_named",
         "LayerZero × RH Chain",
         "LayerZero announces Robinhood Chain deployment / messaging support.",
-        "https://x.com/LayerZero_Core/status/2072396480770674832|LayerZero post|LayerZero announces Robinhood Chain support",
+        "https://x.com/LayerZero_Core/status/2072396480770674832|LayerZero post|LayerZero announces Robinhood Chain connected via LayerZero",
+    )
+
+    # --- Twitter audit 2026-07-16: verified partner announcements on X ---
+
+    add(
+        "alchemy",
+        "robinhood-chain-docs",
+        "partner_named",
+        "Alchemy × RH Chain",
+        "Alchemy announces Robinhood Chain mainnet is live on Alchemy.",
+        "https://x.com/Alchemy/status/2072397155390882230|Alchemy X post|Alchemy announces Robinhood Chain is live on Alchemy",
+    )
+
+    add(
+        "chainlink",
+        "robinhood-crypto",
+        "partner_named",
+        "Chainlink × RH Chain",
+        "Chainlink announces Robinhood Chain partners with Chainlink as oracle platform.",
+        "https://x.com/chainlink/status/2021399623563178207|Chainlink X post|Chainlink announces Robinhood Chain oracle partnership",
+    )
+
+    add(
+        "trm-labs",
+        "robinhood-crypto",
+        "partner_named",
+        "TRM × RH Chain",
+        "TRM Labs announces it is a blockchain intelligence partner for Robinhood Chain.",
+        "https://x.com/trmlabs/status/2072447956993581330|TRM X post|TRM announces Robinhood Chain intelligence partnership",
+    )
+
+    add(
+        "morpho",
+        "robinhood-earn",
+        "lending_stack",
+        "Earn powered by Morpho",
+        "Morpho announces Robinhood Earn is powered by Morpho vault infrastructure.",
+        "https://x.com/Morpho/status/2072395963793350687|Morpho X post|Morpho announces Robinhood Earn powered by Morpho",
+    )
+
+    add(
+        "morpho",
+        "steakhouse",
+        "partner_named",
+        "Earn vault curator",
+        "Morpho names Steakhouse as curator of the Morpho vault behind Robinhood Earn.",
+        "https://x.com/Morpho/status/2072395963793350687|Morpho X post|Morpho names @SteakhouseFi as Earn vault curator",
+    )
+
+    add(
+        "ethena",
+        "robinhood-crypto",
+        "partner_named",
+        "Ethena × RH Chain",
+        "Ethena announces partnership with Robinhood Crypto to bring product suite to Robinhood Chain.",
+        "https://x.com/ethena/status/2072394889061605529|Ethena X post|Ethena announces partnership with Robinhood Crypto",
+    )
+
+    add(
+        "ethena",
+        "robinhood-earn",
+        "lending_stack",
+        "Earn collateral partner",
+        "Ethena announces it is primary collateral issuer for Robinhood Earn via Steakhouse-curated vault.",
+        "https://x.com/ethena/status/2072394889061605529|Ethena X post|Ethena names Robinhood Earn collateral role on RH Chain",
+    )
+
+    add(
+        "steakhouse",
+        "robinhood-earn",
+        "lending_stack",
+        "Earn curator partner",
+        "Steakhouse announces it curates the Morpho vault behind Robinhood Earn on Robinhood Chain.",
+        "https://x.com/SteakhouseFi/status/2072401950801560015|Steakhouse X post|Steakhouse announces Robinhood Earn vault curation",
+    )
+
+    add(
+        "maple",
+        "robinhood-earn",
+        "lending_stack",
+        "Earn stack partner",
+        "Maple announces syrupUSDG live on Robinhood Chain and approved as Earn vault collateral.",
+        "https://x.com/maplefinance/status/2072396227342413938|Maple X post|Maple announces Robinhood Chain Earn integration",
+    )
+
+    add(
+        "spark",
+        "robinhood-earn",
+        "lending_stack",
+        "Earn stack partner",
+        "Spark publishes launch commentary on Robinhood Earn / Robinhood Chain mainnet.",
+        "https://x.com/sparkdotfi/status/2072400270797996332|Spark X post|Spark discusses Robinhood Earn launch on RH Chain",
+    )
+
+    add(
+        "lighter",
+        "robinhood-wallet",
+        "product_integration",
+        "Wallet perps powered by Lighter",
+        "Lighter announces Robinhood Wallet native perps trading powered by Lighter on Robinhood Chain.",
+        "https://x.com/Lighter_xyz/status/2072401921659277595|Lighter X post|Lighter announces Wallet perps integration on RH Chain",
+    )
+
+    add(
+        "robinhood-wallet",
+        "lighter",
+        "partner_named",
+        "RH names Lighter partner",
+        "Robinhood announces Wallet supports perpetual futures via Lighter on Robinhood Chain.",
+        "https://x.com/RobinhoodApp/status/2072390243500658876|Robinhood X post|Robinhood announces Wallet perps via Lighter",
+    )
+
+    add(
+        "symbiosis",
+        "robinhood-crypto",
+        "partner_named",
+        "Symbiosis × RH Chain",
+        "Symbiosis announces 60+ chains connected to Robinhood Crypto / Robinhood Chain bridging.",
+        "https://x.com/symbiosis_fi/status/2077335234710843534|Symbiosis X post|Symbiosis announces Robinhood Chain bridge support",
+    )
+
+    add(
+        "blockaid",
+        "robinhood-wallet",
+        "product_integration",
+        "Day-1 security partner",
+        "Blockaid announces day-1 Robinhood Chain security partnership and Wallet protection support.",
+        "https://x.com/blockaid_/status/2072439547430908313|Blockaid X post|Blockaid announces Robinhood Chain security partnership",
+    )
+
+    add(
+        "blockaid",
+        "robinhood-crypto",
+        "partner_named",
+        "Blockaid × RH Chain",
+        "Blockaid names Robinhood Crypto in Robinhood Chain security partnership announcement.",
+        "https://x.com/blockaid_/status/2072439547430908313|Blockaid X post|Blockaid names Robinhood Crypto in RH Chain partnership",
+    )
+
+    add(
+        "robinhood-crypto",
+        "blockaid",
+        "partner_named",
+        "RH names Blockaid partner",
+        "Robinhood Crypto promotes Blockaid security platform for Robinhood Chain builders.",
+        "https://x.com/RobinhoodCrypto/status/2077394806968320166|Robinhood Crypto X post|Robinhood Crypto names Blockaid for RH Chain builders",
+    )
+
+    add(
+        "arcus",
+        "robinhood-crypto",
+        "partner_named",
+        "Arcus × RH Chain",
+        "Arcus profile and launch post position the DEX as built in partnership with Robinhood Crypto on Robinhood Chain.",
+        "https://x.com/arcus_xyz/status/2072395169215959221|Arcus X post|Arcus announces leading DEX on Robinhood Chain",
+    )
+
+    add(
+        "virtuals",
+        "robinhood-crypto",
+        "product_integration",
+        "Agent infra integration",
+        "Virtuals announces Robinhood Chain integrates Virtuals AI agent infrastructure from day one.",
+        "https://x.com/virtuals_io/status/2072551467085709488|Virtuals X post|Virtuals announces RH Chain day-1 agent infrastructure integration",
+    )
+
+    add(
+        "arbitrum",
+        "robinhood-crypto",
+        "partner_named",
+        "Arbitrum × RH Chain",
+        "Arbitrum quotes Robinhood Crypto partner shout-out — RH Chain built on Arbitrum Orbit stack.",
+        "https://x.com/arbitrum/status/2077081003164647933|Arbitrum X post|Arbitrum amplifies Robinhood Chain partner announcement",
+    )
+
+    add(
+        "uniswap",
+        "robinhood-crypto",
+        "partner_named",
+        "Uniswap × RH Chain",
+        "Uniswap blog announces v2/v3/v4 and UniswapX live on Robinhood Chain as primary public AMM.",
+        "https://blog.uniswap.org/robinhood-chain-is-live|Uniswap blog|Uniswap announces Robinhood Chain deployment",
+    )
+
+    add(
+        "chainalysis",
+        "robinhood-crypto",
+        "partner_named",
+        "Chainalysis × RH Chain",
+        "Chainalysis blog announces automatic token support for Robinhood Chain.",
+        "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/|Chainalysis blog|Chainalysis announces Robinhood Chain support",
     )
 
     return rows
