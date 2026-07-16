@@ -45,7 +45,11 @@ const CONF_COLORS: Record<string, string> = {
 type SimNode = GraphNode & { x?: number; y?: number };
 type SimLink = GraphEdge & { source: string | SimNode; target: string | SimNode };
 
-const HOVER_DISMISS_MS = 400;
+function linkKey(link: SimLink) {
+  const from = typeof link.source === "object" ? link.source.id : link.source;
+  const to = typeof link.target === "object" ? link.target.id : link.target;
+  return `${from}|${to}|${link.label}|${link.type}`;
+}
 
 function confMatches(confidence: string, filter: ConfFilter) {
   if (filter === "all") return true;
@@ -119,25 +123,19 @@ function applyForces(fg: ForceGraphMethods<SimNode, SimLink>) {
   }
 }
 
-function edgeTooltipContent(
-  edge: GraphEdge,
-  pinned: boolean,
-  onClose: () => void,
-) {
+function edgeTooltipContent(edge: GraphEdge, onClose: () => void) {
   return (
     <>
       <div className="graph-tooltip-head">
         <div className="graph-tooltip-type">{edge.type.replace(/_/g, " ")}</div>
-        {pinned ? (
-          <button
-            type="button"
-            className="graph-tooltip-close"
-            aria-label="Close"
-            onClick={onClose}
-          >
-            ×
-          </button>
-        ) : null}
+        <button
+          type="button"
+          className="graph-tooltip-close"
+          aria-label="Close"
+          onClick={onClose}
+        >
+          ×
+        </button>
       </div>
       <div className="graph-tooltip-label">{edge.label}</div>
       <p className="graph-tooltip-explanation">{edge.explanation}</p>
@@ -151,9 +149,6 @@ function edgeTooltipContent(
         </div>
       )}
       <span className={`graph-tooltip-conf conf-${edge.confidence}`}>{edge.confidence}</span>
-      {!pinned ? (
-        <p className="graph-tooltip-pin-hint">Click edge to pin · links become clickable</p>
-      ) : null}
     </>
   );
 }
@@ -170,15 +165,12 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
   const fgRef = useRef<ForceGraphMethods<SimNode, SimLink> | undefined>(undefined);
   const fitPending = useRef(true);
   const imagesRef = useRef(new Map<string, ImgState>());
-  const hoverTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  const pointerRef = useRef({ x: 0, y: 0 });
-  const [hoverAnchor, setHoverAnchor] = useState({ x: 0, y: 0 });
-  const [pinnedAnchor, setPinnedAnchor] = useState({ x: 0, y: 0 });
+  const [panelAnchor, setPanelAnchor] = useState({ x: 0, y: 0 });
   const [size, setSize] = useState({ w: 800, h: 560 });
   const [confFilter, setConfFilter] = useState<ConfFilter>("high-medium");
   const [layerFilter, setLayerFilter] = useState("all");
-  const [hoverEdge, setHoverEdge] = useState<GraphEdge | null>(null);
-  const [pinnedEdge, setPinnedEdge] = useState<GraphEdge | null>(null);
+  const [hoveredLinkKey, setHoveredLinkKey] = useState<string | null>(null);
+  const [edgePanel, setEdgePanel] = useState<GraphEdge | null>(null);
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [logoRevision, setLogoRevision] = useState(0);
 
@@ -190,17 +182,12 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
     if (fg && typeof fg.resumeAnimation === "function") fg.resumeAnimation();
   }, []);
 
-  const clearHover = useCallback(() => {
-    clearTimeout(hoverTimer.current);
-    setHoverEdge(null);
+  const closeEdgePanel = useCallback(() => setEdgePanel(null), []);
+
+  const openEdgePanel = useCallback((edge: GraphEdge, anchor: { x: number; y: number }) => {
+    setPanelAnchor(anchor);
+    setEdgePanel(edge);
   }, []);
-
-  const clearPinned = useCallback(() => setPinnedEdge(null), []);
-
-  const clearAllTooltips = useCallback(() => {
-    clearHover();
-    clearPinned();
-  }, [clearHover, clearPinned]);
 
   useEffect(() => {
     const el = canvasRef.current;
@@ -215,11 +202,11 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") clearAllTooltips();
+      if (e.key === "Escape") closeEdgePanel();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [clearAllTooltips]);
+  }, [closeEdgePanel]);
 
   const filtered = useMemo(() => {
     const nodes = graph.nodes.filter(
@@ -349,47 +336,35 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
     [],
   );
 
-  const handleLinkHover = useCallback(
-    (link: LinkObject<SimNode, SimLink> | null) => {
-      if (pinnedEdge) return;
-      clearTimeout(hoverTimer.current);
-      if (link) {
-        setHoverAnchor({ ...pointerRef.current });
-        setHoverEdge(link as SimLink);
-        return;
-      }
-      hoverTimer.current = setTimeout(() => setHoverEdge(null), HOVER_DISMISS_MS);
-    },
-    [pinnedEdge],
-  );
+  const anchorFromEvent = useCallback((event: MouseEvent) => {
+    const rect = interactiveRef.current?.getBoundingClientRect();
+    if (!rect) return { x: 0, y: 0 };
+    return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+  }, []);
 
-  const handleLinkClick = useCallback(
-    (link: LinkObject<SimNode, SimLink>) => {
-      const edge = link as SimLink;
-      setPinnedAnchor({ ...pointerRef.current });
-      setPinnedEdge(edge);
-      clearHover();
+  const handleLinkHover = useCallback((link: LinkObject<SimNode, SimLink> | null) => {
+    setHoveredLinkKey(link ? linkKey(link as SimLink) : null);
+  }, []);
+
+  const handleLinkRightClick = useCallback(
+    (link: LinkObject<SimNode, SimLink>, event: MouseEvent) => {
+      event.preventDefault();
+      openEdgePanel(link as SimLink, anchorFromEvent(event));
     },
-    [clearHover],
+    [anchorFromEvent, openEdgePanel],
   );
 
   const handleNodeClick = useCallback(
     (node: SimNode) => {
-      clearAllTooltips();
+      closeEdgePanel();
       onNodeClick(node.id);
     },
-    [clearAllTooltips, onNodeClick],
+    [closeEdgePanel, onNodeClick],
   );
-
-  useEffect(() => () => clearTimeout(hoverTimer.current), []);
 
   const resetView = () => {
     fgRef.current?.zoomToFit(400, 64);
   };
-
-  const tooltipEdge = pinnedEdge || hoverEdge;
-  const tooltipPinned = Boolean(pinnedEdge);
-  const anchor = tooltipPinned ? pinnedAnchor : hoverAnchor;
 
   return (
     <div className="graph-view">
@@ -429,19 +404,11 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
         ref={interactiveRef}
         className="graph-interactive"
         style={{ minHeight: 420, height: size.h }}
-        onMouseMove={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          pointerRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
-        }}
+        onContextMenu={(e) => e.preventDefault()}
       >
         <div
           ref={canvasRef}
-          className={`graph-canvas${draggingId ? " is-dragging" : ""}`}
-          onMouseLeave={() => {
-            if (!pinnedEdge) {
-              hoverTimer.current = setTimeout(() => setHoverEdge(null), HOVER_DISMISS_MS);
-            }
-          }}
+          className={`graph-canvas${draggingId ? " is-dragging" : ""}${hoveredLinkKey ? " is-link-hover" : ""}`}
         >
           {filtered.nodes.length === 0 ? (
             <div className="graph-empty">No nodes match these filters.</div>
@@ -458,8 +425,17 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
               nodeCanvasObject={paintNode}
               nodeCanvasObjectMode={() => "replace"}
               nodePointerAreaPaint={paintPointerArea}
-              linkColor={(l) => CONF_COLORS[(l as SimLink).confidence] || CONF_COLORS.low}
-              linkWidth={(l) => linkWidth((l as SimLink).strength)}
+              linkColor={(l) => {
+                const link = l as SimLink;
+                if (linkKey(link) === hoveredLinkKey) return "rgba(232, 240, 235, 0.88)";
+                return CONF_COLORS[link.confidence] || CONF_COLORS.low;
+              }}
+              linkWidth={(l) => {
+                const link = l as SimLink;
+                const base = linkWidth(link.strength);
+                return linkKey(link) === hoveredLinkKey ? base * 1.35 : base;
+              }}
+              showPointerCursor={(obj) => Boolean(obj && "source" in obj && "target" in obj)}
               linkDirectionalArrowLength={7}
               linkDirectionalArrowRelPos={1}
               linkCurvature={0.08}
@@ -472,8 +448,8 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
                 node.fy = node.y;
               }}
               onLinkHover={handleLinkHover}
-              onLinkClick={handleLinkClick}
-              onBackgroundClick={clearAllTooltips}
+              onLinkRightClick={handleLinkRightClick}
+              onBackgroundClick={closeEdgePanel}
               warmupTicks={120}
               cooldownTicks={160}
               onEngineStop={() => {
@@ -488,22 +464,23 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
           )}
         </div>
 
-        {tooltipEdge && (
+        {edgePanel && (
           <div
-            className={`graph-tooltip${tooltipPinned ? " is-pinned" : ""}`}
-            role="tooltip"
+            className="graph-tooltip is-open"
+            role="dialog"
+            aria-label="Connection evidence"
             style={{
-              left: Math.min(Math.max(anchor.x + 12, 8), size.w - 292),
-              top: Math.min(Math.max(anchor.y - 8, 8), size.h - 220),
+              left: Math.min(Math.max(panelAnchor.x + 12, 8), size.w - 292),
+              top: Math.min(Math.max(panelAnchor.y - 8, 8), size.h - 220),
             }}
           >
-            {edgeTooltipContent(tooltipEdge, tooltipPinned, clearPinned)}
+            {edgeTooltipContent(edgePanel, closeEdgePanel)}
           </div>
         )}
       </div>
 
       <p className="graph-hint">
-        Drag nodes · hover edge for preview · click edge to pin and open links · click node for details
+        Drag nodes · right-click a connection for evidence (stays open) · left-click node for details · Esc to close
       </p>
     </div>
   );

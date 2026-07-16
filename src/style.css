@@ -1617,8 +1617,13 @@ main {
   pointer-events: none;
 }
 
-.graph-tooltip.is-pinned {
+.graph-tooltip.is-open {
   pointer-events: auto;
+  border-color: rgba(61, 186, 140, 0.45);
+}
+
+.graph-canvas.is-link-hover {
+  cursor: context-menu;
 }
 
 .graph-tooltip-head {
@@ -1646,12 +1651,6 @@ main {
 .graph-tooltip-close:hover {
   color: var(--text);
   border-color: var(--border);
-}
-
-.graph-tooltip-pin-hint {
-  margin: 0.45rem 0 0;
-  font-size: 0.68rem;
-  color: var(--text-dim);
 }
 
 .graph-tooltip-type {
