@@ -555,11 +555,190 @@ function renderPanel(e) {
   `;
 }
 
+function sourceHost(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+function classifySourceUrl(url) {
+  const h = sourceHost(url);
+  if (h.includes("robinhood.com")) return "official";
+  if (h.includes("defillama.com") || h.includes("llama.fi")) return "metrics";
+  if (
+    h.includes("x.com") ||
+    h.includes("twitter.com") ||
+    h.includes("prnewswire.com") ||
+    h.includes("linkedin.com")
+  ) {
+    return "partnership";
+  }
+  if (h.includes("thedefiedge") || h.includes("tomwanhh")) return "secondary";
+  return "protocol";
+}
+
+const STATIC_OFFICIAL_SOURCES = [
+  ["Robinhood Chain", "https://robinhood.com/us/en/chain/"],
+  ["Chain docs", "https://docs.robinhood.com/chain/"],
+  ["Connecting / RPC docs", "https://docs.robinhood.com/chain/connecting/"],
+  ["Ecosystem directory", "https://robinhood.com/chain/ecosystem"],
+  ["Stock Tokens", "https://robinhood.com/rhj/stocktokens"],
+  ["Robinhood Earn", "https://robinhood.com/us/en/crypto/earn/"],
+  [
+    "Mainnet newsroom",
+    "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+  ],
+  [
+    "Testnet newsroom",
+    "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+  ],
+];
+
+const STATIC_METRICS_SOURCES = [
+  ["DefiLlama — RH Chain dashboard", "https://defillama.com/chain/robinhood-chain"],
+  ["DefiLlama — chains API", "https://api.llama.fi/v2/chains"],
+  [
+    "DefiLlama — RH Chain TVL history",
+    "https://api.llama.fi/v2/historicalChainTvl/Robinhood%20Chain",
+  ],
+  ["DefiLlama — stablecoins API", "https://stablecoins.llama.fi/stablecoinchains"],
+  ["DefiLlama — RH DEX overview", "https://api.llama.fi/overview/dexs/Robinhood%20Chain"],
+  ["DefiLlama — RH fees overview", "https://api.llama.fi/overview/fees/Robinhood%20Chain"],
+  ["DefiLlama — protocols API", "https://api.llama.fi/protocols"],
+];
+
+function collectSiteSources() {
+  const byUrl = new Map();
+
+  const add = (url, label) => {
+    const u = (url || "").trim();
+    if (!u.startsWith("http")) return;
+    const cleanLabel = (label || u).trim();
+    if (!byUrl.has(u)) {
+      byUrl.set(u, cleanLabel);
+      return;
+    }
+    const prev = byUrl.get(u);
+    if (
+      cleanLabel &&
+      cleanLabel !== "Primary" &&
+      cleanLabel !== "X post" &&
+      (prev === "Primary" || prev === "X post" || prev.length < cleanLabel.length)
+    ) {
+      byUrl.set(u, cleanLabel);
+    }
+  };
+
+  for (const [label, url] of STATIC_OFFICIAL_SOURCES) add(url, label);
+  for (const [label, url] of STATIC_METRICS_SOURCES) add(url, label);
+
+  for (const e of state.entities || []) {
+    for (const s of e.sources || []) {
+      const label =
+        s.label && s.label !== "Primary" ? s.label : `${e.name}${s.label ? ` (${s.label})` : ""}`;
+      add(s.url, label);
+    }
+  }
+
+  for (const edge of state.graph?.edges || []) {
+    for (const ev of edge.evidence || []) {
+      const label = ev.label && ev.label !== "X post" ? ev.label : `${edge.label} — evidence`;
+      add(ev.url, label);
+    }
+  }
+
+  const groups = {
+    official: [],
+    metrics: [],
+    protocol: [],
+    partnership: [],
+    secondary: [],
+  };
+
+  for (const [url, label] of byUrl) {
+    groups[classifySourceUrl(url)].push({ url, label });
+  }
+
+  for (const key of Object.keys(groups)) {
+    groups[key].sort((a, b) => a.label.localeCompare(b.label, "en"));
+  }
+
+  return { groups, total: byUrl.size };
+}
+
+function renderSourceList(items) {
+  if (!items.length) {
+    return `<li class="source-empty">—</li>`;
+  }
+  return items
+    .map(
+      ({ label, url }) =>
+        `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a></li>`,
+    )
+    .join("");
+}
+
+function renderSourceSection(title, items, { muted = false } = {}) {
+  return `
+    <section class="source-section${muted ? " is-muted" : ""}">
+      <h2>${escapeHtml(title)} <span class="source-count">${items.length}</span></h2>
+      <ul class="source-list">${renderSourceList(items)}</ul>
+    </section>
+  `;
+}
+
 function renderHow() {
+  const graphEdges = state.graph?.edge_count ?? state.graph?.edges?.length ?? 0;
+  const graphNodes = state.graph?.node_count ?? state.graph?.nodes?.length ?? 0;
+
   return `
     <article class="page-prose">
       <h1>How to read Hoodscape</h1>
       <p class="lede">Orientation directory — not recommendations. Use it to answer: what exists, which job it does, where to verify.</p>
+
+      <h2 style="font-size:1rem;margin:0 0 0.65rem;letter-spacing:-0.02em">Map vs Graph</h2>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="wrong">Map = ranked leaderboard of “best” projects</div>
+          <div class="right">Map = jobs on RH Chain</div>
+          <p>Cards group by layer (Official, Infra, DeFi…). TVL comes from DefiLlama where listed. Confidence is editorial — verify primary docs.</p>
+        </div>
+        <div class="guide-card">
+          <div class="wrong">Graph = who competes with whom</div>
+          <div class="right">Graph = verified partnerships</div>
+          <p>Edges only exist when Hoodscape has an <strong style="color:var(--text)">official partner post or announcement</strong> — not map adjacency, CT co-mentions, or launchpad leaderboards.</p>
+        </div>
+      </div>
+
+      <h2 style="font-size:1rem;margin:0 0 0.65rem;letter-spacing:-0.02em">Ecosystem graph</h2>
+      <p style="color:var(--text-muted);font-size:0.92rem;margin:0 0 0.75rem">
+        Open <a href="#/graph">Graph</a> for the partnership mind map
+        ${graphNodes ? `(${graphNodes} nodes · ${graphEdges} edges)` : ""}.
+        Default view hides low-confidence noise — use the toolbar to widen filters.
+      </p>
+      <ul class="layer-list">
+        <li>
+          <span class="dot official"></span>
+          <div><strong>Nodes</strong><span>One bubble per listed project. Color = layer. Larger nodes = higher weight (official heroes or high TVL).</span></div>
+        </li>
+        <li>
+          <span class="dot defi"></span>
+          <div><strong>Edges</strong><span>Short label on the link (e.g. day-1 partner, Earn stack). Thicker line = stronger cited relationship.</span></div>
+        </li>
+        <li>
+          <span class="dot infra"></span>
+          <div><strong>Evidence</strong><span>Hover a connection → <em>View evidence</em> pin. Click the link or pin → panel with explanation + partner announcement URLs.</span></div>
+        </li>
+        <li>
+          <span class="dot media"></span>
+          <div><strong>Controls</strong><span>Drag nodes to rearrange · click a node to jump to its map card · filter by layer / confidence · Fit view resets zoom · Esc closes panels.</span></div>
+        </li>
+      </ul>
+      <p style="color:var(--text-dim);font-size:0.82rem;margin:0 0 1.25rem;font-family:var(--mono)">
+        Graph edges ≠ endorsements, investment advice, or proof that two apps share liquidity.
+      </p>
 
       <h2 style="font-size:1rem;margin:0 0 0.65rem;letter-spacing:-0.02em">Three splits</h2>
       <div class="guide-grid">
@@ -696,44 +875,41 @@ function renderGraph() {
 }
 
 function renderSources() {
-  const primary = [
-    ["Robinhood Chain", "https://robinhood.com/us/en/chain/"],
-    ["Chain docs", "https://docs.robinhood.com/chain/"],
-    ["Ecosystem directory", "https://robinhood.com/chain/ecosystem"],
-    ["Stock Tokens", "https://robinhood.com/rhj/stocktokens"],
-    ["Mainnet newsroom", "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/"],
-    ["DefiLlama — RH Chain", "https://defillama.com/chain/robinhood-chain"],
-    ["Arbitrum docs", "https://docs.arbitrum.io/"],
-  ];
-  return `
-    <article class="page-prose">
-      <h1>Sources</h1>
-      <p class="lede">Start with primary links. CT maps and watchlists are leads only.</p>
+  const { groups, total } = collectSiteSources();
+  const asOf =
+    state.graph?.generated_at_utc?.slice(0, 10) ||
+    state.pulse?.as_of_utc?.slice(0, 10) ||
+    "";
 
-      <div class="two-col">
-        <div class="source-col">
-          <h2>Primary</h2>
-          <ul>
-            ${primary
-              .map(
-                ([label, href]) =>
-                  `<li><a href="${href}" target="_blank" rel="noopener">${escapeHtml(label)}</a></li>`
-              )
-              .join("")}
-          </ul>
-        </div>
-        <div class="source-col leads">
-          <h2>Leads only (secondary)</h2>
-          <ul>
-            <li>CT ecosystem maps & watchlists</li>
-            <li>Launchpad deploy rankings on X</li>
-            <li>Unaudited community claims</li>
-            <li>Hoodscape confidence labels (editorial)</li>
-          </ul>
-        </div>
+  return `
+    <article class="page-prose sources-page">
+      <h1>Sources</h1>
+      <p class="lede">
+        Full bibliography Hoodscape draws on — official pages, DefiLlama metrics, protocol docs,
+        and partnership evidence cited on the graph. Start with Official + Metrics; verify everything else yourself.
+      </p>
+      <p class="sources-meta">
+        ${total} unique URLs${asOf ? ` · graph/export ${asOf}` : ""}
+      </p>
+
+      <div class="sources-stack">
+        ${renderSourceSection("Official Robinhood", groups.official)}
+        ${renderSourceSection("Chain metrics (DefiLlama)", groups.metrics)}
+        ${renderSourceSection("Protocol & documentation", groups.protocol)}
+        ${renderSourceSection("Partnership announcements & evidence", groups.partnership)}
+        ${renderSourceSection("Secondary / CT leads", groups.secondary, { muted: true })}
       </div>
 
-      <p style="color:var(--text-muted);font-size:0.9rem">
+      <div class="source-col leads" style="margin-top:1rem">
+        <h2>Not sources (orientation only)</h2>
+        <ul>
+          <li>Hoodscape confidence labels — editorial, not third-party ratings</li>
+          <li>Map card copy — synthesized from notes + public data, not financial advice</li>
+          <li>Unaudited community claims without a linked primary URL</li>
+        </ul>
+      </div>
+
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-top:1.25rem">
         Not financial advice. Not affiliated with Robinhood Markets, Inc.
         Inclusion does not mean endorsement, partnership, or security review.
         Jurisdiction limits apply especially to Stock Tokens and Earn.
