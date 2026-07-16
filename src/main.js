@@ -813,10 +813,15 @@ function render(options = {}) {
 
   const prevRoute = lastRenderedRoute;
   if (prevRoute === "graph" && state.route === "graph" && graphMounted) {
-    updateNavActive();
-    if (state.selected) mountPanel(state.selected);
-    else mountPanel(null);
-    return;
+    const live = $("#graph-mount")?.querySelector(".graph-view");
+    if (live) {
+      updateNavActive();
+      if (state.selected) mountPanel(state.selected);
+      else mountPanel(null);
+      return;
+    }
+    graphMounted = false;
+    unmountGraphView();
   }
 
   if (prevRoute === "graph" && state.route !== "graph") {
@@ -855,12 +860,17 @@ function render(options = {}) {
   if (state.route === "graph") {
     const mount = $("#graph-mount");
     if (mount && state.graph) {
-      mountGraphView(mount, {
-        graph: state.graph,
-        entities: state.entities,
-        onNodeClick: (slug) => openEntity(slug),
+      unmountGraphView();
+      requestAnimationFrame(() => {
+        const el = $("#graph-mount");
+        if (!el || state.route !== "graph" || !state.graph) return;
+        mountGraphView(el, {
+          graph: state.graph,
+          entities: state.entities,
+          onNodeClick: (slug) => openEntity(slug),
+        });
+        graphMounted = true;
       });
-      graphMounted = true;
     }
   }
 

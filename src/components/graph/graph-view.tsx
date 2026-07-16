@@ -81,27 +81,31 @@ function buildVisualMap(entities: GraphEntity[]): Record<string, EntityVisual> {
 }
 
 function applyForces(fg: ForceGraphMethods<SimNode, SimLink>) {
-  const linkForce = fg.d3Force("link");
-  if (linkForce) {
-    linkForce
-      .distance((link: SimLink) => {
-        const s = link.strength;
-        return s === "strong" ? 180 : s === "medium" ? 150 : 120;
-      })
-      .strength(0.28);
-  }
+  try {
+    const linkForce = fg.d3Force("link");
+    if (linkForce) {
+      linkForce
+        .distance((link: SimLink) => {
+          const s = link.strength;
+          return s === "strong" ? 180 : s === "medium" ? 150 : 120;
+        })
+        .strength(0.28);
+    }
 
-  const chargeForce = fg.d3Force("charge");
-  if (chargeForce) {
-    chargeForce
-      .strength((node: SimNode) => (node.weight === "hero" ? -560 : -420))
-      .distanceMax(560);
-  }
+    const chargeForce = fg.d3Force("charge");
+    if (chargeForce) {
+      chargeForce
+        .strength((node: SimNode) => (node.weight === "hero" ? -560 : -420))
+        .distanceMax(560);
+    }
 
-  fg.d3Force(
-    "collision",
-    forceCollide<SimNode>((node) => nodeRadius(node.weight) + 16),
-  );
+    fg.d3Force(
+      "collision",
+      forceCollide<SimNode>((node) => nodeRadius(node.weight) + 16),
+    );
+  } catch {
+    // keep default forces if custom config fails
+  }
 }
 
 interface GraphViewProps {
@@ -167,13 +171,24 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
 
   useEffect(() => {
     fitPending.current = true;
-    requestAnimationFrame(() => {
+    const id = window.setTimeout(() => {
       const fg = fgRef.current;
       if (fg) {
         applyForces(fg);
         fg.d3ReheatSimulation();
       }
-    });
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, [graphPayload]);
+
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      if (fitPending.current) {
+        fgRef.current?.zoomToFit(400, 64);
+        fitPending.current = false;
+      }
+    }, 1200);
+    return () => window.clearTimeout(id);
   }, [graphPayload]);
 
   useEffect(() => {
@@ -318,6 +333,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
       <div
         ref={wrapRef}
         className={`graph-canvas${draggingId ? " is-dragging" : ""}`}
+        style={{ height: size.h, minHeight: 420 }}
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setPointer({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -335,8 +351,8 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
             height={size.h}
             graphData={graphPayload}
             backgroundColor="rgba(0,0,0,0)"
-            nodeRelSize={nodeRadius("std")}
-            nodeVal={(n) => nodeRadius(n.weight)}
+            nodeRelSize={4}
+            nodeVal={(n) => (n.weight === "hero" ? 2.2 : 1.4)}
             nodeCanvasObject={paintNode}
             nodeCanvasObjectMode={() => "replace"}
             nodePointerAreaPaint={paintPointerArea}

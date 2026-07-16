@@ -4,12 +4,21 @@ import { GraphView } from "@/components/graph/graph-view";
 import type { GraphData, GraphEntity } from "@/types/graph";
 
 let root: Root | null = null;
+let mountedEl: HTMLElement | null = null;
 
 export function mountGraphView(
   el: HTMLElement,
   props: { graph: GraphData; entities: GraphEntity[]; onNodeClick: (slug: string) => void },
 ) {
-  if (!root) root = createRoot(el);
+  if (root && mountedEl !== el) {
+    root.unmount();
+    root = null;
+    mountedEl = null;
+  }
+  if (!root) {
+    root = createRoot(el);
+    mountedEl = el;
+  }
   root.render(
     <StrictMode>
       <GraphView
@@ -24,4 +33,5 @@ export function mountGraphView(
 export function unmountGraphView() {
   root?.unmount();
   root = null;
+  mountedEl = null;
 }
