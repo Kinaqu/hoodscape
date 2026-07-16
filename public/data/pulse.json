@@ -1,11 +1,11 @@
 {
-  "as_of_utc": "2026-07-16T13:47:20Z",
+  "as_of_utc": "2026-07-16T18:39:27Z",
   "chain_id": 4663,
-  "tvl": 194559243.85330522,
-  "stablecoins": 348698606.5879411,
+  "tvl": 200387587.16264358,
+  "stablecoins": 349211669.1936666,
   "dex_24h": 797508036,
   "dex_7d": 5058392087,
-  "fees_24h": 3942550,
-  "protocol_count": 36,
+  "fees_24h": 4152067,
+  "protocol_count": 37,
   "source": "https://defillama.com/chain/robinhood-chain"
 }

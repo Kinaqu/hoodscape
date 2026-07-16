@@ -255,6 +255,51 @@ def load_latest_snapshot() -> dict | None:
     return json.loads(files[0].read_text(encoding="utf-8"))
 
 
+# Hoodscape entity slug → DefiLlama protocol slug(s). Multiple slugs are summed.
+TVL_LLAMA_SLUGS: dict[str, list[str]] = {
+    "morpho": ["morpho-blue"],
+    "uniswap": ["uniswap-v2", "uniswap-v3", "uniswap-v4"],
+    "arcus": ["arcus-perps"],
+    "spark": ["spark-savings", "spark-liquidity-layer"],
+    "noxa-fun": ["noxa-fun"],
+    "swaphood": ["swaphood-v2", "swaphood-v3"],
+    "curve": ["curve-dex"],
+    "sheriff-exchange": ["sheriff-v2", "sheriff-v3"],
+    "pancakeswap": ["pancakeswap-amm-v3", "pancakeswap-amm"],
+    "meridian-predict": ["meridian-predict"],
+    "dexfi-aggregator": ["dexfi-aggregator"],
+    "slvr": ["slvr"],
+    "symbiosis": ["symbiosis"],
+    "sentry": ["sentry"],
+    "robinswap": ["robinswap-v2", "robinswap-v3"],
+    "aeon-protocol": ["aeon-protocol"],
+    "based-alpha": ["based-alpha"],
+    "hoodit": ["hoodit"],
+    "frothswap": ["frothswap"],
+    "hoodbets": ["hoodbets"],
+    "robinfun": ["robinfun"],
+    "hoodz": ["hoodz"],
+    "ymym-meme": ["ymym.meme"],
+    "hoodpump": ["hoodpump"],
+    "arrowpad": ["arrowpad"],
+}
+
+
+def sum_tvl_for_slugs(by_slug: dict[str, dict], slugs: list[str]) -> float | None:
+    total = 0.0
+    found = False
+    for slug in slugs:
+        row = by_slug.get(slug)
+        if not row:
+            continue
+        val = row.get("tvl_rh")
+        if val is None:
+            continue
+        total += float(val)
+        found = True
+    return total if found else None
+
+
 def merge_tvl(entities: list[dict], snapshot: dict | None) -> None:
     if not snapshot:
         for e in entities:
@@ -262,32 +307,34 @@ def merge_tvl(entities: list[dict], snapshot: dict | None) -> None:
                 e["slug"], e["layer"], e["confidence"], None
             )
         return
-    protos = snapshot.get("protocols_top") or []
-    by_tw = {}
-    by_name = {}
+
+    protos = snapshot.get("protocols_all") or snapshot.get("protocols_top") or []
+    by_slug = {p["slug"]: p for p in protos if p.get("slug")}
+    by_tw: dict[str, dict] = {}
+    by_name: dict[str, dict] = {}
     for p in protos:
         tw = (p.get("twitter") or "").lower().lstrip("@")
-        if tw:
+        if tw and tw not in by_tw:
             by_tw[tw] = p
         n = (p.get("name") or "").lower()
-        by_name[n] = p
-        base = re.sub(r"\s+v[2-4]$", "", n)
-        base = base.replace(" blue", "").replace(" amm", "").replace(" fun", "")
-        by_name[base] = p
+        if n and n not in by_name:
+            by_name[n] = p
 
     for e in entities:
-        tw = e["twitter"].lower().lstrip("@")
-        hit = by_tw.get(tw) if tw else None
-        if not hit:
-            n = e["name"].lower()
-            hit = by_name.get(n)
+        slug = e["slug"]
+        tvl = sum_tvl_for_slugs(by_slug, TVL_LLAMA_SLUGS.get(slug, []))
+        if tvl is None:
+            tw = e["twitter"].lower().lstrip("@")
+            hit = by_tw.get(tw) if tw else None
             if not hit:
-                for k, p in by_name.items():
-                    if n in k or k in n:
-                        hit = p
-                        break
-        if hit and hit.get("tvl_rh") is not None:
-            e["tvl_rh"] = hit["tvl_rh"]
+                n = e["name"].lower()
+                hit = by_name.get(n)
+            if hit and hit.get("tvl_rh") is not None:
+                tvl = float(hit["tvl_rh"])
+        if tvl is not None and tvl > 0:
+            e["tvl_rh"] = tvl
+            e["tvl_source"] = "defillama"
+            e["tvl_as_of_utc"] = snapshot.get("as_of_utc")
         e["display"]["weight"] = weight_for(
             e["slug"], e["layer"], e["confidence"], e.get("tvl_rh")
         )

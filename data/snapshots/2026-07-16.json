@@ -1,13 +1,13 @@
 {
-  "as_of_utc": "2026-07-16T13:47:20Z",
+  "as_of_utc": "2026-07-16T18:39:27Z",
   "chain": "Robinhood Chain",
   "chain_id": 4663,
-  "tvl": 194559243.85330522,
+  "tvl": 200387587.16264358,
   "tvl_history_latest": {
     "date": 1784160000,
-    "tvl": 194559040
+    "tvl": 207244513
   },
-  "stablecoins_circulating_usd": 348698606.5879411,
+  "stablecoins_circulating_usd": 349211669.1936666,
   "dex": {
     "total24h": 797508036,
     "total7d": 5058392087,
@@ -17,18 +17,18 @@
     "protocol_count": 20
   },
   "fees": {
-    "total24h": 3942550,
-    "total7d": 24938256,
+    "total24h": 4152067,
+    "total7d": 25803028,
     "error": null
   },
-  "protocols_on_chain_count": 36,
-  "protocols_top": [
+  "protocols_on_chain_count": 37,
+  "protocols_all": [
     {
       "name": "Morpho Blue",
       "slug": "morpho-blue",
       "category": "Lending",
-      "tvl_total": 7289807439.192075,
-      "tvl_rh": 116995428.77094853,
+      "tvl_total": 7341896422.885934,
+      "tvl_rh": 125479549.90042455,
       "twitter": "Morpho",
       "url": "https://app.morpho.org"
     },
@@ -36,8 +36,26 @@
       "name": "Uniswap V3",
       "slug": "uniswap-v3",
       "category": "Dexs",
-      "tvl_total": 1521463051.0848954,
-      "tvl_rh": 30706974.60063068,
+      "tvl_total": 1509501365.8042126,
+      "tvl_rh": 31199084.716885906,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Arcus Perps",
+      "slug": "arcus-perps",
+      "category": "Derivatives",
+      "tvl_total": 16919734.77845693,
+      "tvl_rh": 16919734.77845693,
+      "twitter": "arcus_xyz",
+      "url": "https://arcus.xyz/"
+    },
+    {
+      "name": "Uniswap V2",
+      "slug": "uniswap-v2",
+      "category": "Dexs",
+      "tvl_total": 781448892.5976112,
+      "tvl_rh": 16195872.544567747,
       "twitter": "Uniswap",
       "url": "https://app.uniswap.org/"
     },
@@ -51,29 +69,11 @@
       "url": "https://app.uniswap.org/"
     },
     {
-      "name": "Uniswap V2",
-      "slug": "uniswap-v2",
-      "category": "Dexs",
-      "tvl_total": 780174242.6550717,
-      "tvl_rh": 15034197.42692674,
-      "twitter": "Uniswap",
-      "url": "https://app.uniswap.org/"
-    },
-    {
-      "name": "Arcus Perps",
-      "slug": "arcus-perps",
-      "category": "Derivatives",
-      "tvl_total": 14419859.00378253,
-      "tvl_rh": 14419859.00378253,
-      "twitter": "arcus_xyz",
-      "url": "https://arcus.xyz/"
-    },
-    {
       "name": "Spark Savings",
       "slug": "spark-savings",
       "category": "Yield",
-      "tvl_total": 1091354707.6563177,
-      "tvl_rh": 8424437.662476074,
+      "tvl_total": 1096591502.8656778,
+      "tvl_rh": 13469533.74238432,
       "twitter": "sparkdotfi",
       "url": "https://data.spark.fi/savings/"
     },
@@ -81,8 +81,8 @@
       "name": "NOXA Fun",
       "slug": "noxa-fun",
       "category": "Launchpad",
-      "tvl_total": 6100981.250063761,
-      "tvl_rh": 6087390.160305349,
+      "tvl_total": 6412952.911282581,
+      "tvl_rh": 6399398.022406258,
       "twitter": "Noxa_Fi",
       "url": "https://fun.noxa.eth.limo/"
     },
@@ -90,8 +90,8 @@
       "name": "SwapHood V3",
       "slug": "swaphood-v3",
       "category": "Dexs",
-      "tvl_total": 637797.8681969142,
-      "tvl_rh": 637797.8681969142,
+      "tvl_total": 637894.8265286507,
+      "tvl_rh": 637894.8265286507,
       "twitter": "SwapHoodFi",
       "url": "https://www.swaphood.finance/#/"
     },
@@ -99,8 +99,8 @@
       "name": "SwapHood V2",
       "slug": "swaphood-v2",
       "category": "Dexs",
-      "tvl_total": 190738.3810501198,
-      "tvl_rh": 190738.3810501198,
+      "tvl_total": 192476.13889125173,
+      "tvl_rh": 192476.13889125173,
       "twitter": "SwapHoodFi",
       "url": "https://www.swaphood.finance/#/"
     },
@@ -108,35 +108,35 @@
       "name": "Curve DEX",
       "slug": "curve-dex",
       "category": "Dexs",
-      "tvl_total": 1290190215.123611,
-      "tvl_rh": 132733.18075693634,
+      "tvl_total": 1295093695.925871,
+      "tvl_rh": 132170.93812493034,
       "twitter": "CurveFinance",
       "url": "https://curve.finance"
-    },
-    {
-      "name": "PancakeSwap AMM V3",
-      "slug": "pancakeswap-amm-v3",
-      "category": "Dexs",
-      "tvl_total": 284342378.09363174,
-      "tvl_rh": 118016.82528394119,
-      "twitter": "PancakeSwap",
-      "url": "https://pancakeswap.finance/swap"
     },
     {
       "name": "Sheriff V3",
       "slug": "sheriff-v3",
       "category": "Dexs",
-      "tvl_total": 113496.75151848429,
-      "tvl_rh": 113496.75151848429,
+      "tvl_total": 113874.0432363452,
+      "tvl_rh": 113874.0432363452,
       "twitter": "sheriffexchange",
       "url": "https://app.sheriff.exchange/"
+    },
+    {
+      "name": "PancakeSwap AMM V3",
+      "slug": "pancakeswap-amm-v3",
+      "category": "Dexs",
+      "tvl_total": 284352540.0989464,
+      "tvl_rh": 113221.78808243039,
+      "twitter": "PancakeSwap",
+      "url": "https://pancakeswap.finance/swap"
     },
     {
       "name": "Meridian Predict",
       "slug": "meridian-predict",
       "category": "Prediction Market",
-      "tvl_total": 108900.22840436768,
-      "tvl_rh": 108900.22840436768,
+      "tvl_total": 108394.29975366176,
+      "tvl_rh": 108394.29975366176,
       "twitter": "meridiandotxyz",
       "url": "https://app.meridian.xyz/predict"
     },
@@ -144,8 +144,8 @@
       "name": "DexFi Aggregator",
       "slug": "dexfi-aggregator",
       "category": "Yield Aggregator",
-      "tvl_total": 1822351.9322024263,
-      "tvl_rh": 84698.56056402507,
+      "tvl_total": 1837146.5057754642,
+      "tvl_rh": 84468.49655371039,
       "twitter": "DexFinance",
       "url": "https://dexfi.com/"
     },
@@ -153,8 +153,8 @@
       "name": "SLVR",
       "slug": "slvr",
       "category": "Gamified Mining",
-      "tvl_total": 45676.36675845629,
-      "tvl_rh": 45676.36675845629,
+      "tvl_total": 65460.45395653357,
+      "tvl_rh": 65460.45395653357,
       "twitter": "S_L_V_R_FUN",
       "url": ""
     },
@@ -162,8 +162,8 @@
       "name": "Symbiosis",
       "slug": "symbiosis",
       "category": "Cross Chain Bridge",
-      "tvl_total": 9350132.511975253,
-      "tvl_rh": 42743.79678522133,
+      "tvl_total": 9285680.077285428,
+      "tvl_rh": 39339.544243004915,
       "twitter": "symbiosis_fi",
       "url": "https://symbiosis.finance"
     },
@@ -171,8 +171,8 @@
       "name": "Sentry",
       "slug": "sentry",
       "category": "Launchpad",
-      "tvl_total": 36725.68195541632,
-      "tvl_rh": 36725.68195541632,
+      "tvl_total": 34346.40985038211,
+      "tvl_rh": 34346.40985038211,
       "twitter": "sentrylauncher",
       "url": " "
     },
@@ -180,17 +180,35 @@
       "name": "RobinSwap V3",
       "slug": "robinswap-v3",
       "category": "Dexs",
-      "tvl_total": 20273.328069515184,
-      "tvl_rh": 20273.328069515184,
+      "tvl_total": 20068.02430659749,
+      "tvl_rh": 20068.02430659749,
       "twitter": "RobinSwap_",
       "url": " "
+    },
+    {
+      "name": "Based Alpha",
+      "slug": "based-alpha",
+      "category": "Launchpad",
+      "tvl_total": 19822.4738526348,
+      "tvl_rh": 19822.4738526348,
+      "twitter": "BasedOneX",
+      "url": "https://alpha.based.one"
+    },
+    {
+      "name": "Catnip",
+      "slug": "catnip",
+      "category": "Dexs",
+      "tvl_total": 17668.631105439927,
+      "tvl_rh": 17668.631105439927,
+      "twitter": "catnipexchange",
+      "url": ""
     },
     {
       "name": "AEON Protocol",
       "slug": "aeon-protocol",
       "category": "Dexs",
-      "tvl_total": 4001.189145083509,
-      "tvl_rh": 4001.189145083509,
+      "tvl_total": 4175.906601942764,
+      "tvl_rh": 4175.906601942764,
       "twitter": null,
       "url": " "
     },
@@ -198,10 +216,327 @@
       "name": "Sheriff V2",
       "slug": "sheriff-v2",
       "category": "Dexs",
-      "tvl_total": 2350.681454969703,
-      "tvl_rh": 2350.681454969703,
+      "tvl_total": 2346.025110205579,
+      "tvl_rh": 2346.025110205579,
       "twitter": "sheriffexchange",
       "url": "https://app.sheriff.exchange/"
+    },
+    {
+      "name": "Hoodit",
+      "slug": "hoodit",
+      "category": "Dexs",
+      "tvl_total": 2022.6200802557144,
+      "tvl_rh": 2022.6200802557144,
+      "twitter": "HooditXYZ",
+      "url": ""
+    },
+    {
+      "name": "RobinFun",
+      "slug": "robinfun",
+      "category": "Launchpad",
+      "tvl_total": 1471.6567743175997,
+      "tvl_rh": 1471.6567743175997,
+      "twitter": "robinfunxyz",
+      "url": " "
+    },
+    {
+      "name": "FrothSwap",
+      "slug": "frothswap",
+      "category": "Dexs",
+      "tvl_total": 1002.0485618714088,
+      "tvl_rh": 1002.0485618714088,
+      "twitter": "froth_meme",
+      "url": ""
+    },
+    {
+      "name": "Hoodbets",
+      "slug": "hoodbets",
+      "category": "Prediction Market",
+      "tvl_total": 809.16742372883,
+      "tvl_rh": 809.16742372883,
+      "twitter": "hoodbetsxyz",
+      "url": " "
+    },
+    {
+      "name": "PancakeSwap AMM",
+      "slug": "pancakeswap-amm",
+      "category": "Dexs",
+      "tvl_total": 1675899247.9759712,
+      "tvl_rh": 464.5827876893604,
+      "twitter": "PancakeSwap",
+      "url": "https://pancakeswap.finance/"
+    },
+    {
+      "name": "HOODZ",
+      "slug": "hoodz",
+      "category": "Gaming",
+      "tvl_total": 405.6099476654877,
+      "tvl_rh": 405.6099476654877,
+      "twitter": "HOODZRH",
+      "url": ""
+    },
+    {
+      "name": "Spark Liquidity Layer",
+      "slug": "spark-liquidity-layer",
+      "category": "Onchain Capital Allocator",
+      "tvl_total": 1687454201.9209247,
+      "tvl_rh": 363.85598047044823,
+      "twitter": "sparkdotfi",
+      "url": "https://app.spark.fi"
+    },
+    {
+      "name": "ymym.meme",
+      "slug": "ymym.meme",
+      "category": "Launchpad",
+      "tvl_total": 112.57793996900512,
+      "tvl_rh": 112.57793996900512,
+      "twitter": "ymym_hood",
+      "url": ""
+    },
+    {
+      "name": "DOTT",
+      "slug": "dott",
+      "category": "Launchpad",
+      "tvl_total": 85.21835005121832,
+      "tvl_rh": 85.21835005121832,
+      "twitter": "DumpOnTrenches",
+      "url": ""
+    },
+    {
+      "name": "HoodPump",
+      "slug": "hoodpump",
+      "category": "Launchpad",
+      "tvl_total": 39.56612231105341,
+      "tvl_rh": 39.56612231105341,
+      "twitter": "hoodpump_fun",
+      "url": ""
+    },
+    {
+      "name": "ArrowPad",
+      "slug": "arrowpad",
+      "category": "Launchpad",
+      "tvl_total": 0.5113631297987908,
+      "tvl_rh": 0.5113631297987908,
+      "twitter": "RobinArrowPad",
+      "url": " "
+    },
+    {
+      "name": "Fusion by IPOR",
+      "slug": "fusion-by-ipor",
+      "category": "Yield Aggregator",
+      "tvl_total": 40705552.80150542,
+      "tvl_rh": 0,
+      "twitter": "ipor_io",
+      "url": "https://app.ipor.io/fusion"
+    },
+    {
+      "name": "T3tris Finance",
+      "slug": "t3tris-finance",
+      "category": "Onchain Capital Allocator",
+      "tvl_total": 11383652.788045727,
+      "tvl_rh": 0,
+      "twitter": "0xT3tris",
+      "url": "https://t3tris.finance/"
+    },
+    {
+      "name": "Ravenhood",
+      "slug": "ravenhood",
+      "category": "Volume Boosting",
+      "tvl_total": 0,
+      "tvl_rh": 0,
+      "twitter": "RVHProtocol",
+      "url": ""
+    },
+    {
+      "name": "RobinSwap V2",
+      "slug": "robinswap-v2",
+      "category": "Dexs",
+      "tvl_total": 0,
+      "tvl_rh": 0,
+      "twitter": "RobinSwap_",
+      "url": " "
+    }
+  ],
+  "protocols_top": [
+    {
+      "name": "Morpho Blue",
+      "slug": "morpho-blue",
+      "category": "Lending",
+      "tvl_total": 7341896422.885934,
+      "tvl_rh": 125479549.90042455,
+      "twitter": "Morpho",
+      "url": "https://app.morpho.org"
+    },
+    {
+      "name": "Uniswap V3",
+      "slug": "uniswap-v3",
+      "category": "Dexs",
+      "tvl_total": 1509501365.8042126,
+      "tvl_rh": 31199084.716885906,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Arcus Perps",
+      "slug": "arcus-perps",
+      "category": "Derivatives",
+      "tvl_total": 16919734.77845693,
+      "tvl_rh": 16919734.77845693,
+      "twitter": "arcus_xyz",
+      "url": "https://arcus.xyz/"
+    },
+    {
+      "name": "Uniswap V2",
+      "slug": "uniswap-v2",
+      "category": "Dexs",
+      "tvl_total": 781448892.5976112,
+      "tvl_rh": 16195872.544567747,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Uniswap V4",
+      "slug": "uniswap-v4",
+      "category": "Dexs",
+      "tvl_total": 829413167.8158795,
+      "tvl_rh": 15942750.00479163,
+      "twitter": "Uniswap",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "name": "Spark Savings",
+      "slug": "spark-savings",
+      "category": "Yield",
+      "tvl_total": 1096591502.8656778,
+      "tvl_rh": 13469533.74238432,
+      "twitter": "sparkdotfi",
+      "url": "https://data.spark.fi/savings/"
+    },
+    {
+      "name": "NOXA Fun",
+      "slug": "noxa-fun",
+      "category": "Launchpad",
+      "tvl_total": 6412952.911282581,
+      "tvl_rh": 6399398.022406258,
+      "twitter": "Noxa_Fi",
+      "url": "https://fun.noxa.eth.limo/"
+    },
+    {
+      "name": "SwapHood V3",
+      "slug": "swaphood-v3",
+      "category": "Dexs",
+      "tvl_total": 637894.8265286507,
+      "tvl_rh": 637894.8265286507,
+      "twitter": "SwapHoodFi",
+      "url": "https://www.swaphood.finance/#/"
+    },
+    {
+      "name": "SwapHood V2",
+      "slug": "swaphood-v2",
+      "category": "Dexs",
+      "tvl_total": 192476.13889125173,
+      "tvl_rh": 192476.13889125173,
+      "twitter": "SwapHoodFi",
+      "url": "https://www.swaphood.finance/#/"
+    },
+    {
+      "name": "Curve DEX",
+      "slug": "curve-dex",
+      "category": "Dexs",
+      "tvl_total": 1295093695.925871,
+      "tvl_rh": 132170.93812493034,
+      "twitter": "CurveFinance",
+      "url": "https://curve.finance"
+    },
+    {
+      "name": "Sheriff V3",
+      "slug": "sheriff-v3",
+      "category": "Dexs",
+      "tvl_total": 113874.0432363452,
+      "tvl_rh": 113874.0432363452,
+      "twitter": "sheriffexchange",
+      "url": "https://app.sheriff.exchange/"
+    },
+    {
+      "name": "PancakeSwap AMM V3",
+      "slug": "pancakeswap-amm-v3",
+      "category": "Dexs",
+      "tvl_total": 284352540.0989464,
+      "tvl_rh": 113221.78808243039,
+      "twitter": "PancakeSwap",
+      "url": "https://pancakeswap.finance/swap"
+    },
+    {
+      "name": "Meridian Predict",
+      "slug": "meridian-predict",
+      "category": "Prediction Market",
+      "tvl_total": 108394.29975366176,
+      "tvl_rh": 108394.29975366176,
+      "twitter": "meridiandotxyz",
+      "url": "https://app.meridian.xyz/predict"
+    },
+    {
+      "name": "DexFi Aggregator",
+      "slug": "dexfi-aggregator",
+      "category": "Yield Aggregator",
+      "tvl_total": 1837146.5057754642,
+      "tvl_rh": 84468.49655371039,
+      "twitter": "DexFinance",
+      "url": "https://dexfi.com/"
+    },
+    {
+      "name": "SLVR",
+      "slug": "slvr",
+      "category": "Gamified Mining",
+      "tvl_total": 65460.45395653357,
+      "tvl_rh": 65460.45395653357,
+      "twitter": "S_L_V_R_FUN",
+      "url": ""
+    },
+    {
+      "name": "Symbiosis",
+      "slug": "symbiosis",
+      "category": "Cross Chain Bridge",
+      "tvl_total": 9285680.077285428,
+      "tvl_rh": 39339.544243004915,
+      "twitter": "symbiosis_fi",
+      "url": "https://symbiosis.finance"
+    },
+    {
+      "name": "Sentry",
+      "slug": "sentry",
+      "category": "Launchpad",
+      "tvl_total": 34346.40985038211,
+      "tvl_rh": 34346.40985038211,
+      "twitter": "sentrylauncher",
+      "url": " "
+    },
+    {
+      "name": "RobinSwap V3",
+      "slug": "robinswap-v3",
+      "category": "Dexs",
+      "tvl_total": 20068.02430659749,
+      "tvl_rh": 20068.02430659749,
+      "twitter": "RobinSwap_",
+      "url": " "
+    },
+    {
+      "name": "Based Alpha",
+      "slug": "based-alpha",
+      "category": "Launchpad",
+      "tvl_total": 19822.4738526348,
+      "tvl_rh": 19822.4738526348,
+      "twitter": "BasedOneX",
+      "url": "https://alpha.based.one"
+    },
+    {
+      "name": "Catnip",
+      "slug": "catnip",
+      "category": "Dexs",
+      "tvl_total": 17668.631105439927,
+      "tvl_rh": 17668.631105439927,
+      "twitter": "catnipexchange",
+      "url": ""
     }
   ],
   "sources": [
