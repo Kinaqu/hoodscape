@@ -60,12 +60,12 @@ export function NavBar({ activeRoute, className }: NavBarProps) {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-1/2 z-50 mb-6 w-[calc(100%-1.5rem)] max-w-4xl -translate-x-1/2 sm:top-6 sm:bottom-auto sm:mb-0 sm:w-auto",
+        "fixed bottom-0 left-1/2 z-50 mb-6 w-auto -translate-x-1/2 sm:top-6 sm:bottom-auto sm:mb-0 sm:max-w-4xl",
         className,
       )}
     >
-      <div className="flex items-center gap-2 rounded-full border border-border bg-background/5 py-1 pr-1 pl-2 shadow-lg backdrop-blur-lg sm:gap-3 sm:pl-3">
-        <a href="#/map" className="nav-bar-brand brand shrink-0">
+      <div className="flex items-center gap-2 rounded-full border border-border bg-background/5 py-1 pr-1 pl-1 shadow-lg backdrop-blur-lg sm:gap-3 sm:pl-3">
+        <a href="#/map" className="nav-bar-brand brand hidden shrink-0 sm:flex">
           <div className="brand-mark">
             <BrandMark />
           </div>
@@ -84,7 +84,7 @@ export function NavBar({ activeRoute, className }: NavBarProps) {
           aria-hidden="true"
         />
 
-        <div className="flex min-w-0 flex-1 items-center justify-end gap-0.5 sm:flex-none sm:justify-start sm:gap-1">
+        <div className="flex items-center justify-center gap-0.5 sm:gap-1">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.name;
