@@ -97,10 +97,10 @@ function shell(content) {
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#/map">
-          <div class="brand-mark">RH</div>
+          <div class="brand-mark">HS</div>
           <div>
-            RH Chain Map
-            <span class="sub">Robinhood Chain orientation</span>
+            Hoodscape
+            <span class="sub">Robinhood Chain landscape</span>
           </div>
         </a>
         <nav>
@@ -153,9 +153,9 @@ function renderMap() {
   const list = filtered();
   return `
     <section class="hero">
-      <h1>What exists on Robinhood Chain</h1>
+      <h1>The Robinhood Chain landscape, mapped</h1>
       <p class="lead">
-        Orientation map: protocols, rails, and who does which job.
+        Hoodscape is an orientation map: protocols, rails, and who does which job.
         Built for builders, writers, and anyone tired of CA spam.
       </p>
       <div class="badge-row">
@@ -504,7 +504,7 @@ function bindEvents() {
       const data = new FormData(form);
       const body = formatSubmission(data);
       const subject = encodeURIComponent(
-        `[RH Chain Map] List request: ${data.get("name")}`
+        `[Hoodscape] List request: ${data.get("name")}`
       );
       const mailBody = encodeURIComponent(body);
       // mailto without fixed address — user fills
@@ -535,7 +535,7 @@ function bindEvents() {
 
 function formatSubmission(data) {
   return [
-    "## RH Chain Map — listing request",
+    "## Hoodscape — listing request",
     "",
     `- **Name:** ${data.get("name")}`,
     `- **Layer:** ${data.get("layer")}`,

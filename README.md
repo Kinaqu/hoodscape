@@ -1,6 +1,6 @@
-# RH Chain Map
+# Hoodscape
 
-Orientation directory for **Robinhood Chain** — protocols, rails, and who does which job.
+Orientation map of the **Robinhood Chain** landscape — protocols, rails, and who does which job.
 
 **Not financial advice. Not a watchlist. Listings are not endorsements.**  
 **Not affiliated with Robinhood Markets, Inc.**
@@ -45,10 +45,6 @@ No env vars required for v1.
 npm run build
 # upload dist/ or connect this repo to your host
 ```
-
-### GitHub Pages (optional)
-
-Use any static deploy action that runs `npm ci && npm run build` and publishes `dist/`.
 
 ## Pages
 

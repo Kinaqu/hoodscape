@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Orientation map for Robinhood Chain — protocols, rails, jobs. NFA.",
+  "description": "Hoodscape — orientation map of the Robinhood Chain landscape. NFA.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
