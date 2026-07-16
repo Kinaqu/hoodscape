@@ -1,4 +1,7 @@
+import twitterLogoMap from "../../data/twitter-logo-map.json";
 import type { GraphEntity } from "@/types/graph";
+
+const TWITTER_LOGOS = twitterLogoMap as Record<string, string>;
 
 function addUnique(urls: string[], url?: string) {
   if (url && !urls.includes(url)) urls.push(url);
@@ -13,11 +16,12 @@ function hostFromUrl(raw?: string) {
   }
 }
 
-/** Ordered fallbacks — entity logo first, then site favicons. */
+/** Ordered fallbacks — Twitter avatars first, then entity logo, then site favicons. */
 export function logoCandidates(entity: GraphEntity): string[] {
   const d = entity.display || {};
   const urls: string[] = [];
 
+  addUnique(urls, TWITTER_LOGOS[entity.name]);
   addUnique(urls, entity.logo);
 
   const domain = d.logo_domain || hostFromUrl(entity.website);

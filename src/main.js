@@ -790,14 +790,20 @@ function bindPanelEvents() {
   });
 }
 
+function setPanelScrollLock(open) {
+  document.body.classList.toggle("panel-open", open);
+}
+
 function mountPanel(entity) {
   const root = $("#panel-root");
   if (!root) return;
   if (!entity) {
     root.innerHTML = "";
+    setPanelScrollLock(false);
     return;
   }
   root.innerHTML = renderPanel(entity);
+  setPanelScrollLock(true);
   bindPanelEvents();
 }
 
