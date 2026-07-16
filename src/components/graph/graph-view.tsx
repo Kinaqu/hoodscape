@@ -4,6 +4,8 @@ import ForceGraph2D, {
   type ForceGraphMethods,
   type LinkObject,
 } from "react-force-graph-2d";
+import { loadNodeImage, type ImgState } from "@/lib/load-node-image";
+import { logoCandidates } from "@/lib/resolve-logo";
 import type {
   ConfFilter,
   EntityVisual,
@@ -42,7 +44,8 @@ const CONF_COLORS: Record<string, string> = {
 
 type SimNode = GraphNode & { x?: number; y?: number; __dragging?: boolean };
 type SimLink = GraphEdge & { source: string | SimNode; target: string | SimNode };
-type ImgState = HTMLImageElement | "loading" | "error";
+
+const EDGE_TOOLTIP_HIDE_MS = 280;
 
 function confMatches(confidence: string, filter: ConfFilter) {
   if (filter === "all") return true;
@@ -68,12 +71,8 @@ function buildVisualMap(entities: GraphEntity[]): Record<string, EntityVisual> {
   const map: Record<string, EntityVisual> = {};
   for (const e of entities) {
     const d = e.display || {};
-    let logoUrl = e.logo || "";
-    if (!logoUrl && d.logo_domain) {
-      logoUrl = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d.logo_domain)}&sz=128`;
-    }
     map[e.slug] = {
-      logoUrl,
+      candidates: logoCandidates(e),
       monogram: d.monogram || (e.name || "?").slice(0, 2).toUpperCase(),
       hue: d.hue ?? 160,
     };
@@ -116,10 +115,12 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
   const fgRef = useRef<ForceGraphMethods<SimNode, SimLink> | undefined>(undefined);
   const fitPending = useRef(true);
   const imagesRef = useRef(new Map<string, ImgState>());
+  const edgeHideTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const tooltipLocked = useRef(false);
   const [size, setSize] = useState({ w: 800, h: 560 });
   const [confFilter, setConfFilter] = useState<ConfFilter>("high-medium");
   const [layerFilter, setLayerFilter] = useState("all");
-  const [hovered, setHovered] = useState<GraphEdge | null>(null);
+  const [activeEdge, setActiveEdge] = useState<GraphEdge | null>(null);
   const [pointer, setPointer] = useState({ x: 0, y: 0 });
   const [draggingId, setDraggingId] = useState<string | null>(null);
 
@@ -178,21 +179,8 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
   useEffect(() => {
     const bump = () => fgRef.current?.refresh();
     for (const node of filtered.nodes) {
-      const url = visuals[node.id]?.logoUrl;
-      if (!url || imagesRef.current.has(url)) continue;
-      imagesRef.current.set(url, "loading");
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.referrerPolicy = "no-referrer";
-      img.onload = () => {
-        imagesRef.current.set(url, img);
-        bump();
-      };
-      img.onerror = () => {
-        imagesRef.current.set(url, "error");
-        bump();
-      };
-      img.src = url;
+      const candidates = visuals[node.id]?.candidates ?? [];
+      loadNodeImage(node.id, candidates, imagesRef.current, bump);
     }
   }, [filtered, visuals]);
 
@@ -215,8 +203,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
       ctx.fillStyle = "#15201c";
       ctx.fill();
 
-      const logoUrl = visual?.logoUrl;
-      const cached = logoUrl ? imagesRef.current.get(logoUrl) : undefined;
+      const cached = imagesRef.current.get(node.id);
       if (cached && cached !== "loading" && cached !== "error" && cached.complete) {
         ctx.save();
         ctx.beginPath();
@@ -268,9 +255,27 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
     [],
   );
 
-  const handleLinkHover = useCallback((link: LinkObject<SimNode, SimLink> | null) => {
-    setHovered(link ? (link as SimLink) : null);
+  const clearActiveEdge = useCallback(() => {
+    clearTimeout(edgeHideTimer.current);
+    setActiveEdge(null);
   }, []);
+
+  const handleLinkHover = useCallback(
+    (link: LinkObject<SimNode, SimLink> | null) => {
+      clearTimeout(edgeHideTimer.current);
+      if (link) {
+        setActiveEdge(link as SimLink);
+        return;
+      }
+      if (tooltipLocked.current) return;
+      edgeHideTimer.current = setTimeout(() => {
+        if (!tooltipLocked.current) setActiveEdge(null);
+      }, EDGE_TOOLTIP_HIDE_MS);
+    },
+    [],
+  );
+
+  useEffect(() => () => clearTimeout(edgeHideTimer.current), []);
 
   const resetView = () => {
     fgRef.current?.zoomToFit(400, 64);
@@ -317,7 +322,9 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
           const rect = e.currentTarget.getBoundingClientRect();
           setPointer({ x: e.clientX - rect.left, y: e.clientY - rect.top });
         }}
-        onMouseLeave={() => setHovered(null)}
+        onMouseLeave={() => {
+          if (!tooltipLocked.current) clearActiveEdge();
+        }}
       >
         {filtered.nodes.length === 0 ? (
           <div className="graph-empty">No nodes match these filters.</div>
@@ -338,7 +345,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
             linkDirectionalArrowLength={7}
             linkDirectionalArrowRelPos={1}
             linkCurvature={0.08}
-            linkHoverPrecision={8}
+            linkHoverPrecision={14}
             onNodeClick={(node) => onNodeClick((node as SimNode).id)}
             onNodeDrag={(node) => setDraggingId((node as SimNode).id)}
             onNodeDragEnd={(node) => {
@@ -361,35 +368,45 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
           />
         )}
 
-        {hovered && (
+        {activeEdge && (
           <div
             className="graph-tooltip"
+            role="tooltip"
             style={{
-              left: Math.min(pointer.x + 14, size.w - 280),
-              top: Math.min(pointer.y + 14, size.h - 160),
+              left: Math.min(Math.max(pointer.x - 20, 8), size.w - 292),
+              top: Math.min(Math.max(pointer.y - 12, 8), size.h - 200),
             }}
+            onMouseEnter={() => {
+              tooltipLocked.current = true;
+              clearTimeout(edgeHideTimer.current);
+            }}
+            onMouseLeave={() => {
+              tooltipLocked.current = false;
+              clearActiveEdge();
+            }}
+            onPointerDown={(e) => e.stopPropagation()}
           >
-            <div className="graph-tooltip-type">{hovered.type.replace(/_/g, " ")}</div>
-            <div className="graph-tooltip-label">{hovered.label}</div>
-            <p className="graph-tooltip-explanation">{hovered.explanation}</p>
-            {hovered.evidence?.length > 0 && (
+            <div className="graph-tooltip-type">{activeEdge.type.replace(/_/g, " ")}</div>
+            <div className="graph-tooltip-label">{activeEdge.label}</div>
+            <p className="graph-tooltip-explanation">{activeEdge.explanation}</p>
+            {activeEdge.evidence?.length > 0 && (
               <div className="graph-tooltip-evidence">
-                {hovered.evidence.map((ev) => (
+                {activeEdge.evidence.map((ev) => (
                   <a key={ev.url} href={ev.url} target="_blank" rel="noopener noreferrer">
                     {ev.label || ev.url} ↗
                   </a>
                 ))}
               </div>
             )}
-            <span className={`graph-tooltip-conf conf-${hovered.confidence}`}>
-              {hovered.confidence}
+            <span className={`graph-tooltip-conf conf-${activeEdge.confidence}`}>
+              {activeEdge.confidence}
             </span>
           </div>
         )}
       </div>
 
       <p className="graph-hint">
-        Drag nodes to rearrange · hover an edge for evidence · click a node for details
+        Drag nodes to rearrange · hover an edge, then click links in the tooltip · click a node for details
       </p>
     </div>
   );

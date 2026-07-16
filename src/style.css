@@ -1571,6 +1571,8 @@ main {
 }
 
 .graph-canvas canvas {
+  position: relative;
+  z-index: 1;
   cursor: inherit;
 }
 
@@ -1584,7 +1586,7 @@ main {
 
 .graph-tooltip {
   position: absolute;
-  z-index: 4;
+  z-index: 12;
   width: min(268px, calc(100% - 1.5rem));
   padding: 0.75rem 0.85rem;
   border-radius: var(--radius-sm);
@@ -1626,13 +1628,21 @@ main {
 }
 
 .graph-tooltip-evidence a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.28rem 0.45rem;
   font-size: 0.78rem;
   color: var(--accent-strong);
   text-decoration: none;
+  border-radius: var(--radius-xs);
+  background: var(--accent-soft);
+  pointer-events: auto;
 }
 
 .graph-tooltip-evidence a:hover {
   text-decoration: underline;
+  background: rgba(61, 186, 140, 0.2);
 }
 
 .graph-tooltip-conf {
