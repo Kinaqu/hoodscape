@@ -5,9 +5,15 @@ Orientation map of the **Robinhood Chain** landscape — protocols, rails, and w
 **Not financial advice. Not a watchlist. Listings are not endorsements.**  
 **Not affiliated with Robinhood Markets, Inc.**
 
-## Live
+## Features
 
-After deploy, link your Pages/Vercel URL here.
+- **Layer overview** — 7 tiles (official → noise) with live counts
+- **Pulse strip** — TVL, stables, DEX volume, fees (DefiLlama)
+- **Browse** — grouped by layer or flat grid
+- **Sort / filter** — TVL, confidence, A–Z, search
+- **Entity panel** — job, trust labels, links
+- **How to read** — App ≠ rails · volume ≠ thesis · listed ≠ liquid
+- **Submit** — listing request (mailto + markdown)
 
 ## Quick start
 
@@ -20,18 +26,10 @@ npm run dev
 ## Update entities
 
 1. Edit `data/rh-entities.csv`
-2. Run `npm run data` (or `npm run data:full` for fresh metrics)
+2. Run `npm run data` (or `npm run data:full`)
 3. Commit and push — redeploy
 
-## Stack
-
-- Vite static site (`src/`, `public/`)
-- Curated registry: `data/rh-entities.csv`
-- Metrics: DefiLlama public API via `scripts/rh_llama_snapshot.py`
-
 ## Deploy
-
-### Cloudflare Pages / Vercel / Netlify
 
 | Setting | Value |
 |---------|--------|
@@ -39,21 +37,7 @@ npm run dev
 | Output directory | `dist` |
 | Install | `npm install` |
 
-No env vars required for v1.
-
-```bash
-npm run build
-# upload dist/ or connect this repo to your host
-```
-
-## Pages
-
-| Route | Content |
-|-------|---------|
-| `#/map` | Layers, search, cards, pulse metrics |
-| `#/how` | App ≠ chain · volume ≠ thesis · listed ≠ liquid |
-| `#/submit` | Project listing request (mailto + markdown) |
-| `#/sources` | Primary links |
+Repo: https://github.com/Kinaqu/rh-chain-map
 
 ## License
 
