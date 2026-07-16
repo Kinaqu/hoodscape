@@ -26,6 +26,13 @@ const LAYER_ORDER = [
 
 const CONF_RANK = { high: 0, medium: 1, low: 2 };
 
+const SITE_LINKS = {
+  defillama: "https://defillama.com/chain/robinhood-chain",
+  twitter: "https://x.com/Kinaqu123",
+  portfolio: "https://kinaqu.com/",
+  github: "https://github.com/Kinaqu",
+};
+
 const state = {
   route: "map",
   entities: [],
@@ -224,9 +231,19 @@ function shell(content) {
   return `
     <main>${content}</main>
     <footer class="site-footer">
-      NFA · Not investment advice · Listings are not endorsements ·
-      Not affiliated with Robinhood Markets, Inc. ·
-      <a href="https://defillama.com/chain/robinhood-chain" target="_blank" rel="noopener">DefiLlama</a>
+      <p class="site-footer-disclaimer">
+        NFA · Not investment advice · Listings are not endorsements ·
+        Not affiliated with Robinhood Markets, Inc.
+      </p>
+      <nav class="site-footer-links" aria-label="Site links">
+        <a href="${SITE_LINKS.defillama}" target="_blank" rel="noopener noreferrer">DefiLlama</a>
+        <span class="site-footer-sep" aria-hidden="true">·</span>
+        <a href="${SITE_LINKS.twitter}" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <span class="site-footer-sep" aria-hidden="true">·</span>
+        <a href="${SITE_LINKS.portfolio}" target="_blank" rel="noopener noreferrer">kinaqu.com</a>
+        <span class="site-footer-sep" aria-hidden="true">·</span>
+        <a href="${SITE_LINKS.github}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
     </footer>
     <div id="panel-root"></div>
   `;
