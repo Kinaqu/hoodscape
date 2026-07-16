@@ -40,6 +40,8 @@ const state = {
   conf: "all",
   selected: null,
   loadError: null,
+  resultsKey: "",
+  ignoreHash: false,
 };
 
 function $(sel, root = document) {
@@ -166,7 +168,7 @@ function shell(content) {
       Not affiliated with Robinhood Markets, Inc. ·
       <a href="https://defillama.com/chain/robinhood-chain" target="_blank" rel="noopener">DefiLlama</a>
     </footer>
-    ${state.selected ? renderPanel(state.selected) : ""}
+    <div id="panel-root"></div>
   `;
 }
 
@@ -608,7 +610,48 @@ function renderSources() {
   `;
 }
 
-function render() {
+function resultsKey() {
+  return [state.route, state.layer, state.sort, state.conf, state.q, state.view].join("|");
+}
+
+function setHash(path) {
+  const next = `#/${path}`;
+  if (location.hash === next) return;
+  state.ignoreHash = true;
+  location.hash = next;
+}
+
+function mapDomReady() {
+  return Boolean($("#panel-root") && ( $("#results") || $(".layer-overview") || state.route !== "map" ));
+}
+
+function bindPanelEvents() {
+  $("#modal-bg")?.addEventListener("click", (e) => {
+    if (e.target.id === "modal-bg" || e.target.id === "modal-close") {
+      closeEntity();
+    }
+  });
+  document.querySelectorAll("#panel-root .related-chip[data-slug]").forEach((el) => {
+    el.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      openEntity(el.dataset.slug);
+    });
+  });
+}
+
+function mountPanel(entity) {
+  const root = $("#panel-root");
+  if (!root) return;
+  if (!entity) {
+    root.innerHTML = "";
+    return;
+  }
+  root.innerHTML = renderPanel(entity);
+  bindPanelEvents();
+}
+
+function render(options = {}) {
+  const { animateResults = true } = options;
   const app = $("#app");
   if (state.loadError) {
     app.innerHTML = shell(
@@ -623,29 +666,53 @@ function render() {
   else if (state.route === "sources") body = renderSources();
   else body = renderMap();
 
+  // Preserve scroll when re-rendering map filters
+  const prevScroll = window.scrollY;
+
   app.innerHTML = shell(body);
   bindEvents();
-  // stagger cards on map
+
+  const key = resultsKey();
   const results = $("#results");
-  if (results) {
+  if (results && animateResults && key !== state.resultsKey && state.route === "map") {
+    state.resultsKey = key;
     results.classList.remove("is-entering");
-    // force reflow then re-add for animation replay
     void results.offsetWidth;
     results.classList.add("is-entering");
     window.setTimeout(() => results.classList.remove("is-entering"), 900);
+  } else {
+    state.resultsKey = key;
+  }
+
+  if (state.selected) mountPanel(state.selected);
+  else mountPanel(null);
+
+  if (state.route === "map") {
+    window.scrollTo(0, prevScroll);
   }
 }
 
 function openEntity(slug) {
-  state.selected = state.entities.find((x) => x.slug === slug) || null;
-  if (state.selected) navigate(`entity/${slug}`);
-  render();
+  const ent = state.entities.find((x) => x.slug === slug) || null;
+  if (!ent) return;
+  state.selected = ent;
+  state.route = "map";
+  setHash(`entity/${slug}`);
+
+  // Map already painted → panel only (no full remount / no stagger)
+  if ($("#panel-root") && ($("#results") || $(".layer-overview"))) {
+    mountPanel(ent);
+    return;
+  }
+  // First paint (deep link)
+  render({ animateResults: false });
 }
 
 function closeEntity() {
+  if (!state.selected && !$("#panel-root")?.innerHTML) return;
   state.selected = null;
-  navigate("map");
-  render();
+  setHash("map");
+  mountPanel(null);
 }
 
 function bindEvents() {
@@ -690,28 +757,6 @@ function bindEvents() {
   document.querySelectorAll(".card[data-slug]").forEach((el) => {
     el.addEventListener("click", () => openEntity(el.dataset.slug));
   });
-
-  document.querySelectorAll(".related-chip[data-slug]").forEach((el) => {
-    el.addEventListener("click", (ev) => {
-      ev.stopPropagation();
-      openEntity(el.dataset.slug);
-    });
-  });
-
-  $("#modal-bg")?.addEventListener("click", (e) => {
-    if (e.target.id === "modal-bg" || e.target.id === "modal-close") {
-      closeEntity();
-    }
-  });
-
-  // Escape — rebind each render is ok with once
-  document.addEventListener(
-    "keydown",
-    (e) => {
-      if (e.key === "Escape" && state.selected) closeEntity();
-    },
-    { once: true }
-  );
 
   const form = $("#submit-form");
   if (form) {
@@ -764,14 +809,44 @@ function formatSubmission(data) {
   ].join("\n");
 }
 
+function onHashChange() {
+  if (state.ignoreHash) {
+    state.ignoreHash = false;
+    return;
+  }
+
+  const prevRoute = state.route;
+  const prevSlug = state.selected?.slug || null;
+  parseRoute();
+
+  // Soft transitions when map DOM already exists
+  const mapAlive = Boolean($(".layer-overview") || $("#results"));
+
+  if (mapAlive && state.route === "map") {
+    const nextSlug = state.selected?.slug || null;
+    if (nextSlug && nextSlug !== prevSlug) {
+      mountPanel(state.selected);
+      return;
+    }
+    if (!nextSlug && prevSlug) {
+      mountPanel(null);
+      return;
+    }
+    // same map state from hash (e.g. #/map while already map)
+    if (prevRoute === "map") return;
+  }
+
+  render();
+}
+
 async function boot() {
   $("#app").innerHTML = `<div class="loading">Loading Hoodscape…</div>`;
   await loadData();
   parseRoute();
-  render();
-  window.addEventListener("hashchange", () => {
-    parseRoute();
-    render();
+  render({ animateResults: true });
+  window.addEventListener("hashchange", onHashChange);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && state.selected) closeEntity();
   });
 }
 

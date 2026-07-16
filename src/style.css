@@ -947,15 +947,17 @@ main {
 
 .group {
   position: relative;
+  padding-left: 0.9rem;
+  margin-left: 0.1rem;
 }
 .group-head {
   position: relative;
-  padding-left: 0.15rem;
+  padding-left: 0.1rem;
 }
 .group::before {
   content: "";
   position: absolute;
-  left: -2px;
+  left: 0;
   top: 0.35rem;
   bottom: 0.35rem;
   width: 2px;

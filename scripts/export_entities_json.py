@@ -100,12 +100,33 @@ def load_csv() -> list[dict]:
 
     # resolve related names → slugs
     by_name = {e["name"].lower(): e["slug"] for e in rows}
+    by_slug = {e["slug"]: e for e in rows}
+    by_layer = {}
+    conf_rank = {"high": 0, "medium": 1, "low": 2}
+    for e in rows:
+        by_layer.setdefault(e["layer"], []).append(e)
+    for layer, items in by_layer.items():
+        items.sort(
+            key=lambda x: (conf_rank.get(x.get("confidence"), 9), x["name"])
+        )
+
     for e in rows:
         related = []
+        seen = set()
         for n in e.pop("related_names", []):
             slug = by_name.get(n.lower())
-            if slug and slug != e["slug"]:
+            if slug and slug != e["slug"] and slug not in seen:
                 related.append({"name": n, "slug": slug})
+                seen.add(slug)
+        # fallback: same-layer peers
+        if len(related) < 2:
+            for peer in by_layer.get(e["layer"], []):
+                if peer["slug"] == e["slug"] or peer["slug"] in seen:
+                    continue
+                related.append({"name": peer["name"], "slug": peer["slug"]})
+                seen.add(peer["slug"])
+                if len(related) >= 3:
+                    break
         e["related"] = related
     return rows
 
