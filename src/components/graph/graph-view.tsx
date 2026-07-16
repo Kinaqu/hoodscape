@@ -127,7 +127,11 @@ function edgeTooltipContent(edge: GraphEdge, onClose: () => void) {
   return (
     <>
       <div className="graph-tooltip-head">
-        <div className="graph-tooltip-type">{edge.type.replace(/_/g, " ")}</div>
+        <div className="graph-tooltip-type">
+          {edge.type === "partner_named" || edge.type === "product_integration" || edge.type === "lending_stack"
+            ? "Partnership"
+            : edge.type.replace(/_/g, " ")}
+        </div>
         <button
           type="button"
           className="graph-tooltip-close"
@@ -141,7 +145,7 @@ function edgeTooltipContent(edge: GraphEdge, onClose: () => void) {
       <p className="graph-tooltip-explanation">{edge.explanation}</p>
       {edge.evidence?.length > 0 && (
         <div className="graph-tooltip-evidence">
-          <span className="graph-tooltip-evidence-head">Sources — what each link shows for this connection</span>
+          <span className="graph-tooltip-evidence-head">Partner announcement sources</span>
           {edge.evidence.map((ev) => (
             <div key={`${ev.url}-${ev.label}`} className="graph-tooltip-evidence-item">
               <a href={ev.url} target="_blank" rel="noopener noreferrer">
@@ -558,7 +562,7 @@ export function GraphView({ graph, entities, onNodeClick }: GraphViewProps) {
       </div>
 
       <p className="graph-hint">
-        Drag nodes · hover a connection and click to view evidence (stays open) · click node for details · Esc to close
+        Partnership map — links need an official partner post or announcement · hover and click a connection for sources · Esc to close
       </p>
     </div>
   );

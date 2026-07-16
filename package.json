@@ -13,7 +13,7 @@
     "research:audit": "python3 scripts/audit_edges.py",
     "research:seed": "python3 scripts/seed_edges.py",
     "research:merge-x": "python3 scripts/merge_x_digest.py",
-    "research:graph": "python3 scripts/seed_edges.py && python3 scripts/merge_x_digest.py && python3 scripts/export_entities_json.py"
+    "research:graph": "python3 scripts/seed_edges.py && python3 scripts/merge_x_digest.py && python3 scripts/build_partnerships.py && python3 scripts/export_entities_json.py"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

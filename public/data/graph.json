@@ -1,18 +1,13 @@
 {
-  "generated_at_utc": "2026-07-16T18:00:34Z",
+  "generated_at_utc": "2026-07-16T18:06:10Z",
   "node_count": 72,
-  "edge_count": 182,
+  "edge_count": 59,
   "edge_types": [
-    "competitive",
-    "ecosystem_directory",
     "infra_dependency",
     "lending_stack",
-    "liquidity_stack",
-    "media_intel",
     "official_stack",
     "partner_named",
-    "product_integration",
-    "twitter_mention"
+    "product_integration"
   ],
   "nodes": [
     {
@@ -594,413 +589,49 @@
   ],
   "edges": [
     {
-      "from": "0x",
-      "to": "1inch",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "1inch is named as a day-1 or launch partner in narratives around 0x. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://0x.org/",
-          "label": "0x"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "0x",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around 0x. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://0x.org/",
-          "label": "0x"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "0x",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around 0x. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://0x.org/",
-          "label": "0x"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "1inch",
-      "to": "0x",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "0x is named as a day-1 or launch partner in narratives around 1inch. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://1inch.io/",
-          "label": "1inch"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "1inch",
-      "to": "robinhood-wallet",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Wallet is named as a day-1 or launch partner in narratives around 1inch. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://1inch.io/",
-          "label": "1inch"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "1inch",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around 1inch. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://1inch.io/",
-          "label": "1inch"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "4-fun",
-      "to": "curve",
-      "type": "ecosystem_directory",
-      "label": "Ecosystem map adjacency (text)",
-      "explanation": "4.fun and Curve are mapped together in the RH Chain landscape as related venues or rails. Verify primary sources before interacting. Curve appears in 4.fun about/summary copy.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://4.fun/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "text_mining"
-    },
-    {
-      "from": "4-fun",
-      "to": "flap",
-      "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "4.fun and Flap compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://4.fun/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "4-fun",
-      "to": "lighter",
-      "type": "ecosystem_directory",
-      "label": "Ecosystem map adjacency (text)",
-      "explanation": "4.fun and Lighter are mapped together in the RH Chain landscape as related venues or rails. Verify primary sources before interacting. Lighter appears in 4.fun about/summary copy.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://4.fun/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "text_mining"
-    },
-    {
-      "from": "4-fun",
-      "to": "noxa-fun",
-      "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "4.fun and NOXA Fun compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://4.fun/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "4-fun",
-      "to": "pons",
-      "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "4.fun and Pons compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://4.fun/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "aeon-protocol",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around AEON Protocol. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "aeon-protocol",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around AEON Protocol. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "alchemy",
-      "to": "arbitrum",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Alchemy. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        },
-        {
-          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
-          "label": "Alchemy blog"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "alchemy",
-      "to": "quicknode",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "QuickNode is named as a day-1 or launch partner in narratives around Alchemy. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        },
-        {
-          "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
-          "label": "Alchemy blog"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
       "from": "alchemy",
       "to": "robinhood-chain-docs",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Chain Docs is named as a day-1 or launch partner in narratives around Alchemy. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Alchemy \u00d7 RH Chain",
+      "explanation": "Alchemy announces Robinhood Chain mainnet is live on Alchemy infrastructure.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        },
         {
           "url": "https://www.alchemy.com/blog/robinhood-chain-mainnet-is-live-on-alchemy",
-          "label": "Alchemy blog"
+          "label": "Alchemy blog",
+          "proves": "Alchemy announces Robinhood Chain mainnet on its platform"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "allium",
-      "to": "alchemy",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around Allium. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
-          "label": "Allium blog"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "allium",
-      "to": "arbitrum",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Allium. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
-          "label": "Allium blog"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "allium",
-      "to": "chainlink",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Chainlink is named as a day-1 or launch partner in narratives around Allium. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
-        },
-        {
-          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
-          "label": "Allium blog"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "arbitrum",
       "to": "robinhood-chain-docs",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Chain Docs is named as a day-1 or launch partner in narratives around Arbitrum. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Allium \u00d7 RH Chain",
+      "explanation": "Allium announces support for Robinhood Chain at launch.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
+          "url": "https://allium.so/blog/supporting-robinhood-chain-at-launch/",
+          "label": "Allium blog",
+          "proves": "Allium announces Robinhood Chain data support at launch"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "arbitrum",
-      "to": "robinhood-crypto",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Crypto is named as a day-1 or launch partner in narratives around Arbitrum. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "arcus",
       "to": "stock-tokens-official",
       "type": "product_integration",
-      "label": "Product / UX integration",
-      "explanation": "Arcus is oriented as integrating with or routing through Stock Tokens (official) in official or high-signal ecosystem copy. Confirm live deployments before assuming user exposure.",
+      "label": "Partner announces RH integration",
+      "explanation": "arcus publishes a partner announcement naming Robinhood Chain / stock-tokens-official integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -1011,25 +642,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "arcus",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Arcus. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "bitgo",
@@ -1051,7 +664,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "bitgo",
@@ -1069,32 +682,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "blockaid",
-      "to": "arbitrum",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Blockaid. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.arbitrum.io/",
-          "label": "Arbitrum docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "blockaid",
       "to": "robinhood-wallet",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Wallet is named as a day-1 or launch partner in narratives around Blockaid. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Partner announces RH integration",
+      "explanation": "blockaid publishes a partner announcement naming Robinhood Chain / robinhood-wallet integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -1105,7 +700,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "blockaid",
@@ -1123,43 +718,7 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
-    },
-    {
-      "from": "blockaid",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Blockaid. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "blockscout",
-      "to": "alchemy",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around Blockscout. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "blockscout",
@@ -1177,177 +736,33 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "cash-cat",
-      "to": "noxa-fun",
-      "type": "competitive",
-      "label": "Meme attention via launch rails",
-      "explanation": "Native memes like Cash Cat often ride launchpad distribution rails (NOXA-class pads) for early attention \u2014 does not imply official endorsement.",
-      "confidence": "low",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "DeFi Edge RH volume thread",
-          "proves": "Uses native meme activity to explain RH DEX volume composition"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "cash-cat",
-      "to": "noxa-fun",
-      "type": "ecosystem_directory",
-      "label": "Meme attention near launch rails",
-      "explanation": "Hoodscape groups Cash Cat (native meme) near NOXA (launchpad) because early meme attention often flows through deploy rails \u2014 not an official link.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "DeFi Edge RH volume thread",
-          "proves": "Frames meme-heavy DEX volume vs launchpad activity on RH Chain"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "cash-cat",
-      "to": "uniswap",
-      "type": "liquidity_stack",
-      "label": "Meme trades on public AMM",
-      "explanation": "High-visibility RH memes (Cash Cat-class) trade on public AMM venues \u2014 explains meme-heavy DEX volume, not a partnership.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "DeFi Edge RH volume thread",
-          "proves": "Links native meme activity to headline DEX volume on RH Chain"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "chainalysis",
-      "to": "alchemy",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around Chainalysis. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
-          "label": "Chainalysis blog"
-        },
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "chainalysis",
-      "to": "arbitrum",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Chainalysis. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
-          "label": "Chainalysis blog"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "chainalysis",
-      "to": "chainlink",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Chainlink is named as a day-1 or launch partner in narratives around Chainalysis. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://www.chainalysis.com/blog/robinhood-chain-automatic-token-support/",
-          "label": "Chainalysis blog"
-        },
-        {
-          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
-          "label": "Chainlink PR"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "chainlink",
-      "to": "layerzero",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "LayerZero is named as a day-1 or launch partner in narratives around Chainlink. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
-        },
-        {
-          "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
-          "label": "LayerZero X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "chainlink",
       "to": "robinhood-crypto",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Crypto is named as a day-1 or launch partner in narratives around Chainlink. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Chainlink \u00d7 RH Chain",
+      "explanation": "Chainlink press release: Robinhood Chain adopts Chainlink as official data and cross-chain oracle partner.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
           "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
-          "label": "Chainlink PR"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
+          "label": "Chainlink PR",
+          "proves": "Chainlink announces Robinhood Chain oracle partnership"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "chainlink",
       "to": "stock-tokens-official",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Stock Tokens (official) is named as a day-1 or launch partner in narratives around Chainlink. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Partner announces RH integration",
+      "explanation": "chainlink publishes a partner announcement naming Robinhood Chain / stock-tokens-official integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -1362,104 +777,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "curve",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Curve. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://curve.finance/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "curve",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Curve. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://curve.finance/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "dexfi-aggregator",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around DexFi Aggregator. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://dexfi.com/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "dexfi-aggregator",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around DexFi Aggregator. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://dexfi.com/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "ethena",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Ethena. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
-          "label": "USDG newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "ethena",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Ethena and Robinhood Earn sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Partner announces RH integration",
+      "explanation": "ethena publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -1470,481 +795,33 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "ethena",
-      "to": "usdg-paxos",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "USDG / Paxos is named as a day-1 or launch partner in narratives around Ethena. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://globaldollar.com/newsroom/usdg-is-now-available-on-robinhood-chain-as-the-lending-asset-in-robinhood-s-new-earn-product",
-          "label": "USDG newsroom"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "fireblocks",
-      "to": "alchemy",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around Fireblocks. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
-          "label": "Fireblocks post"
-        },
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "fireblocks",
-      "to": "arbitrum",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Fireblocks. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
-          "label": "Fireblocks post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "fireblocks",
-      "to": "chainlink",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Chainlink is named as a day-1 or launch partner in narratives around Fireblocks. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://www.linkedin.com/posts/fireblocks_robinhood-chain-mainnet-is-live-fireblocks-activity-7478162146296762368-cVWP",
-          "label": "Fireblocks post"
-        },
-        {
-          "url": "https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html",
-          "label": "Chainlink PR"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "flap",
-      "to": "noxa-fun",
-      "type": "competitive",
-      "label": "Rotating deploy leaders",
-      "explanation": "Both run permissionless memecoin launch rails on RH Chain. Tom Wan's board shows NOXA #1 the prior week and Flap #2 on 15 Jul \u2014 same launchpad war, different snapshots. Deploy rank \u2260 safety.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy leaderboard",
-          "proves": "Names @Noxa_Fi #1 (prior week) and @flapdotsh #2 (15 Jul) in one launchpad-war thread"
-        },
-        {
-          "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap RH deploy board",
-          "proves": "Flap operates a Robinhood Chain token launch board"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "Launchpad account cited in the same deploy-rank coverage"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "flap",
-      "to": "pons",
-      "type": "competitive",
-      "label": "Pons ahead on 15 Jul board",
-      "explanation": "Tom Wan's 15 Jul snapshot ranks Pons #1 and Flap #2 by tokens deployed \u2014 direct head-to-head on the same leaderboard.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan 15 Jul board",
-          "proves": "Same snapshot: @ponsdotfamily #1, @flapdotsh #2"
-        },
-        {
-          "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap RH deploy board",
-          "proves": "Flap launch rail on RH Chain"
-        },
-        {
-          "url": "https://x.com/ponsdotfamily",
-          "label": "Pons",
-          "proves": "Launchpad that overtook Flap in that snapshot"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "flap",
-      "to": "uniswap",
-      "type": "liquidity_stack",
-      "label": "Deploy \u2192 public AMM liquidity",
-      "explanation": "Flap creates tokens on RH Chain; liquid trading often migrates to public AMMs like Uniswap. This is a liquidity path, not a day-1 partnership claim.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap RH deploy board",
-          "proves": "Where Flap tokens are created on RH Chain"
-        },
-        {
-          "url": "https://defillama.com/protocol/uniswap-v3",
-          "label": "Uniswap on DefiLlama",
-          "proves": "Dominant public AMM on RH Chain for post-launch liquidity"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "frothswap",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around FrothSwap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "frothswap",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around FrothSwap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "hoodbets",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Hoodbets. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "hoodbets",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Hoodbets. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "hoodit",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Hoodit. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "hoodit",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Hoodit. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "hoodz",
-      "to": "noxa-fun",
-      "type": "ecosystem_directory",
-      "label": "Both live on RH Chain",
-      "explanation": "HOODZ (gaming/attention) and NOXA (launchpad) are distinct apps on the same chain \u2014 Hoodscape map adjacency only.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama RH Chain",
-          "proves": "Chain dashboard listing RH-native protocols"
-        },
-        {
-          "url": "https://x.com/HOODZRH",
-          "label": "HOODZ",
-          "proves": "HOODZ project on RH Chain"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "NOXA launchpad on RH Chain"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "index-fi",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Index Fi. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "index-fi",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Index Fi. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "layerzero",
-      "to": "chainlink",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Chainlink is named as a day-1 or launch partner in narratives around LayerZero. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
-        },
-        {
-          "url": "https://docs.layerzero.network/v2/deployments/chains/robinhood-testnet",
-          "label": "LayerZero docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "layerzero",
       "to": "robinhood-crypto",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Crypto is named as a day-1 or launch partner in narratives around LayerZero. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "LayerZero \u00d7 RH Chain",
+      "explanation": "LayerZero announces Robinhood Chain deployment / messaging support.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
-          "label": "LayerZero X post"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
+          "label": "LayerZero post",
+          "proves": "LayerZero announces Robinhood Chain support"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "layerzero",
-      "to": "symbiosis",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Symbiosis is named as a day-1 or launch partner in narratives around LayerZero. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/LayerZero_Core/status/2072396480770674832",
-          "label": "LayerZero X post"
-        },
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
-          "label": "Testnet newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "lighter",
-      "to": "robinhood-wallet",
-      "type": "product_integration",
-      "label": "Product / UX integration",
-      "explanation": "Lighter is oriented as integrating with or routing through Robinhood Wallet in official or high-signal ecosystem copy. Confirm live deployments before assuming user exposure.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://cryptobriefing.com/lighter-robinhood-chain-perpetual-trading/",
-          "label": "CryptoBriefing"
-        },
-        {
-          "url": "https://lighter.xyz/",
-          "label": "Lighter"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "lighter",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner (text)",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Lighter. Partner naming is orientation only \u2014 not performance or security endorsement. Uniswap appears in Lighter about/summary copy.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://cryptobriefing.com/lighter-robinhood-chain-perpetual-trading/",
-          "label": "CryptoBriefing"
-        },
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "maple",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Maple. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "maple",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Maple and Robinhood Earn sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Partner announces RH integration",
+      "explanation": "maple publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -1959,434 +836,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "maple",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Maple. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "meridian-predict",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Meridian Predict. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "meridian-predict",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Meridian Predict. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "midas-rwa",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Midas RWA. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "midas-rwa",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Midas RWA. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "morpho",
-      "to": "ethena",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Ethena is named as a day-1 or launch partner in narratives around Morpho. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "morpho",
-      "to": "maple",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Maple is named as a day-1 or launch partner in narratives around Morpho. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "morpho",
-      "to": "robinhood-earn",
-      "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Morpho and Robinhood Earn sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "morpho",
-      "to": "spark",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Spark is named as a day-1 or launch partner in narratives around Morpho. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "morpho",
-      "to": "steakhouse",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Steakhouse is named as a day-1 or launch partner in narratives around Morpho. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "morpho",
-      "to": "usdg-paxos",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "USDG / Paxos is named as a day-1 or launch partner in narratives around Morpho. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "news-for-robinhood",
-      "to": "cash-cat",
-      "type": "twitter_mention",
-      "label": "$WALLET cluster narrative",
-      "explanation": "@NewsForRH mapped wallet/deployer clusters around high-visibility native tokens including Cash Cat-class attention assets. CT intel \u2014 verify onchain.",
-      "confidence": "low",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/NewsForRH/status/2077717819823886447",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "news-for-robinhood",
-      "to": "the-defi-edge",
-      "type": "media_intel",
-      "label": "Intel cites research tier",
-      "explanation": "News For Robinhood maps ecosystem intel and references Tier-1 research accounts like The DeFi Edge for narrative framing.",
-      "confidence": "low",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/NewsForRH/status/2077717819823886447",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-03",
-      "source": "x_digest"
-    },
-    {
-      "from": "news-for-robinhood",
-      "to": "tom-wan",
-      "type": "media_intel",
-      "label": "Intel cites onchain research",
-      "explanation": "News For Robinhood sits in the same CT intel cluster as Tom Wan deploy/volume posts \u2014 secondary source only.",
-      "confidence": "low",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/NewsForRH/status/2077717819823886447",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-03",
-      "source": "x_digest"
-    },
-    {
-      "from": "noxa-fun",
-      "to": "4-fun",
-      "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "NOXA Fun and 4.fun compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "RH launchpad cited in deploy-rank coverage"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "noxa-fun",
-      "to": "flap",
-      "type": "competitive",
-      "label": "Launchpad war \u2014 rank rotation",
-      "explanation": "NOXA led Tom Wan's prior-week deploy board; Flap held #2 on 15 Jul while Pons took #1. Shows the same attention job with fast leaderboard flips.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy leaderboard",
-          "proves": "Prior-week #1 NOXA vs 15 Jul #2 Flap in the same thread"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "RH launchpad rail in deploy-rank narrative"
-        },
-        {
-          "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap RH deploy board",
-          "proves": "Flap launch surface on Robinhood Chain"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "noxa-fun",
-      "to": "pons",
-      "type": "competitive",
-      "label": "Deploy rank flipped (NOXA \u2192 Pons)",
-      "explanation": "Tom Wan compares two snapshots: NOXA #1 one week earlier, Pons #1 on 15 Jul \u2014 same launchpad war with rotating winners.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy leaderboard",
-          "proves": "Shows @Noxa_Fi leading prior week and @ponsdotfamily leading 15 Jul"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "Named #1 in prior-week board"
-        },
-        {
-          "url": "https://x.com/ponsdotfamily",
-          "label": "Pons",
-          "proves": "Named #1 in 15 Jul board"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "noxa-fun",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around NOXA Fun. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "RH launchpad cited in deploy-rank coverage"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "pancakeswap",
-      "to": "1inch",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "1inch is named as a day-1 or launch partner in narratives around PancakeSwap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://pancakeswap.finance/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "pancakeswap",
-      "to": "robinhood-wallet",
-      "type": "product_integration",
-      "label": "Product / UX integration",
-      "explanation": "PancakeSwap is oriented as integrating with or routing through Robinhood Wallet in official or high-signal ecosystem copy. Confirm live deployments before assuming user exposure.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://pancakeswap.finance/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "pancakeswap",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around PancakeSwap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://pancakeswap.finance/",
-          "label": "Primary"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "pleiades",
-      "to": "rialto",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Rialto is named as a day-1 or launch partner in narratives around Pleiades. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "pleiades",
       "to": "robinhood-crypto",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Robinhood Crypto is named as a day-1 or launch partner in narratives around Pleiades. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Partner announces RH integration",
+      "explanation": "pleiades publishes a partner announcement naming Robinhood Chain / robinhood-crypto integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -2397,141 +854,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "pleiades",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Pleiades. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "pons",
-      "to": "4-fun",
-      "type": "competitive",
-      "label": "Same launchpad job on RH",
-      "explanation": "Pons and 4.fun both offer permissionless token launch rails on Robinhood Chain \u2014 competing for deploy attention, not a verified integration.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://4.fun/",
-          "label": "4.fun",
-          "proves": "4.fun launchpad on RH Chain"
-        },
-        {
-          "url": "https://x.com/ponsdotfamily",
-          "label": "Pons",
-          "proves": "Pons launchpad on RH Chain"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "pons",
-      "to": "4-fun",
-      "type": "twitter_mention",
-      "label": "Approval-surface risk flag",
-      "explanation": "@Nikitont flagged Multicall3 / approval-surface concerns on paths related to Pons-class launchpads. Treat as risk lead \u2014 verify contracts before interacting.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/Nikitont/status/2077713827181773021",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "pons",
-      "to": "flap",
-      "type": "competitive",
-      "label": "Pons flipped Flap on deploys (15 Jul)",
-      "explanation": "@tomwanhh reported Pons overtook Flap in RH launchpad deploy counts on 15 Jul 2026. Competitive leaderboard only \u2014 not safety or quality ranking.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan 15 Jul board",
-          "proves": "Post explicitly states Pons flipped Flap"
-        },
-        {
-          "url": "shows Pons #1 and Flap #2",
-          "label": "shows Pons #1 and Flap #2"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "pons",
-      "to": "noxa-fun",
-      "type": "competitive",
-      "label": "Leaderboard handoff (NOXA \u2192 Pons)",
-      "explanation": "Same Tom Wan thread: NOXA led the prior-week deploy board; Pons led 15 Jul. Both fight for the top launchpad slot on RH Chain.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy leaderboard",
-          "proves": "Prior-week #1 @Noxa_Fi vs 15 Jul #1 @ponsdotfamily"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "Prior-week deploy leader"
-        },
-        {
-          "url": "https://x.com/ponsdotfamily",
-          "label": "Pons",
-          "proves": "15 Jul deploy leader"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "privy",
-      "to": "alchemy",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around Privy. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        },
-        {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Chain docs"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "privy",
@@ -2549,51 +872,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "quicknode",
-      "to": "alchemy",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around QuickNode. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        },
-        {
-          "url": "https://www.quicknode.com/builders-guide/best/top-10-robinhood-chain-rpc-providers",
-          "label": "QuickNode guide"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "quicknode",
-      "to": "arbitrum",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around QuickNode. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://docs.robinhood.com/chain/connecting/",
-          "label": "Connecting docs"
-        },
-        {
-          "url": "https://www.quicknode.com/builders-guide/best/top-10-robinhood-chain-rpc-providers",
-          "label": "QuickNode guide"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "quicknode",
@@ -2615,68 +894,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "rialto",
-      "to": "arcus",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arcus is named as a day-1 or launch partner in narratives around Rialto. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "rialto",
-      "to": "pleiades",
-      "type": "liquidity_stack",
-      "label": "Day-1 prop liquidity pair",
-      "explanation": "Rialto and Pleiades appear as paired prop/specialized liquidity venues in day-1 mainnet trading lists versus public Uniswap pools.",
-      "confidence": "high",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
-        }
-      ],
-      "last_checked": "2026-07-10",
-      "source": "x_digest"
-    },
-    {
-      "from": "rialto",
-      "to": "pleiades",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Pleiades is named as a day-1 or launch partner in narratives around Rialto. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "rialto",
       "to": "stock-tokens-official",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Stock Tokens (official) is named as a day-1 or launch partner in narratives around Rialto. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "Partner announces RH integration",
+      "explanation": "rialto publishes a partner announcement naming Robinhood Chain / stock-tokens-official integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -2687,50 +912,71 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
-      "from": "rialto",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Rialto. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "from": "robinhood-chain-docs",
+      "to": "alchemy",
+      "type": "infra_dependency",
+      "label": "Recommended RPC partner",
+      "explanation": "Robinhood Chain docs name Alchemy as the recommended infrastructure provider for builders.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
-          "label": "Newsroom"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs",
+          "proves": "Docs recommend Alchemy for Robinhood Chain RPC"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-chain-docs",
       "to": "alchemy",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Alchemy is named as a day-1 or launch partner in narratives around Robinhood Chain Docs. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names testnet partner",
+      "explanation": "Robinhood testnet newsroom names Alchemy as an infrastructure partner integrating with Robinhood Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom",
+          "proves": "Robinhood announces Alchemy as testnet infrastructure partner"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-chain-docs",
+      "to": "allium",
+      "type": "partner_named",
+      "label": "RH names testnet partner",
+      "explanation": "Robinhood testnet newsroom names Allium as an infrastructure partner integrating with Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom",
+          "proves": "Robinhood announces Allium as testnet infrastructure partner"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
     },
     {
       "from": "robinhood-chain-docs",
       "to": "arbitrum",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Robinhood Chain Docs. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (robinhood-chain-docs) names arbitrum as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -2741,25 +987,64 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-chain-docs",
+      "to": "chainlink",
+      "type": "partner_named",
+      "label": "RH names testnet partner",
+      "explanation": "Robinhood testnet newsroom names Chainlink as an infrastructure partner integrating with Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom",
+          "proves": "Robinhood announces Chainlink as testnet infrastructure partner"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-chain-docs",
+      "to": "layerzero",
+      "type": "partner_named",
+      "label": "RH names testnet partner",
+      "explanation": "Robinhood testnet newsroom names LayerZero as an infrastructure partner integrating with Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom",
+          "proves": "Robinhood announces LayerZero as testnet infrastructure partner"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
     },
     {
       "from": "robinhood-chain-docs",
       "to": "quicknode",
       "type": "infra_dependency",
-      "label": "Infrastructure dependency",
-      "explanation": "Robinhood Chain Docs is linked to QuickNode as infrastructure the chain or apps rely on (RPC, oracle, L2 stack, bridge, or security). Infra presence is not an app safety review.",
+      "label": "Supported RPC provider",
+      "explanation": "Robinhood Chain docs list QuickNode as a supported RPC provider for the network.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://docs.robinhood.com/chain/connecting/",
+          "label": "Connecting docs",
+          "proves": "Docs list QuickNode as supported RPC provider"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-chain-docs",
@@ -2777,7 +1062,26 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-chain-docs",
+      "to": "trm-labs",
+      "type": "partner_named",
+      "label": "RH names testnet partner",
+      "explanation": "Robinhood testnet newsroom names TRM Labs as an infrastructure partner integrating with Robinhood Chain.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet/",
+          "label": "Testnet newsroom",
+          "proves": "Robinhood announces TRM Labs as testnet infrastructure partner"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
     },
     {
       "from": "robinhood-crypto",
@@ -2795,29 +1099,45 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-crypto",
-      "to": "arbitrum",
+      "to": "morpho",
       "type": "partner_named",
-      "label": "Day-1 / launch partner (text)",
-      "explanation": "Arbitrum is named as a day-1 or launch partner in narratives around Robinhood Crypto. Partner naming is orientation only \u2014 not performance or security endorsement. Arbitrum appears in Robinhood Crypto about/summary copy.",
+      "label": "RH names mainnet partner",
+      "explanation": "Robinhood mainnet newsroom names Morpho in the day-1 trading / ecosystem partner set.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
-        },
-        {
-          "url": "https://docs.robinhood.com/chain/",
-          "label": "Docs"
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Mainnet newsroom",
+          "proves": "Robinhood announces Morpho in mainnet launch partner list"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "text_mining"
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-crypto",
+      "to": "rialto",
+      "type": "partner_named",
+      "label": "RH names mainnet partner",
+      "explanation": "Robinhood mainnet newsroom names Rialto in the day-1 trading / ecosystem partner set.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Mainnet newsroom",
+          "proves": "Robinhood announces Rialto in mainnet launch partner list"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
     },
     {
       "from": "robinhood-crypto",
@@ -2839,7 +1159,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-crypto",
@@ -2861,7 +1181,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-crypto",
@@ -2883,7 +1203,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-crypto",
@@ -2905,7 +1225,26 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
+    },
+    {
+      "from": "robinhood-crypto",
+      "to": "uniswap",
+      "type": "partner_named",
+      "label": "RH names mainnet partner",
+      "explanation": "Robinhood mainnet newsroom names Uniswap in the day-1 trading / ecosystem partner set.",
+      "confidence": "high",
+      "strength": "strong",
+      "directed": true,
+      "evidence": [
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Mainnet newsroom",
+          "proves": "Robinhood announces Uniswap in mainnet launch partner list"
+        }
+      ],
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
     },
     {
       "from": "robinhood-earn",
@@ -2923,7 +1262,7 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-earn",
@@ -2941,7 +1280,7 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-earn",
@@ -2959,7 +1298,7 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-earn",
@@ -2977,7 +1316,7 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-earn",
@@ -2995,14 +1334,14 @@
         }
       ],
       "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-earn",
       "to": "usdg-paxos",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Robinhood Earn and USDG / Paxos sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (robinhood-earn) names usdg-paxos as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3017,14 +1356,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-wallet",
       "to": "1inch",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "1inch is named as a day-1 or launch partner in narratives around Robinhood Wallet. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (robinhood-wallet) names 1inch as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3035,25 +1374,26 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-wallet",
-      "to": "1inch",
+      "to": "blockaid",
       "type": "product_integration",
-      "label": "Wallet trading routes",
-      "explanation": "Wallet trading narratives on RH Chain cite aggregator routing (1inch-class) alongside native DEX venues for swap UX.",
+      "label": "Security partner (Wallet)",
+      "explanation": "Blockaid announces real-time transaction protection for Robinhood Chain builders and Wallet-adjacent flows.",
       "confidence": "high",
-      "strength": "moderate",
+      "strength": "strong",
       "directed": true,
       "evidence": [
         {
-          "url": "https://x.com/RobinhoodCrypto/status/2077420481355849815",
-          "label": "X post"
+          "url": "https://www.blockaid.io/blog/blockaid-brings-real-time-transaction-protection-to-robinhood-chain",
+          "label": "Blockaid blog",
+          "proves": "Blockaid announces Robinhood Chain security partnership"
         }
       ],
-      "last_checked": "2026-07-10",
-      "source": "x_digest"
+      "last_checked": "2026-07-16",
+      "source": "partnerships"
     },
     {
       "from": "robinhood-wallet",
@@ -3071,7 +1411,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-wallet",
@@ -3089,14 +1429,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "robinhood-wallet",
       "to": "uniswap",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Robinhood Wallet. Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (robinhood-wallet) names uniswap as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3107,32 +1447,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "robinhood-wallet",
-      "to": "uniswap",
-      "type": "product_integration",
-      "label": "Wallet checkout on RH Chain",
-      "explanation": "@RobinhoodCrypto (Tier 0) promoted Apple/Google Pay checkout on Robinhood Chain via Wallet \u2014 swaps/liquidity often route through public DEX infra like Uniswap.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/RobinhoodCrypto/status/2077420481355849815",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "robinode",
       "to": "stock-tokens-official",
       "type": "product_integration",
-      "label": "Product / UX integration",
-      "explanation": "RobiNode is oriented as integrating with or routing through Stock Tokens (official) in official or high-signal ecosystem copy. Confirm live deployments before assuming user exposure.",
+      "label": "Partner announces RH integration",
+      "explanation": "robinode publishes a partner announcement naming Robinhood Chain / stock-tokens-official integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3143,188 +1465,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "robinode",
-      "to": "stock-tokens-official",
-      "type": "twitter_mention",
-      "label": "Listed \u2260 liquid",
-      "explanation": "@robinodexyz highlights that stock tokens can be listed onchain without being sellable at size \u2014 routing/sellability is a separate check from ticker presence.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/robinodexyz/status/2077709280913031179",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "robinode",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around RobiNode. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "robinswap",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around RobinSwap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "robinswap",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around RobinSwap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "sheriff-exchange",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Sheriff Exchange. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "sheriff-exchange",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Sheriff Exchange. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "slvr",
-      "to": "cash-cat",
-      "type": "competitive",
-      "label": "Attention-layer cluster",
-      "explanation": "SLVR and Cash Cat are grouped as gamified/meme attention samples on RH Chain in the same volume-composition story.",
-      "confidence": "low",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "DeFi Edge RH volume thread",
-          "proves": "Discusses native meme/gamified attention driving early RH DEX volume"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "slvr",
-      "to": "noxa-fun",
-      "type": "ecosystem_directory",
-      "label": "Attention apps on RH Chain",
-      "explanation": "SLVR (gamified attention) and NOXA (launchpad) coexist on RH Chain \u2014 map neighbors, not an integration.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama RH Chain",
-          "proves": "Lists RH-native apps side by side"
-        },
-        {
-          "url": "https://x.com/S_L_V_R_FUN",
-          "label": "SLVR",
-          "proves": "SLVR attention app"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "NOXA launchpad"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "spark",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Spark. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "spark",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Spark and Robinhood Earn sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Partner announces RH integration",
+      "explanation": "spark publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3339,32 +1487,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "steakhouse",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around Steakhouse. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "steakhouse",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "Steakhouse and Robinhood Earn sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Partner announces RH integration",
+      "explanation": "steakhouse publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3379,32 +1509,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "steakhouse",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Steakhouse. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "stock-tokens-official",
       "to": "chainlink",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Chainlink is named as a day-1 or launch partner in narratives around Stock Tokens (official). Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (stock-tokens-official) names chainlink as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3415,14 +1527,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "stock-tokens-official",
       "to": "rialto",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Rialto is named as a day-1 or launch partner in narratives around Stock Tokens (official). Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (stock-tokens-official) names rialto as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3433,7 +1545,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "stock-tokens-official",
@@ -3451,14 +1563,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "stock-tokens-official",
       "to": "uniswap",
       "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Stock Tokens (official). Partner naming is orientation only \u2014 not performance or security endorsement.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (stock-tokens-official) names uniswap as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3469,14 +1581,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "stock-tokens-official",
       "to": "usdg-paxos",
       "type": "product_integration",
-      "label": "Product / UX integration",
-      "explanation": "Stock Tokens (official) is oriented as integrating with or routing through USDG / Paxos in official or high-signal ecosystem copy. Confirm live deployments before assuming user exposure.",
+      "label": "RH names launch partner",
+      "explanation": "Robinhood (stock-tokens-official) names usdg-paxos as a day-1 / launch partner in official newsroom or product copy.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -3487,362 +1599,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "swaphood",
-      "to": "robinswap",
-      "type": "liquidity_stack",
-      "label": "Adjacent native DEXs on RH",
-      "explanation": "SwapHood and RobinSwap are separate native AMM venues on Robinhood Chain \u2014 compare depth per pool, not headline chain volume.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama RH Chain",
-          "proves": "Lists SwapHood and RobinSwap as distinct DEX protocols on RH Chain"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "swaphood",
-      "to": "sheriff-exchange",
-      "type": "liquidity_stack",
-      "label": "Adjacent native DEXs on RH",
-      "explanation": "SwapHood and Sheriff Exchange occupy parallel native DEX jobs on RH Chain with separate TVL pools.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama RH Chain",
-          "proves": "Lists SwapHood and Sheriff Exchange as separate RH DEX entries"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "swaphood",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around SwapHood. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "symbiosis",
-      "to": "layerzero",
-      "type": "infra_dependency",
-      "label": "Bridge messaging stack",
-      "explanation": "Symbiosis and LayerZero are cited together in RH ecosystem bridge/messaging maps \u2014 cross-chain path adds bridge risk surface.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://symbiosis.finance",
-          "label": "Symbiosis"
-        }
-      ],
-      "last_checked": "2026-07-10",
-      "source": "x_digest"
-    },
-    {
-      "from": "symbiosis",
-      "to": "layerzero",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "LayerZero is named as a day-1 or launch partner in narratives around Symbiosis. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://symbiosis.finance",
-          "label": "Symbiosis"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "symbiosis",
-      "to": "robinhood-crypto",
-      "type": "infra_dependency",
-      "label": "Infrastructure dependency",
-      "explanation": "Symbiosis is linked to Robinhood Crypto as infrastructure the chain or apps rely on (RPC, oracle, L2 stack, bridge, or security). Infra presence is not an app safety review.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://symbiosis.finance",
-          "label": "Symbiosis"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "the-defi-edge",
-      "to": "cash-cat",
-      "type": "twitter_mention",
-      "label": "Meme volume composition",
-      "explanation": "@thedefiedge uses native meme activity (Cash Cat-class tokens) to explain why headline DEX volume can diverge from RWA narrative.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "the-defi-edge",
-      "to": "defillama-rh-chain",
-      "type": "media_intel",
-      "label": "Metrics anchor for research",
-      "explanation": "@thedefiedge landscape threads cite DefiLlama RH Chain dashboard for TVL/DEX volume context when arguing volume composition.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-03",
-      "source": "x_digest"
-    },
-    {
-      "from": "the-defi-edge",
-      "to": "robinhood-crypto",
-      "type": "twitter_mention",
-      "label": "Brokerage-on-rails framing",
-      "explanation": "@thedefiedge argues RH is building a vertically integrated brokerage on permissionless rails \u2014 not a meme-only casino. Orientation framing only.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709972092453196",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "the-defi-edge",
-      "to": "stock-tokens-official",
-      "type": "twitter_mention",
-      "label": "Meme vol vs stock-token road",
-      "explanation": "@thedefiedge frames a fork: meme/launchpad volume today vs stock-token/RWA path as the longer thesis test for the chain.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "the-defi-edge",
-      "to": "tom-wan",
-      "type": "media_intel",
-      "label": "Research cluster cross-cite",
-      "explanation": "The DeFi Edge and Tom Wan are mutually cited in Hoodscape media layer \u2014 both frame RH Chain metrics and launchpad/RWA narratives for CT.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-03",
-      "source": "x_digest"
-    },
-    {
-      "from": "the-defi-edge",
-      "to": "uniswap",
-      "type": "twitter_mention",
-      "label": "DEX vol \u2260 RWA thesis",
-      "explanation": "@thedefiedge notes RH Chain hit #2 DEX volume with memecoin-heavy composition \u2014 Uniswap is the public AMM capturing much of that print.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "tom-wan",
-      "to": "defillama-rh-chain",
-      "type": "media_intel",
-      "label": "Onchain metrics source",
-      "explanation": "@tomwanhh uses DefiLlama public metrics in RH Chain deploy and volume analysis \u2014 primary numbers with secondary interpretation.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077690634048037164",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-03",
-      "source": "x_digest"
-    },
-    {
-      "from": "tom-wan",
-      "to": "flap",
-      "type": "media_intel",
-      "label": "Tracks Flap deploy rank",
-      "explanation": "@tomwanhh names @flapdotsh as #2 on the 15 Jul RH launchpad deploy board.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy post",
-          "proves": "Names @flapdotsh #2 on 15 Jul leaderboard"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "tom-wan",
-      "to": "noxa-fun",
-      "type": "media_intel",
-      "label": "Tracks NOXA deploy rank",
-      "explanation": "@tomwanhh names @Noxa_Fi as #1 on the prior-week RH launchpad deploy board in the same thread.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy post",
-          "proves": "Names @Noxa_Fi #1 on prior-week leaderboard"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "tom-wan",
-      "to": "pons",
-      "type": "media_intel",
-      "label": "Tracks Pons deploy rank",
-      "explanation": "@tomwanhh reports Pons flipping Flap and lists @ponsdotfamily as #1 on 15 Jul.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy post",
-          "proves": "States Pons flipped Flap"
-        },
-        {
-          "url": "shows @ponsdotfamily #1 on 15 Jul",
-          "label": "shows @ponsdotfamily #1 on 15 Jul"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "tom-wan",
-      "to": "symbiosis",
-      "type": "twitter_mention",
-      "label": "Bridge vs native issuance",
-      "explanation": "@tomwanhh argues canonical bridge TVL alone misses native issuance on RH Chain (~$100M mcap week narrative). Symbiosis is the named bridge TVL slice on Llama.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077690634048037164",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
-    },
-    {
-      "from": "tom-wan",
-      "to": "the-defi-edge",
-      "type": "media_intel",
-      "label": "Research cluster cross-cite",
-      "explanation": "Tom Wan and The DeFi Edge form a Tier-1 research pair frequently referenced together in RH Chain landscape digests.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-03",
-      "source": "x_digest"
-    },
-    {
-      "from": "trm-labs",
-      "to": "blockaid",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Blockaid is named as a day-1 or launch partner in narratives around TRM Labs. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/trmlabs/status/2072447956993581330",
-          "label": "TRM X post"
-        },
-        {
-          "url": "https://www.blockaid.io/blog/blockaid-brings-real-time-transaction-protection-to-robinhood-chain",
-          "label": "Blockaid blog"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "trust-wallet",
@@ -3860,158 +1617,14 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "trust-wallet",
-      "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Trust Wallet. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "uniswap",
-      "to": "0x",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "0x is named as a day-1 or launch partner in narratives around Uniswap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "uniswap",
-      "to": "1inch",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "1inch is named as a day-1 or launch partner in narratives around Uniswap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "uniswap",
-      "to": "cash-cat",
-      "type": "liquidity_stack",
-      "label": "Meme flow into public AMM",
-      "explanation": "High-visibility native memes (Cash Cat-class) trade on public AMM venues \u2014 explains meme-heavy DEX volume composition on early RH metrics.",
-      "confidence": "medium",
-      "strength": "weak",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
-        }
-      ],
-      "last_checked": "2026-07-10",
-      "source": "x_digest"
-    },
-    {
-      "from": "uniswap",
-      "to": "pleiades",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Pleiades is named as a day-1 or launch partner in narratives around Uniswap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "uniswap",
-      "to": "rialto",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Rialto is named as a day-1 or launch partner in narratives around Uniswap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "uniswap",
-      "to": "stock-tokens-official",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Stock Tokens (official) is named as a day-1 or launch partner in narratives around Uniswap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "usdg-paxos",
-      "to": "morpho",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Morpho is named as a day-1 or launch partner in narratives around USDG / Paxos. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://morpho.org/",
-          "label": "Morpho"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "usdg-paxos",
       "to": "robinhood-earn",
       "type": "lending_stack",
-      "label": "Earn / lending stack",
-      "explanation": "USDG / Paxos and Robinhood Earn sit in the Robinhood Earn / USDG / Morpho lending story on RH Chain. Yield, curator, and market parameters change \u2014 read primary docs.",
+      "label": "Partner announces RH integration",
+      "explanation": "usdg-paxos publishes a partner announcement naming Robinhood Chain / robinhood-earn integration.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
@@ -4026,36 +1639,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
-    },
-    {
-      "from": "virtuals",
-      "to": "noxa-fun",
-      "type": "ecosystem_directory",
-      "label": "Agent + launch rails on RH",
-      "explanation": "Virtuals (agent tokens) and NOXA (launchpad) both appear in early RH attention maps \u2014 Tom Wan's prior-week board even listed Virtuals #3 while NOXA was #1.",
-      "confidence": "medium",
-      "strength": "moderate",
-      "directed": true,
-      "evidence": [
-        {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "Tom Wan deploy leaderboard",
-          "proves": "Prior-week board: NOXA #1 and @virtuals_io #3"
-        },
-        {
-          "url": "https://x.com/virtuals_io",
-          "label": "Virtuals",
-          "proves": "Agent launch platform on RH"
-        },
-        {
-          "url": "https://x.com/Noxa_Fi",
-          "label": "NOXA Fun",
-          "proves": "Launchpad on RH"
-        }
-      ],
-      "last_checked": "2026-07-16",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "virtuals",
@@ -4073,7 +1657,7 @@
         }
       ],
       "last_checked": "2026-07-03",
-      "source": "x_digest"
+      "source": "partnerships"
     },
     {
       "from": "vlad-tenev",
@@ -4095,7 +1679,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "vlad-tenev",
@@ -4113,7 +1697,7 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     },
     {
       "from": "vlad-tenev",
@@ -4131,8 +1715,8 @@
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "partnerships"
     }
   ],
-  "disclaimer": "NFA. Graph edges are orientation with cited context \u2014 not endorsements."
+  "disclaimer": "NFA. Graph shows verified partner announcements only \u2014 not competition, map adjacency, or co-mentions."
 }

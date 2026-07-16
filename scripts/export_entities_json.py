@@ -14,6 +14,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 CSV_PATH = ROOT / "data" / "rh-entities.csv"
 EDGES_PATH = ROOT / "data" / "edges.csv"
+PARTNERSHIPS_PATH = ROOT / "data" / "partnerships.csv"
 OUT_ENTITIES = ROOT / "data" / "entities.json"
 SNAP_DIR = ROOT / "data" / "snapshots"
 SITE_PUBLIC = ROOT / "public" / "data"
@@ -315,11 +316,12 @@ def parse_evidence_urls(raw: str) -> list[dict]:
 
 
 def load_edges(entities: list[dict]) -> list[dict]:
-    if not EDGES_PATH.exists():
+    path = PARTNERSHIPS_PATH if PARTNERSHIPS_PATH.exists() else EDGES_PATH
+    if not path.exists():
         return []
     slugs = {e["slug"] for e in entities}
     edges = []
-    with EDGES_PATH.open(encoding="utf-8") as f:
+    with path.open(encoding="utf-8") as f:
         for row in csv.DictReader(f):
             fr = (row.get("from_slug") or "").strip()
             to = (row.get("to_slug") or "").strip()
@@ -362,7 +364,7 @@ def build_graph(entities: list[dict], edges: list[dict]) -> dict:
         "edge_types": sorted({e["type"] for e in edges if e.get("type")}),
         "nodes": nodes,
         "edges": edges,
-        "disclaimer": "NFA. Graph edges are orientation with cited context — not endorsements.",
+        "disclaimer": "NFA. Graph shows verified partner announcements only — not competition, map adjacency, or co-mentions.",
     }
 
 
