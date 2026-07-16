@@ -35,6 +35,8 @@
   --header-h: 60px;
   --shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
   --ease: 0.15s ease;
+  --glass: rgba(12, 18, 16, 0.68);
+  --glass-strong: rgba(12, 18, 16, 0.82);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -50,15 +52,54 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ASCII video layer (React mounts into #bg-root) */
+#bg-root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ambient-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ambient-bg__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ambient-bg__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 18, 16, 0.42);
+  pointer-events: none;
+}
+
+.ambient-bg__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 40%,
+    transparent 0%,
+    rgba(12, 18, 16, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 70% 45% at 8% -8%, rgba(61, 186, 140, 0.06), transparent 55%),
-    radial-gradient(ellipse 50% 35% at 95% 5%, rgba(230, 195, 92, 0.04), transparent 50%),
-    linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.12) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.18) 100%);
   z-index: 0;
 }
 
@@ -67,7 +108,7 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.025;
+  opacity: 0.02;
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
@@ -89,8 +130,9 @@ a:hover { color: var(--accent-strong); text-decoration: underline; }
 
 .site-header {
   border-bottom: 1px solid var(--border-soft);
-  background: rgba(12, 18, 16, 0.88);
+  background: var(--glass-strong);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -224,7 +266,9 @@ main {
   gap: 0.5rem;
   margin-bottom: 0.35rem;
   padding: 0.65rem 0.85rem;
-  background: var(--bg-elev);
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
 }
@@ -269,7 +313,9 @@ main {
   text-align: left;
   font-family: inherit;
   cursor: pointer;
-  background: var(--bg-card);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.85rem;
@@ -281,7 +327,7 @@ main {
   gap: 0.25rem;
 }
 .layer-tile:hover {
-  background: var(--bg-card-hover);
+  background: var(--glass-strong);
   border-color: var(--border);
   transform: translateY(-1px);
 }
@@ -329,7 +375,9 @@ main {
   top: var(--header-h);
   z-index: 40;
   padding: 0.55rem 0;
-  background: linear-gradient(180deg, rgba(12, 18, 16, 0.97) 75%, transparent);
+  background: linear-gradient(180deg, var(--glass-strong) 70%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .search-wrap {
   position: relative;
@@ -433,7 +481,9 @@ main {
 }
 
 .card {
-  background: var(--bg-card);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   padding: 0.95rem 1rem;
@@ -449,7 +499,7 @@ main {
   min-height: 132px;
 }
 .card:hover {
-  background: var(--bg-card-hover);
+  background: var(--glass-strong);
   border-color: var(--border);
 }
 .card:focus-visible {
@@ -1260,7 +1310,9 @@ main {
   padding: 0;
   min-height: 124px;
   overflow: hidden;
-  background: var(--bg-card);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .card .card-accent {
   position: absolute;

@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { AsciiArt, POSTER_SRC } from "@/components/ui/d60-hero";
-import { cn } from "@/lib/utils";
 
 /**
- * Site-wide ambient ASCII layer — always present, low visual weight.
- * Pauses when tab is hidden; falls back to static poster when motion is reduced.
+ * Full-viewport ASCII layer — visible like the 21st.dev demo, with a light
+ * scrim so foreground text stays readable. Pauses when the tab is hidden.
  */
 export function AmbientBackground() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -19,9 +18,12 @@ export function AmbientBackground() {
   }, []);
 
   useEffect(() => {
+    const video = rootRef.current?.querySelector("video");
+    if (!video || reduceMotion) return;
+
+    void video.play().catch(() => {});
+
     const onVisibility = () => {
-      const video = rootRef.current?.querySelector("video");
-      if (!video || reduceMotion) return;
       if (document.hidden) video.pause();
       else void video.play().catch(() => {});
     };
@@ -30,30 +32,22 @@ export function AmbientBackground() {
   }, [reduceMotion]);
 
   return (
-    <div
-      ref={rootRef}
-      className={cn(
-        "pointer-events-none fixed inset-0 z-0 overflow-hidden",
-        "select-none",
-      )}
-      aria-hidden
-    >
+    <div ref={rootRef} className="ambient-bg" aria-hidden>
       {reduceMotion ? (
         <img
           src={POSTER_SRC}
           alt=""
-          className="h-full w-full object-cover opacity-[0.1] saturate-50"
-          loading="lazy"
+          className="ambient-bg__media"
+          loading="eager"
           decoding="async"
         />
       ) : (
-        <AsciiArt className="h-full w-full opacity-[0.14] saturate-[0.45] contrast-[0.92]" />
+        <AsciiArt className="ambient-bg__media" />
       )}
 
-      {/* Blend into Hoodscape palette so motion stays subtle */}
-      <div className="absolute inset-0 bg-[#0c1210]/78" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0c1210]/55 via-[#0c1210]/82 to-[#0c1210]/94" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_65%_at_50%_18%,transparent_0%,#0c1210_70%)]" />
+      {/* Single scrim — keeps ASCII visible, text readable */}
+      <div className="ambient-bg__scrim" />
+      <div className="ambient-bg__vignette" />
     </div>
   );
 }
