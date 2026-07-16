@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T13:54:11Z",
+  "generated_at_utc": "2026-07-16T14:16:30Z",
   "count": 72,
   "layers": [
     "official",
@@ -22,11 +22,43 @@
       "website": "https://robinhood.com/us/en/chain/",
       "job": "Official product & chain surface",
       "notes": "Official chain + crypto product surface",
+      "summary": "Official product surface for Robinhood Chain \u2014 the public face of the L2 and onchain crypto products.",
+      "about": "Robinhood Chain is pitched as a permissionless Layer 2 for financial services and real-world assets, developed on Arbitrum infrastructure.\n\nThe brokerage app and the chain are different products: app = accounts, KYC, eligibility; chain = rails anyone can (in principle) deploy on.\n\nUse official pages and docs as primary sources before secondary CT maps.",
+      "status": "official",
+      "risks": "Official narrative \u2260 security review of every third-party app on the chain.",
+      "sources": [
+        {
+          "url": "https://robinhood.com/us/en/chain/",
+          "label": "Chain page"
+        },
+        {
+          "url": "https://docs.robinhood.com/chain/",
+          "label": "Docs"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "official"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        },
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        },
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        },
+        {
+          "name": "Robinhood Chain Docs",
+          "slug": "robinhood-chain-docs"
+        }
       ]
     },
     {
@@ -40,12 +72,40 @@
       "website": "https://docs.robinhood.com/chain/",
       "job": "Primary builder documentation",
       "notes": "Developer docs for the L2",
+      "summary": "Primary developer documentation for building on Robinhood Chain.",
+      "about": "Start here for network parameters, tooling, and builder-facing claims.\n\nPrefer docs over CT threads when the two disagree.",
+      "status": "official",
+      "risks": "Docs lag product launches; always check last-updated dates.",
+      "sources": [
+        {
+          "url": "https://docs.robinhood.com/chain/",
+          "label": "Docs"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "docs",
         "official"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "Arbitrum",
+          "slug": "arbitrum"
+        },
+        {
+          "name": "Alchemy",
+          "slug": "alchemy"
+        },
+        {
+          "name": "QuickNode",
+          "slug": "quicknode"
+        }
       ]
     },
     {
@@ -59,12 +119,40 @@
       "website": "https://robinhood.com/us/en/chain/",
       "job": "Wallet UX into RH Chain",
       "notes": "Self-custody wallet surface; trending tokens; Pay checkout claims",
+      "summary": "Self-custody wallet surface that points users at Robinhood Chain activity (swaps, trending, checkout UX).",
+      "about": "Wallet features (trending tokens, Apple/Google Pay checkout narratives, fee/gas promos) are product UX on top of the chain.\n\nTime-box every promo claim \u2014 gas waivers and fee holidays expire.\n\nWallet inclusion of a token is not an endorsement of safety or liquidity.",
+      "status": "official",
+      "risks": "Promo windows and trending lists change; verify terms and dates.",
+      "sources": [
+        {
+          "url": "https://robinhood.com/us/en/chain/",
+          "label": "Chain page"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "wallet",
         "official"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "1inch",
+          "slug": "1inch"
+        },
+        {
+          "name": "Trust Wallet",
+          "slug": "trust-wallet"
+        }
       ]
     },
     {
@@ -78,12 +166,52 @@
       "website": "https://robinhood.com/us/en/crypto/earn/",
       "job": "App-facing USDG lend product",
       "notes": "USDG lending via Morpho; ~7% APY narrative; insurance claims in newsroom",
+      "summary": "App-facing USDG lending product; underlying rails cited as Morpho with partner stack support.",
+      "about": "Earn lets eligible users lend dollar-backed USDG via a self-custody path, with an official ~7% APY narrative and insurance claims in newsroom copy.\n\nInfrastructure is powered by Morpho; partners named in launch narrative include Steakhouse, Ethena, Spark, and Maple.\n\nThis is an app product experience sitting on chain lending rails \u2014 not a guarantee of yield.",
+      "status": "official",
+      "risks": "Yield is variable; eligibility and insurance terms are jurisdiction- and product-specific. NFA.",
+      "sources": [
+        {
+          "url": "https://robinhood.com/us/en/crypto/earn/",
+          "label": "Earn"
+        },
+        {
+          "url": "https://robinhood.com/us/en/newsroom/robinhood-accelerates-global-expansion-robinhood-chain-mainnet-stock-tokens-agentic-trading/",
+          "label": "Newsroom"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "lending",
         "official"
+      ],
+      "related": [
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "USDG / Paxos",
+          "slug": "usdg-paxos"
+        },
+        {
+          "name": "Spark",
+          "slug": "spark"
+        },
+        {
+          "name": "Ethena",
+          "slug": "ethena"
+        },
+        {
+          "name": "Steakhouse",
+          "slug": "steakhouse"
+        },
+        {
+          "name": "Maple",
+          "slug": "maple"
+        }
       ]
     },
     {
@@ -97,12 +225,44 @@
       "website": "https://robinhood.com/rhj/stocktokens",
       "job": "Official RWA / equity tokens",
       "notes": "Tokenized equities product; jurisdiction-restricted (not US)",
+      "summary": "Official tokenized equities product on Robinhood Chain \u2014 the RWA thesis surface, not a memecoin market.",
+      "about": "Stock Tokens are pitched as tokenized exposure to named equities/ETFs for eligible users outside restricted jurisdictions.\n\nOfficial pages note they are not available in the US and are subject to restrictions elsewhere.\n\nListed onchain does not mean deep two-sided liquidity \u2014 listed \u2260 liquid.\n\nUse for product/mechanism understanding, not price targets.",
+      "status": "official",
+      "risks": "Jurisdiction limits; brochure listings can fail at size; not direct share ownership in all legal senses \u2014 read official terms.",
+      "sources": [
+        {
+          "url": "https://robinhood.com/rhj/stocktokens",
+          "label": "Stock Tokens"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "rwa",
         "official"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Rialto",
+          "slug": "rialto"
+        },
+        {
+          "name": "USDG / Paxos",
+          "slug": "usdg-paxos"
+        },
+        {
+          "name": "Chainlink",
+          "slug": "chainlink"
+        }
       ]
     },
     {
@@ -116,11 +276,26 @@
       "website": "",
       "job": "Company leadership signal",
       "notes": "CEO; builder embed stock-token calls",
+      "summary": "CEO / co-founder signal account for product direction (e.g. builder calls to embed stock tokens).",
+      "about": "Useful as Tier-0 primary signal for strategy, not as a protocol docs substitute.",
+      "status": "official",
+      "risks": "Social posts are not legal or product documentation.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "official"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        }
       ]
     },
     {
@@ -134,12 +309,32 @@
       "website": "",
       "job": "Settlement / Earn stable base",
       "notes": "Dollar-backed stable narrative; dominant stables mcap on chain",
+      "summary": "Dollar-backed stable narrative on Robinhood Chain; dominant share of stables mcap in early metrics.",
+      "about": "USDG is central to Earn and settlement stories on RH Chain.\n\nStable dominance on a young chain can reflect product design and incentives, not permanent equilibrium.\n\nAlways separate stable float from DEX meme volume when reading landscape metrics.",
+      "status": "live",
+      "risks": "Issuer, attestation, and redeemability details belong in primary issuer docs.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "stablecoin",
-        "defi"
+        "defi",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Spark",
+          "slug": "spark"
+        }
       ]
     },
     {
@@ -153,11 +348,32 @@
       "website": "https://docs.arbitrum.io/",
       "job": "L2 stack / Orbit platform",
       "notes": "Orbit stack parent for RH Chain",
+      "summary": "Orbit / L2 stack parent for Robinhood Chain \u2014 security and architecture context.",
+      "about": "RH Chain is developed on Arbitrum\u2019s Layer 2 infrastructure with high-throughput / ~100ms block claims in official copy.\n\n\u201cBuilt on Arbitrum\u201d is a stack claim, not a full safety sticker for every app, bridge, or sequencer operational choice.\n\nRead Orbit/L2 docs for inheritance model, then map residual risks separately.",
+      "status": "day-1 partner",
+      "risks": "Stack inheritance \u2260 app-level bridge/ops risk.",
+      "sources": [
+        {
+          "url": "https://docs.arbitrum.io/",
+          "label": "Arbitrum docs"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "infra"
+        "infra",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "Robinhood Chain Docs",
+          "slug": "robinhood-chain-docs"
+        }
       ]
     },
     {
@@ -171,12 +387,32 @@
       "website": "",
       "job": "Oracles & cross-chain messaging",
       "notes": "Day-1 oracle / CCIP partner (testnet+narrative)",
+      "summary": "Oracle and cross-chain messaging partner cited in day-1 / testnet ecosystem narratives.",
+      "about": "Oracles and CCIP-class messaging are load-bearing for tokenized asset products and cross-domain flows.\n\nPresence as a partner is infrastructure context, not proof that every RH app uses Chainlink correctly.",
+      "status": "day-1 partner",
+      "risks": "Wrong feed configuration is an app risk even when the oracle network is reputable.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "oracle",
-        "infra"
+        "infra",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        },
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "LayerZero",
+          "slug": "layerzero"
+        }
       ]
     },
     {
@@ -190,12 +426,28 @@
       "website": "",
       "job": "RPC & developer infra",
       "notes": "Day-1 infra / RPC partner",
+      "summary": "RPC / developer infrastructure partner for builders on Robinhood Chain.",
+      "about": "Node and API infra makes the chain usable for apps; it is not a protocol risk model by itself.",
+      "status": "day-1 partner",
+      "risks": "Infra outages affect UX, not consensus guarantees.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "rpc",
-        "infra"
+        "infra",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "QuickNode",
+          "slug": "quicknode"
+        },
+        {
+          "name": "Robinhood Chain Docs",
+          "slug": "robinhood-chain-docs"
+        }
       ]
     },
     {
@@ -209,12 +461,32 @@
       "website": "",
       "job": "Omnichain messaging",
       "notes": "Cross-chain messaging partner",
+      "summary": "Omnichain messaging / bridge-layer partner cited for moving messages and assets across chains.",
+      "about": "Cross-chain messaging expands product surface and attack surface at the same time.\n\nTreat bridge and messaging paths as first-class risk when reading \u201cecosystem maps.\u201d",
+      "status": "day-1 partner",
+      "risks": "Messaging \u2260 removing bridge or solver risk.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "bridge",
-        "infra"
+        "infra",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Symbiosis",
+          "slug": "symbiosis"
+        },
+        {
+          "name": "Chainlink",
+          "slug": "chainlink"
+        },
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        }
       ]
     },
     {
@@ -228,13 +500,20 @@
       "website": "",
       "job": "Onchain risk & compliance",
       "notes": "Compliance / screening partner (testnet era)",
+      "summary": "Onchain risk & compliance",
+      "about": "Compliance / screening partner (testnet era)",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "compliance",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e013",
@@ -247,13 +526,20 @@
       "website": "",
       "job": "Institutional custody rails",
       "notes": "Custody partner cited in ecosystem coverage",
+      "summary": "Institutional custody rails",
+      "about": "Custody partner cited in ecosystem coverage",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "custody",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e014",
@@ -266,13 +552,20 @@
       "website": "",
       "job": "Embedded wallet / auth",
       "notes": "Wallet/auth infra cited in eco maps",
+      "summary": "Embedded wallet / auth",
+      "about": "Wallet/auth infra cited in eco maps",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "wallet_infra",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e015",
@@ -285,13 +578,20 @@
       "website": "",
       "job": "Node & API infra",
       "notes": "RPC/node infra cited in eco maps",
+      "summary": "Node & API infra",
+      "about": "RPC/node infra cited in eco maps",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "rpc",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e016",
@@ -304,13 +604,20 @@
       "website": "",
       "job": "Chain explorer",
       "notes": "Block explorer for the chain",
+      "summary": "Chain explorer",
+      "about": "Block explorer for the chain",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "explorer",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e017",
@@ -323,13 +630,20 @@
       "website": "",
       "job": "Onchain data infra",
       "notes": "Data infra partner (testnet announcement)",
+      "summary": "Onchain data infra",
+      "about": "Data infra partner (testnet announcement)",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e018",
@@ -342,13 +656,20 @@
       "website": "",
       "job": "Institutional wallet infra",
       "notes": "Institutional controls cited in eco maps",
+      "summary": "Institutional wallet infra",
+      "about": "Institutional controls cited in eco maps",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "custody",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e019",
@@ -361,13 +682,20 @@
       "website": "",
       "job": "Compliance analytics",
       "notes": "Compliance tooling cited in eco maps",
+      "summary": "Compliance analytics",
+      "about": "Compliance tooling cited in eco maps",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "compliance",
-        "infra"
-      ]
+        "infra",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e020",
@@ -380,12 +708,28 @@
       "website": "",
       "job": "Scam/threat detection",
       "notes": "Day-1 security partner; free builder tier claim",
+      "summary": "Security / threat-detection partner with day-1 RH Chain narrative and builder tooling access claims.",
+      "about": "Useful as ecosystem security infrastructure \u2014 not a substitute for user diligence or audits of individual apps.",
+      "status": "day-1 partner",
+      "risks": "Detection tools reduce some scam surface; they do not eliminate protocol risk.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "security",
-        "infra"
+        "infra",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
       ]
     },
     {
@@ -399,12 +743,28 @@
       "website": "",
       "job": "Self-custody access path",
       "notes": "Third-party wallet with RH Chain swap promo windows",
+      "summary": "Third-party self-custody wallet with RH Chain swap promo windows.",
+      "about": "Alternative access path to the chain outside Robinhood Wallet.\n\nPromo fee periods are time-boxed \u2014 date every claim.",
+      "status": "live",
+      "risks": "Third-party wallet security model is independent of RH.",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "wallet",
-        "infra"
+        "infra",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
       ]
     },
     {
@@ -418,12 +778,45 @@
       "website": "https://uniswap.org/",
       "job": "Public AMM liquidity layer",
       "notes": "V2/V3/V4 (+ UniswapX narrative) primary public AMM",
+      "summary": "Primary public AMM on Robinhood Chain (v2/v3/v4 narrative) \u2014 main open liquidity venue by volume/TVL.",
+      "about": "Uniswap deployed as the day-1 public liquidity layer for the chain\u2019s open AMM job.\n\nEarly RH volume spikes on Uniswap can be meme- and incentive-heavy; separate that from stock-token depth.\n\nPublic AMM depth is a different liquidity job than prop venues (Rialto/Pleiades).",
+      "status": "day-1 partner",
+      "risks": "Pool liquidity and fee tiers vary wildly by pair; volume \u2260 sustainable fees for LPs.",
+      "sources": [
+        {
+          "url": "https://uniswap.org/",
+          "label": "Uniswap"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": 15034197.42692674,
       "tags": [
         "dex",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Rialto",
+          "slug": "rialto"
+        },
+        {
+          "name": "Pleiades",
+          "slug": "pleiades"
+        },
+        {
+          "name": "1inch",
+          "slug": "1inch"
+        },
+        {
+          "name": "0x",
+          "slug": "0x"
+        },
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        }
       ]
     },
     {
@@ -437,12 +830,36 @@
       "website": "",
       "job": "Prop / specialized spot venue",
       "notes": "Prop AMM / spot venue; newsroom day-1 trading list",
+      "summary": "Prop / specialized spot venue named in official day-1 trading lists alongside Uniswap.",
+      "about": "Newsroom and ecosystem copy place Rialto in the onchain spot path for crypto and tokenized assets.\n\nProp AMM / specialized venues solve a different job than public Uniswap pools \u2014 inventory and pricing can differ.\n\nWorth separating public AMM vs prop venue when analyzing \u201cliquidity on RH.\u201d",
+      "status": "day-1 partner",
+      "risks": "Venue design and access may differ from permissionless public AMM UX.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "prop_amm",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Pleiades",
+          "slug": "pleiades"
+        },
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        },
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        }
       ]
     },
     {
@@ -456,12 +873,32 @@
       "website": "",
       "job": "Prop trading venue (day-1)",
       "notes": "Proprietary AMM / prop trading venue (newsroom day-1)",
+      "summary": "Proprietary AMM / prop trading venue called out as a day-1 partner in mainnet narrative.",
+      "about": "Positioned as the prop side of the day-1 liquidity story vs Uniswap\u2019s public AMM.\n\nCorporate chain launches often ship both open and controlled liquidity jobs \u2014 do not merge them into one \u201cDEX blob.\u201d",
+      "status": "day-1 partner",
+      "risks": "Less public surface than Uniswap; verify access and assumptions before comparing volume.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "prop_amm",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Rialto",
+          "slug": "rialto"
+        },
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        }
       ]
     },
     {
@@ -475,12 +912,37 @@
       "website": "https://1inch.io/",
       "job": "DEX aggregation / routing",
       "notes": "Router / aggregator in wallet trading narrative",
+      "summary": "DEX aggregator / router in wallet trading narratives for RH Chain.",
+      "about": "Aggregation improves UX by stitching routes; it packages path risk rather than deleting it.\n\nNative single-venue swaps can still be cleaner when liquidity is already where you need it.",
+      "status": "day-1 partner",
+      "risks": "Route quality and allowance surfaces still require user caution.",
+      "sources": [
+        {
+          "url": "https://1inch.io/",
+          "label": "1inch"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "aggregator",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "0x",
+          "slug": "0x"
+        },
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        }
       ]
     },
     {
@@ -494,12 +956,33 @@
       "website": "https://0x.org/",
       "job": "Swap infrastructure / aggregation",
       "notes": "Aggregator volume visible on Llama DEX overview",
+      "summary": "Swap infrastructure / aggregation layer with volume visible on RH DEX overviews.",
+      "about": "Infrastructure for filling swaps across sources \u2014 part of the routing stack, not a destination \u201capp brand\u201d for end users.",
+      "status": "live",
+      "risks": "As with any router, verify allowances and counterparties.",
+      "sources": [
+        {
+          "url": "https://0x.org/",
+          "label": "0x"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "aggregator",
-        "defi"
+        "defi",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "1inch",
+          "slug": "1inch"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
       ]
     },
     {
@@ -513,12 +996,49 @@
       "website": "https://morpho.org/",
       "job": "Lending backbone for Earn",
       "notes": "Largest RH TVL; powers Robinhood Earn rails",
+      "summary": "Lending backbone on RH Chain; largest TVL slice and rails behind Robinhood Earn narrative.",
+      "about": "Morpho Blue-class markets dominate early DeFi TVL on the chain.\n\nEarn funnels attention to USDG lending, but Morpho also represents general onchain credit infrastructure.\n\nRead markets, oracles, and curator setup before treating TVL as \u201csafe yield.\u201d",
+      "status": "day-1 partner",
+      "risks": "Smart contract, oracle, and liquidity risks; APY is not guaranteed.",
+      "sources": [
+        {
+          "url": "https://morpho.org/",
+          "label": "Morpho"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": 116995428.77094853,
       "tags": [
         "lending",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        },
+        {
+          "name": "USDG / Paxos",
+          "slug": "usdg-paxos"
+        },
+        {
+          "name": "Spark",
+          "slug": "spark"
+        },
+        {
+          "name": "Steakhouse",
+          "slug": "steakhouse"
+        },
+        {
+          "name": "Ethena",
+          "slug": "ethena"
+        },
+        {
+          "name": "Maple",
+          "slug": "maple"
+        }
       ]
     },
     {
@@ -532,12 +1052,32 @@
       "website": "",
       "job": "Yield / savings jobs",
       "notes": "Spark Savings + liquidity layer on RH",
+      "summary": "Yield / savings style protocols on RH (Spark Savings and related liquidity layer).",
+      "about": "Appears in Earn-adjacent and yield job lists; complements Morpho rather than replacing it.",
+      "status": "live",
+      "risks": "Yield products can change parameters; read market docs.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": 8424437.662476074,
       "tags": [
         "yield",
-        "defi"
+        "defi",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        },
+        {
+          "name": "USDG / Paxos",
+          "slug": "usdg-paxos"
+        }
       ]
     },
     {
@@ -551,12 +1091,32 @@
       "website": "",
       "job": "Yield / stable strategy partner",
       "notes": "Earn stack partner (newsroom)",
+      "summary": "Yield / stable strategy partner named in Robinhood Earn launch narrative.",
+      "about": "Part of the curator/strategy stack around USDG lending stories \u2014 verify actual deployments on RH before assuming exposure.",
+      "status": "day-1 partner",
+      "risks": "Strategy risk is separate from chain and Morpho market risk.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "yield",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "USDG / Paxos",
+          "slug": "usdg-paxos"
+        }
       ]
     },
     {
@@ -570,12 +1130,28 @@
       "website": "",
       "job": "Vault curator partner",
       "notes": "Earn / Morpho curator partner (newsroom)",
+      "summary": "Vault curator partner referenced in Earn / Morpho ecosystem narrative.",
+      "about": "Curators shape risk parameters and market design; \u201cpartner\u201d status is not a performance guarantee.",
+      "status": "day-1 partner",
+      "risks": "Curator choices affect borrower/lender outcomes.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "curator",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        },
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        }
       ]
     },
     {
@@ -589,12 +1165,28 @@
       "website": "",
       "job": "Credit / lending partner",
       "notes": "Earn stack partner (newsroom)",
+      "summary": "Credit / lending partner named in Earn stack narrative.",
+      "about": "Institutional-style credit narratives differ from open Morpho markets \u2014 confirm what is actually live on RH Chain.",
+      "status": "day-1 partner",
+      "risks": "Credit products have default and liquidity risk.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "lending",
-        "defi"
+        "defi",
+        "day-1 partner"
+      ],
+      "related": [
+        {
+          "name": "Robinhood Earn",
+          "slug": "robinhood-earn"
+        },
+        {
+          "name": "Morpho",
+          "slug": "morpho"
+        }
       ]
     },
     {
@@ -608,12 +1200,32 @@
       "website": "",
       "job": "Perps & tokenized equity trading",
       "notes": "Perps/spot; ex-dYdX team narrative; high TVL",
+      "summary": "Perps / derivatives venue on RH Chain with material TVL in early Llama rankings.",
+      "about": "Cited as part of the trading stack for tokenized equities and crypto; team narrative often references ex-dYdX builders.\n\nPerps are a different risk surface than spot AMM or stock-token transfer.",
+      "status": "live",
+      "risks": "Leverage, liquidation, and oracle design \u2014 higher complexity than spot swaps.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": 14419859.00378253,
       "tags": [
         "perps",
-        "defi"
+        "defi",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "Lighter",
+          "slug": "lighter"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        },
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        }
       ]
     },
     {
@@ -627,12 +1239,28 @@
       "website": "",
       "job": "Perps / spot venue",
       "notes": "ZK perps/spot; wallet integration claims",
+      "summary": "ZK-powered perps/spot venue with wallet integration claims on RH Chain.",
+      "about": "Part of the derivatives and trading surface beyond pure Uniswap spot flow.\n\nTreat \u201cintegrated in wallet\u201d marketing as distribution, not a risk free pass.",
+      "status": "live",
+      "risks": "Derivatives risk + new-chain operational risk.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "perps",
-        "defi"
+        "defi",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "Arcus",
+          "slug": "arcus"
+        },
+        {
+          "name": "Robinhood Wallet",
+          "slug": "robinhood-wallet"
+        }
       ]
     },
     {
@@ -646,13 +1274,25 @@
       "website": "https://curve.finance/",
       "job": "Specialized AMM",
       "notes": "Stable/volatile pools on RH",
+      "summary": "Specialized AMM",
+      "about": "Stable/volatile pools on RH",
+      "status": "live",
+      "risks": "",
+      "sources": [
+        {
+          "url": "https://curve.finance/",
+          "label": "Primary"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": 132733.18075693634,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e035",
@@ -665,13 +1305,25 @@
       "website": "https://pancakeswap.finance/",
       "job": "Multi-chain DEX presence",
       "notes": "AMM V2/V3 presence on RH",
+      "summary": "Multi-chain DEX presence",
+      "about": "AMM V2/V3 presence on RH",
+      "status": "live",
+      "risks": "",
+      "sources": [
+        {
+          "url": "https://pancakeswap.finance/",
+          "label": "Primary"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": 118016.82528394119,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e036",
@@ -684,13 +1336,20 @@
       "website": "",
       "job": "Native public DEX",
       "notes": "Native RH DEX V2/V3",
+      "summary": "Native public DEX",
+      "about": "Native RH DEX V2/V3",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": 190738.3810501198,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e037",
@@ -703,13 +1362,20 @@
       "website": "",
       "job": "Native DEX",
       "notes": "Small DEX TVL V2/V3",
+      "summary": "Native DEX",
+      "about": "Small DEX TVL V2/V3",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 2350.681454969703,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e038",
@@ -722,13 +1388,20 @@
       "website": "",
       "job": "Native DEX",
       "notes": "Native DEX V2/V3 on Llama",
+      "summary": "Native DEX",
+      "about": "Native DEX V2/V3 on Llama",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 20273.328069515184,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e039",
@@ -741,13 +1414,20 @@
       "website": "",
       "job": "Native DEX",
       "notes": "Small native DEX",
+      "summary": "Native DEX",
+      "about": "Small native DEX",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e040",
@@ -760,13 +1440,20 @@
       "website": "",
       "job": "Native DEX",
       "notes": "Small DEX on Llama",
+      "summary": "Native DEX",
+      "about": "Small DEX on Llama",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e041",
@@ -779,13 +1466,20 @@
       "website": "",
       "job": "Native DEX",
       "notes": "Small DEX TVL on Llama",
+      "summary": "Native DEX",
+      "about": "Small DEX TVL on Llama",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 4001.189145083509,
       "tags": [
         "dex",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e042",
@@ -798,13 +1492,20 @@
       "website": "",
       "job": "Prediction markets",
       "notes": "Prediction market on RH",
+      "summary": "Prediction markets",
+      "about": "Prediction market on RH",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": 108900.22840436768,
       "tags": [
         "prediction",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e043",
@@ -817,13 +1518,20 @@
       "website": "",
       "job": "Prediction markets",
       "notes": "Prediction market (small TVL)",
+      "summary": "Prediction markets",
+      "about": "Prediction market (small TVL)",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "prediction",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e044",
@@ -836,13 +1544,25 @@
       "website": "https://dexfi.com/",
       "job": "Yield aggregation",
       "notes": "Yield aggregator on RH",
+      "summary": "Yield aggregation",
+      "about": "Yield aggregator on RH",
+      "status": "live",
+      "risks": "",
+      "sources": [
+        {
+          "url": "https://dexfi.com/",
+          "label": "Primary"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 84698.56056402507,
       "tags": [
         "yield_aggregator",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e045",
@@ -855,13 +1575,34 @@
       "website": "https://symbiosis.finance",
       "job": "Cross-chain bridge",
       "notes": "Cross-chain bridge TVL on RH",
+      "summary": "Cross-chain bridge with TVL registered on RH Chain in Llama.",
+      "about": "Bridges move assets; they concentrate historical exploit risk in crypto.\n\nSelf-custodial bridge UX \u2260 riskless path.",
+      "status": "live",
+      "risks": "Bridge smart contract and liquidity risk.",
+      "sources": [
+        {
+          "url": "https://symbiosis.finance",
+          "label": "Symbiosis"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": 42743.79678522133,
       "tags": [
         "bridge",
         "defi",
-        "infra"
+        "infra",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "LayerZero",
+          "slug": "layerzero"
+        },
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        }
       ]
     },
     {
@@ -875,13 +1616,20 @@
       "website": "",
       "job": "Tokenized index product",
       "notes": "Programmatic stock index claims (CT)",
+      "summary": "Tokenized index product",
+      "about": "Programmatic stock index claims (CT)",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "rwa",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e047",
@@ -894,13 +1642,20 @@
       "website": "",
       "job": "Tokenized credit / RWA product",
       "notes": "mGLO day-1 product claims (CT)",
+      "summary": "Tokenized credit / RWA product",
+      "about": "mGLO day-1 product claims (CT)",
+      "status": "live",
+      "risks": "",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "rwa",
-        "defi"
-      ]
+        "defi",
+        "live"
+      ],
+      "related": []
     },
     {
       "id": "e048",
@@ -913,11 +1668,35 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Early dominant launchpad; Llama TVL",
+      "summary": "Early dominant launchpad rail on RH Chain by community metrics and Llama TVL.",
+      "about": "Launchpads explain a large share of permissionless token creation and fee print.\n\nUseful for understanding volume composition \u2014 not for \u201cwhich launch to buy.\u201d",
+      "status": "live",
+      "risks": "Launchpad UX can hide approval and contract risks; DYOR on contracts.",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": 6087390.160305349,
       "tags": [
-        "launchpad"
+        "launchpad",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "Pons",
+          "slug": "pons"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        },
+        {
+          "name": "4.fun",
+          "slug": "4-fun"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
       ]
     },
     {
@@ -931,11 +1710,31 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "High deploy count narrative; approval-risk CT notes",
+      "summary": "High-deploy launchpad rail in the RH \u201claunchpad war\u201d; watch approval UX carefully.",
+      "about": "CT tracked deploy leadership flipping among Noxa/Pons/Flap-class apps.\n\nCommunity posts have flagged approval-surface concerns on related paths \u2014 treat as risk case studies and verify contracts yourself.",
+      "status": "live",
+      "risks": "Unlimited approvals and multicall patterns can be dangerous; revoke unused allowances.",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
+        "launchpad",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        },
+        {
+          "name": "Flap",
+          "slug": "flap"
+        },
+        {
+          "name": "4.fun",
+          "slug": "4-fun"
+        }
       ]
     },
     {
@@ -949,12 +1748,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Launchpad war; DEX volume on Llama",
+      "summary": "Token launch rail",
+      "about": "Launchpad war; DEX volume on Llama",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e051",
@@ -967,12 +1773,24 @@
       "website": "https://4.fun/",
       "job": "Meme launch rail",
       "notes": "No creation fees / no bonding curves claim",
+      "summary": "Meme launch rail",
+      "about": "No creation fees / no bonding curves claim",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [
+        {
+          "url": "https://4.fun/",
+          "label": "Primary"
+        }
+      ],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e052",
@@ -985,12 +1803,19 @@
       "website": "",
       "job": "Launchpad (RWA-themed)",
       "notes": "RWA-dividend launch narrative",
+      "summary": "Launchpad (RWA-themed)",
+      "about": "RWA-dividend launch narrative",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e053",
@@ -1003,12 +1828,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Deploy rankings (CT)",
+      "summary": "Token launch rail",
+      "about": "Deploy rankings (CT)",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e054",
@@ -1021,12 +1853,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Launchpad on Llama",
+      "summary": "Token launch rail",
+      "about": "Launchpad on Llama",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 36725.68195541632,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e055",
@@ -1039,12 +1878,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Launchpad on Llama",
+      "summary": "Token launch rail",
+      "about": "Launchpad on Llama",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e056",
@@ -1057,12 +1903,19 @@
       "website": "",
       "job": "Launch tooling",
       "notes": "Prior week launchpad ranking (CT)",
+      "summary": "Launch tooling",
+      "about": "Prior week launchpad ranking (CT)",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e057",
@@ -1075,12 +1928,19 @@
       "website": "",
       "job": "Agent-assisted launches",
       "notes": "Agent launch tooling (CT)",
+      "summary": "Agent-assisted launches",
+      "about": "Agent launch tooling (CT)",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e058",
@@ -1093,12 +1953,24 @@
       "website": "https://alpha.based.one",
       "job": "Token launch rail",
       "notes": "Small launchpad TVL",
+      "summary": "Token launch rail",
+      "about": "Small launchpad TVL",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [
+        {
+          "url": "https://alpha.based.one",
+          "label": "Primary"
+        }
+      ],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e059",
@@ -1111,12 +1983,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Small launchpad on Llama",
+      "summary": "Token launch rail",
+      "about": "Small launchpad on Llama",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e060",
@@ -1129,12 +2008,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Small launchpad",
+      "summary": "Token launch rail",
+      "about": "Small launchpad",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e061",
@@ -1147,12 +2033,19 @@
       "website": "",
       "job": "Token launch rail",
       "notes": "Small launchpad",
+      "summary": "Token launch rail",
+      "about": "Small launchpad",
+      "status": "community",
+      "risks": "Launch rails concentrate contract and approval risk; verify before interacting.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
-        "launchpad"
-      ]
+        "launchpad",
+        "community"
+      ],
+      "related": []
     },
     {
       "id": "e062",
@@ -1165,12 +2058,32 @@
       "website": "",
       "job": "Agent launch platform",
       "notes": "Agent launch platform cited in eco maps",
+      "summary": "Agent launch platform frequently cited in RH Chain agentic / AI layer maps.",
+      "about": "Agents are a core official narrative (\u201cAI-native\u201d chain). Virtuals-class platforms are where much of the agent token surface appears.\n\nAgent volume is not the same as RWA product-market fit.",
+      "status": "live",
+      "risks": "Agent tokens are often highly speculative; treat as noise/attention unless proven utility.",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "agent",
-        "agents"
+        "agents",
+        "live"
+      ],
+      "related": [
+        {
+          "name": "RobiNode",
+          "slug": "robinode"
+        },
+        {
+          "name": "Robinhood Crypto",
+          "slug": "robinhood-crypto"
+        },
+        {
+          "name": "NOXA Fun",
+          "slug": "noxa-fun"
+        }
       ]
     },
     {
@@ -1184,13 +2097,33 @@
       "website": "",
       "job": "Agent layer for RWA routes",
       "notes": "Stock-token routing; listed\u2260liquid",
+      "summary": "Builder focusing on agent routing for tokenized stocks \u2014 \u201clisted \u2260 liquid\u201d in practice.",
+      "about": "Useful peer example: multi-protocol routing with sellability checks for stock tokens.\n\nHighlights that brochure listings and actual fillable routes are different products.",
+      "status": "community",
+      "risks": "Early builder software; verify before using with size.",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "agent",
         "builder",
-        "agents"
+        "agents",
+        "community"
+      ],
+      "related": [
+        {
+          "name": "Stock Tokens (official)",
+          "slug": "stock-tokens-official"
+        },
+        {
+          "name": "Virtuals",
+          "slug": "virtuals"
+        },
+        {
+          "name": "Uniswap",
+          "slug": "uniswap"
+        }
       ]
     },
     {
@@ -1204,13 +2137,20 @@
       "website": "",
       "job": "Gamified / attention app",
       "notes": "Gamified mining; fee print on Llama",
+      "summary": "Gamified / attention app",
+      "about": "Gamified mining; fee print on Llama",
+      "status": "sample only",
+      "risks": "Highly speculative attention asset; not a research endorsement.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": 45676.36675845629,
       "tags": [
         "gamified",
-        "noise"
-      ]
+        "noise",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e065",
@@ -1223,13 +2163,20 @@
       "website": "",
       "job": "Native meme (attention layer)",
       "notes": "High-visibility native meme",
+      "summary": "Native meme (attention layer)",
+      "about": "High-visibility native meme",
+      "status": "sample only",
+      "risks": "Highly speculative attention asset; not a research endorsement.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "meme",
-        "noise"
-      ]
+        "noise",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e066",
@@ -1242,13 +2189,20 @@
       "website": "",
       "job": "Gaming / attention",
       "notes": "Gaming project small TVL",
+      "summary": "Gaming / attention",
+      "about": "Gaming project small TVL",
+      "status": "sample only",
+      "risks": "Highly speculative attention asset; not a research endorsement.",
+      "sources": [],
       "confidence": "low",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "gaming",
-        "noise"
-      ]
+        "noise",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e067",
@@ -1261,13 +2215,20 @@
       "website": "",
       "job": "Independent ecosystem intel",
       "notes": "Independent RH intel / wallet clusters",
+      "summary": "Independent ecosystem intel",
+      "about": "Independent RH intel / wallet clusters",
+      "status": "sample only",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "media"
-      ]
+        "media",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e068",
@@ -1280,13 +2241,20 @@
       "website": "",
       "job": "DeFi research / curation",
       "notes": "Research; memes vs RWA fork framing",
+      "summary": "DeFi research / curation",
+      "about": "Research; memes vs RWA fork framing",
+      "status": "sample only",
+      "risks": "",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "media"
-      ]
+        "media",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e069",
@@ -1299,13 +2267,20 @@
       "website": "",
       "job": "Onchain data research",
       "notes": "Entropy Advisors; launchpad deploy ranks",
+      "summary": "Onchain data research",
+      "about": "Entropy Advisors; launchpad deploy ranks",
+      "status": "sample only",
+      "risks": "",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "media"
-      ]
+        "media",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e070",
@@ -1318,13 +2293,20 @@
       "website": "",
       "job": "Macro / product research",
       "notes": "Artemis; product thesis letters",
+      "summary": "Macro / product research",
+      "about": "Artemis; product thesis letters",
+      "status": "sample only",
+      "risks": "",
+      "sources": [],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "media"
-      ]
+        "media",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e071",
@@ -1337,13 +2319,20 @@
       "website": "",
       "job": "Visual research explainers",
       "notes": "Visual explainers; RWA+meme barbell",
+      "summary": "Visual research explainers",
+      "about": "Visual explainers; RWA+meme barbell",
+      "status": "sample only",
+      "risks": "",
+      "sources": [],
       "confidence": "medium",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "media"
-      ]
+        "media",
+        "sample only"
+      ],
+      "related": []
     },
     {
       "id": "e072",
@@ -1356,13 +2345,25 @@
       "website": "https://defillama.com/chain/robinhood-chain",
       "job": "TVL / volume / fees dashboard",
       "notes": "Primary public metrics (chainId 4663)",
+      "summary": "TVL / volume / fees dashboard",
+      "about": "Primary public metrics (chainId 4663)",
+      "status": "sample only",
+      "risks": "",
+      "sources": [
+        {
+          "url": "https://defillama.com/chain/robinhood-chain",
+          "label": "Primary"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": null,
       "tags": [
         "data",
-        "media"
-      ]
+        "media",
+        "sample only"
+      ],
+      "related": []
     }
   ],
   "disclaimer": "NFA. Orientation map only. Not investment advice. Listings are not endorsements."

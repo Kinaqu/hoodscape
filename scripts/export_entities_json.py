@@ -23,6 +23,29 @@ def slugify(name: str) -> str:
     return s.strip("-") or "entity"
 
 
+def parse_sources(raw: str) -> list[dict]:
+    out = []
+    raw = (raw or "").strip()
+    if not raw:
+        return out
+    for part in raw.split(";"):
+        part = part.strip()
+        if not part:
+            continue
+        if "|" in part:
+            url, label = part.split("|", 1)
+            out.append({"url": url.strip(), "label": label.strip() or url.strip()})
+        else:
+            out.append({"url": part, "label": part})
+    return out
+
+
+def parse_related(raw: str) -> list[str]:
+    if not raw:
+        return []
+    return [x.strip() for x in raw.split(",") if x.strip()]
+
+
 def load_csv() -> list[dict]:
     rows = []
     with CSV_PATH.open(encoding="utf-8") as f:
@@ -33,6 +56,10 @@ def load_csv() -> list[dict]:
             tw = (row.get("twitter") or "").strip()
             if tw and not tw.startswith("@"):
                 tw = f"@{tw}"
+            notes = (row.get("notes") or "").strip()
+            job = (row.get("job_one_liner") or notes or "").strip()
+            summary = (row.get("summary") or job or notes).strip()
+            about = (row.get("about") or "").strip().replace("|", "\n\n")
             entity = {
                 "id": f"e{i+1:03d}",
                 "slug": slugify(name),
@@ -42,19 +69,27 @@ def load_csv() -> list[dict]:
                 "category": (row.get("category") or "").strip(),
                 "twitter": tw,
                 "website": (row.get("primary_url") or "").strip(),
-                "job": (row.get("job_one_liner") or row.get("notes") or "").strip(),
-                "notes": (row.get("notes") or "").strip(),
+                "job": job,
+                "notes": notes,
+                "summary": summary,
+                "about": about,
+                "status": (row.get("status") or "").strip(),
+                "related_names": parse_related(row.get("related") or ""),
+                "risks": (row.get("risks") or "").strip(),
+                "sources": parse_sources(row.get("sources") or ""),
                 "confidence": (row.get("confidence") or "low").strip(),
                 "last_checked": (row.get("last_seen") or "").strip(),
                 "tvl_rh": None,
                 "tags": [],
             }
-            for key in ("category", "type", "layer"):
+            for key in ("category", "type", "layer", "status"):
                 v = entity.get(key)
                 if v and v not in entity["tags"]:
                     entity["tags"].append(v)
             rows.append(entity)
-    seen = {}
+
+    # unique slugs
+    seen: dict[str, int] = {}
     for e in rows:
         base = e["slug"]
         if base not in seen:
@@ -62,6 +97,16 @@ def load_csv() -> list[dict]:
         else:
             seen[base] += 1
             e["slug"] = f"{base}-{seen[base]}"
+
+    # resolve related names → slugs
+    by_name = {e["name"].lower(): e["slug"] for e in rows}
+    for e in rows:
+        related = []
+        for n in e.pop("related_names", []):
+            slug = by_name.get(n.lower())
+            if slug and slug != e["slug"]:
+                related.append({"name": n, "slug": slug})
+        e["related"] = related
     return rows
 
 
