@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T17:54:04Z",
+  "generated_at_utc": "2026-07-16T18:00:34Z",
   "node_count": 72,
   "edge_count": 182,
   "edge_types": [
@@ -1191,25 +1191,27 @@
       "evidence": [
         {
           "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
+          "label": "DeFi Edge RH volume thread",
+          "proves": "Uses native meme activity to explain RH DEX volume composition"
         }
       ],
-      "last_checked": "2026-07-03",
+      "last_checked": "2026-07-16",
       "source": "x_digest"
     },
     {
       "from": "cash-cat",
       "to": "noxa-fun",
       "type": "ecosystem_directory",
-      "label": "Ecosystem map adjacency",
-      "explanation": "Cash Cat and NOXA Fun are mapped together in the RH Chain landscape as related venues or rails. Verify primary sources before interacting.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Meme attention near launch rails",
+      "explanation": "Hoodscape groups Cash Cat (native meme) near NOXA (launchpad) because early meme attention often flows through deploy rails \u2014 not an official link.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
+          "label": "DeFi Edge RH volume thread",
+          "proves": "Frames meme-heavy DEX volume vs launchpad activity on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1218,20 +1220,21 @@
     {
       "from": "cash-cat",
       "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Cash Cat. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
+      "type": "liquidity_stack",
+      "label": "Meme trades on public AMM",
+      "explanation": "High-visibility RH memes (Cash Cat-class) trade on public AMM venues \u2014 explains meme-heavy DEX volume, not a partnership.",
+      "confidence": "medium",
+      "strength": "weak",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
+          "label": "DeFi Edge RH volume thread",
+          "proves": "Links native meme activity to headline DEX volume on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "chainalysis",
@@ -1557,19 +1560,26 @@
       "from": "flap",
       "to": "noxa-fun",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "Flap and NOXA Fun compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
+      "label": "Rotating deploy leaders",
+      "explanation": "Both run permissionless memecoin launch rails on RH Chain. Tom Wan's board shows NOXA #1 the prior week and Flap #2 on 15 Jul \u2014 same launchpad war, different snapshots. Deploy rank \u2260 safety.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy leaderboard",
+          "proves": "Names @Noxa_Fi #1 (prior week) and @flapdotsh #2 (15 Jul) in one launchpad-war thread"
         },
         {
           "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap board"
+          "label": "Flap RH deploy board",
+          "proves": "Flap operates a Robinhood Chain token launch board"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "Launchpad account cited in the same deploy-rank coverage"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1579,19 +1589,26 @@
       "from": "flap",
       "to": "pons",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "Flap and Pons compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
+      "label": "Pons ahead on 15 Jul board",
+      "explanation": "Tom Wan's 15 Jul snapshot ranks Pons #1 and Flap #2 by tokens deployed \u2014 direct head-to-head on the same leaderboard.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan 15 Jul board",
+          "proves": "Same snapshot: @ponsdotfamily #1, @flapdotsh #2"
         },
         {
           "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap board"
+          "label": "Flap RH deploy board",
+          "proves": "Flap launch rail on RH Chain"
+        },
+        {
+          "url": "https://x.com/ponsdotfamily",
+          "label": "Pons",
+          "proves": "Launchpad that overtook Flap in that snapshot"
         }
       ],
       "last_checked": "2026-07-16",
@@ -1600,24 +1617,26 @@
     {
       "from": "flap",
       "to": "uniswap",
-      "type": "partner_named",
-      "label": "Day-1 / launch partner",
-      "explanation": "Uniswap is named as a day-1 or launch partner in narratives around Flap. Partner naming is orientation only \u2014 not performance or security endorsement.",
-      "confidence": "high",
-      "strength": "strong",
+      "type": "liquidity_stack",
+      "label": "Deploy \u2192 public AMM liquidity",
+      "explanation": "Flap creates tokens on RH Chain; liquid trading often migrates to public AMMs like Uniswap. This is a liquidity path, not a day-1 partnership claim.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
         {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap RH deploy board",
+          "proves": "Where Flap tokens are created on RH Chain"
         },
         {
-          "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap board"
+          "url": "https://defillama.com/protocol/uniswap-v3",
+          "label": "Uniswap on DefiLlama",
+          "proves": "Dominant public AMM on RH Chain for post-launch liquidity"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "frothswap",
@@ -1731,15 +1750,26 @@
       "from": "hoodz",
       "to": "noxa-fun",
       "type": "ecosystem_directory",
-      "label": "Ecosystem map adjacency",
-      "explanation": "HOODZ and NOXA Fun are mapped together in the RH Chain landscape as related venues or rails. Verify primary sources before interacting.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Both live on RH Chain",
+      "explanation": "HOODZ (gaming/attention) and NOXA (launchpad) are distinct apps on the same chain \u2014 Hoodscape map adjacency only.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama"
+          "label": "DefiLlama RH Chain",
+          "proves": "Chain dashboard listing RH-native protocols"
+        },
+        {
+          "url": "https://x.com/HOODZRH",
+          "label": "HOODZ",
+          "proves": "HOODZ project on RH Chain"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "NOXA launchpad on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2194,8 +2224,9 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://4.fun/",
-          "label": "Primary"
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "RH launchpad cited in deploy-rank coverage"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2205,36 +2236,58 @@
       "from": "noxa-fun",
       "to": "flap",
       "type": "competitive",
-      "label": "Launchpad war triad",
-      "explanation": "NOXA and Flap trade leaderboard positions with Pons in early RH launchpad war coverage.",
+      "label": "Launchpad war \u2014 rank rotation",
+      "explanation": "NOXA led Tom Wan's prior-week deploy board; Flap held #2 on 15 Jul while Pons took #1. Shows the same attention job with fast leaderboard flips.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy leaderboard",
+          "proves": "Prior-week #1 NOXA vs 15 Jul #2 Flap in the same thread"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "RH launchpad rail in deploy-rank narrative"
+        },
+        {
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap RH deploy board",
+          "proves": "Flap launch surface on Robinhood Chain"
         }
       ],
-      "last_checked": "2026-07-03",
+      "last_checked": "2026-07-16",
       "source": "x_digest"
     },
     {
       "from": "noxa-fun",
       "to": "pons",
       "type": "competitive",
-      "label": "Launchpad war leaderboard",
-      "explanation": "NOXA and Pons are repeatedly paired in CT deploy-rank narratives as leading RH launchpads in week-one metrics.",
+      "label": "Deploy rank flipped (NOXA \u2192 Pons)",
+      "explanation": "Tom Wan compares two snapshots: NOXA #1 one week earlier, Pons #1 on 15 Jul \u2014 same launchpad war with rotating winners.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy leaderboard",
+          "proves": "Shows @Noxa_Fi leading prior week and @ponsdotfamily leading 15 Jul"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "Named #1 in prior-week board"
+        },
+        {
+          "url": "https://x.com/ponsdotfamily",
+          "label": "Pons",
+          "proves": "Named #1 in 15 Jul board"
         }
       ],
-      "last_checked": "2026-07-03",
+      "last_checked": "2026-07-16",
       "source": "x_digest"
     },
     {
@@ -2248,8 +2301,9 @@
       "directed": true,
       "evidence": [
         {
-          "url": "https://uniswap.org/",
-          "label": "Uniswap"
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "RH launchpad cited in deploy-rank coverage"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2367,19 +2421,25 @@
       "from": "pons",
       "to": "4-fun",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "Pons and 4.fun compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
+      "label": "Same launchpad job on RH",
+      "explanation": "Pons and 4.fun both offer permissionless token launch rails on Robinhood Chain \u2014 competing for deploy attention, not a verified integration.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "url": "https://4.fun/",
+          "label": "4.fun",
+          "proves": "4.fun launchpad on RH Chain"
+        },
+        {
+          "url": "https://x.com/ponsdotfamily",
+          "label": "Pons",
+          "proves": "Pons launchpad on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
-      "source": "csv_manual"
+      "source": "x_digest"
     },
     {
       "from": "pons",
@@ -2404,14 +2464,19 @@
       "to": "flap",
       "type": "competitive",
       "label": "Pons flipped Flap on deploys (15 Jul)",
-      "explanation": "@tomwanhh reported Pons overtook Flap in RH launchpad deploy counts around 15 Jul 2026. Competitive leaderboard only \u2014 not safety or quality ranking.",
+      "explanation": "@tomwanhh reported Pons overtook Flap in RH launchpad deploy counts on 15 Jul 2026. Competitive leaderboard only \u2014 not safety or quality ranking.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan 15 Jul board",
+          "proves": "Post explicitly states Pons flipped Flap"
+        },
+        {
+          "url": "shows Pons #1 and Flap #2",
+          "label": "shows Pons #1 and Flap #2"
         }
       ],
       "last_checked": "2026-07-16",
@@ -2421,15 +2486,26 @@
       "from": "pons",
       "to": "noxa-fun",
       "type": "competitive",
-      "label": "Same job \u2014 competing rails",
-      "explanation": "Pons and NOXA Fun compete for the same attention job (e.g. launchpad deploy volume). Competitive ranking \u2260 quality or safety.",
+      "label": "Leaderboard handoff (NOXA \u2192 Pons)",
+      "explanation": "Same Tom Wan thread: NOXA led the prior-week deploy board; Pons led 15 Jul. Both fight for the top launchpad slot on RH Chain.",
       "confidence": "high",
       "strength": "strong",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy leaderboard",
+          "proves": "Prior-week #1 @Noxa_Fi vs 15 Jul #1 @ponsdotfamily"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "Prior-week deploy leader"
+        },
+        {
+          "url": "https://x.com/ponsdotfamily",
+          "label": "Pons",
+          "proves": "15 Jul deploy leader"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3182,14 +3258,15 @@
       "to": "cash-cat",
       "type": "competitive",
       "label": "Attention-layer cluster",
-      "explanation": "SLVR and Cash Cat are grouped in Hoodscape noise layer as gamified/meme attention samples on RH Chain.",
+      "explanation": "SLVR and Cash Cat are grouped as gamified/meme attention samples on RH Chain in the same volume-composition story.",
       "confidence": "low",
       "strength": "weak",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/thedefiedge/status/2077709910591365630",
-          "label": "X post"
+          "label": "DeFi Edge RH volume thread",
+          "proves": "Discusses native meme/gamified attention driving early RH DEX volume"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3199,15 +3276,26 @@
       "from": "slvr",
       "to": "noxa-fun",
       "type": "ecosystem_directory",
-      "label": "Ecosystem map adjacency",
-      "explanation": "SLVR and NOXA Fun are mapped together in the RH Chain landscape as related venues or rails. Verify primary sources before interacting.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Attention apps on RH Chain",
+      "explanation": "SLVR (gamified attention) and NOXA (launchpad) coexist on RH Chain \u2014 map neighbors, not an integration.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama"
+          "label": "DefiLlama RH Chain",
+          "proves": "Lists RH-native apps side by side"
+        },
+        {
+          "url": "https://x.com/S_L_V_R_FUN",
+          "label": "SLVR",
+          "proves": "SLVR attention app"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "NOXA launchpad"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3405,15 +3493,16 @@
       "from": "swaphood",
       "to": "robinswap",
       "type": "liquidity_stack",
-      "label": "Liquidity / routing layer",
-      "explanation": "SwapHood and RobinSwap occupy adjacent liquidity jobs on RH Chain (public AMM, prop venue, or aggregation). Volume on one venue does not imply depth on the other.",
+      "label": "Adjacent native DEXs on RH",
+      "explanation": "SwapHood and RobinSwap are separate native AMM venues on Robinhood Chain \u2014 compare depth per pool, not headline chain volume.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama"
+          "label": "DefiLlama RH Chain",
+          "proves": "Lists SwapHood and RobinSwap as distinct DEX protocols on RH Chain"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3423,15 +3512,16 @@
       "from": "swaphood",
       "to": "sheriff-exchange",
       "type": "liquidity_stack",
-      "label": "Liquidity / routing layer",
-      "explanation": "SwapHood and Sheriff Exchange occupy adjacent liquidity jobs on RH Chain (public AMM, prop venue, or aggregation). Volume on one venue does not imply depth on the other.",
+      "label": "Adjacent native DEXs on RH",
+      "explanation": "SwapHood and Sheriff Exchange occupy parallel native DEX jobs on RH Chain with separate TVL pools.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama"
+          "label": "DefiLlama RH Chain",
+          "proves": "Lists SwapHood and Sheriff Exchange as separate RH DEX entries"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3639,15 +3729,16 @@
       "from": "tom-wan",
       "to": "flap",
       "type": "media_intel",
-      "label": "Tracks launchpad deploy ranks",
-      "explanation": "@tomwanhh tracks Flap in the RH launchpad deploy race alongside Pons and NOXA. Leaderboard flips quickly in week-one chains.",
+      "label": "Tracks Flap deploy rank",
+      "explanation": "@tomwanhh names @flapdotsh as #2 on the 15 Jul RH launchpad deploy board.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy post",
+          "proves": "Names @flapdotsh #2 on 15 Jul leaderboard"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3657,15 +3748,16 @@
       "from": "tom-wan",
       "to": "noxa-fun",
       "type": "media_intel",
-      "label": "Tracks launchpad deploy ranks",
-      "explanation": "@tomwanhh cites NOXA Fun in RH launchpad war metrics. Useful for understanding permissionless deploy volume \u2014 not a pad endorsement.",
+      "label": "Tracks NOXA deploy rank",
+      "explanation": "@tomwanhh names @Noxa_Fi as #1 on the prior-week RH launchpad deploy board in the same thread.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy post",
+          "proves": "Names @Noxa_Fi #1 on prior-week leaderboard"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3675,15 +3767,20 @@
       "from": "tom-wan",
       "to": "pons",
       "type": "media_intel",
-      "label": "Tracks launchpad deploy ranks",
-      "explanation": "@tomwanhh publishes onchain deploy leaderboards for RH Chain launchpads; 15 Jul post noted Pons flipping Flap by deploy count. Deploy rank \u2260 safety or quality.",
+      "label": "Tracks Pons deploy rank",
+      "explanation": "@tomwanhh reports Pons flipping Flap and lists @ponsdotfamily as #1 on 15 Jul.",
       "confidence": "medium",
       "strength": "moderate",
       "directed": true,
       "evidence": [
         {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy post",
+          "proves": "States Pons flipped Flap"
+        },
+        {
+          "url": "shows @ponsdotfamily #1 on 15 Jul",
+          "label": "shows @ponsdotfamily #1 on 15 Jul"
         }
       ],
       "last_checked": "2026-07-16",
@@ -3935,19 +4032,26 @@
       "from": "virtuals",
       "to": "noxa-fun",
       "type": "ecosystem_directory",
-      "label": "Ecosystem map adjacency",
-      "explanation": "Virtuals and NOXA Fun are mapped together in the RH Chain landscape as related venues or rails. Verify primary sources before interacting.",
-      "confidence": "high",
-      "strength": "strong",
+      "label": "Agent + launch rails on RH",
+      "explanation": "Virtuals (agent tokens) and NOXA (launchpad) both appear in early RH attention maps \u2014 Tom Wan's prior-week board even listed Virtuals #3 while NOXA was #1.",
+      "confidence": "medium",
+      "strength": "moderate",
       "directed": true,
       "evidence": [
         {
-          "url": "https://robinhood.com/us/en/chain/",
-          "label": "Chain page"
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "Tom Wan deploy leaderboard",
+          "proves": "Prior-week board: NOXA #1 and @virtuals_io #3"
         },
         {
-          "url": "https://defillama.com/chain/robinhood-chain",
-          "label": "DefiLlama"
+          "url": "https://x.com/virtuals_io",
+          "label": "Virtuals",
+          "proves": "Agent launch platform on RH"
+        },
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun",
+          "proves": "Launchpad on RH"
         }
       ],
       "last_checked": "2026-07-16",

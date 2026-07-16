@@ -1717,26 +1717,45 @@ main {
 .graph-tooltip-evidence {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.4rem;
   margin-bottom: 0.45rem;
 }
 
-.graph-tooltip-evidence a {
+.graph-tooltip-evidence-head {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+}
+
+.graph-tooltip-evidence-item {
+  padding: 0.38rem 0.45rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-soft);
+  background: var(--bg-card);
+}
+
+.graph-tooltip-evidence-item a {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
-  padding: 0.28rem 0.45rem;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--accent-strong);
   text-decoration: none;
-  border-radius: var(--radius-xs);
-  background: var(--accent-soft);
   pointer-events: auto;
 }
 
-.graph-tooltip-evidence a:hover {
+.graph-tooltip-evidence-item a:hover {
   text-decoration: underline;
-  background: rgba(61, 186, 140, 0.2);
+}
+
+.graph-tooltip-evidence-proves {
+  margin: 0.28rem 0 0;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: var(--text-muted);
 }
 
 .graph-tooltip-conf {

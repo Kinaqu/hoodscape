@@ -16,7 +16,7 @@ export interface GraphEdge {
   confidence: string;
   strength: string;
   directed: boolean;
-  evidence: { url: string; label: string }[];
+  evidence: { url: string; label: string; proves?: string }[];
 }
 
 export interface GraphData {

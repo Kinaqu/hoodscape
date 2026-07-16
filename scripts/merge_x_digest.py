@@ -11,6 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 X_LOG = ROOT / "data" / "research" / "x-edge-log.csv"
 EDGES = ROOT / "data" / "edges.csv"
 
+DROP_EDGE_KEYS = {
+    ("flap", "uniswap", "partner_named"),
+    ("cash-cat", "uniswap", "partner_named"),
+}
+
 EDGE_FIELDS = [
     "from_slug",
     "to_slug",
@@ -82,6 +87,11 @@ def main() -> int:
         existing[k] = out
 
     rows = sorted(existing.values(), key=lambda r: (r["from_slug"], r["to_slug"], r["type"]))
+    rows = [
+        r
+        for r in rows
+        if (r["from_slug"], r["to_slug"], r["type"]) not in DROP_EDGE_KEYS
+    ]
     with EDGES.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=EDGE_FIELDS)
         w.writeheader()

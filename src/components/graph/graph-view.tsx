@@ -141,10 +141,14 @@ function edgeTooltipContent(edge: GraphEdge, onClose: () => void) {
       <p className="graph-tooltip-explanation">{edge.explanation}</p>
       {edge.evidence?.length > 0 && (
         <div className="graph-tooltip-evidence">
+          <span className="graph-tooltip-evidence-head">Sources — what each link shows for this connection</span>
           {edge.evidence.map((ev) => (
-            <a key={ev.url} href={ev.url} target="_blank" rel="noopener noreferrer">
-              {ev.label || ev.url} ↗
-            </a>
+            <div key={`${ev.url}-${ev.label}`} className="graph-tooltip-evidence-item">
+              <a href={ev.url} target="_blank" rel="noopener noreferrer">
+                {ev.label || ev.url} ↗
+              </a>
+              {ev.proves ? <p className="graph-tooltip-evidence-proves">{ev.proves}</p> : null}
+            </div>
           ))}
         </div>
       )}

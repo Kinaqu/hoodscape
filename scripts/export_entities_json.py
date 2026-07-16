@@ -302,8 +302,13 @@ def parse_evidence_urls(raw: str) -> list[dict]:
         if not part:
             continue
         if "|" in part:
-            url, label = part.split("|", 1)
-            out.append({"url": url.strip(), "label": label.strip() or url.strip()})
+            pieces = [p.strip() for p in part.split("|")]
+            url = pieces[0]
+            label = pieces[1] if len(pieces) > 1 else url
+            item: dict = {"url": url, "label": label or url}
+            if len(pieces) > 2 and pieces[2]:
+                item["proves"] = pieces[2]
+            out.append(item)
         else:
             out.append({"url": part, "label": part})
     return out

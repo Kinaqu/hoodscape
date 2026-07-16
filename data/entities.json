@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-16T17:54:04Z",
+  "generated_at_utc": "2026-07-16T18:00:34Z",
   "count": 72,
   "layers": [
     "official",
@@ -2492,7 +2492,12 @@
       "about": "Launchpads explain a large share of permissionless token creation and fee print.\n\nUseful for understanding volume composition \u2014 not for \u201cwhich launch to buy.\u201d",
       "status": "live",
       "risks": "Launchpad UX can hide approval and contract risks; DYOR on contracts.",
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://x.com/Noxa_Fi",
+          "label": "NOXA Fun|RH launchpad cited in deploy-rank coverage"
+        }
+      ],
       "confidence": "high",
       "last_checked": "2026-07-16",
       "tvl_rh": 6087390.160305349,
@@ -2545,8 +2550,12 @@
       "risks": "Unlimited approvals and multicall patterns can be dangerous; revoke unused allowances.",
       "sources": [
         {
+          "url": "https://x.com/ponsdotfamily",
+          "label": "Pons launchpad"
+        },
+        {
           "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "label": "Tom Wan deploy leaderboard|15 Jul #1 in launchpad war thread"
         }
       ],
       "confidence": "medium",
@@ -2597,12 +2606,12 @@
       "risks": "Launchpad approval and contract risk; DYOR.",
       "sources": [
         {
-          "url": "https://x.com/tomwanhh/status/2077686289541824987",
-          "label": "X post"
+          "url": "https://flap.sh/robinhood/board?lang=en",
+          "label": "Flap RH deploy board"
         },
         {
-          "url": "https://flap.sh/robinhood/board?lang=en",
-          "label": "Flap board"
+          "url": "https://x.com/tomwanhh/status/2077686289541824987",
+          "label": "Tom Wan deploy leaderboard|15 Jul #2 in launchpad war thread"
         }
       ],
       "confidence": "medium",
