@@ -40,10 +40,70 @@
   --glass: rgba(12, 18, 16, 0.72);
   --glass-strong: rgba(12, 18, 16, 0.86);
   --stage-bg: rgba(12, 18, 16, 0.94);
+  /* Topo Line scrollbars */
+  --scrollbar-size: 7px;
+  --scrollbar-track: #1e2b25;
+  --scrollbar-thumb-top: #e6c35c;
+  --scrollbar-thumb: #3dba8c;
+  --scrollbar-thumb-end: #2dd4a0;
+  --scrollbar-thumb-border: rgba(42, 58, 50, 0.65);
+  --scrollbar-thumb-glow: rgba(61, 186, 140, 0.25);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* Topo Line — landscape chart thumb (gold peak → green slope) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 4px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.14);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--scrollbar-thumb-top) 0,
+    var(--scrollbar-thumb-top) 5px,
+    var(--scrollbar-thumb) 9px,
+    var(--scrollbar-thumb-end) 100%
+  );
+  border: 1px solid var(--scrollbar-thumb-border);
+  border-radius: 4px;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #f0d070 0,
+    var(--scrollbar-thumb-top) 5px,
+    var(--scrollbar-thumb-end) 100%
+  );
+  border-color: rgba(61, 186, 140, 0.4);
+  box-shadow: 0 0 10px var(--scrollbar-thumb-glow);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
 
 body {
   margin: 0;
